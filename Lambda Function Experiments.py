@@ -14,7 +14,6 @@
 # to do breadboard electronics with a Raspberry Pi 4, since the last two years. Anyway,
 # have some fun with these lambda functions(), or not. lol
 
-
 lambda_func = lambda x:x + 2
 print(lambda_func(5))
 
