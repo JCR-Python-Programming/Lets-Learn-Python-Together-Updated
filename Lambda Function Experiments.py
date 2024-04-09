@@ -1,4 +1,4 @@
-# Never ever use these myself, but they are another tool I might one day have
+# I Never ever use these myself, but they are another tool I might one day have
 # a usefulness for. But here is some researching I had done with 'lambda functions()
 # These are, what they call anonymous functions, because you use them, then
 # throw them away; whatever that means is still unclear to me at this time. So
