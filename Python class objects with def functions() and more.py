@@ -6,8 +6,8 @@
 # chain them together by invoking the (self) parameter, along with return 'self'.
 # Next we will create a def functions() list and call each function() with a for
 # loop. Next, we will create the very same class object as before. But this time
-# we will also place the class object functions() inside a list. And lastly, we will
-# use a for loop to call up all the class object's functions() with a for loop.
+# we will also place the class object functions() inside a list. And lastly, we
+# will use a for loop to call up all the class object's functions() with a for loop.
 
 class Functs:
 
@@ -140,10 +140,10 @@ for i in class_functs_list:i()
 # Note: you can call 'self' any word you like, but Python programmers use the
 # word 'self' as standard programming practice. the 'self' prefix means to make
 # a def function() call itself back up, which is known as RECURSION. In computer
-# programing, the word 'recursion' is mentioned a lot. So keep this in mind. In some
-# cases, recursion can be a bad thing; you have to know when to use it, and when
-# not to use it. Never use recursion in for loops, even if they look like they work.
-# because errors could occur. For loops have to have a proverbial end by nature.
-# Never use recursion in for loops to avoid possible program execution errors from
-# happening. Always know when and where you can use recursion; def functions()
-# love recursion more than anything.
+# programing, the word 'recursion' is mentioned a lot. So keep this in mind. In
+# some cases, recursion can be a bad thing; you have to know when to use it, and
+# when not to use it. Never use recursion in for loops, even if they look like
+# they work. because errors could occur. For loops have to have a proverbial end
+# by nature. Never use recursion in for loops to avoid possible program execution
+# errors from happening. Always know when and where you can use recursion; def
+# functions() love recursion more than anything.
