@@ -36,10 +36,52 @@ while True:
     x6=randint(-500,1920)
     y6=randint(-500,1920)
     
-    random_width=randint(0,10)
+    x7=randint(-500,1920)
+    y7=randint(-500,1920)
+    x8=randint(-500,1920)
+    y8=randint(-500,1920)
+    
+    x9=randint(-500,1920)
+    y9=randint(-500,1920)
+    x10=randint(-500,1920)
+    y10=randint(-500,1920)
+
+    x11=randint(-500,1920)
+    y11=randint(-500,1920)
+    x12=randint(-500,1920)
+    y12=randint(-500,1920)
+
+    x13=randint(-500,1920)
+    y13=randint(-500,1920)
+    x14=randint(-500,1920)
+    y14=randint(-500,1920)
+
+    x15=randint(-500,1920)
+    y15=randint(-500,1920)
+    x16=randint(-500,1920)
+    y16=randint(-500,1920)
+
+    x17=randint(-500,1920)
+    y17=randint(-500,1920)
+    x18=randint(-500,1920)
+    y18=randint(-500,1920)
+
+    x19=randint(-500,1920)
+    y19=randint(-500,1920)
+    x20=randint(-500,1920)
+    y20=randint(-500,1920)
+    
+    random_width=randint(0,15)
     my_canvas.create_line(x1,y1,x2,y2,fill=random_colour_code(),width=random_width)
     my_canvas.create_line(x3,y3,x4,y4,fill=random_colour_code(),width=random_width)
     my_canvas.create_line(x5,y5,x6,y6,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x7,y7,x8,y8,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x9,y9,x10,y10,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x11,y11,x12,y12,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x13,y13,x14,y14,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x15,y15,x16,y16,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x17,y17,x18,y18,fill=random_colour_code(),width=random_width)
+    my_canvas.create_line(x19,y19,x20,y20,fill=random_colour_code(),width=random_width)    
 
     my_canvas.update()
     time.sleep(.08)
