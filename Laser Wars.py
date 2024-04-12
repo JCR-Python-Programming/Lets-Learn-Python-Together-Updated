@@ -5,9 +5,9 @@
 import time
 from random import*
 from tkinter import*
-my_window=Tk()
+laser_wars=Tk()
 
-my_window.title('LASER WARS')
+laser_wars.title('LASER WARS')
 
 def random_colour_code():
     hex_chars=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
@@ -17,8 +17,8 @@ def random_colour_code():
         colour_code=colour_code+choice(hex_chars)
     return colour_code
 
-my_canvas=Canvas(my_window,width=1920,height=1080,background='#000000')
-my_canvas.grid(row=0,column=0)
+laser_canvas=Canvas(laser_wars,width=1920,height=1080,background='#000000')
+laser_canvas.grid(row=0,column=0)
 
 while True:
     x1=randint(-500,1920)
@@ -72,19 +72,19 @@ while True:
     y20=randint(-500,1920)
     
     random_width=randint(0,15)
-    my_canvas.create_line(x1,y1,x2,y2,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x3,y3,x4,y4,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x5,y5,x6,y6,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x7,y7,x8,y8,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x9,y9,x10,y10,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x11,y11,x12,y12,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x13,y13,x14,y14,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x15,y15,x16,y16,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x17,y17,x18,y18,fill=random_colour_code(),width=random_width)
-    my_canvas.create_line(x19,y19,x20,y20,fill=random_colour_code(),width=random_width)    
+    laser_canvas.create_line(x1,y1,x2,y2,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x3,y3,x4,y4,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x5,y5,x6,y6,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x7,y7,x8,y8,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x9,y9,x10,y10,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x11,y11,x12,y12,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x13,y13,x14,y14,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x15,y15,x16,y16,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x17,y17,x18,y18,fill=random_colour_code(),width=random_width)
+    laser_canvas.create_line(x19,y19,x20,y20,fill=random_colour_code(),width=random_width)    
 
-    my_canvas.update()
+    laser_canvas.update()
     time.sleep(.08)
-    my_canvas.delete('all')
+    laser_canvas.delete('all')
 
-my_window.mainloop()
+laser_wars.mainloop()
