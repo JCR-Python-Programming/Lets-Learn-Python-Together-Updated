@@ -9,7 +9,7 @@ to be able to identify such errors from occurring.
 Please note: any Python programming examples, which are not 'mine', I will sternly give credit those of whom I've used examples from,
 such as Corey Schafer and Programming with Mosh.
 
-99% of anything else is all my very own, dedicated Python programming skills and works, which so far had taken me three years to fully start to understand
+99% of anything else is all my very own, dedicated Python programming skills and works, which so far had taken me six years to fully start to understand
 Object Oriented Programming Languages, such as Python.
 
 However, my "Python Programmer's Glossary Bible" By Joseph C. Richardson does not and will not contain any Python programming examples from others, unless others want to build onto it, knowingly first.
