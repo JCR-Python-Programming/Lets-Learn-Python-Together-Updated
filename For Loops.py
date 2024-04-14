@@ -1,9 +1,9 @@
 '''For-Loop Examples:'''
 '''
-Loops are instructions, which tells the computer to iterate/repeat a part of a \
-program a certain numbers of times before it stops. When a loop reaches its \
-final iteration, it stops and comes to an end. Loops make programming code \
-very efficient, without the manual redundancy on the programmer's part. Loops \
+Loops are instructions, which tells the computer to iterate/repeat a part of a
+program a certain numbers of times before it stops. When a loop reaches its
+final iteration, it stops and comes to an end. Loops make programming code
+very efficient, without the manual redundancy on the programmer's part. Loops
 can also manipulate data by incrementing it or decrementing it.
 '''
 # The 'for i in range(5):' for-loop causes the 'print' statement value to print 'Hello
