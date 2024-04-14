@@ -1,8 +1,9 @@
+import math
 from tkinter import*
 
 root=Tk()
 root.title('majestic calculator'.title())
-entry=Entry(root,width=35,borderwidth=5)
+entry=Entry(root,width=35,borderwidth=10)
 entry.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
 
 root.resizable(width=False,height=False)
