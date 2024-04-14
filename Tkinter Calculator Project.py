@@ -5,6 +5,8 @@ root.title('majestic calculator'.title())
 entry=Entry(root,width=35,borderwidth=5)
 entry.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
 
+root.resizable(width=False,height=False)
+
 def button_click(number):
     current=entry.get()
     entry.delete(0,END)
