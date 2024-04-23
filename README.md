@@ -1,5 +1,5 @@
 # README
-![image](https://user-images.githubusercontent.com/34896540/223653543-f49dc6af-a0b4-4fa6-8646-1a384483692b.png)
+![Binary Photo Circuit Board](https://github.com/JCR-Python-Programming/Lets-Learn-Python-Together-Updated/assets/34896540/b550eb8a-8e05-4276-b818-a579d238bb70)
 ![SCIENCE](https://github.com/ROBOMASTER-S1/Lets-Learn-Python-Together/assets/34896540/4d9df1e3-2b05-4d1e-bd9e-48c61483ea2f)
 Learn Python Programming with me.
 
