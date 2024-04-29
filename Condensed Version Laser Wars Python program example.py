@@ -31,7 +31,7 @@ while True:
             randint(-500+x,1920+x),
             randint(-500+x,1920+x),
             fill=random_colour_code(),
-            width=random_width)
+            width = random_width)
 
     laser_canvas.update()
     time.sleep(.08)
