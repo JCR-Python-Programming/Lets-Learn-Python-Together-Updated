@@ -21,7 +21,7 @@ colour = '#000000'
 w,h = 1920,1080
 r,c = 0,0
 rand1,rand2 = 0,15
-randint1,randint2 = -500,1920
+randint1,randint2 = -1920,1920
 loop = 20
 seconds = .08
 
