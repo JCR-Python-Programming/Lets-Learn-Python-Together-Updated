@@ -5,12 +5,12 @@
 from time import sleep as wait
 from random import*
 from tkinter import*
-laser_wars=Tk()
+laser_wars = Tk()
 
 laser_wars.title('LASER WARS')
 
 def random_colour_code():
-    hex_chars=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+    hex_chars = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
     colour_code='#'
 
     for i in range(0,6):
