@@ -26,10 +26,10 @@ while True:
         random_width=randint(0,15)
         x = randint(-1920,1920)
         laser_canvas.create_line(
-            randint(-500+x,1920+x),
-            randint(-500+x,1920+x),
-            randint(-500+x,1920+x),
-            randint(-500+x,1920+x),
+            randint(-1920+x,1920+x),
+            randint(-1920+x,1920+x),
+            randint(-1920+x,1920+x),
+            randint(-1920+x,1920+x),
             fill=random_colour_code(),
             width = random_width)
 
