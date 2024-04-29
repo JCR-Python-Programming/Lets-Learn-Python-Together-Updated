@@ -33,9 +33,10 @@ while True:
     for i in range(loop): # increse the for loop value to add more lasers on the screen output
         random_width=randint(rand1,rand2)
         x = randint(randint1,randint2)
-        laser_canvas.create_line(randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),\
-                                 randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),\
-                                 fill=random_colour_code(),width=random_width)
+        laser_canvas.create_line(
+            randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),
+            randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),
+            fill=random_colour_code(),width=random_width)
 
     laser_canvas.update();wait(seconds);laser_canvas.delete('all')
 
