@@ -8,6 +8,7 @@ from tkinter import*
 laser_wars = Tk()
 
 laser_wars.title('LASER WARS')
+everything = 'all'
 
 def random_colour_code():
     hex_chars = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
@@ -34,10 +35,15 @@ while True:
         random_width=randint(rand1,rand2)
         x = randint(randint1,randint2)
         laser_canvas.create_line(
-            randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),
-            randint(randint1+x,randint2+x),randint(randint1+x,randint2+x),
-            fill=random_colour_code(),width=random_width)
+            randint(randint1+x,randint2+x),
+            randint(randint1+x,randint2+x),
+            randint(randint1+x,randint2+x),
+            randint(randint1+x,randint2+x),
+            fill=random_colour_code(),
+            width = random_width)
 
-    laser_canvas.update();wait(seconds);laser_canvas.delete('all')
+    laser_canvas.update()
+    wait(seconds)
+    laser_canvas.delete(everything)
 
 laser_wars.mainloop()
