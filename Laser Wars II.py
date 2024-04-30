@@ -5,7 +5,7 @@
 import time
 from random import*
 from tkinter import*
-laser_wars =Tk()
+laser_wars = Tk()
 
 laser_wars.title('LASER WARS II')
 
