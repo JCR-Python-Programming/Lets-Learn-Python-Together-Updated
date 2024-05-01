@@ -22,6 +22,14 @@ If anyone has a Robomaster S1 from DJI, why not have some fun learning all about
 
 So why not have some fun and learn to program the Robomaster S1 with me. I will keep adding more and more Robomaster S1 Python programming examples.
 
+Please note: some of my Python files are in their experimental stages, such as my Tk calculator Python programs. As with all things we learn, we also have to learn to experiment with whatever we are learning first beforehand. I'm constantly learning Python programming every single day, and I have been doing such for almost seven years this Christmas day coming. I started to learn Object Oriented Programming back in 2017 on Christmas day. However, you are all more than welcome to explore all my Python programming experiments with me. I don't have anything worth protecting, I have no such software inventions I want to hide away from others, whatsoever; I'm just a simple Python programmer, who is constantly learning what this type of Object Oriented Programming is truly all about. I will keep on learning so I can keep on teaching and sharing all my Python code to EVERYONE, who wants to learn with me on GitHub.com, as well as on my YouTube channel. Click the links below to learn more.
+
+My YouTube Homepage:
+https://www.youtube.com/channel/UCe1gZh7Pa8KtIBudbqkMfdA
+
+My YouTube Community page:
+https://www.youtube.com/@Compuscience-Python-Prog-Exps/community
+
 Because, the more I can learn is the more fun we both can have.
 
 Joseph C. Richardson
