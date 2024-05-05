@@ -8,7 +8,7 @@
 
 # HIGHLIGHT AND COPY CODE, THEN PASTE INTO YOUR PREFERABLE PYTHON APP/IDLE
 
-import os,time,winsound
+import os,time,math,winsound
 
 text_colours=(
     '\x1b[31m', # index 0 = red
