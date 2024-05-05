@@ -8,7 +8,7 @@
 
 # HIGHLIGHT AND COPY CODE, THEN PASTE INTO YOUR PREFERABLE PYTHON APP/IDLE
 
-import os,math
+import os,time,math
 
 text_features=(
     'cls', # index 0 = clear screen
