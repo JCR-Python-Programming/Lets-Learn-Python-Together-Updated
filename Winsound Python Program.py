@@ -7,7 +7,7 @@
 
 # You must create a sounds folder so you can keep your Windows wave sounds
 # within the very same folder you will create your Windows wave sound Python
-# program example as shown here.
+# program example.
 
 # Step 1: Go to your C drive, then look for the Windows folder and open it.
 # Step 2: Then look for Media folder and open it.
