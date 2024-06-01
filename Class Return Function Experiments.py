@@ -97,4 +97,3 @@ for i in loop_mathematics:
     print(f'print smart: {i:,}\n'.title())
        
 input('Press "Enter" to close the prompt window.')
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
