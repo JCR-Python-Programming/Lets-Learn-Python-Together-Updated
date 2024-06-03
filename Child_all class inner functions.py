@@ -575,8 +575,8 @@ e=Class_all(
     'Class_all value1',
     'Class_all value2',
     'Class_all value3'
-
     )
+
 f=Class_all(
     'Class_all value1',
     'Class_all value2',
