@@ -6,6 +6,30 @@ works. However, you can always look up what things do, if you
 aren't sure of what does what. These Python program examples
 are as-is. What you see is what you get.
 '''
+# Python can show you what 'type' of string, integer and float values
+# you are using to help you understand what 'str', 'int', and 'float values
+# are.
+
+print(type('text string'))  # <class 'str'>
+
+print(type(1))  # <class 'int'>
+
+print(type(1.0))  # <class 'float'>
+
+# The 'dir( )' function shows you the complete directory of what you can
+# use within Python programs you create. Type and execute/run these
+# simple Python program examples and study the screen output.
+
+print(dir('text'))
+
+print(dir(1))
+
+print(dir(1.0))
+
+# Type help() for interactive help, or help(object) for help about object.
+
+print(help)
+
 # Let's create a class inheritance using only the class name 'Parent'.
 # This will allow us to inherit properties from the Parent class to the
 # inherited class called 'Inherit'. Any attributes in the Parent or main
