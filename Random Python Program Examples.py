@@ -955,3 +955,65 @@ for i in num:
 
 for i in num:
     print(i,i)
+
+# Use these dunder methods to calculate numbers, such as integers and floats.
+
+print(int.__add__(8,2))  # equals 10
+
+print(int.__sub__(8,2))  # equals 6
+
+print(int.__mul__(8,2))  # equals 16
+
+print(int.__floordiv__(8,2))  # equals 4
+
+print(int.__pow__(8,2))  # equals 64
+
+
+print(float.__add__(8.0,2.0))  # equals 10.0
+
+print(float.__sub__(8.0,2.0))  # equals 6.0
+
+print(float.__mul__(8.0,2.0))  # equals 16.0
+
+print(float.__floordiv__(8.0,2.0))  # equals 4.0
+
+print(float.__pow__(8.0,2.0))  # equals 64.0
+
+# Use the 'dir( ) function with nothing inside the parentheses
+
+print(dir())
+
+# screen output:
+'''
+['__annotations__', '__builtins__', '__doc__', '__file__', '__loader__',
+'__name__', '__package__', '__spec__']
+'''
+# Use the 'dir( ) function with a number inside the parentheses
+
+print(dir(1))
+
+# screen output:
+'''
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__',
+'__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__',
+'__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__',
+'__getnewargs__', '__gt__', '__hash__', '__index__', '__init__',
+'__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__',
+'__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__',
+'__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__',
+'__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__',
+'__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__',
+'__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__',
+'__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__',
+'as_integer_ratio', 'bit_length', 'conjugate', 'denominator', 'from_bytes',
+'imag', 'numerator', 'real', 'to_bytes']
+'''
+# Use the __str__ dunder method for text strings.
+
+print(str.__str__('text string'))
+
+# Use the __repr__ dunder method to represent integer and float strings.
+
+print(int.__repr__(8+2))
+
+print(float.__repr__(8.0+2.0))
