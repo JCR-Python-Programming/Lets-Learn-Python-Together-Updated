@@ -1095,3 +1095,43 @@ print(Dad('John','Smith',28,'Bass').fishing)
 print(Mom('Jane','Smith',23).age)
 
 print(Dad('John','Smith',28,'Pike').fishing)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a multiple inheritance class, called 'Child'. However,
+# we cannot use the super( ) function here. In the Child class we
+# only need to call the def __init__ parameters, without repeating
+# our code. Although, we do have to repeat the Mom and Dad class
+# code as shown below.
+
+class Mom:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+class Dad:  # inheritance variable 'Mom'
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+# Make the Child class have one attribute of its own. However,
+# the new Child class attribute 'playing' will only work with
+# the Child class. If you try to make the attribute 'playing' work
+# in the Mom and Dad class, it will not work. The Child class
+# has its own attributes that will only work within that class act.
+
+class Child(Mom,Dad):
+    def __init__(self,fname,lname,age,play):
+        Mom.__init__(self,fname,lname,age)
+        Dad.__init__(self,fname,lname,age)
+        self.playing=play  # one brand new attribute
+
+print(Mom('Jane','Smith',23).first_name)
+
+print(Dad('John','Smith',28).first_name)
+
+print(Child('Tommy','Smith',3,'Toy Cars').first_name)
+
+print(Child('Tommy','Smith',3,'Toy Cars').playing)
