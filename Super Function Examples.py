@@ -87,3 +87,11 @@ Sub_child2('Jane','Smith',23,'hair','blond','huge blue eyes.')
 print(Parent_main('John','Smith',23).first_name)
 print(Sub_child1('John','Smith',23,'German Shepherd','Black Cat','Parrot','Gold Fish').fish)
 print(Sub_child2('John','Smith',23,'Long','Brown','Blue').hair)
+
+a = Parent_main('John','Smith',23).first_name
+b = Sub_child1('John','Smith',23,'German Shepherd','Black Cat','Parrot','Gold Fish').fish
+c = Sub_child2('John','Smith',23,'Long','Brown','Blue').hair
+
+print(a)
+print(b)
+print(c)
