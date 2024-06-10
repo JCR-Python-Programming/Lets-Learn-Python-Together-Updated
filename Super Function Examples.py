@@ -85,5 +85,5 @@ Sub_child1('John','Smith',23,'Dog','Cat','Bird','Fish')
 Sub_child2('Jane','Smith',23,'hair','blond','huge blue eyes.')
 
 print(Parent_main('John','Smith',23).first_name)
-print(Sub_child1('John','Smith',23,'Shephard','Cute Cat','Cute Bird','nice fish').last_name)
-print(Sub_child2('John','Smith',23,'Long','Brown','Blue').age)
+print(Sub_child1('John','Smith',23,'German Shepherd','Black Cat','Parrot','Gold Fish').fish)
+print(Sub_child2('John','Smith',23,'Long','Brown','Blue').hair)
