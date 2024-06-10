@@ -1,8 +1,3 @@
-# Let's learn what the 'super()' function does, when we want to use
-# attributes from the Main class, if we want all our classes to be the
-# same. Let's use the 'super()' function to get rid of redundant attribute
-# code blocks, since they are all the same. Let's get real lazy now.
-
 # HIGHLIGHT AND COPY CODE, THEN PASTE INTO YOUR PREFERABLE PYTHON APP/IDLE
 
 class Main_class:
@@ -89,6 +84,6 @@ Parent_main('John','Smith',23)
 Sub_child1('John','Smith',23,'Dog','Cat','Bird','Fish')
 Sub_child2('Jane','Smith',23,'hair','blond','huge blue eyes.')
 
-print(Main_class('John','Smith',23).first_name)
-print(Sub_class1('John','Smith',23).last_name)
-print(Sub_class2('John','Smith',23).age)
+print(Parent_main('John','Smith',23).first_name)
+print(Sub_child1('John','Smith',23,'Shephard','Cute Cat','Cute Bird','nice fish').last_name)
+print(Sub_child2('John','Smith',23,'Long','Brown','Blue').age)
