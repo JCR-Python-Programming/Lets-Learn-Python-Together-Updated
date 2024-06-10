@@ -1,4 +1,4 @@
-# Let's create a class inheritance using only the class name 'Parent'.
+# Let's create a class inheritance using only the class name 'Person'.
 # This will allow us to inherit properties from the Parent class to the
 # inherited class called 'Inherit'. Any attributes in the Parent or main
 # class are all passed onto the inherited class called 'Inherit'
