@@ -1017,3 +1017,81 @@ print(str.__str__('text string'))
 print(int.__repr__(8+2))
 
 print(float.__repr__(8.0+2.0))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is the simplest way I could explain what the super( ) function does.
+# Take a look at the two examples and you will see how the super( ) function
+# makes it so you don't have to repeat all the class attributes in the Dad class
+
+# Without the super( ) function, you would have to repeat your code.
+
+class Mom:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+class Dad:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+print(Mom('Jane','Smith',23).first_name)
+
+print(Dad('John','Smith',28).first_name)
+
+# This is much better as not to repeat your code using the super( ) function.
+
+class Mom:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+class Dad(Mom):  # inheritance variable 'Mom'
+
+    def __init__(self,fname,lname,age):
+        super().__init__(fname,lname,age)  # no repeated attributes
+
+print(Mom('Jane','Smith',23).first_name)
+
+print(Dad('John','Smith',28).first_name)
+
+print(Mom('Jane','Smith',23).last_name)
+
+print(Dad('John','Smith',28).last_name)
+
+print(Mom('Jane','Smith',23).age)
+
+print(Dad('John','Smith',28).age)
+
+# As we did before, you can also add brand new attributes to the
+# Dad class.
+
+class Mom:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+class Dad(Mom):  # inheritance variable 'Mom'
+
+    def __init__(self,fname,lname,age,fishing):
+        super().__init__(fname,lname,age)
+        self.fishing=fishing  # one brand new attribute
+
+print(Mom('Jane','Smith',23).first_name)
+
+print(Dad('John','Smith',28,'Trout').fishing)
+
+print(Mom('Jane','Smith',23).last_name)
+
+print(Dad('John','Smith',28,'Bass').fishing)
+
+print(Mom('Jane','Smith',23).age)
+
+print(Dad('John','Smith',28,'Pike').fishing)
