@@ -1135,3 +1135,36 @@ print(Dad('John','Smith',28).first_name)
 print(Child('Tommy','Smith',3,'Toy Cars').first_name)
 
 print(Child('Tommy','Smith',3,'Toy Cars').playing)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some argument def function( ) examples.
+
+def arg_funct(fname,lname,age):
+    print(fname,lname,age)
+    
+arg_funct('John','Smith',30)
+
+# return one value with the return statement.
+
+def arg_funct(fname,lname,age):
+    return fname  # return each argument variable one at a time
+
+print(arg_funct('John','Smith',30))
+
+def arg_funct(fname,lname,age):
+    return lname  # return each argument variable one at a time
+
+print(arg_funct('John','Smith',30))
+
+def arg_funct(fname,lname,age):
+    return age  # return each argument variable one at a time
+
+print(arg_funct('John','Smith',30))
+
+# create a variable 'x' to return one value with the return statement.
+
+def arg_funct(fname,lname,age):
+    return fname  # return each argument variable one at a time as shown above
+
+x = arg_funct('John','Smith',30)
+
+print(x)
