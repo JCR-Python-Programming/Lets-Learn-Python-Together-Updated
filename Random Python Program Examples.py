@@ -1166,3 +1166,41 @@ def arg_funct(fname,lname,age):
 x = arg_funct('John','Smith',30)
 
 print(x)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some classes with argument def function( ) examples.
+
+class Function:
+    def arg_funct(fname,lname,age):
+        print(fname,lname,age)
+    
+Function.arg_funct('John','Smith',30)
+
+# return one value with the return statement.
+
+class Function:
+    def arg_funct(fname,lname,age):
+        return fname  # return each argument variable one at a time
+
+print(Function.arg_funct('John','Smith',30))
+
+class Function:
+    def arg_funct(fname,lname,age):
+        return lname  # return each argument variable one at a time
+
+print(Function.arg_funct('John','Smith',30))
+
+class Function:
+    def arg_funct(fname,lname,age):
+        return age  # return each argument variable one at a time
+
+print(Function.arg_funct('John','Smith',30))
+
+# create a variable 'x' to return one value with the return statement.
+
+class Function:
+    def arg_funct(fname,lname,age):
+        return fname  # return each argument variable one at a time as shown above
+
+x = Function.arg_funct('John','Smith',30)
+
+print(x)
