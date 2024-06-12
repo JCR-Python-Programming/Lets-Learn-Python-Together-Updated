@@ -29,7 +29,7 @@ print(dir(1.0))
 # Type help() for interactive help, or help(object) for help about object.
 
 print(help)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a class inheritance using only the class name 'Parent'.
 # This will allow us to inherit properties from the Parent class to the
 # inherited class called 'Inherit'. Any attributes in the Parent or main
@@ -61,7 +61,7 @@ my_variable1 = Person('John','Smith',23).first_name
 my_variable2 = Inherit('Joe','Swift',23).first_name
 
 print(my_variable1,my_variable2)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use three single quote marks at the beginning and
 # at the end of the print() function text.
 
@@ -121,8 +121,7 @@ print(my_text1,'\n\n'+my_text2)
 # or use plus '+' signs before and after the double '\n\n' line break
 
 print(my_text1+'\n\n'+my_text2)
-
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Person:
 
     def __init__(self,fname,lname,age):
@@ -176,7 +175,7 @@ print(my_variable.age)
 # Now we can keep things short and sweet with just one print( ) function.
 
 print(my_variable.first_name,my_variable.last_name,my_variable.age)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create classes with return def functions() inside them and call each one up.
 
 class Return_result_addition:
@@ -186,7 +185,7 @@ class Return_result_addition:
     addition = class_return_result_addition
 
 print(Return_result_addition.addition(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Return_result_subtraction:
     def class_return_result_subtraction(num1,num2):
         return int(num1 - num2)
@@ -194,7 +193,7 @@ class Return_result_subtraction:
     subtraction = class_return_result_subtraction
 
 print(Return_result_subtraction.subtraction(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Return_result_multiplication:
     def class_return_result_multiplication(num1,num2):
         return int(num1 * num2)
@@ -202,7 +201,7 @@ class Return_result_multiplication:
     multiplication = class_return_result_multiplication
 
 print(Return_result_multiplication.multiplication(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Return_result_division:
     def class_return_result_division(num1,num2):
         return int(num1 / num2)
@@ -210,7 +209,7 @@ class Return_result_division:
     division = class_return_result_division
 
 print(Return_result_division.division(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Return_result_exponent:
     def class_return_result_exponent(num1,num2):
         return int(num1 ** num2)
@@ -218,7 +217,7 @@ class Return_result_exponent:
     exponent = class_return_result_exponent
 
 print(Return_result_exponent.exponent(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Return_result_power:
     def class_return_result_pow(num1,num2):
         return int(pow(num1,num2))
@@ -226,7 +225,7 @@ class Return_result_power:
     power = class_return_result_pow
 
 print(Return_result_power.power(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a Child class that inherits all the other def functions of the
 # upper parent class attributes.
 
@@ -244,7 +243,7 @@ print(Inherit_return_result.multiplication(8,2))  # call me up
 print(Inherit_return_result.division(8,2))  # call me up
 print(Inherit_return_result.exponent(8,2))  # call me up
 print(Inherit_return_result.power(8,2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's get lazy and shorten some Python code within the print() function
 # with a tuple( ). Note: you can also create a list[ ] if you like, but a tuple( )
 # is what we are using in our Python program example below.
@@ -273,7 +272,7 @@ print(class_inherit[2](num1,num2))  # call me up
 print(class_inherit[3](num1,num2))  # call me up
 print(class_inherit[4](num1,num2))  # call me up
 print(class_inherit[5](num1,num2))  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's get real lazy and shorten some more Python code within the print( )
 # function using a for loop to iterate through the 'class_inherit( ) tuple.
 
@@ -315,7 +314,7 @@ class Grandpa:
 Grandpa.first_def_function_grandpa()  # call me up
 Grandpa.second_def_function_grandpa()  # call me up
 Grandpa.third_def_function_grandpa()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Grandma:
     def first_def_function_grandma():
         print("I'm the first def function() within the Grandma class")
@@ -327,7 +326,7 @@ class Grandma:
 Grandma.first_def_function_grandma()  # call me up
 Grandma.second_def_function_grandma()  # call me up
 Grandma.third_def_function_grandma()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Dad:
     def first_def_function_dad():
         print("I'm the first def function() within the Dad class")
@@ -339,7 +338,7 @@ class Dad:
 Dad.first_def_function_dad()  # call me up
 Dad.second_def_function_dad()  # call me up
 Dad.third_def_function_dad()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Mom:
     def first_def_function_mom():
         print("I'm the first def function() within the Mom class")
@@ -351,7 +350,7 @@ class Mom:
 Mom.first_def_function_mom()  # call me up
 Mom.second_def_function_mom()  # call me up
 Mom.third_def_function_mom()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a Child class that inherits all the other def functions of the
 # upper parent class attributes.
 
@@ -373,7 +372,7 @@ Child.third_def_function_dad()  # call me up
 Child.first_def_function_mom()  # call me up
 Child.second_def_function_mom()  # call me up
 Child.third_def_function_mom()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's shorten these Python commands down using variables
 
 gpf1 = Child.first_def_function_grandpa
@@ -383,7 +382,7 @@ gpf3 = Child.third_def_function_grandpa
 gpf1()  # call me up
 gpf2()  # call me up
 gpf3()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 gmf1 = Child.first_def_function_grandma
 gmf2 = Child.second_def_function_grandma
 gmf3 = Child.third_def_function_grandma
@@ -391,7 +390,7 @@ gmf3 = Child.third_def_function_grandma
 gmf1()  # call me up
 gmf2()  # call me up
 gmf3()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 df1 = Child.first_def_function_dad
 df2 = Child.second_def_function_dad
 df3 = Child.third_def_function_dad
@@ -399,7 +398,7 @@ df3 = Child.third_def_function_dad
 df1()  # call me up
 df2()  # call me up
 df3()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 mf1 = Child.first_def_function_mom
 mf2 = Child.second_def_function_mom
 mf3 = Child.third_def_function_mom
@@ -407,7 +406,7 @@ mf3 = Child.third_def_function_mom
 mf1()  # call me up
 mf2()  # call me up
 mf3()  # call me up
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create an immutable default tuple for loop of our class def functions, using the
 # hard return backslash ' \ ' instead of using parentheses ' ( ) '
 
@@ -581,7 +580,7 @@ Child.gp()
 Child.gm()
 Child.d()
 Child.m()
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here are some easy ways to create math operations with return functions.
 
 def addition(num1,num2):
