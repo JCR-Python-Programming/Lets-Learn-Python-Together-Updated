@@ -15,7 +15,7 @@ print(type('text string'))  # <class 'str'>
 print(type(1))  # <class 'int'>
 
 print(type(1.0))  # <class 'float'>
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # The 'dir( )' function shows you the complete directory of what you can
 # use within Python programs you create. Type and execute/run these
 # simple Python program examples and study the screen output.
@@ -79,7 +79,7 @@ function. That way you don't have create more print()
 functions. All you need to do is press Enter to begin
 a new line of text within your one and only print()
 function. You can type as much text as you please.""")
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use one variable to satisfy the print() function.
 
 my_text = '''print things on different lines with just one print()
@@ -97,7 +97,7 @@ a new line of text within your one and only print()
 function. You can type as much text as you please."""
 
 print(my_text)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create two packed variables with different text paragraphs
 # in them.
 
@@ -138,7 +138,7 @@ print(person1.first_name,person1.last_name,person1.age)
 print(person2.first_name,person2.last_name,person2.age)
 
 print(person3.first_name,person3.last_name,person3.age)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a class that has def function( ) with attributes in it.
 # Use the __init__( ) initialize constructor to be able to use the
 # def function's attributes: self, fname, lname and age within
@@ -442,7 +442,6 @@ class_def_functions = \
 for i in class_def_functions:
     i()
 
-
 class Grandma:
     def gm():
         print("I'm the Grandma class")
@@ -458,8 +457,7 @@ class Mom:
 class Child(Grandpa,Grandma,Dad,Mom):
      def c():
          print('I\'m the Child class act')
-
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Class inheritance with the print() function
 
 class Grandpa:
@@ -515,7 +513,7 @@ print(Child.gp)
 print(Child.gm)
 print(Child.d)
 print(Child.m)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Class inheritance with the def function()
 
 class Grandpa:
@@ -628,7 +626,7 @@ print(pow_expon(5,4)) # These are the actual vales. five to the same power of fo
 
 add_nums = 1,2,3,4,5,6,7,8,9  # default tuple
 print(sum(add_nums))  # equals '45'
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try these Python program return function examples.
 
 def my_first_return_value(book): # (one variable parameter)
@@ -654,7 +652,7 @@ print(my_third_return_value(
     "placeholder argument value for the variable 'book'",
     "placeholder argument value for the variable 'Python'",
     "placeholder argument value for the variable 'program'"))
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn some def functions that return number values
 
 def my_first_return_num(num): # (one variable parameter)
@@ -678,7 +676,7 @@ print(my_third_return_num(
     "placeholder argument value for the variable 'num1'",
     "placeholder argument value for the variable 'num2'",
     "placeholder argument value for the variable 'num3'"))
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try these example Python programs out. Refer to the post below of what functions and
 # def functions are all about.
 
@@ -705,6 +703,7 @@ my_third_function_variables(
     'placeholder argument variable1', # value 1
     'placeholder argument variable2', # value 2
     'placeholder argument variable3') # value 3
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 For those who are very new to Python programming or just programming
 at all. If you are getting into Python, you will often hear the word called:
@@ -755,7 +754,7 @@ def my_third_function():
         print('You can create your own Python code inside def functions.')  # print() function
 
 my_third_function()
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # TIP: After using the colon : in a def function, just press your Enter Key on your keyboard
 # and the spacebar will be automatically indented for you. Keep all the indents the same.
 # On the next press of he Enter key, if you have other commands you want inside your
@@ -1066,7 +1065,7 @@ print(Dad('John','Smith',28).last_name)
 print(Mom('Jane','Smith',23).age)
 
 print(Dad('John','Smith',28).age)
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # As we did before, you can also add brand new attributes to the
 # Dad class.
 
