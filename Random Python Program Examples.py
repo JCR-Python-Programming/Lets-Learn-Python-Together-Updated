@@ -1360,3 +1360,80 @@ for index1,index2,index3 in zip(fnames,lnames,ages):
         Return_all_class_functions.arg_funct1(index1,index2,index3),
         Return_all_class_functions.arg_funct2(index1,index2,index3),
         Return_all_class_functions.arg_funct3(index1,index2,index3))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some classes with attributes and return argument
+# def functions( ), along with a 'child' class act Python program example.
+
+class Return_class_function1:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct1(fname,lname,age):
+        return fname  # return each argument variable one at a time
+
+class Return_class_function2:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct2(fname,lname,age):
+        return lname  # return each argument variable one at a time
+
+class Return_class_function3:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct3(fname,lname,age):
+        return age  # return each argument variable one at a time
+
+class Return_all_class_functions(
+    Return_class_function1,
+    Return_class_function2,
+    Return_class_function3):
+
+    def __init__(self,fname,lname,age):
+        Return_class_function1.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function2.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function3.__init__(first_name,last_name,age)  # inheritance
+
+# Let's now create three tuples called fnames, lnames and ages to use within
+# 'enumerate( )' functions. Here are three separate enumerate( ) function examples
+# for the three individual classes.
+
+fnames = 'Jane','John','Ron'
+lnames = 'Smith','Smith','Smith'
+ages = 30,35,10
+
+for index,fname_lname_age in enumerate(fnames):
+    print(Return_class_function1.arg_funct1(
+        fname_lname_age,fname_lname_age,fname_lname_age))
+
+for index,fname_lname_age in enumerate(lnames):
+    print(Return_class_function2.arg_funct2(
+        fname_lname_age,fname_lname_age,fname_lname_age))
+
+for index,fname_lname_age in enumerate(ages):
+    print(Return_class_function3.arg_funct3(
+        fname_lname_age,fname_lname_age,fname_lname_age))
+
+# Let's use the child class acts to do as we did in the examples above.
+
+for index,fname_lname_age in enumerate(fnames):
+    print(Return_class_function1.arg_funct1(
+        fname_lname_age,fname_lname_age,fname_lname_age))
+
+for index,fname_lname_age in enumerate(lnames):
+    print(Return_class_function2.arg_funct2(
+        fname_lname_age,fname_lname_age,fname_lname_age))
+
+for index,fname_lname_age in enumerate(ages):
+    print(Return_class_function3.arg_funct3(
+        fname_lname_age,fname_lname_age,fname_lname_age))
