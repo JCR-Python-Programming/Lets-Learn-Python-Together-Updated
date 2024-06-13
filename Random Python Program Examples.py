@@ -1204,3 +1204,58 @@ class Function:
 x = Function.arg_funct('John','Smith',30)
 
 print(x)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some classes with attributes and return argument
+# def functions( ), along with a 'child' class act Python program example.
+
+class Return_class_function1:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+        
+    def arg_funct1(fname,lname,age):
+        return fname  # return each argument variable one at a time
+
+class Return_class_function2:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+        
+    def arg_funct2(fname,lname,age):
+        return lname  # return each argument variable one at a time
+
+class Return_class_function3:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+        
+    def arg_funct3(fname,lname,age):
+        return age  # return each argument variable one at a time
+
+class Return_all_class_functions(
+    Return_class_function1,
+    Return_class_function2,
+    Return_class_function3):
+    
+    def __init__(self,fname,lname,age):
+        Return_class_function1.__init__(self,first_name,last_name,age)  # inheritance
+        Return_class_function2.__init__(self,first_name,last_name,age)  # inheritance
+        Return_class_function3.__init__(self,first_name,last_name,age)  # inheritance
+
+# print out each individual class by themselves
+
+print(Return_class_function1.arg_funct1('Jane','Smith',30))
+print(Return_class_function2.arg_funct2('John','Smith',35))
+print(Return_class_function3.arg_funct3('Ron','Smith',10))
+
+# print out the Return_all_class_functions child class acts
+
+print(Return_all_class_functions.arg_funct1('Jane','Smith',30))
+print(Return_all_class_functions.arg_funct2('John','Smith',35))
+print(Return_all_class_functions.arg_funct3('Ron','Smith',10))
