@@ -1259,3 +1259,104 @@ print(Return_class_function3.arg_funct3('Ron','Smith',10))
 print(Return_all_class_functions.arg_funct1('Jane','Smith',30))
 print(Return_all_class_functions.arg_funct2('John','Smith',35))
 print(Return_all_class_functions.arg_funct3('Ron','Smith',10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some classes with attributes and return argument
+# def functions( ), along with a 'child' class act Python program example.
+
+class Return_class_function1:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct1(fname,lname,age):
+        return fname  # return each argument variable one at a time
+
+class Return_class_function2:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct2(fname,lname,age):
+        return lname  # return each argument variable one at a time
+
+class Return_class_function3:
+
+    def __init__(self,fname,lname,age):
+        self.first_name=fname  # attribute
+        self.last_name=lname  # attribute
+        self.age=age  # attribute
+
+    def arg_funct3(fname,lname,age):
+        return age  # return each argument variable one at a time
+
+class Return_all_class_functions(
+    Return_class_function1,
+    Return_class_function2,
+    Return_class_function3):
+
+    def __init__(self,fname,lname,age):
+        Return_class_function1.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function2.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function3.__init__(first_name,last_name,age)  # inheritance
+
+# Let's now create three tuples called fnames, lnames and ages to use within
+# 'zip( )' functions. Here are three separate zip( ) function examples for the three
+# individual classes.
+
+fnames = 'Jane','John','Ron'
+lnames = 'Smith','Smith','Smith'
+ages = 30,35,10
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_class_function1.arg_funct1(index1,index2,index3))
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_class_function2.arg_funct2(index1,index2,index3))
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_class_function3.arg_funct3(index1,index2,index3))
+
+# Here are three separite zip( ) function examples for the three child class acts.
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_all_class_functions.arg_funct1(index1,index2,index3))
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_all_class_functions.arg_funct2(index1,index2,index3))
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_all_class_functions.arg_funct3(index1,index2,index3))
+
+# Let's shrink down these Python program examples, using just one zip( ) function.
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_class_function1.arg_funct1(index1,index2,index3))
+    print(Return_class_function2.arg_funct2(index1,index2,index3))
+    print(Return_class_function3.arg_funct3(index1,index2,index3))
+
+# Let's shrink down these Python program examples, using just one zip( ) function.
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(Return_all_class_functions.arg_funct1(index1,index2,index3))
+    print(Return_all_class_functions.arg_funct2(index1,index2,index3))
+    print(Return_all_class_functions.arg_funct3(index1,index2,index3))
+
+# Let's shrink down this Python program even more, with just one print( ) function.
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(
+        Return_class_function1.arg_funct1(index1,index2,index3),
+        Return_class_function2.arg_funct2(index1,index2,index3),
+        Return_class_function3.arg_funct3(index1,index2,index3))
+
+# Let's shrink down this Python program even more, with just one print( ) function.
+
+for index1,index2,index3 in zip(fnames,lnames,ages):
+    print(
+        Return_all_class_functions.arg_funct1(index1,index2,index3),
+        Return_all_class_functions.arg_funct2(index1,index2,index3),
+        Return_all_class_functions.arg_funct3(index1,index2,index3))
