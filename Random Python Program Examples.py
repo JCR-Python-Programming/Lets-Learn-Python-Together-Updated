@@ -1244,9 +1244,9 @@ class Return_all_class_functions(
     Return_class_function3):
     
     def __init__(self,fname,lname,age):
-        Return_class_function1.__init__(self,first_name,last_name,age)  # inheritance
-        Return_class_function2.__init__(self,first_name,last_name,age)  # inheritance
-        Return_class_function3.__init__(self,first_name,last_name,age)  # inheritance
+        Return_class_function1.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function2.__init__(first_name,last_name,age)  # inheritance
+        Return_class_function3.__init__(first_name,last_name,age)  # inheritance
 
 # print out each individual class by themselves
 
