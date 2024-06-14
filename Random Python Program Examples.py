@@ -1437,3 +1437,18 @@ for index,fname_lname_age in enumerate(lnames):
 for index,fname_lname_age in enumerate(ages):
     print(Return_class_function3.arg_funct3(
         fname_lname_age,fname_lname_age,fname_lname_age))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# You can use Emojis in Python. I just discovered this on my own, just to see if
+# it would work. And it does work! WOW!! Use YouTube Emojis in your very own
+# Python program examples. Use them for creating logical programs that if
+# the user doesn't press the right key, you can program the Emojis to make
+# an angry face. If the user does what he wants, them make the Emojis make
+# a happy face and so on. Who knows? I just might create us a Python program
+# to do such. Copy and then paste this program into your Python App and
+# execute/run it and see what happens. Double click the file to open it so you
+# can see the colour of the Emojis face. Save the file as Emojis and run it.
+
+print('I am almost a complete Walking Human Computer Science \
+Research Laboratory Machine on Two Legs. 😁')
+
+input('Press Enter to exit the program')
