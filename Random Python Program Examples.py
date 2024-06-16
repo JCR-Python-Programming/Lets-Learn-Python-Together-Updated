@@ -1017,7 +1017,7 @@ print(int.__repr__(8+2))
 print(float.__repr__(8.0+2.0))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is a simple way to learn multi class inheritance. The first example will
-# demonstrate this without the use of the super( ) function, and the next exmaple
+# demonstrate this without the use of the super( ) function, and the next example
 # will demonstrate the use of the super( ) function with class inheritance.
 
 class Mom:
@@ -1036,10 +1036,10 @@ class Child(Mom,Dad): # Multi Inheritance
         Dad.__init__(self,name,age)  # inheritance
 
 print(Mom('Jan',30).name)
-print(Dad('Jan',30).age)
+print(Dad('John',35).age)
 
 print(Child('Jan',30).name)
-print(Child('Jan',30).age)
+print(Child('John',35).age)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Unlike the class example above, the super( ) function is very useful in that you
 # don't have to repeat your class attributes in the 'Dad' class and the 'Child' class act.
@@ -1058,10 +1058,66 @@ class Child(Mom):  # class inheritance variable
         super().__init__(name,age)  # super() calls the __init__ method
 
 print(Mom('Jan',30).name)
-print(Dad('Jan',30).age)
+print(Dad('John',35).age)
 
 print(Child('Jan',30).name)
-print(Child('Jan',30).age)
+print(Child('Joh',35).age)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Here is a simple way to learn multi class inheritance. The first example will
+# demonstrate this without the use of the super( ) function, and the next example
+# will demonstrate the use of the super( ) function with class inheritance.
+# We will use variables this time for the print( ) functions.
+
+class Mom:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+
+class Dad:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+
+class Child(Mom,Dad): # Multi Inheritance
+    def __init__(self,name,age):
+        Mom.__init__(self,name,age)  # inheritance
+        Dad.__init__(self,name,age)  # inheritance
+        
+variable1 = Mom('Jan',30).name
+variable2 = Dad('John',35).age
+variable3 = Child('Jan',30).name
+variable4 = Child('John',35).age
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Unlike the class example above, the super( ) function is very useful in that you
+# don't have to repeat your class attributes in the 'Dad' class and the 'Child' class act.
+
+class Mom:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+
+class Dad(Mom):  # class inheritance variable
+     def __init__(self,name,age):
+        super().__init__(name,age)  # super() calls the __init__ method
+
+class Child(Mom):  # class inheritance variable
+    def __init__(self,name,age):
+        super().__init__(name,age)  # super() calls the __init__ method
+
+variable1 = Mom('Jan',30).name
+variable2 = Dad('John',35).age
+variable3 = Child('Jan',30).name
+variable4 = Child('John',35).age
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is the simplest way I could explain what the super( ) function does.
 # Take a look at the two examples and you will see how the super( ) function
