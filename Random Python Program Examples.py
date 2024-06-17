@@ -373,7 +373,7 @@ Child.first_def_function_mom()  # call me up
 Child.second_def_function_mom()  # call me up
 Child.third_def_function_mom()  # call me up
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's shorten these Python commands down using variables
+# Let's shorten these Python commands down using variables.
 
 gpf1 = Child.first_def_function_grandpa
 gpf2 = Child.second_def_function_grandpa
@@ -1016,6 +1016,142 @@ print(int.__repr__(8+2))
 
 print(float.__repr__(8.0+2.0))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is a skeletal scheme of how to create classes with sub classes,
+# along with a child class act. Keep this class scheme as something
+# to easily memorize, which will help you when you need to refer to
+# it. Note: you can create just one class if you like as well. This class
+# scheme shows you the complete class sets, should you wish to use
+# them all. I hope this will help those who are new to creating classes,
+# such as myself am; I'm still pretty new to adapting to creating classes.
+# You can also create as many sub classes as you please. Just make
+# sure you give the child class act all the sub classes you create, along
+# with the Main class, which comes first in your child class inheritance
+# variables. Other than this, go Crazy and create your own class acts.
+
+class Main_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Sub_class1:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Sub_class2:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Sub_class3:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Sub_class4:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class All_classes(
+    Main_class,Sub_class1,
+    Sub_class2,Sub_class3,
+    Sub_class4): # Multi Inheritance
+    
+    def __init__(self,arg1,arg2,arg3):
+        Main_class.__init__(self,arg1,arg2,arg3)  # inheritance
+        Sub_class1.__init__(self,arg1,arg2,arg3)  # inheritance
+        Sub_class2.__init__(self,arg1,arg2,arg3)  # inheritance
+        Sub_class3.__init__(self,arg1,arg2,arg3)  # inheritance
+        Sub_class4.__init__(self,arg1,arg2,arg3)  # inheritance
+
+print(Main_class('argument1','argument2','argument3').arg1)
+print(Main_class('argument1','argument2','argument3').arg2)
+print(Main_class('argument1','argument2','argument3').arg3)
+
+print(Sub_class1('argument1','argument2','argument3').arg1)
+print(Sub_class1('argument1','argument2','argument3').arg2)
+print(Sub_class1('argument1','argument2','argument3').arg3)
+
+print(Sub_class2('argument1','argument2','argument3').arg1)
+print(Sub_class2('argument1','argument2','argument3').arg2)
+print(Sub_class2('argument1','argument2','argument3').arg3)
+
+print(Sub_class3('argument1','argument2','argument3').arg1)
+print(Sub_class3('argument1','argument2','argument3').arg2)
+print(Sub_class3('argument1','argument2','argument3').arg3)
+
+print(Sub_class4('argument1','argument2','argument3').arg1)
+print(Sub_class4('argument1','argument2','argument3').arg2)
+print(Sub_class4('argument1','argument2','argument3').arg3)
+
+print(All_classes('argument1','argument2','argument3').arg1)
+print(All_classes('argument1','argument2','argument3').arg2)
+print(All_classes('argument1','argument2','argument3').arg3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is a skeletal scheme of how to create classes with sub classes,
+# along with a child class act. Keep this class scheme as something
+# to easily memorize, which will help you when you need to refer to
+# it. Note: you can create just one class if you like as well. This class
+# scheme shows you the complete class sets, should you wish to use
+# them all. I hope this will help those who are new to creating classes,
+# such as myself am; I'm still pretty new to adapting to creating classes.
+# You can also create as many sub classes as you please.
+
+# The super( ) function reduces redundant Python code, so you can keep
+# Python code nice and 'DRY!' ( "Don't Repeat Yourself!" ) 
+
+class Main_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Sub_class1(Main_class):  # class inheritance variable
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+class Sub_class2(Main_class):  # class inheritance variable
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+class Sub_class3(Main_class):  # class inheritance variable
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+class Sub_class4(Main_class):  # class inheritance variable
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+class All_classes(Main_class):  # class inheritance variable
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+print(Sub_class1('argument1','argument2','argument3').arg1)
+print(Sub_class1('argument1','argument2','argument3').arg2)
+print(Sub_class1('argument1','argument2','argument3').arg3)
+
+print(Sub_class2('argument1','argument2','argument3').arg1)
+print(Sub_class2('argument1','argument2','argument3').arg2)
+print(Sub_class2('argument1','argument2','argument3').arg3)
+
+print(Sub_class3('argument1','argument2','argument3').arg1)
+print(Sub_class3('argument1','argument2','argument3').arg2)
+print(Sub_class3('argument1','argument2','argument3').arg3)
+
+print(Sub_class4('argument1','argument2','argument3').arg1)
+print(Sub_class4('argument1','argument2','argument3').arg2)
+print(Sub_class4('argument1','argument2','argument3').arg3)
+
+print(All_classes('argument1','argument2','argument3').arg1)
+print(All_classes('argument1','argument2','argument3').arg2)
+print(All_classes('argument1','argument2','argument3').arg3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is a simple way to learn multi class inheritance. The first example will
 # demonstrate this without the use of the super( ) function, and the next example
 # will demonstrate the use of the super( ) function with class inheritance.
@@ -1082,7 +1218,7 @@ class Child(Mom,Dad): # Multi Inheritance
     def __init__(self,name,age):
         Mom.__init__(self,name,age)  # inheritance
         Dad.__init__(self,name,age)  # inheritance
-        
+
 variable1 = Mom('Jan',30).name
 variable2 = Dad('John',35).age
 variable3 = Child('Jan',30).name
@@ -1237,11 +1373,153 @@ print(Child('Tommy','Smith',3,'Toy Cars').first_name)
 
 print(Child('Tommy','Smith',3,'Toy Cars').playing)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try these class acts Python program examples with return statements.
+
+class Mom:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+    def mom(self):
+        return "I'm still your Mom Son!"
+
+class Dad:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+    def dad(self):
+        return "I'm still your Dad Son!"
+
+class Child(Mom,Dad): # Multi Inheritance
+    def __init__(self,name,age):
+        Mom.__init__(self,name,age)  # inheritance
+        Dad.__init__(self,name,age)  # inheritance
+    def child(self):
+        return "I'm still your Child, Mom and Dad!"
+
+variable1 = Mom('Jane',30).name
+variable2 = Dad('John',35).age
+variable3 = Child('Jane',30).name
+variable4 = Child('John',35).age
+
+variable5 = Mom('Jane',30).mom()
+variable6 = Dad('John',35).dad()
+variable7 = Child('Jane',30).mom()
+variable8 = Child('John',35).dad()
+variable9 = Child('George',10).child()
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+print(variable5)
+print(variable6)
+print(variable7)
+print(variable8)
+print(variable9)
+
+# You can also use these, via the return statements.
+
+print(Mom.mom('placeholder'))  # return argument placeholder value
+print(Dad.dad('placeholder'))  # return argument placeholder value
+print(Child.mom('placeholder'))  # return argument placeholder value
+print(Child.dad('placeholder'))  # return argument placeholder value
+print(Child.child('placeholder'))  # return argument placeholder value
+
+# Let's use variables to shrink down our print( ) functions.
+
+variable1 = Mom.mom('placeholder')  # return argument placeholder value
+variable2 = Dad.dad('placeholder')  # return argument placeholder value
+variable3 = Child.mom('placeholder')  # return argument placeholder value
+variable4 = Child.dad('placeholder')  # return argument placeholder value
+variable5 = Child.child('placeholder')  # return argument placeholder value
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+print(variable5)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try these class acts Python program examples with return statements.
+# and the super( ) function. Note: the Child class has to call up the Dad class
+# when using return statements and the super( ) function. The Child class
+# calls up the Dad class and the Dad class calls up the Mom class. This allows
+# the Child class to have full access to the Mom and Dad class; the Child calls
+# the Dad class and the Dad class calls the Mom class.
+
+class Mom:
+    def __init__(self,name,age):
+        self.name=name  # attribute
+        self.age=age  # attribute
+    def mom(self):
+        return "I'm still your Mom Son!"
+
+class Dad(Mom):  # call the Mom class inheritance variable
+     def __init__(self,name,age):
+        super().__init__(name,age)  # super() calls the __init__ method
+     def dad(self):
+         return "I'm still your Dad Son!"
+
+class Child(Dad):  # call the Dad class inheritance variable
+    def __init__(self,name,age):
+        super().__init__(name,age)  # super() calls the __init__ method
+    def child(self):
+        return "I'm still your Child, Mom and Dad!"
+
+# Let's use variables to shrink down our print( ) functions.
+
+variable1 = Mom('Jan',30).name
+variable2 = Dad('John',35).age
+variable3 = Child('Jan',30).name
+variable4 = Child('John',35).age
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+
+# Let's use variables to shrink down our print( ) functions.
+
+variable1 = Mom('Jane',30).name
+variable2 = Dad('John',35).age
+variable3 = Child('Jane',30).name
+variable4 = Child('John',35).age
+
+variable5 = Mom('Jane',30).mom()
+variable6 = Dad('John',35).dad()
+variable7 = Child('Jane',30).mom()
+variable8 = Child('John',35).dad()
+variable9 = Child('George',10).child()
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+print(variable5)
+print(variable6)
+print(variable7)
+print(variable8)
+print(variable9)
+
+# You can also use these, via the return statements.
+# Let's use variables to shrink down our print( ) functions.
+
+variable1 = Mom.mom('placeholder')  # return argument placeholder value
+variable2 = Dad.dad('placeholder')  # return argument placeholder value
+variable3 = Child.mom('placeholder')  # return argument placeholder value
+variable4 = Child.dad('placeholder')  # return argument placeholder value
+variable5 = Child.child('placeholder')  # return argument placeholder value
+
+print(variable1)
+print(variable2)
+print(variable3)
+print(variable4)
+print(variable5)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create some argument def function( ) examples.
 
 def arg_funct(fname,lname,age):
     print(fname,lname,age)
-    
+
 arg_funct('John','Smith',30)
 
 # return one value with the return statement.
@@ -1275,7 +1553,7 @@ print(x)
 class Function:
     def arg_funct(fname,lname,age):
         print(fname,lname,age)
-    
+
 Function.arg_funct('John','Smith',30)
 
 # return one value with the return statement.
@@ -1317,7 +1595,7 @@ class Return_class_function1:
         self.first_name=fname  # attribute
         self.last_name=lname  # attribute
         self.age=age  # attribute
-        
+
     def arg_funct1(fname,lname,age):
         return fname  # return each argument variable one at a time
 
@@ -1327,7 +1605,7 @@ class Return_class_function2:
         self.first_name=fname  # attribute
         self.last_name=lname  # attribute
         self.age=age  # attribute
-        
+
     def arg_funct2(fname,lname,age):
         return lname  # return each argument variable one at a time
 
@@ -1337,7 +1615,7 @@ class Return_class_function3:
         self.first_name=fname  # attribute
         self.last_name=lname  # attribute
         self.age=age  # attribute
-        
+
     def arg_funct3(fname,lname,age):
         return age  # return each argument variable one at a time
 
@@ -1345,7 +1623,7 @@ class Return_all_class_functions(
     Return_class_function1,
     Return_class_function2,
     Return_class_function3):
-    
+
     def __init__(self,fname,lname,age):
         Return_class_function1.__init__(first_name,last_name,age)  # inheritance
         Return_class_function2.__init__(first_name,last_name,age)  # inheritance
