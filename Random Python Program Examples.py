@@ -1016,6 +1016,312 @@ print(int.__repr__(8+2))
 
 print(float.__repr__(8.0+2.0))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is a skeletal scheme of how to create a single class.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+print(Single_class('argument1','argument2','argument3').arg1)
+
+# This is a skeletal scheme of how to create a single class without
+# attributes but only a def function( ) inside it.
+
+class Single_class:
+    def inner_function():
+        print('Add me to the Single class.')
+
+Single_class.inner_function()
+
+# This is a skeletal scheme of how to create a single class with
+# attributes and a def function( ) inside it. Note: you cannot call
+# the def function, 'inner_function( )' at the same time you call
+# the 'Single_class' attributes. Instead, you have to call each
+# one separately.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+    def inner_function():
+        print('Add me to the Single class.')
+
+print(Single_class('argument1','argument2','argument3').arg1)
+
+Single_class.inner_function()
+
+# It does not matter the order of how you place the inner def
+# function( ) and the Single_class attributes. However, you still
+# cannot call both at the same time. The example above is less
+# confusing looking than the example shown here.
+
+class Single_class:
+    def inner_function():
+        print('Add me to the Single class.')
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+print(Single_class('argument1','argument2','argument3').arg1)
+
+Single_class.inner_function()
+
+# Let's create a def function with a return statement inside the
+# Single_class act. Once again, you cannot call both the Single_class
+# attributes and the inner def function( ) at the same time. However,
+# in this example below, it does matter about the order you place
+# the single class attributes in. Once you create a return function,
+# the cursor will automatically jump right out of the indented
+# class Python code when the 'Enter key' is pressed.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+    def inner_function(self):
+        return 'Return me to the Single class.'
+
+print(Single_class('argument1','argument2','argument3').arg1)
+
+print(Single_class.inner_function('argument placeholder value'))
+
+# Let's create a 'Super_class' and invoke the 'super( ) function so we
+# don't have to repeat any attributes with in our super_function_class.
+
+class Super_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+# The super( ) function reduces redundant Python code, so you can keep
+# Python code nice and 'DRY!' ( "Don't Repeat Yourself!" )
+
+class Super_function_class(Super_class):
+    def __init__(self,arg1,arg2,arg3):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+
+print(Super_function_class('argument1','argument2','argument3').arg1)
+
+# Let's create the same 'Super_class' act, but let's now expand/add to the
+# 'Super_function_class' act with attributes of its own, while not having
+# to repeat the attributes from the 'Super_class' act.
+
+class Super_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+class Super_function_class(Super_class):
+    def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6):
+        self.arg4=arg4  # attribute
+        self.arg5=arg5  # attribute
+        self.arg6=arg6  # attribute
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method        
+
+print(Super_function_class(
+    'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
+
+# It does not matter the order of how you place the Super_function_class
+# attributes. You can place the super( ) function before the Super_function_class
+# attributes. However, the example above is less confusing looking than the
+# example shown here.
+
+class Super_function_class(Super_class):
+    def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6):
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
+        self.arg4=arg4  # attribute
+        self.arg5=arg5  # attribute
+        self.arg6=arg6  # attribute
+             
+print(Super_function_class(
+    'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
+
+# Lastly, if we create a class with just a simple 'print( )' function, it won't really do
+# anything, but print out text inside the print( ) function as if we didn't even create
+# a class at all; there is simply nothing to call. So the class is practically ignored;
+# the print( ) function executes/runs anyway. So avoid stuff like this if you want
+# your Python classes to work properly. Classes love 'ATTRIBUTES' and proper
+# classes need attributes to work correctly, so we call them when we want to
+# call them. Not when they want to be called. Remember! We're the Boss, not
+# the classes. The class attributes make sure that they obey the Boss's orders.
+# Not the other way around.
+
+class Single_class:
+    print("I don't really do anything, but show printed text.")
+
+# By now you should have a stern, but general idea of how Python classes work.
+# I hope this extensive lesson on Python classes helped. Until next time. Peace!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is a skeletal scheme of how to create a single class, using variables.
+# Next, we will get into for loops, using a tuple( ) for our class argument
+# values. Tuples are immutable; they cannot be changed or modified.
+# Tuple indexes[ ] always start at zero, not one. Let's create a tuple( ) that
+# will hold all our class attribute argument values
+
+class_arguments_tuple = ('argument1','argument2','argument3')
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+# If you don't have enough room to see the whole print( ) function text and or
+# variables on one line, you can do the following.
+
+print(
+    Single_class(
+    class_arguments_tuple[0],  # index[0]
+    class_arguments_tuple[1],  # index[1]
+    class_arguments_tuple[2]   # index[2]
+    ).arg1)
+
+# Here is the very same print( ) function that's all on one line. When you type this
+# out, you won't be able to see all the Python code inside the print( ) function
+# without having to scroll your cursor all the way to the end, until you can see the
+# text and or variables at the end of the entire print( ) function. So to keep things
+# like this from occurring, we will always use the above example for our print( )
+# functions
+
+print(Single_class(class_arguments_tuple[0],class_arguments_tuple[1],class_arguments_tuple[2]).arg1)
+
+# Let's create a for loop that will loop through all the class argument variables
+# and show all the class argument values on the screen with only one print( )
+# function. Again, we will use a tuple, and then use the tuple's variable name
+# to count the actual for loop values. We can also do this all with one, single
+# line of Python code. We can place the print( ) function right after the for loop's
+# colon : on the same line as the for loop. However, this will only work if you
+# don't have any other code blocks within the for loop. This will not work if you
+# have other indented Python commands within the for loop.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+tuple_loop = (
+    Single_class('argument1','argument2','argument3').arg1,
+    Single_class('argument1','argument2','argument3').arg2,
+    Single_class('argument1','argument2','argument3').arg3)
+
+# See how we drastically reduced our Python code, using a tuple( )?
+# Also, we used the tuple's variable name 'tuple_loop' to do the counting
+# of the tuple_loop values for us automatically without the worry of how
+# high we have to make the for loop count.
+
+for i in tuple_loop:print(i)
+
+# Now, let's create a list[ ] and do exactly the same as we did before with
+# with our tuple( ). Lists are mutable, meaning they can be changed or
+# modified, whereas tuples cannot be changed or modified. In most
+# cases, it's a good idea to use a list[ ] if you want your list of values to
+# change over time throughout your Python program.
+
+class_arguments_list = ['argument1','argument2','argument3']
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+# If you don't have enough room to see the whole print( ) function text and or
+# variables on one line, you can do the following.
+
+print(
+    Single_class(
+    class_arguments_list[0],  # index[0]
+    class_arguments_list[1],  # index[1]
+    class_arguments_list[2]   # index[2]
+    ).arg1)
+
+# Let's create a for loop that will loop through all the class argument variables
+# and show all the class argument values on the screen with only one print( )
+# function. Again, we will use a list, and then use the list's variable name
+# to count the actual for loop values. We can also do this all with one, single
+# line of Python code. We can place the print( ) function right after the for loop's
+# colon : on the same line as the for loop. However, this will only work if you
+# don't have any other code blocks within the for loop. This will not work if you
+# have other indented Python commands within the for loop.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+list_loop = [
+    Single_class('argument1','argument2','argument3').arg1,
+    Single_class('argument1','argument2','argument3').arg2,
+    Single_class('argument1','argument2','argument3').arg3]
+
+# See how we drastically reduced our Python code, using a list[ ]?
+# Also, we used the list's variable name 'list_loop' to do the counting
+# of the list_loop values for us automatically without the worry of how
+# high we have to make the for loop count.
+
+for i in list_loop:print(i)
+
+# Now, let's create a dictionary{ } and do exactly the same as we did
+# before with our tuple( ) and our list[ ] Python program examples.
+# We are about to get our feet just a wee bit more wet this time.
+
+class_arguments_dictionary = {1:'argument1',2:'argument2',3:'argument3'}
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+# If you don't have enough room to see the whole print( ) function text and or
+# variables on one line, you can do the following.
+
+print(
+    Single_class(
+    class_arguments_dictionary.get(1),  # dictionary key 1
+    class_arguments_dictionary.get(2),  # dictionary key 2
+    class_arguments_dictionary.get(3)   # dictionary key 3
+    ).arg1)
+
+# Let's create a for loop that will loop through all the class argument variables
+# and show all the class argument values on the screen with only one print( )
+# function. Again, we will use a dictionary. However, we need to use the 'range( )
+# function this time. The variable ' i ' won't work within the .get() function part,
+# so we have to use the variable 'dictionary_loop.get(i+1)'. Why the variable ' i '
+# does not work for the variable dictionary_loop is a complete mystery? However,
+# this will only work if you don't have any other code blocks within the for loop.
+# This will not work if you have other indented Python commands within the for
+# loop.
+
+class Single_class:
+    def __init__(self,arg1,arg2,arg3):
+        self.arg1=arg1  # attribute
+        self.arg2=arg2  # attribute
+        self.arg3=arg3  # attribute
+
+dictionary_loop = (
+    {1:Single_class('argument1','argument2','argument3').arg1,
+     2:Single_class('argument1','argument2','argument3').arg2,
+     3:Single_class('argument1','argument2','argument3').arg3})
+
+# See how we drastically reduced our Python code, using a dictionary{ }
+# with a for loop?
+
+for i in range(3):print(dictionary_loop.get(i+1))
+
+# I hope this helped you understand how to create classes with for loops
+# using one, single 'print( )' function, which drastically reduces redundant
+# Python code.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a skeletal scheme of how to create classes with sub classes,
 # along with a child class act. Keep this class scheme as something
 # to easily memorize, which will help you when you need to refer to
