@@ -1,6 +1,5 @@
-'''
-Here are some extensive hands-on, in depth Python program examples.
-'''
+# Here are some extensive hands-on, in depth Python program examples.
+
 # Let's learn what Python dictionaries are all about with these Python program
 # examples.
 
