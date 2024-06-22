@@ -1,11 +1,241 @@
 '''
-Here are some practice works, which I prepared for my YouTube
-community page. What's on there is also in here. I don't explain
-everything in here, but that's the point of why I call it my practice
-works. However, you can always look up what things do, if you
-aren't sure of what does what. These Python program examples
-are as-is. What you see is what you get.
+Here are some extensive hands-on, in depth Python program examples.
 '''
+# Let's learn what Python dictionaries are all about with these Python program
+# examples.
+
+# print out key values onto the screen output
+
+my_dictionary = {
+    'key1':'Python','key2':"Programmer's",'key3':'Glossary','key4':'Bible'}
+
+print(my_dictionary.get('key1'))
+
+print(my_dictionary.get('key2'))
+
+print(my_dictionary.get('key3'))
+
+print(my_dictionary.get('key4'))
+
+print(my_dictionary.get('key5'))
+
+print(my_dictionary.get('key5','Key Not Found!'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# print out key values with a partial tuple within 'my_dictionary_list'
+
+my_dictionary_tuple = {
+    'key1':'Python','key2':("Programmer's",'Glossary','Bible'),'key3':'is','key4':'Great!'}
+
+print(my_dictionary_tuple.get('key1'))
+
+print(my_dictionary_tuple.get('key2')[0])
+
+print(my_dictionary_tuple.get('key2')[1])
+
+print(my_dictionary_tuple.get('key2')[2])
+
+print(my_dictionary_tuple.get('key3'))
+
+print(my_dictionary_tuple.get('key4'))
+
+print(my_dictionary_tuple.get('key1','Key Not Found!'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# print out key values with a partial list within 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+print(my_dictionary_list.get('key1'))
+
+print(my_dictionary_list.get('key2')[0])
+
+print(my_dictionary_list.get('key2')[1])
+
+print(my_dictionary_list.get('key2')[2])
+
+print(my_dictionary_list.get('key3'))
+
+print(my_dictionary_list.get('key4'))
+
+print(my_dictionary_list.get('key5','Key Not Found!'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# update a key's value to change its value in 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+my_dictionary_list.update({'key1':'Book'})  # key1 value was 'Python'
+
+print(my_dictionary_list.get('key1'))  # Book
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# update a key's value to change its value in 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+my_dictionary_list['key1'] = 'Book'  # key1 value was 'Python'
+
+print(my_dictionary_list.get('key1'))   # Book
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'pop( )' function to delete/pop 'key2' from 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+my_dictionary_list.pop('key2')
+
+print(my_dictionary_list.get('key2','Sorry! Key Not Found:'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# return a 'poopped' dictionary{ } 'key' from 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+popped = my_dictionary_list.pop('key1')
+
+print(popped)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# completely delete a dictionary{ } 'key' from 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+del my_dictionary_list['key1']
+
+print(my_dictionary_list.get('key1','Sorry! Key Not Found:'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# clear the entire 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+my_dictionary_list.clear()
+
+print(my_dictionary_list.get('key1','Sorry! Key Not Found:'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'items()' function to view the complete 'my_dictionary_list'
+# with 'keys' and 'key values'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+list_items = my_dictionary_list.items()
+
+print(list_items)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'items()' function to view the 'my_dictionary_list' 'keys' and 'key values'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+# invoke the 'items()' function to view the 'my_dictionary_list' 'keys' only
+
+print(my_dictionary_list.keys())
+
+# invoke the 'items()' function to view the 'my_dictionary_list' 'values' only
+
+print(my_dictionary_list.values())
+
+# invoke the 'items()' function using a for loop to view the 'my_dictionary_list'
+# 'keys' and 'key values'
+
+for keys, values in my_dictionary_list.items():
+  print(keys, values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# change a key's value in 'my_dictionary_list'
+
+my_dictionary_list = {
+    'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
+
+my_dictionary_list['key1'] = 'We Sure Love Python!'
+
+print(my_dictionary_list.get('key1'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create an animals dictionary so we can use its values.
+
+animals={
+    'Dog':'Wolf',
+    'Cat':'Lion',
+    'Bird':'Eagle',
+    'Fish':'Shark'
+    }
+
+print(animals.get('dog'))
+
+print(animals.get('dog','Not Found!'))  # optional
+
+print(animals.get('Dog','Not Found!'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+for key,value in animals.items():
+    print(key)
+
+for key,value in animals.items():
+    print(value)
+
+for key,value in animals.items():
+    print(key,value)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create some sentences out of our animals dictionary list.
+
+d=animals.get('Dog')
+c=animals.get('Cat')
+b=animals.get('Bird')
+f=animals.get('Fish')
+
+print(f'My dog is really a {d}.')
+print(f'My Cat is really a {c}.')
+print(f'My Bird is really a {b}.')
+print(f'My Fish is really a {f}.')
+
+# Let's create some sentences out of our animals dictionary list
+# using a 'for in' items() function to drastically reduce lines of
+# code and code redundancy in our Python program example.
+
+for keys,values in animals.items():
+    print(f'My {keys} is really a {values}.')
+
+# Rename the key and value variables if you wish.
+
+for my_keys,my_values in animals.items():
+    print(f'My {my_keys} is really a {my_values}.')
+
+for animal_keys,animal_values in animals.items():
+    print(f'My {animal_keys} is really a {animal_values}.')
+
+# Try this dictionary Python program example below and recap
+# what happens when you type and execute/run this program.
+
+animals={
+    'Dog':'Wolf',
+    'Cat':'Lion',
+    'Bird':'Eagle',
+    'Fish':'Shark'}
+
+people={              
+    'Person1':'Tom',
+    'Person2':'Bob',
+    'Person3':'Rob',
+    'Person4':'Ron'}
+
+for key,value in animals.items():
+    print(key,value)
+
+for key,value in people.items():
+    print(key,value)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a dictionary that's also a complete list of values
+# to one, single key each.
+
+my_dictionary_list={
+  'key1':['Dog,','Cat','Bird','fish'],
+  'key2':['Tom','Bob','Rob','Ron']}
+
+print(my_dictionary_list.get('key1')[0])
+
+print(my_dictionary_list.get('key2')[0])
+
+print(my_dictionary_list.get('key5','Sorry! Key Not Found:'))  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Python can show you what 'type' of string, integer and float values
 # you are using to help you understand what 'str', 'int', and 'float values
 # are.
