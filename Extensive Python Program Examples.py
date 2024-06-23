@@ -1,7 +1,136 @@
 # Here are some extensive hands-on, in depth Python program examples.
 
-# Let's learn what Python dictionaries are all about with these Python program
-# examples.
+# Let's learn what Python lists are all about with these
+# Python program examples.
+
+# print out list values onto the screen output
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+print(my_list[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# change 'my_list' value 'Bible' to the value 'Book'
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list[3] = 'Book'
+
+print(my_list[3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# insert three new values into my_list with indexing
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list[2:0] = ['Fun','Greate','Book']
+
+print(my_list[2])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# add the value 'Book' to my_list with the append( ) function
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list.append('Book')
+
+print(my_list[4])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# insert a new value 'Book' into my_list at index[3]
+# with the 'insert( )' function
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list.insert(3,'Book')
+
+print(my_list[3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# remove the last value at the end of my_list with the
+# pop( ) function
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+# create a variable called popped, so you can see the
+# value that was removed or popped off my_list, via the pop()
+# function
+
+popped = my_list.pop()
+
+print(popped)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# remove the second value of my_list with the pop( ) function
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+# create a variable called popped, so you can see the
+# value that was removed or popped off my_list, via the pop()
+# function
+
+popped = my_list.pop(1)
+
+print(popped)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# remove a value from my_list with the remove( ) function
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list.remove("Programmer's")
+
+print(my_list[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# empty all values in my_list with the clear( ) function,
+# without deleting the my_list variable
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list.clear()
+
+print(my_list)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# delete the entire my_list variable and values, via
+# invoking the 'del' prefix. Note: when you type and
+# execute/run this Python program example, the program
+# will cause and error and crash the program. This is
+# simply because my_list doesn't exist anymore
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+del my_list
+
+print(my_list)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# delete the my_list value at index[1], via invoking the 'del'
+# prefix
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+del my_list[1]
+
+print(my_list[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# copy all the values in my_list to the items_list with the
+# copy( ) function, then check the two lists to view them
+# on the screen output at program execution time
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+items_list = my_list.copy()
+
+print(items_list)
+
+print(my_list)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# join two lists together with the extend( ) function, then
+# check my_list1 to view them on the screen output at
+# execution time
+
+my_list1 = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list2 = ['We','Sure','Love','Python','Programming']
+
+my_list1.extend(my_list2)
+
+print(my_list1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn what Python dictionaries are all about with these
+# Python program examples.
 
 # print out key values onto the screen output
 
