@@ -1,5 +1,91 @@
 # Here are some extensive hands-on, in depth Python program examples.
 
+# Let's learn what Python tuples are all about with these
+# Python program examples.
+
+# print out tuple values onto the screen output
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+print(my_tuple[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# this is a tuple( ) by default, without the parantheses '( )'
+
+default_tuple = 'Python',"Programmer's",'Glossary','Bible'
+
+print(default_tuple)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# access 'my_tuple' values 1 through 4 without printing
+# the value 'Python'
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+print(my_tuple[1:4])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# access 'my_tuple' values 1 through 4 without printing
+# the value 'Python'
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+print(my_tuple[1:])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# access three of my_tuple values 0 through 3 without printing
+# the value 'Bible'
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+print(my_tuple[:3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# unpack tuple or list values; both examples will work the same
+# way. Refer to learning and creating lists
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+(we,sure,love,Python) = my_tuple
+
+print(we,sure,love,Python)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# unpack and assign tuple or list values with an asterisk ' * ',
+# both examples will work the same  way. Refer to learning
+# and creating lists.
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+(we,sure,*love,Python) = my_tuple
+
+print(we,sure,love,Python)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# create a variable to join 'my_tuple1' with 'my_tuple2'
+
+my_tuple1 = ('Python',"Programmer's",'Glossary','Bible')
+
+my_tuple2 = ('We','sure','love','Python')
+
+tuple_join = my_tuple1+my_tuple2
+
+print(tuple_join)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the asterisk key ' * ' to duplicate all values in 'my_tuple' by three,
+# followed by an integer count duplicator value ' 3 ', which multiplies
+# the entire tuple values three times
+
+my_tuple = ('Python',"Programmer's",'Glossary','Bible')
+
+print(my_tuple*3)  # assign any integer number value
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# place a tuple within another tuple, while each tuple set
+# returns their own indexed values
+
+my_tuple = (('Python',"Programmer's",'Glossary','Bible'),('We','love','Python'))
+
+print(my_tuple[0])
+
+print(my_tuple[1])
+
+print(my_tuple[1][1])
+
+print(my_tuple[0][0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn what Python lists are all about with these
 # Python program examples.
 
@@ -17,7 +103,7 @@ my_list[3] = 'Book'
 
 print(my_list[3])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# insert three new values into my_list with indexing
+# insert three new values into 'my_list' with indexing
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -25,7 +111,7 @@ my_list[2:0] = ['Fun','Greate','Book']
 
 print(my_list[2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# add the value 'Book' to my_list with the append( ) function
+# add the value 'Book' to 'my_list' with the append( ) function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -33,7 +119,7 @@ my_list.append('Book')
 
 print(my_list[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# insert a new value 'Book' into my_list at index[3]
+# insert a new value 'Book' into 'my_list' at index[3]
 # with the 'insert( )' function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -42,32 +128,32 @@ my_list.insert(3,'Book')
 
 print(my_list[3])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# remove the last value at the end of my_list with the
+# remove the last value at the end of 'my_list' with the
 # pop( ) function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
 # create a variable called popped, so you can see the
-# value that was removed or popped off my_list, via the pop()
+# value that was removed or popped off 'my_list', via the pop()
 # function
 
 popped = my_list.pop()
 
 print(popped)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# remove the second value of my_list with the pop( ) function
+# remove the second value of 'my_list' with the pop( ) function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
 # create a variable called popped, so you can see the
-# value that was removed or popped off my_list, via the pop()
+# value that was removed or popped off 'my_list', via the pop()
 # function
 
 popped = my_list.pop(1)
 
 print(popped)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# remove a value from my_list with the remove( ) function
+# remove a value from 'my_list' with the remove( ) function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -75,8 +161,8 @@ my_list.remove("Programmer's")
 
 print(my_list[1])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# empty all values in my_list with the clear( ) function,
-# without deleting the my_list variable
+# empty all values in 'my_list' with the clear( ) function,
+# without deleting the 'my_list' variable
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -84,11 +170,11 @@ my_list.clear()
 
 print(my_list)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# delete the entire my_list variable and values, via
+# delete the entire 'my_list' variable and values, via
 # invoking the 'del' prefix. Note: when you type and
 # execute/run this Python program example, the program
 # will cause and error and crash the program. This is
-# simply because my_list doesn't exist anymore
+# simply because 'my_list' doesn't exist anymore
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -96,7 +182,7 @@ del my_list
 
 print(my_list)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# delete the my_list value at index[1], via invoking the 'del'
+# delete the 'my_list' value at index[1], via invoking the 'del'
 # prefix
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -105,7 +191,7 @@ del my_list[1]
 
 print(my_list[1])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# copy all the values in my_list to the items_list with the
+# copy all the values in 'my_list' to the items_list with the
 # copy( ) function, then check the two lists to view them
 # on the screen output at program execution time
 
@@ -117,8 +203,18 @@ print(items_list)
 
 print(my_list)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# create a variable to join 'my_list1' with 'my_list2'
+
+my_list1 = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list2 = ['We','sure','love','Python']
+
+list_join = my_list1+my_list2
+
+print(list_join)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # join two lists together with the extend( ) function, then
-# check my_list1 to view them on the screen output at
+# check 'my_list1' to view them on the screen output at
 # execution time
 
 my_list1 = ['Python',"Programmer's",'Glossary','Bible']
@@ -128,6 +224,64 @@ my_list2 = ['We','Sure','Love','Python','Programming']
 my_list1.extend(my_list2)
 
 print(my_list1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# unpack list or tuple values; both examples will work the same
+# way. Refer to learning and creating tuples
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+(we,sure,love,Python) = my_list
+
+print(we,sure,love,Python)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# unpack and assign list or tuple values with an asterisk ' * ',
+# both examples will work the same  way. Refer to learning
+# and creating tuples
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+(we,sure,*love,Python) = my_list
+
+print(we,sure,love,Python)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the sorrt( ) function to sort 'my_list' values in
+# alphabetical order
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+my_list.sort()
+
+print(my_list)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the sorted( ) function to temporarily sort 'my_list'
+# values without sorting the actual 'my_list' values
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+sorted_list = sorted(my_list)
+
+print(sorted_list)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the asterisk key ' * ' to duplicate all values in 'my_list' by three,
+# followed by an integer count duplicator value ' 3 ', which multiplies
+# the entire list values three times
+
+my_list = ['Python',"Programmer's",'Glossary','Bible']
+
+print(my_list*3)  # assign any integer number value
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# place a list within another list, while each list set
+# returns their own indexed values
+
+my_list = [['Python',"Programmer's",'Glossary','Bible'],['We','love','Python']]
+
+print(my_list[0])
+
+print(my_list[1])
+
+print(my_list[1][1])
+
+print(my_list[0][0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn what Python dictionaries are all about with these
 # Python program examples.
@@ -314,7 +468,7 @@ print(f'My dog is really a {d}.')
 print(f'My Cat is really a {c}.')
 print(f'My Bird is really a {b}.')
 print(f'My Fish is really a {f}.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create some sentences out of our animals dictionary list
 # using a 'for in' items() function to drastically reduce lines of
 # code and code redundancy in our Python program example.
@@ -329,7 +483,7 @@ for my_keys,my_values in animals.items():
 
 for animal_keys,animal_values in animals.items():
     print(f'My {animal_keys} is really a {animal_values}.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try this dictionary Python program example below and recap
 # what happens when you type and execute/run this program.
 
@@ -339,7 +493,7 @@ animals={
     'Bird':'Eagle',
     'Fish':'Shark'}
 
-people={              
+people={
     'Person1':'Tom',
     'Person2':'Bob',
     'Person3':'Rob',
@@ -1481,7 +1635,7 @@ class Super_function_class(Super_class):
         self.arg4=arg4  # attribute
         self.arg5=arg5  # attribute
         self.arg6=arg6  # attribute
-        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method        
+        super().__init__(arg1,arg2,arg3)  # super() calls the __init__ method
 
 print(Super_function_class(
     'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
@@ -1497,7 +1651,7 @@ class Super_function_class(Super_class):
         self.arg4=arg4  # attribute
         self.arg5=arg5  # attribute
         self.arg6=arg6  # attribute
-             
+
 print(Super_function_class(
     'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
 
@@ -1726,7 +1880,7 @@ class All_classes(
     Main_class,Sub_class1,
     Sub_class2,Sub_class3,
     Sub_class4): # Multi Inheritance
-    
+
     def __init__(self,arg1,arg2,arg3):
         Main_class.__init__(self,arg1,arg2,arg3)  # inheritance
         Sub_class1.__init__(self,arg1,arg2,arg3)  # inheritance
@@ -1768,7 +1922,7 @@ print(All_classes('argument1','argument2','argument3').arg3)
 # You can also create as many sub classes as you please.
 
 # The super( ) function reduces redundant Python code, so you can keep
-# Python code nice and 'DRY!' ( "Don't Repeat Yourself!" ) 
+# Python code nice and 'DRY!' ( "Don't Repeat Yourself!" )
 
 class Main_class:
     def __init__(self,arg1,arg2,arg3):
