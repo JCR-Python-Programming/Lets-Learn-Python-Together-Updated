@@ -60,6 +60,42 @@ print(my_text1,'\n\n'+my_text2)
 
 print(my_text1+'\n\n'+my_text2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Unpack multiple values, using just one, single "=" sign.
+# Not: You must use equal variables to equal values.
+
+a,b,c=1,2,3
+
+print(a,b,c)
+
+# Add the values together.
+
+print(a+b+c)
+
+# Example 2:
+
+a,b,c,d,e,f=1,2,3,4,5,6
+
+print(a,b,c,d,e,f)
+
+# Add the values together.
+
+print(a+b+c+d+e+f)
+
+# Example 3
+
+name1,name2,name3='Bob','Rob','John'
+
+print(name1,'and',name2,'went to',name3+"'s",'house for dinner.')
+
+# You can use the 'f' format to make the above print statement
+# read like this.
+
+print(f"{name1} and {name2} went to {name3}'s house for dinner.")
+
+# Old format example of the print statement from earlier Python versions.
+
+print("{} and {} went to {}'s house for dinner.".format(name1,name2,name3))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn what Python tuples are all about with these
 # Python program examples.
 
@@ -401,6 +437,29 @@ print(multi_dim_list[0][0])
 print(multi_dim_list[2][1])
 
 print(multi_dim_list[2][2])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Unpacking multi-list example:
+
+list_1,list_2,list_3=[
+    [0,1,2,3,4,5,6,7,8,9],
+    ['a','b','c','d','e','f','g','h','i','j','k','l','m',
+     'n','o','p','q','r','s','t','u','v','w','x','y','z'],
+    ['"Python',"Programmer's",'Glossary','Bible"']]
+
+print(list_1[9])
+print(list_2[0])
+print(list_3[0],list_3[1],list_3[2],list_3[3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Unpacking multi-list for-loop example:
+
+list_1,list_2,list_3=[
+    [0,1,2,3,4,5,6,7,8,9],
+    ['a','b','c','d','e','f','g','h','i','j','k','l','m',
+     'n','o','p','q','r','s','t','u','v','w','x','y','z'],
+    ['"Python',"Programmer's",'Glossary','Bible"']]
+
+for i in list_1,list_2,list_3:
+    print(i[0],i[1],i[2],i[3])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Things you can do with tuples and lists.
 
@@ -781,6 +840,353 @@ for keys,values in dictionary.items():
 
 print(dict(
   we='Python',sure="Programmer's",love='Glassary',Python='Bible'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Have some fun with Python Sets.
+
+animals1,animals2=(
+    {'Dog','Cat','Bird','Fish','Dog','Bird'},
+    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
+
+animals1.update(animals2)
+
+animals1.add('Frog')
+
+animals1.discard('Rat')
+
+print(animals1)
+
+'''
+.add()
+.clear()
+.copy()
+.difference()
+.difference_update()
+.discard()
+.intersection()
+.intersection_update()
+.isdisjoint()
+.issubset()
+.issuperset()
+.pop()
+.remove()
+.symmetric_difference()
+.symmetric_difference_update()
+.union()
+.update()
+'''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Check to see if there are any duplicate names, using a set.
+# Sets always display values in random order, such as this set_demo
+# example below illustrates. This means that every time you execute/run
+# the set_demo program example, the values will always be in random
+# order. However, sets are designed to get rid of duplicate values. Note:
+# sets do not use indexing, such as tuples and lists do.
+
+set_demo={'Tom','Bob','John','Ron','Tom'}
+
+print(set_demo)
+
+# If you try to run this one-line 'print' statement, you will get a type error.
+# message as illustrated below.
+
+print(set_demo[1])
+
+'''
+Traceback (most recent call last):
+  File "C:/Users/Brian D/Desktop/JCR/GITFiles/Sets Examples.py", line 16, in <module>
+    print(set_demo[1])
+TypeError: 'set' object is not subscriptable
+'''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's convert a set into a tuple, complete with indexing.
+
+set_demo={'Tom','Bob','John','Ron','Tom'}
+
+convert=tuple(set_demo)
+
+print(convert[1])
+
+# If you re-execute/run the set_demo program example above, it will
+# still return a random value from the converted set, even though it
+# has an index list range. To solve this problem, we need to use the
+# 'sort()' function or the 'sorted() function. Also note that tuples cannot
+# be changed or sorted, but lists can be changed and sorted
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's convert a set into a sorted list, complete with indexing. The
+# 'sorted()' function only affects the output of the list, not the actual list
+# itself, whereas the 'sort()' function changes the actual list, such as in
+# our next example shows.
+
+set_demo={'Tom','Bob','John','Ron','Tom'}
+
+convert=list(set_demo)
+
+sorted_index=sorted(convert)
+
+print(sorted_index)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Here is almost the very same set_demo program example as illustrated
+# above but with one exception, the actual list gets sorted, which in most
+# cases, that's not always what you want. Therefore, the 'sorted()' function
+# is used to prevent actual list modifications.
+
+set_demo={'Tom','Bob','John','Ron','Tom'}
+
+convert=list(set_demo)
+
+convert.sort()
+
+print(convert)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# The set_demo program example below does everything the above program
+# example illustrated. The only difference, is that there are two sets, which
+# we are going to extend both sets into one, single list. We will create two sets
+# called set_demo1 and set_demo2 so we can extend them into one, single
+# sorted list without duplicate values. We will also use what's called 'unpacking',
+# which simply means to unpack two or more variables and two or more values,
+# using just one '=' sign.
+
+# convert1,convert2=list(set_demo1),list(set_demo2)
+
+set_demo1={'Tom','Bob','John','Ron','Tom'}
+set_demo2={'Tamy','Sandy','Mandy','Randy','Tamy'}
+
+convert1,convert2=list(set_demo1),list(set_demo2)
+
+convert1.extend(convert2)
+
+sorted_index=sorted(convert1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Check the values first to make sure they are correctly sorted and such.
+
+print(sorted_index)
+
+# Let's create a sentence out of our sorted_index argument like this.
+
+print(sorted_index[0],'is a great name.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a for-loop to loop through our sorted_index variable, and creat a
+# sentence within our for-loop.
+
+for i in sorted_index:
+    print(i,'is a great name')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+animals1,animals2=(
+    {'Dog','Cat','Bird','Fish','Dog','Bird'},
+    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
+
+print(animals1.union(animals2)) # Union
+print(animals1|animals2) # Union
+
+print(animals1.intersection(animals2)) # Intersection
+print(animals1 & animals2) # Intersection
+
+print(animals1.difference(animals2)) # Difference
+print(animals1 - animals2) # Difference
+
+print(animals1 ^ animals2) # Symmetric Difference
+
+x=animals1.symmetric_difference_update(animals2) # Symmetric Difference Update
+print(animals1)
+
+# Why not use these shortcuts instead.
+
+print(animals1 | animals2)
+print(animals1 & animals2)
+print(animals1 - animals2)
+print(animals1 ^ animals2)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+animals1,animals2=(
+    {'Dog','Cat','Bird','Fish','Dog','Bird'},
+    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
+
+x=animals1 | animals2
+for i in x:
+    print(i)
+
+animals1.update(animals2)
+for i in animals1:
+    print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+animals1,animals2=(
+    {'Dog','Cat','Bird','Fish','Dog','Bird'},
+    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
+
+animals1.update(animals2)
+
+convert=list(animals1)
+
+x=sorted(convert)
+for i in x:
+    print(i)
+
+x=sorted(convert,reverse=True)
+for i in x:
+    print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''
+Create three different integer sets that will combine/unionize all three sets into one
+single set. Convert the single set into a list, using the list() function. Next, view the
+contents of the list, along with the slice() function to set the range of list content
+values to display on the screen.
+
+Type and execute/run this Python program example below.
+'''
+# To reduce lines of code, create packed variables and their
+# packed values.
+
+x,y,z=(
+    {1,2,3,4,9,6,7,8,5,9,10},
+    {11,12,13,14,15,16,17},
+    {18,19,20,21,22,23,24})
+
+a=slice(24) # slice the set with the slice() function
+
+# To reduce lines of code, create packed variables and their
+# packed values.
+
+length1,length2,length3=len(x),len(y),len(z)
+
+unionize=x.union(y,z) # unionize x to y and z with the value v.union() function
+
+convert=list(unionize) # cast the set to a list with the list() function
+
+answer=length1,length2,length3
+
+# Add the total values between length1, length2 and length3 with the sum()
+# function.
+
+total_sum=sum(answer) # add all three values of answer together with the sum() function
+
+# View the contents of x, y and z in their combined, converted sets to a list.
+
+print('View the value contents of the unionized list to check it:\n\n'+str(convert[a]))
+
+# Create a variable called sentence_loop, along with all its values.
+
+sentence_loop=(
+    f'\nThe length of (x) = {length1}',f'The length of (y) = {length2}',
+    f'The length of (z) = {length3}',f'\nThe total lengths of x+y+z = {total_sum}')
+
+# Create a for loop that will loop through the sentence_loop variable, using a
+# single print() function. The for loop will iterate until all the values are cycled
+# through the sentence_loop variable.
+
+for i in sentence_loop:print(i)
+
+x={1,2,3,4,9,6,7,8,5,9}
+y={10,11,15,13,14,12,16,17,18,19,19}
+z={20,21,22,23,27,25,26,24,28,29,22}
+
+unionize=x.union(y).union(z)
+
+convert=list(unionize)
+
+a=slice(20)
+
+print(convert[a])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x={1,2,3,4,9,6,7,8,5,9}
+y={10,11,15,13,14,12,16,17,18,19,19}
+z={20,21,22,23,27,25,26,24,28,29,22}
+
+unionize=x.union(y,z)
+
+convert=list(unionize)
+
+a=slice(20)
+
+print(convert[a])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+a=list()
+for i in range(10):
+    a.append(i)
+
+b=set()
+for i in range(10):
+    b.add(i)
+
+print(a)
+print(b)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+nums1={1,1,2,3,4,5,6}
+nums2={1,2,2,3,4}
+
+print(nums1 | nums2) # Union
+
+print(nums1.union(nums2)) # Union
+
+nums1={1,1,2,3,4,5,6}
+nums2={1,2,2,3,4}
+
+print(nums1 & nums2) # Intersection
+
+print(nums1.intersection(nums2)) # Intersection
+
+nums1={1,1,2,3,4,5,6}
+nums2={1,2,2,3,4}
+
+print(nums1 - nums2) # Difference
+
+print(nums1.difference(nums2)) # Difference
+
+nums1={1,1,2,3,4,5,6}
+nums2={1,2,2,3,4}
+
+print(nums1.symmetric_difference(nums2)) # Symmetric Difference
+
+print(nums1 ^ nums2) # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+nums1={0,1,2,3,1,3,4,10,5,6,6,7,8,9,10,23}
+nums2={1,2,7,1,3,4,10,5,6,6,7,8,9,10,11,22}
+
+print(nums1 | nums2) # Union
+print(nums1 & nums2) # Intersection
+print(nums1 - nums2) # Difference
+print(nums1 ^ nums2) # Symmetric Difference
+
+nums1=[1,2,3,1,3,4,10,5,6,6,7,8,9,10]
+nums2=[1,2,3,1,3,4,10,5,6,6,7,8,9,10]
+
+uniques1=set(nums1)
+uniques2=set(nums2)
+
+print(uniques1 | uniques2)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# input Fibonacci Number Sequence example, using a set{}
+
+num1,num2=0,1
+
+fib={num1,num2}
+
+words=(
+    'is in the Fibonacci Sequence.',
+    'is not in the Fibonacci Sequence.',
+    'Please enter a correct Fibonacci Sequence Number: ',
+    'Sorry! Numbers only.',
+    'Memory Error!'
+    )
+
+try:
+    x=int(input(words[2]).strip())
+
+    for i in range(x):
+        fib_num=num1+num2
+        fib.add(fib_num)
+        num1=num2
+        num2=fib_num
+
+    if x in fib:
+        print(x,words[0])
+
+    elif x not in fib:
+        print(x,words[1])
+
+except ValueError:
+    print(words[3])
+
+except MemoryError:
+    print(words[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 For those who are very new to Python programming or just programming
@@ -1277,6 +1683,30 @@ my_cast = list(my_functions_set) # use the casting tuple function
 
 for i in my_cast:
     i()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''
+If you are too lazy to create an integer number line, let Python create one for you.
+Simply execute/run this Python program example and then highlight and copy
+the screen output and paste it into whatever you need this integer number line
+for.
+'''
+for i in range(-10,11):
+    print(i,end=', ')
+
+# screen output: -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+
+# Let's use variables this time, including for the 'print()' function. Let's also reduce
+# Python code by creating a for loop that is just one, single line of code. However,
+# this only works if the for loop does not contain any other code blocks; should
+# you add more code blocks, this will not work but give you an error.
+
+integers = -10,11
+comma_space = ', '
+integer_number_line = print
+
+for i in range(integers[0],integers[1]):integer_number_line(i,end = comma_space)
+
+# screen output: -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I use def functions() most of the time. These are used for either
 # calling code through them, or they can be used as simple subroutines.
@@ -2306,7 +2736,6 @@ my_variable2 = Inherit('Joe','Swift',23).first_name
 
 print(my_variable1,my_variable2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
 class Person:
 
     def __init__(self,fname,lname,age):
@@ -3398,6 +3827,8 @@ for index,fname_lname_age in enumerate(ages):
     print(Return_class_function3.arg_funct3(
         fname_lname_age,fname_lname_age,fname_lname_age))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Python scoping with strings and integer values
+
 # Python can show you what 'type' of string, integer and float values
 # you are using to help you understand what 'str', 'int', and 'float values
 # are.
@@ -3408,42 +3839,29 @@ print(type(1))  # <class 'int'>
 
 print(type(1.0))  # <class 'float'>
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Python scoping with strings and integer values
+
 # The 'dir( )' function shows you the complete directory of what you can
 # use within Python programs you create. Type and execute/run these
 # simple Python program examples and study the screen output.
 
-print(dir('text'))
+print(dir('text string'))
 
 print(dir(1))
 
 print(dir(1.0))
 
+# Get the id from a string.
+
+print(id('string'))
+
+# Get the id from an integer.
+
+print(id(2))
+
 # Type help() for interactive help, or help(object) for help about object.
 
 print(help)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Use these dunder methods to calculate numbers, such as integers and floats.
-
-print(int.__add__(8,2))  # equals 10
-
-print(int.__sub__(8,2))  # equals 6
-
-print(int.__mul__(8,2))  # equals 16
-
-print(int.__floordiv__(8,2))  # equals 4
-
-print(int.__pow__(8,2))  # equals 64
-
-
-print(float.__add__(8.0,2.0))  # equals 10.0
-
-print(float.__sub__(8.0,2.0))  # equals 6.0
-
-print(float.__mul__(8.0,2.0))  # equals 16.0
-
-print(float.__floordiv__(8.0,2.0))  # equals 4.0
-
-print(float.__pow__(8.0,2.0))  # equals 64.0
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use the 'dir( ) function with nothing inside the parentheses
 
@@ -3484,6 +3902,29 @@ print(str.__str__('text string'))
 print(int.__repr__(8+2))
 
 print(float.__repr__(8.0+2.0))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use these dunder methods to calculate numbers, such as integers and floats.
+
+print(int.__add__(8,2))  # equals 10
+
+print(int.__sub__(8,2))  # equals 6
+
+print(int.__mul__(8,2))  # equals 16
+
+print(int.__floordiv__(8,2))  # equals 4
+
+print(int.__pow__(8,2))  # equals 64
+
+
+print(float.__add__(8.0,2.0))  # equals 10.0
+
+print(float.__sub__(8.0,2.0))  # equals 6.0
+
+print(float.__mul__(8.0,2.0))  # equals 16.0
+
+print(float.__floordiv__(8.0,2.0))  # equals 4.0
+
+print(float.__pow__(8.0,2.0))  # equals 64.0
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Easy Python program practice examples for those who might be stuck
 # with some Python program examples I've demonstrated. Experiment
