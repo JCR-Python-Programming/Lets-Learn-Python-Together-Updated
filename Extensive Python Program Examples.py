@@ -2163,7 +2163,140 @@ print(text[1]) # index[1] is the word: is
 
 for i in text:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'''
+# This is a basic layout of the 'try and except', 'finally' program
+# example. The program does work fine, but it does nothing.
+# The program example below simply shows the basic layout
+# of the 'try and except', 'finally' statements. The 'finally' statement
+# is executed no matter the outcome the 'try and except' handler
+# block does. Note: you can also leave out the 'finally' statement
+# if you like, but it can come in handy if you want the final outcome
+# to execute no matter what the 'try and except' handler block does.
+# The 'pass' statements are just empty placeholders for the empty
+# code blocks until they are needed, via the programmer.
+
+try:
+     pass
+except:
+     pass
+else:
+     pass
+finally:
+     pass
+
+# Here is the very same 'try and except' program example below.
+# Type and execute/run the program and see what happens.
+
+try:
+     message=int(input('Pick a number. ').lower().strip())
+except ValueError:
+     print('Numbers only please.')
+else:
+     print('You picked a number.')
+finally:
+     print("'finally' executed no matter what.")
+
+# The 'finally' statement is executed no matter the outcome the
+# 'try and except' handler block does.
+
+# These two 'input' statements in this program example asks the
+# user their name and their age, using the 'try:' and 'except:' error
+# handlers.
+
+name=input('\nWhat is your name please? ').lower().strip()
+
+try:
+    age=int(input(f'\nHow old are you {name}? ').lower().strip())
+    print(f'\n{name}. You are {age} years old.')
+    
+except ValueError:
+    print('\nThe \'try:\' and \'except ValueError:\' block executes/runs whenever a letter \
+key is pressed instead of a number key.')
+
+# Now, put this very same program code above into a conditional
+# while-loop and see what happens when the user tries to type letters,
+# instead of typing numbers for their age. When the 'try:' statement is
+# executed, the 'break' statement causes the conditional while-loop to
+# break out and the 'print' statement ('End of program') is then executed.
+
+name=input('\nWhat is your name please? ').lower().strip()
+
+while True:
+    try:
+        age=int(input(f'\nHow old are you {name}? ').lower().strip())
+        print(f'\n{name}. You are {age} years old.')
+        break
+    
+    except ValueError:
+        print('\nThe \'try:\' and \'except ValueError:\' block executes/runs whenever a \
+letter key is pressed instead of a number key.')
+
+# This little flip flop game is a great example of how the conditional while-
+# loop works. The 'else' statement executes/runs when the user types the
+# wrong keys, and the while-loop iterates/repeats over again while ignoring
+# the 'break' statement.
+
+print('\nWelcome to Flip! Flop!')
+
+print('\nPlease type the words "flip" or "flop", then press (ENTER)')
+
+print('\nWhen you give up, press (ENTER) to quit playing Flip! Flop!')
+
+while True:
+    flip=input('\nFlip? or Flop? ').strip()
+    
+    if flip=='flip':
+        print('\nFlop!')
+        
+    elif flip=='flop':
+        print('\nFlip!')
+        
+    elif flip=='':
+        print('\nThanks for playing Flip! Flop!')
+        break
+    
+    else:
+        print('\nYou can\'t cheat now! Do you flip? or do you flop?')
+
+# This conditional while-loop will loop as long as the value is less (<)
+# than 3, then it will stop its iteration no matter what wrong keys the
+# user tries to type.
+
+chance=0
+
+name=input('\nWhat is your name please? ').strip()
+
+while chance<3:
+    try:
+        age=int(input(f'\nHow old are you {name}? ').strip())
+        print(f'\n{name}. You are {age} years old.')
+        break
+    
+    except ValueError:
+        print(f'\nYou have 3 chances left before the while-loop breaks out anyway!')
+        
+        chance+=1
+
+# This for-loop example does exactly the same thing, the above
+# while-loop example shows. The only difference is, the while-loop
+# is a conditional loop, whereas the for-loop is an iterate. While-
+# loops can also be 'True:' or 'False:', depending on the outcome
+# of a program's execution run. While-loops also compare data
+# greater than or less than other data, as shown in the examples
+# above.
+
+name=input('\nWhat is your name please? ').strip()
+
+for chance in range(3):
+    try:
+        age=int(input(f'\nHow old are you {name}? ').strip())
+        print(f'\n{name}. You are {age} years old.')
+        break
+    
+    except ValueError:
+        print('\nYou have 3 chances left before the while-loop breaks out anyway!')
+        
+        chance+=1
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 Did you know you can create variables for some of these Python
 commands/functions? This will give us much more opertunities
 to use variables as Python code in a for loop that loops through
