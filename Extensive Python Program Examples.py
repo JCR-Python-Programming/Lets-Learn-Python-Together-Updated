@@ -497,6 +497,33 @@ variable_5=['friend','girlfriend','boyfriend','neighbour']
 for var1,var2,var3,var4,var5 in zip(variable_1,variable_2,variable_3,variable_4,variable_5):
     print(f'My {var4} and my {var5} {var3} says my {var1} is really a {var2}.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let Python help you create a list of values faster with this Python program example
+
+empty_list = []
+
+while True:
+    user_input = input("Let's create a list of values for 'empty_list': ").lower().strip()
+
+    empty_list.append(user_input)
+
+    if user_input == 'quit':
+        break
+    elif user_input == '':
+        empty_list.pop(0)
+
+empty_list.pop() # removes the very last value 'quit' in the empty_list
+
+# check your 'empty_list' values that you created
+
+print(f"\nPython helped you create your 'empty_list' values:\n{empty_list}")
+
+# call an 'empty_list' value with its index value range
+
+try:
+    print(empty_list[0])
+except IndexError:
+    print('index out of range:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # You can use Emojis in Python. I just discovered this on my own, just to see if
 # it would work. And it does work! WOW!! Use YouTube Emojis in your very own
 # Python program examples. Use them for creating logical programs that if
@@ -2207,7 +2234,7 @@ name=input('\nWhat is your name please? ').lower().strip()
 try:
     age=int(input(f'\nHow old are you {name}? ').lower().strip())
     print(f'\n{name}. You are {age} years old.')
-    
+
 except ValueError:
     print('\nThe \'try:\' and \'except ValueError:\' block executes/runs whenever a letter \
 key is pressed instead of a number key.')
@@ -2225,7 +2252,7 @@ while True:
         age=int(input(f'\nHow old are you {name}? ').lower().strip())
         print(f'\n{name}. You are {age} years old.')
         break
-    
+
     except ValueError:
         print('\nThe \'try:\' and \'except ValueError:\' block executes/runs whenever a \
 letter key is pressed instead of a number key.')
@@ -2243,17 +2270,17 @@ print('\nWhen you give up, press (ENTER) to quit playing Flip! Flop!')
 
 while True:
     flip=input('\nFlip? or Flop? ').strip()
-    
+
     if flip=='flip':
         print('\nFlop!')
-        
+
     elif flip=='flop':
         print('\nFlip!')
-        
+
     elif flip=='':
         print('\nThanks for playing Flip! Flop!')
         break
-    
+
     else:
         print('\nYou can\'t cheat now! Do you flip? or do you flop?')
 
@@ -2270,10 +2297,10 @@ while chance<3:
         age=int(input(f'\nHow old are you {name}? ').strip())
         print(f'\n{name}. You are {age} years old.')
         break
-    
+
     except ValueError:
         print(f'\nYou have 3 chances left before the while-loop breaks out anyway!')
-        
+
         chance+=1
 
 # This for-loop example does exactly the same thing, the above
@@ -2291,10 +2318,10 @@ for chance in range(3):
         age=int(input(f'\nHow old are you {name}? ').strip())
         print(f'\n{name}. You are {age} years old.')
         break
-    
+
     except ValueError:
         print('\nYou have 3 chances left before the while-loop breaks out anyway!')
-        
+
         chance+=1
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 Did you know you can create variables for some of these Python
