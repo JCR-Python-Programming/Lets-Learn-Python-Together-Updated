@@ -61,7 +61,7 @@ print(my_text1,'\n\n'+my_text2)
 print(my_text1+'\n\n'+my_text2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Unpack multiple values, using just one, single "=" sign.
-# Not: You must use equal variables to equal values.
+# Note: You must use equal variables to equal values.
 
 a,b,c=1,2,3
 
@@ -2949,6 +2949,134 @@ print(my_variable.age)
 # Now we can keep things short and sweet with just one print( ) function.
 
 print(my_variable.first_name,my_variable.last_name,my_variable.age)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a Grandmother class with other classes that can share her
+# attributes. Use the super( ) function so you don't repeat any Python
+# code inside other classes that share the same attribute variables
+# alike. Also, you can create return def functions( ) that allow the
+# other classes to use them as well. Note: return def functions( ) are
+# optional; you don't need to use them with classes. But it's great
+# to know that you can if you like, which also adds more functionality
+# in your Python programs.
+
+class Grandmother:
+    def __init__(self,fname,lname):
+        self.first_name = fname
+        self.last_name = lname
+        
+    def grandmother(self):
+        return 'I love you all!'
+    def dog(self):
+        return "Grandma's dog, Sparky."
+
+class Mom(Grandmother):  # Mom class inherits Grandmother class
+    def __init__(self,fname,lname):
+        super().__init__(fname,lname)
+        
+    def mom(self):
+        return 'We love you two Mom!'
+    def cat(self):
+        return "Mom's fluffy cat."
+
+class Daughter(Mom):  # Daughter class inherits Mom class
+    def __init__(self,fname,lname):
+        super().__init__(fname,lname)
+        
+    def daughter(self):
+        return 'High Grandma!'
+    def fish(self):
+        return "Daughter's Goldfish."
+
+class Son(Daughter):   # Son class inherits Daughter class
+    def __init__(self,fname,lname):
+        super().__init__(fname,lname)
+        
+    def son(self):
+        return 'I love you Grandma!'
+    def bird(self):
+        return "Son's parrot."
+
+# gain access to first_name attributes
+
+print(Grandmother('Joan','Smith').first_name)
+
+print(Mom('Jane','Smith').first_name)
+
+print(Daughter('Jean','Smith').first_name)
+
+print(Son('John','Smith').first_name)
+
+# gain access to last_name attributes
+
+print(Grandmother('Joan','Smith').last_name)
+
+print(Mom('Jane','Smith').last_name)
+
+print(Daughter('Jean','Smith').last_name)
+
+print(Son('John','Smith').last_name)
+
+# call def function( ) return values
+
+print(Grandmother.grandmother('returned value'))
+
+print(Mom.mom('returned value'))
+
+print(Daughter.daughter('returned value'))
+
+print(Son.son('returned value'))
+
+# call def function( ) return values
+
+print(Grandmother.grandmother('returned value'))
+
+print(Mom.grandmother('returned value'))
+
+print(Daughter.grandmother('returned value'))
+
+print(Son.grandmother('returned value'))
+
+# call def function( ) return values
+
+print(Grandmother.grandmother('returned value'))
+
+print(Mom.grandmother('returned value'))
+
+print(Daughter.mom('returned value'))
+
+print(Son.mom('returned value'))
+
+print(Son.daughter('returned value'))
+
+# call def function( ) return values
+
+print(Grandmother.dog('returned value'))
+
+print(Mom.cat('returned value'))
+
+print(Daughter.fish('returned value'))
+
+print(Son.bird('returned value'))
+
+# call def function( ) return values
+
+print(Grandmother.dog('returned value'))
+
+print(Mom.dog('returned value'))
+
+print(Daughter.dog('returned value'))
+
+print(Son.dog('returned value'))
+
+# call def function( ) return values
+
+print(Grandmother.dog('returned value'))
+
+print(Mom.dog('returned value'))
+
+print(Daughter.cat('returned value'))
+
+print(Son.cat('returned value'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create classes with return def functions() inside them and call each one up.
 
