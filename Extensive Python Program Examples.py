@@ -194,6 +194,19 @@ print(multi_dim_tuple[2][1])
 
 print(multi_dim_tuple[2][2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'join( )' function to join tuple items together
+# with a separator '//' string. The separator string can
+# be any character/characters; two backslashes '//' are
+# used for this Python program example.
+
+tuple_join = ('Python',"Programmer's",'Glossary','Bible')
+
+separater = '//'
+
+print(separater.join(tuple_join))
+
+print(separater.join(tuple_join[1]))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn what Python lists are all about with these
 # Python program examples.
 
@@ -523,6 +536,19 @@ try:
     print(empty_list[0])
 except IndexError:
     print('index out of range:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'join( )' function to join list items together
+# with a separator '//' string. The separator string can
+# be any character/characters; two backslashes '//' are
+# used for this Python program example.
+
+list_join = ['Python',"Programmer's",'Glossary','Bible']
+
+separater = '//'
+
+print(separater.join(list_join))
+
+print(separater.join(list_join[1]))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # You can use Emojis in Python. I just discovered this on my own, just to see if
 # it would work. And it does work! WOW!! Use YouTube Emojis in your very own
@@ -867,6 +893,20 @@ for keys,values in dictionary.items():
 
 print(dict(
   we='Python',sure="Programmer's",love='Glassary',Python='Bible'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the 'join( )' function to join dictionary keys together
+# with a separator '//' string. The separator string can
+# be any character/characters; two backslashes '//' are
+# used for this Python program example.
+
+dictionary_join = {
+    'key1':'Python','key2':"Programmer's",'key3':'Glossary','key4':'Bible'}
+
+separater = '//'
+
+print(separater.join(dictionary_join))
+
+print(separater.join(dictionary_join.get('key1')))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Have some fun with Python Sets.
 
