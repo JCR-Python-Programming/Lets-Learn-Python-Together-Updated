@@ -1058,10 +1058,10 @@ print(animals1)
 
 # Why not use these shortcuts instead.
 
-print(animals1 | animals2)
-print(animals1 & animals2)
-print(animals1 - animals2)
-print(animals1 ^ animals2)
+print(animals1 | animals2)  # Union
+print(animals1 & animals2)  # Intersection
+print(animals1 - animals2)  # Difference
+print(animals1 ^ animals2)  # Symmetric Difference
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 animals1,animals2=(
     {'Dog','Cat','Bird','Fish','Dog','Bird'},
@@ -1075,6 +1075,170 @@ animals1.update(animals2)
 for i in animals1:
     print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# packing and unpacking integer sets using one equals = sign
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+print(set1,set2,set3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# add up all the integer values in each set with the sum( ) function,
+# then add up all the sets together
+
+set1,set2,set3 = (
+    {1,2,3,4,5},  # set1 = 15
+    {6,7,8,9,10},  # set2 = 40
+    {11,12,13,14,15})  # set3 = 65
+
+set_total_sum = sum(set2)+sum(set3)  # 15+40+55 = 120
+
+print(set_total_sum)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the enumerate( ) function to loop through a set of values
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+for x,y in enumerate(set1):print(y)
+
+for x,y in enumerate(set2):print(y)
+
+for x,y in enumerate(set3):print(y)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# invoke the zip( ) function to loop through a set of values.
+# Note: the zip() function must contain exactly the same
+# number of value items; the shortest value set will cut off
+# values in the other sets
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+for x,y,z in zip(set1,set2,set3):print(x,y,z)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# join two sets of values into a larger set of values
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+print(set1.union(set2)) # Union
+
+print(set2.union(set3)) # Union
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use these shortcuts
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+print(set1|set2) # Union
+
+print(set2|set3) # Union
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# intersect two sets; if their values have one or more values
+# the same, they will be displayed. If not the same, nothing
+# will be displayed
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1.intersection(set2)) # Intersection
+
+print(set2.intersection(set3)) # Intersection
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use these shortcuts
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1&set2) # Intersection
+
+print(set2&set3) # Intersection
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# the difference method will only show the values of set1 and any
+# like values in set2 and set3 as well as set1 won't be diplayed on
+# the screen output in set1
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1.difference(set2)) # Difference
+
+print(set2.difference(set3)) # Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use these shortcuts
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1-set2) # Difference
+
+print(set2-set3) # Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# the symmetric difference method will show the values of set1,
+# set2 and set3 and any like values in set2 and set3 as well as
+# set1 won't be diplayed on the screen output in all three sets
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1.symmetric_difference(set2)) # Symmetric Difference
+
+print(set2.symmetric_difference(set3)) # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use these shortcuts
+
+set1,set2,set3 = (
+    {1,2,3,4,15},
+    {7,8,9,10,15},
+    {11,12,13,14,15})
+
+print(set1^set2) # Symmetric Difference
+
+print(set2^set3) # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# the symmetric difference update method will remove the values
+# of set1, set2 and set3
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+print(set1.symmetric_difference_update(set2)) # Symmetric Difference Update
+
+print(set2.symmetric_difference_update(set3)) # Symmetric Difference Update
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Why not use these shortcuts instead.
+
+set1,set2,set3 = (
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15})
+
+print(set1 | set2)  # Union
+print(set1 & set2)  # Intersection
+print(set1 - set2)  # Difference
+print(set1 ^ set2)  # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 animals1,animals2=(
     {'Dog','Cat','Bird','Fish','Dog','Bird'},
     {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
@@ -1272,6 +1436,28 @@ print(len(num_set)) # there are ten values in the set, zero through nine
 add_num_values = sum(num_set) # add up all values in the set
 
 print(add_num_values) # added all ten values = 45
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is how you can find the mean of a set of numbers with Python.
+# But now, I want to figure out how to find the middle number or numbers
+# in the nums values. In this case, 4 and 5 are the only two that are in
+# the middle of the nums values; hence ten values, zero through nine.
+# The good news is, I have long ago found out how to intersect numbers,
+# which is simply numbers that are the same, but from different sets
+# and values or unionize them into one, larger set of values. Python sets
+# also get rid of any duplicate values, such as text strings and integer
+# strings. Sets also don't use indexing, whereas tuples and lists do.
+# Sets display text strings in random order, whereas integer strings are
+# in order and sorted as well.
+
+nums = {0,1,2,3,4,5,6,7,8,9}
+
+mean = len(nums)  # 10 values in nums
+
+add_values = sum(nums)  # nums = 45
+
+answer = add_values/mean  # 45/10 = 4.5
+
+print(answer)  # 4.5
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 For those who are very new to Python programming or just programming
@@ -4037,7 +4223,7 @@ class Return_all_class_functions(
         Return_class_function1.__init__(first_name,last_name,age)  # inheritance
         Return_class_function2.__init__(first_name,last_name,age)  # inheritance
         Return_class_function3.__init__(first_name,last_name,age)  # inheritance
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's now create three tuples called fnames, lnames and ages to use within
 # 'zip( )' functions. Here are three separate zip( ) function examples for the three
 # individual classes.
@@ -4138,7 +4324,7 @@ class Return_all_class_functions(
         Return_class_function1.__init__(first_name,last_name,age)  # inheritance
         Return_class_function2.__init__(first_name,last_name,age)  # inheritance
         Return_class_function3.__init__(first_name,last_name,age)  # inheritance
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's now create three tuples called fnames, lnames and ages to use within
 # 'enumerate( )' functions. Here are three separate enumerate( ) function examples
 # for the three individual classes.
