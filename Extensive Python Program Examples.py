@@ -1074,6 +1074,22 @@ for i in x:
 animals1.update(animals2)
 for i in animals1:
     print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+animals1,animals2=(
+    {'Dog','Cat','Bird','Fish','Dog','Bird'},
+    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
+
+animals1.update(animals2)
+
+convert=list(animals1)
+
+x=sorted(convert)
+for i in x:
+    print(i)
+
+x=sorted(convert,reverse=True)
+for i in x:
+    print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # packing and unpacking integer sets using one equals = sign
 
@@ -1239,22 +1255,6 @@ print(set1 & set2)  # Intersection
 print(set1 - set2)  # Difference
 print(set1 ^ set2)  # Symmetric Difference
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-animals1,animals2=(
-    {'Dog','Cat','Bird','Fish','Dog','Bird'},
-    {'Bat','Rat','Mouse','Monkey','Dog','Fish','Cat'})
-
-animals1.update(animals2)
-
-convert=list(animals1)
-
-x=sorted(convert)
-for i in x:
-    print(i)
-
-x=sorted(convert,reverse=True)
-for i in x:
-    print(i)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 Create three different integer sets that will combine/unionize all three sets into one
 single set. Convert the single set into a list, using the list() function. Next, view the
