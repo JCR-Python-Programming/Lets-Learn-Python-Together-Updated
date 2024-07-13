@@ -908,6 +908,109 @@ print(separater.join(dictionary_join))
 
 print(separater.join(dictionary_join.get('key1')))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Python dictionaries are pretty neat for data manipulation.
+# You can call keys to return values. You can also use integers
+# for keys and values to completely manipulate data
+
+# dictionary 'keys' return values. Note: the word key can be any
+# name you like. Play with the text values and make sentences
+# out of them
+
+dictionary = {
+    'key 1':'Value 1','key 2':'Value 2','key 3':'Value 3',
+    'key 4':'Value 4','key 5':'Value 5','key 6':'Value 6',
+    'key 7':'Value 7','key 8':'Value 8'}
+
+# use a variable if you like
+
+key = dictionary.get('key 4')
+
+print(key)
+
+# or this:
+
+key = dictionary.get('key 11','Key Not Found:')  # KNF optional
+
+print(key)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+dictionary = {
+    'key 1':'Value 1','key 2':'Value 2','key 3':'Value 3',
+    'key 4':'Value 4','key 5':'Value 5','key 6':'Value 6',
+    'key 7':'Value 7','key 8':'Value 8'}
+
+# loop through dictionary keys
+
+for i in dictionary:
+    print(i)
+
+# loop through the dictionary values
+
+for i in dictionary:
+    print(dictionary.get(i))
+
+# loop through dictionary keys and values
+
+for i in dictionary:
+    print(i,dictionary.get(i))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use integers as dictionary keys to return values
+
+dictionary = {
+    1:'Value 1',2:'Value 2',3:'Value 3',
+    4:'Value 4',5:'Value 5',6:'Value 6',
+    7:'Value 7',8:'Value 8'}
+
+# use a variable if you like
+
+key = dictionary.get(4)
+
+print(key)
+
+# or this:
+
+key = dictionary.get(11,'Key Not Found:')  # KNF optional
+
+print(key)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# this is pure data manipulation at its finest.
+# Use integer numbers for keys instead of text strings
+
+dictionary = {
+    1:'Value 1',2:'Value 2',3:'Value 3',
+    4:'Value 4',5:'Value 5',6:'Value 6',
+    7:'Value 7',8:'Value 8'}
+
+print(dictionary.get(1+2+5))
+
+print(dictionary.get(2*5-2))
+
+print(dictionary.get(16/2))
+
+print(dictionary.get(16/2+1,'Key Not Found:'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use integers for keys and values for total data manipulation
+
+dictionary = {
+    1:100,2:200,3:300,
+    4:400,5:500,6:600,
+    7:700,8:800}
+
+# add up all the keys
+
+print(sum(dictionary.keys()))
+
+# add up all the values
+
+print(sum(dictionary.values()))
+
+# add up all the keys and values together
+
+sum_num1 = sum(dictionary.keys())
+
+sum_num2 = sum(dictionary.values())
+
+print(sum_num1+sum_num2)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Have some fun with Python Sets.
 
 animals1,animals2=(
