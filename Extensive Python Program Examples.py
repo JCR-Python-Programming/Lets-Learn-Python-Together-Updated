@@ -1011,6 +1011,26 @@ sum_num2 = sum(dictionary.values())
 
 print(sum_num1+sum_num2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# calculate the values in a dictionary. If a key is not found, the try and
+# except handler will execute and the finally handler executes no matter
+# the outcome.
+
+dictionary = {
+    1:100,2:200,3:300,
+    4:400,5:500,6:600,
+    7:700,8:800}
+
+try:
+    values = dictionary.get(8)+dictionary.get(9)
+
+    print(values)
+
+except TypeError:
+    print('keys cannot be solved. Not enough values:')
+
+finally:
+    print('finally executes no matter the outcome.')  # optional
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Have some fun with Python Sets.
 
 animals1,animals2=(
@@ -1049,8 +1069,8 @@ print(animals1)
 # Sets always display values in random order, such as this set_demo
 # example below illustrates. This means that every time you execute/run
 # the set_demo program example, the values will always be in random
-# order. However, sets are designed to get rid of duplicate values. Note:
-# sets do not use indexing, such as tuples and lists do.
+# order. However, sets are designed to get rid of duplicate values.
+# Note: sets do not use indexing, such as tuples and lists do.
 
 set_demo={'Tom','Bob','John','Ron','Tom'}
 
