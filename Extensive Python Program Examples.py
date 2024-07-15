@@ -1065,6 +1065,19 @@ print(animals1)
 .update()
 '''
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# use the dict( ) function to create a dictionary, via the screen output
+
+make_dictionary = dict(key1='Value 1',key2='Value 2',key3='Value 3')
+
+# copy the screen output then create a variable and paste the screen
+# output that you see below:
+
+print(make_dictionary)  # {'key1': 'Value 1', 'key2': 'Value 2', 'key3': 'Value 3'}
+
+my_dictionary = {'key1': 'Value 1', 'key2': 'Value 2', 'key3': 'Value 3'}
+
+print(my_dictionary.get('key1'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Check to see if there are any duplicate names, using a set.
 # Sets always display values in random order, such as this set_demo
 # example below illustrates. This means that every time you execute/run
@@ -4922,3 +4935,73 @@ while True:
 
     time.sleep(1)
     os.system('cls')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# To get the ASCII code value of any letter or number key, simply type and
+# execute/run the program examples below and see what happens. Try using
+# different letters and numbers to see their ASCII code values.
+
+print(chr(65))
+print(ord('A'))
+
+print(chr(97))
+print(ord('a'))
+
+print(chr(66))
+print(ord('B'))
+
+print(chr(98))
+print(ord('b'))
+
+print('ASCII code',ord('A'),'is the uppercase letter',chr(65))
+print('ASCII code',ord('a'),'is the lowercase letter',chr(97))
+
+print('ASCII code',ord('B'),'is the uppercase letter',chr(66))
+print('ASCII code',ord('b'),'is the lowercase letter',chr(98))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# express binary, octal and hexadecimal numbers with these Python
+# program examples
+
+print(bin(255))  # 0b11111111
+
+print(oct(255))  # 0o377
+
+print(hex(255))  # 0xff
+
+# or these:
+
+print(f'{255:b}')  # 11111111
+
+print(f'{255:o}')  # 377
+
+print(f'{255:x}')  # ff
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Things you can do with digital computer numbers. Use these
+# with tuples, lists, dectionaries and sets.
+
+digital_dictionary = {'bin1': f'{0:b}','bin2': f'{15:b}','bin3': f'{255:b}'}
+
+print(digital_dictionary.get('bin1'))  # 0 bytes
+
+print(digital_dictionary.get('bin2'))  # 1111 = 15, half byte
+
+print(digital_dictionary.get('bin3'))  # 11111111 = 255, one full eight bit byte
+
+# prefixes:
+
+# f'{255:b}' binary
+
+# f'{255:x}' hexadecimal
+
+# f'{255:o}' octal
+
+# and these if you like:
+
+# bin(255) binary
+
+# hex(255) hexadecimal
+
+# oct(255) octal
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+digital_set = {f'{0:b}',f'{15:b}',f'{255:b}'}
+
+print(digital_set)
