@@ -1069,14 +1069,9 @@ print(animals1)
 
 make_dictionary = dict(key1='Value 1',key2='Value 2',key3='Value 3')
 
-# copy the screen output then create a variable and paste the screen
-# output that you see below:
-
 print(make_dictionary)  # {'key1': 'Value 1', 'key2': 'Value 2', 'key3': 'Value 3'}
 
-my_dictionary = {'key1': 'Value 1', 'key2': 'Value 2', 'key3': 'Value 3'}
-
-print(my_dictionary.get('key1'))
+print(make_dictionary.get('key1'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Check to see if there are any duplicate names, using a set.
 # Sets always display values in random order, such as this set_demo
