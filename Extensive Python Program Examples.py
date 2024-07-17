@@ -5000,3 +5000,92 @@ print(digital_dictionary.get('bin3'))  # 11111111 = 255, one full eight bit byte
 digital_set = {f'{0:b}',f'{15:b}',f'{255:b}'}
 
 print(digital_set)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Type any number, or numbers you wish and Python will translate them
+# into binary, hexadecimal, octal to human readable decimal numbers.
+# For brand new programmers, this is a must to learn, so let Python teach
+# you how to read computer numbers.
+
+redundant_code='''
+question = input('Do you wish to continue? Enter for Y, N for No: ').lower().strip()'''
+
+while True:
+    try:
+        user_input = int(input('Type any number and I will translate it for you: ').strip())
+
+        if user_input == 0:
+            print('zero bits')
+            exec(redundant_code)
+        elif user_input == 1:
+            print(len(f'{user_input:b}'),
+                  f'bit = {user_input:b} = {user_input:x} = {user_input:o} = decimal: {user_input}')
+            exec(redundant_code)
+        elif user_input > 1:
+            print(len(f'{user_input:b}'),
+                  f'bits = {user_input:b} = {user_input:x} = {user_input:o} = decimal: {user_input}')
+            exec(redundant_code)
+        if question == 'n':
+            break
+        else:
+            continue
+   
+    except ValueError:
+        print('Numbers only please: ')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Type any number, or numbers you wish and Python will translate them
+# into binary, hexadecimal, octal to human readable decimal numbers.
+# For brand new programmers, this is a must to learn, so let Python teach
+# you how to read computer numbers.
+
+# define function( ) example:
+
+def digital_translator():
+    
+    while True:
+        try:
+            user_input = int(input('Type any number and I will translate it for you: ').strip())
+
+            if user_input == 0:
+                print('zero bits')
+                question = input('Do you wish to continue? Enter for Y, N for No: ').lower().strip()
+            elif user_input == 1:
+                print(len(f'{user_input:b}'),
+                      f'bit = {user_input:b} = {user_input:x} = {user_input:o} = decimal: {user_input}')
+                question = input('Do you wish to continue? Enter for Y, N for No: ').lower().strip()
+            elif user_input > 1:
+                print(len(f'{user_input:b}'),
+                      f'bits = {user_input:b} = {user_input:x} = {user_input:o} = decimal: {user_input}')
+                question = input('Do you wish to continue? Enter for Y, N for No: ').lower().strip()
+            if question == 'n':
+                break
+            else:
+                continue
+       
+        except ValueError:
+            print('Numbers only please: ')
+            
+digital_translator()  # call the digital_translator() function
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Welcome to the Binary Beat in Motion Python program example:
+
+from time import sleep as delay;import os;os.system('title Binary Beat')
+
+red='\x1b[31m'
+green='\x1b[32m'
+blue='\x1b[34m'
+yellow='\x1b[33m'
+purple='\x1b[35m'
+white='\x1b[37m'
+os.system('cls')
+n=0
+
+while True:
+    print(white+'\n'+' '*6+'welcome to the binary beat in motion python program example'.title()
+          +yellow+'\n\n'+' '*6+'1     1    1    1    1   1   1   1 = eight bits or one byte'
+          +'\n\n'+' '*6+'128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = decimal number: 255''\n\n'+' '*2
+          +'binary base: 2, octal base: 8, hexadecimal base: 16, decimal base: 10'.title()
+          +'\n\n'+' '*3+yellow,len(f'{n:b}'),green+'binary digits: '.title()
+          +yellow+f'{n:b} '+red+'=\n\n'+' '*3+yellow,len(f'{n:o}'),green+'octal digits: '.title()
+          +yellow+f'{n:o} '+red+'=\n\n'+green+' '*3+yellow,len(f'{n:x}'),green+'hexadecimal digits: '.title()
+          +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
+          +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
