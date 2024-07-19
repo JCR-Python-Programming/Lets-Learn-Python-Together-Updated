@@ -2035,10 +2035,10 @@ print(outer_function(10,5,2))  # BEDMAS: order of operation rules
 def outer_function(book):
     def inner_function1():
         return "Python Programmer's Glossary Bible"
-    
+
     def inner_function2():
         return "by Joseph C. Richardson"
-    
+
     return inner_function1()
 
 print(outer_function('return argument placeholder'))
@@ -2046,10 +2046,10 @@ print(outer_function('return argument placeholder'))
 def outer_function(book):
     def inner_function1():
         return "Python Programmer's Glossary Bible"
-    
+
     def inner_function2():
         return "by Joseph C. Richardson"
-    
+
     return inner_function1(),inner_function2()
 
 print(outer_function('return argument placeholder')[0])
@@ -2059,7 +2059,7 @@ print(outer_function('return argument placeholder')[1])
 def outer_function(num):
     def inner_function1():
         return num+num
-    
+
     def inner_function2():
         return num-num
 
@@ -2070,7 +2070,7 @@ print(outer_function(10))
 def outer_function(num):
     def inner_function1():
         return num+num
-    
+
     def inner_function2():
         return num-num
 
@@ -2139,10 +2139,10 @@ print(outer_function('return argument placeholder'))
 def outer_function(book):
     def inner_function1(book_name):
         return "Python Programmer's Glossary Bible"
-    
+
     def inner_function2(author):
         return "by Joseph C. Richardson"
-    
+
     return inner_function1('argument placeholder')
 
 print(outer_function('return argument placeholder'))
@@ -2150,10 +2150,10 @@ print(outer_function('return argument placeholder'))
 def outer_function(book):
     def inner_function1(book_name):
         return "Python Programmer's Glossary Bible"
-    
+
     def inner_function2(author):
         return "by Joseph C. Richardson"
-    
+
     return inner_function1('argument placeholder'),inner_function2('argument placeholder')
 
 print(outer_function('return argument placeholder')[0])
@@ -2207,6 +2207,50 @@ def outer_function(num1,num2,num3):
 print(outer_function(10,5,2)[0])  # BEDMAS: order of operation rules
 
 print(outer_function(10,5,2)[1])  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(computer_numbers):
+
+    num = 255
+    bookname = "Python Programmer's Glossary Bible"
+    authorname = 'by Joseph C. Richardson'
+
+    def inner_function1(binary):
+        return int(f'{num:b}')
+
+    def inner_function2(hexadecimal):
+        return f'{num:X}'
+
+    def inner_function3(octal):
+        return f'{num:o}'
+
+    def inner_function4(decimal):
+        return f'{num:d}'
+
+    def inner_function5(book):
+        return bookname
+
+    def inner_function6(author):
+        return authorname
+
+    return (
+        inner_function1('argument placeholder'),
+        inner_function2('argument placeholder'),
+        inner_function3('argument placeholder'),
+        inner_function4('argument placeholder'),
+        inner_function5('argument placeholder'),
+        inner_function6('argument placeholder'))
+
+print(outer_function('return argument placeholder')[0])
+
+print(outer_function('return argument placeholder')[1])
+
+print(outer_function('return argument placeholder')[2])
+
+print(outer_function('return argument placeholder')[3])
+
+print(outer_function('return argument placeholder')[4])
+
+print(outer_function('return argument placeholder')[5])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a continuation of the use of def fuctions(). We are doing
 # the very same things we did before, but we are now going to
@@ -5238,7 +5282,7 @@ while True:
             break
         else:
             continue
-   
+
     except ValueError:
         print('Numbers only please: ')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -5250,7 +5294,7 @@ while True:
 # define function( ) example:
 
 def digital_translator():
-    
+
     while True:
         try:
             user_input = int(input('Type any number and I will translate it for you: ').strip())
@@ -5270,10 +5314,10 @@ def digital_translator():
                 break
             else:
                 continue
-       
+
         except ValueError:
             print('Numbers only please: ')
-            
+
 digital_translator()  # call the digital_translator() function
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Welcome to the Binary Beat in Motion Python program example:
