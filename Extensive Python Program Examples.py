@@ -1998,6 +1998,216 @@ x = arg_funct('John','Smith',30)
 
 print(x)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create outer functions with inner return functions.
+
+def outer_function(book):
+    def inner_function():
+        return "Python Programmer's Glossary Bible"
+
+    return inner_function()
+
+print(outer_function('by Joseph C. Richardson'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num):
+    def inner_function():
+        return num+num
+
+    return inner_function()
+
+print(outer_function(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2):
+    def inner_function():
+        return num1+num2
+
+    return inner_function()
+
+print(outer_function(15,5))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function():
+        return num1+num2*num3
+
+    return inner_function()
+
+print(outer_function(10,5,2))  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(book):
+    def inner_function1():
+        return "Python Programmer's Glossary Bible"
+    
+    def inner_function2():
+        return "by Joseph C. Richardson"
+    
+    return inner_function1()
+
+print(outer_function('return argument placeholder'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(book):
+    def inner_function1():
+        return "Python Programmer's Glossary Bible"
+    
+    def inner_function2():
+        return "by Joseph C. Richardson"
+    
+    return inner_function1(),inner_function2()
+
+print(outer_function('return argument placeholder')[0])
+
+print(outer_function('return argument placeholder')[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num):
+    def inner_function1():
+        return num+num
+    
+    def inner_function2():
+        return num-num
+
+    return inner_function1()
+
+print(outer_function(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num):
+    def inner_function1():
+        return num+num
+    
+    def inner_function2():
+        return num-num
+
+    return inner_function1(),inner_function2()
+
+print(outer_function(10)[0])
+
+print(outer_function(10)[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2):
+    def inner_function1():
+        return num1+num2
+
+    def inner_function2():
+        return num1-num2
+
+    return inner_function1()
+
+print(outer_function(15,5))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2):
+    def inner_function1():
+        return num1+num2
+
+    def inner_function2():
+        return num1-num2
+
+    return inner_function1(),inner_function2()
+
+print(outer_function(15,5)[0])
+
+print(outer_function(15,5)[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function1():
+        return num1+num2*num3
+
+    def inner_function2():
+        return num1-num2/num3
+
+    return inner_function1()
+
+print(outer_function(10,5,2))  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function1():
+        return num1+num2*num3
+
+    def inner_function2():
+        return num1-num2/num3
+
+    return inner_function1(),inner_function2()
+
+print(outer_function(10,5,2)[0])  # BEDMAS: order of operation rules
+
+print(outer_function(10,5,2)[1])  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(book):
+    def inner_function(author):
+        return "Python Programmer's Glossary Bible"
+
+    return inner_function('by Joseph C. Richardson')
+
+print(outer_function('return argument placeholder'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(book):
+    def inner_function1(book_name):
+        return "Python Programmer's Glossary Bible"
+    
+    def inner_function2(author):
+        return "by Joseph C. Richardson"
+    
+    return inner_function1('argument placeholder')
+
+print(outer_function('return argument placeholder'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(book):
+    def inner_function1(book_name):
+        return "Python Programmer's Glossary Bible"
+    
+    def inner_function2(author):
+        return "by Joseph C. Richardson"
+    
+    return inner_function1('argument placeholder'),inner_function2('argument placeholder')
+
+print(outer_function('return argument placeholder')[0])
+
+print(outer_function('return argument placeholder')[1])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num):
+    def inner_function(number):
+        return num+num
+
+    return inner_function('argument placeholder')
+
+print(outer_function(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2):
+    def inner_function(number):
+        return num1+num2
+
+    return inner_function('argument placeholder')
+
+print(outer_function(15,5))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function(number):
+        return num1+num2*num3
+
+    return inner_function('argument placeholder')
+
+print(outer_function(10,5,2))  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function1(numbers):
+        return num1+num2*num3
+
+    def inner_function2(numbers):
+        return num1-num2/num3
+
+    return inner_function1('argument placeholder')
+
+print(outer_function(10,5,2))  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(num1,num2,num3):
+    def inner_function1(numbers):
+        return num1+num2*num3
+
+    def inner_function2(numbers):
+        return num1-num2/num3
+
+    return inner_function1('argument placeholder'),inner_function2('argument placeholder')
+
+print(outer_function(10,5,2)[0])  # BEDMAS: order of operation rules
+
+print(outer_function(10,5,2)[1])  # BEDMAS: order of operation rules
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a continuation of the use of def fuctions(). We are doing
 # the very same things we did before, but we are now going to
 # create a for loop that will iterate all through the tuple() indexes
