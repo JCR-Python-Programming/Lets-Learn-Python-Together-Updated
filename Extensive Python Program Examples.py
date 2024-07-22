@@ -2252,6 +2252,36 @@ print(outer_function('return argument placeholder')[4])
 
 print(outer_function('return argument placeholder')[5])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def outer_function(computer_numbers):
+    
+    num1,num2,num3 = 2,16,8
+    
+    def inner_function1(binary):
+        return f'{num1+num2-num3:b}'
+
+    def inner_function2(hexadecimal):
+        return  f'{num1+num2-num3:X}'
+
+    def inner_function3(octal):
+        return  f'{num1+num2-num3:o}'
+
+    def inner_function4(decimal):
+        return  f'{num1+num2-num3:d}'
+
+    return (
+        inner_function1('argument placeholder'),
+        inner_function2('argument placeholder'),
+        inner_function3('argument placeholder'),
+        inner_function4('argument placeholder'))
+
+print(outer_function('return argument placeholder')[0])
+
+print(outer_function('return argument placeholder')[1])
+
+print(outer_function('return argument placeholder')[2])
+
+print(outer_function('return argument placeholder')[3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a continuation of the use of def fuctions(). We are doing
 # the very same things we did before, but we are now going to
 # create a for loop that will iterate all through the tuple() indexes
@@ -5066,6 +5096,99 @@ print(Attributes1('argument1','argument2','argument3').attribute1)
 print(Attributes2('argument1','argument2','argument3').attribute2)
 
 print(Attributes1.return_sum(1,2))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# LAMBDA functions are 'nameless', 'anonymous' functions.
+
+variable = lambda name:name
+
+print(variable('John'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+variable = lambda fname,lname:fname+lname
+
+print(variable('John ','Smith'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+variable = lambda x:x
+
+print(variable(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+variable = lambda x:x+x
+
+print(variable(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+variable = lambda x,y:x+y
+
+print(variable(10,10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+variable = lambda num:num >= 20
+
+print(variable(20))  # True
+
+print(variable(19))  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def num(x):
+    return x**3
+print(num(10))
+
+num=lambda x:x**3
+print(num(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def num(x):
+    return lambda x:x**3
+c=num(3)
+print(c(10))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+mylist=[1,2,3,4,5,6]
+newlist=list(filter(lambda a:(a/3==2),mylist))
+print(newlist)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+mylist=[1,2,3,4,5,6]
+p=list(map(lambda a:(a/3!=2),mylist))
+print(p)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+from functools import reduce
+r=reduce(lambda a,b:a+b,[23,56,43,98,1])
+print(r)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+s=lambda a: a*a
+print(s(4))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+d=lambda x,y:3*x+4*y
+print(d(4,7))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x=lambda a,b:(a+b)**2
+print(x(3,4))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x=lambda a:a+10
+print(x(5))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x=lambda a,b:a*b
+print(x(5,6))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x=lambda a,b,c:a+b+c
+print(x(5,6,2))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def myfunc(n):
+  return lambda a:a*n
+
+mydoubler=myfunc(2)
+
+print(mydoubler(11))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def myfunc(n):
+  return lambda a:a*n
+
+mytripler=myfunc(3)
+
+print(mytripler(11))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def myfunc(n):
+  return lambda a:a*n
+
+mydoubler=myfunc(2)
+mytripler=myfunc(3)
+
+print(mydoubler(11)) 
+print(mytripler(11))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 Python clock functions allow you to program the actual time in real time.
