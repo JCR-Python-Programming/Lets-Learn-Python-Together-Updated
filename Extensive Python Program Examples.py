@@ -3968,8 +3968,9 @@ mf1()  # call me up
 mf2()  # call me up
 mf3()  # call me up
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create an immutable default tuple for loop of our class def functions, using the
-# hard return backslash ' \ ' instead of using parentheses ' ( ) '
+# Let's create an immutable default tuple for loop of our class
+# def functions, using the hard return backslash ' \ ' instead of
+# using parentheses ' ( ) '
 
 class_def_functions = \
                     Child.first_def_function_grandpa,\
@@ -5466,3 +5467,34 @@ while True:
           +yellow+f'{n:o} '+red+'=\n\n'+green+' '*3+yellow,len(f'{n:x}'),green+'hexadecimal digits: '.title()
           +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
           +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try these Python programming experiments out, via invoking
+# the 'in' and 'not' prefixes to see if values are True or False.
+
+text = 'Python'
+
+print('P' in text)  # True
+
+print('p' in text)  # False
+
+print('p' not in text)  # True
+
+print('P' not in text)  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+num_set = {0,1,2,3,4,5,6,7,8,9}
+
+print(1 in num_set)  # True
+
+print(10 in num_set)  # False
+
+print(11 not in num_set)  # True
+
+print(1 not in num_set)  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+num_set = {0,1,2,3,4,5,6,7,8,9}
+
+if 1 in num_set:
+    print('True')
+
+if 11 not in num_set:
+    print('True')
