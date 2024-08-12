@@ -1,5 +1,7 @@
 # Here are some extensive hands-on, in depth Python program examples.
 
+# Created by Joseph C. Richardson, GitHub.com
+
 # Use three single quote marks at the beginning and
 # at the end of the print() function text.
 
