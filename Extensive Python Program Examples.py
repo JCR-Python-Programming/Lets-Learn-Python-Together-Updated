@@ -2,6 +2,9 @@
 
 # Created by Joseph C. Richardson, GitHub.com
 
+# I am almost a complete Walking Human Computer Science Research Laboratory
+# Machine on Two Legs. 😁
+
 # Use three single quote marks at the beginning and
 # at the end of the print() function text.
 
