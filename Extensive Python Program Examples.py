@@ -110,7 +110,7 @@ my_tuple = ('Python',"Programmer's",'Glossary','Bible')
 
 print(my_tuple[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# this is a tuple( ) by default, without the parantheses '( )'
+# this is a tuple() by default, without the parantheses '()'
 
 default_tuple = 'Python',"Programmer's",'Glossary','Bible'
 
@@ -199,7 +199,7 @@ print(multi_dim_tuple[2][1])
 
 print(multi_dim_tuple[2][2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the 'join( )' function to join tuple items together
+# invoke the 'join()' function to join tuple items together
 # with a separator '//' string. The separator string can
 # be any character/characters; two backslashes '//' are
 # used for this Python program example.
@@ -237,7 +237,7 @@ my_list[2:0] = ['Fun','Greate','Book']
 
 print(my_list[2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# add the value 'Book' to 'my_list' with the append( ) function
+# add the value 'Book' to 'my_list' with the append() function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -246,7 +246,7 @@ my_list.append('Book')
 print(my_list[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # insert a new value 'Book' into 'my_list' at index[3]
-# with the 'insert( )' function
+# with the 'insert()' function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -255,7 +255,7 @@ my_list.insert(3,'Book')
 print(my_list[3])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # remove the last value at the end of 'my_list' with the
-# pop( ) function
+# pop() function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -267,7 +267,7 @@ popped = my_list.pop()
 
 print(popped)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# remove the second value of 'my_list' with the pop( ) function
+# remove the second value of 'my_list' with the pop() function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -279,7 +279,7 @@ popped = my_list.pop(1)
 
 print(popped)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# remove a value from 'my_list' with the remove( ) function
+# remove a value from 'my_list' with the remove() function
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
 
@@ -287,7 +287,7 @@ my_list.remove("Programmer's")
 
 print(my_list[1])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# empty all values in 'my_list' with the clear( ) function,
+# empty all values in 'my_list' with the clear() function,
 # without deleting the 'my_list' variable
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -318,7 +318,7 @@ del my_list[1]
 print(my_list[1])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # copy all the values in 'my_list' to the items_list with the
-# copy( ) function, then check the two lists to view them
+# copy() function, then check the two lists to view them
 # on the screen output at program execution time
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -339,7 +339,7 @@ list_join = my_list1+my_list2
 
 print(list_join)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# join two lists together with the extend( ) function, then
+# join two lists together with the extend() function, then
 # check 'my_list1' to view them on the screen output at
 # execution time
 
@@ -370,7 +370,7 @@ my_list = ['Python',"Programmer's",'Glossary','Bible']
 
 print(we,sure,love,Python)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the sorrt( ) function to sort 'my_list' values in
+# invoke the sorrt() function to sort 'my_list' values in
 # alphabetical order
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -379,7 +379,7 @@ my_list.sort()
 
 print(my_list)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the sorted( ) function to temporarily sort 'my_list'
+# invoke the sorted() function to temporarily sort 'my_list'
 # values without sorting the actual 'my_list' values
 
 my_list = ['Python',"Programmer's",'Glossary','Bible']
@@ -542,7 +542,7 @@ try:
 except IndexError:
     print('index out of range:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the 'join( )' function to join list items together
+# invoke the 'join()' function to join list items together
 # with a separator '//' string. The separator string can
 # be any character/characters; two backslashes '//' are
 # used for this Python program example.
@@ -677,7 +677,7 @@ my_dictionary_list['key1'] = 'Book'  # key1 value was 'Python'
 
 print(my_dictionary_list.get('key1'))   # Book
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the 'pop( )' function to delete/pop 'key2' from 'my_dictionary_list'
+# invoke the 'pop()' function to delete/pop 'key2' from 'my_dictionary_list'
 
 my_dictionary_list = {
     'key1':'Python','key2':["Programmer's",'Glossary','Bible'],'key3':'is','key4':'Great!'}
@@ -899,7 +899,7 @@ for keys,values in dictionary.items():
 print(dict(
   we='Python',sure="Programmer's",love='Glassary',Python='Bible'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the 'join( )' function to join dictionary keys together
+# invoke the 'join()' function to join dictionary keys together
 # with a separator '//' string. The separator string can
 # be any character/characters; two backslashes '//' are
 # used for this Python program example.
@@ -1070,7 +1070,7 @@ print(animals1)
 .update()
 '''
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# use the dict( ) function to create a dictionary, via the screen output
+# use the dict() function to create a dictionary, via the screen output
 
 make_dictionary = dict(key1='Value 1',key2='Value 2',key3='Value 3')
 
@@ -1236,7 +1236,7 @@ set1,set2,set3 = (
 
 print(set1,set2,set3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# add up all the integer values in each set with the sum( ) function,
+# add up all the integer values in each set with the sum() function,
 # then add up all the sets together
 
 set1,set2,set3 = (
@@ -1248,7 +1248,7 @@ set_total_sum = sum(set2)+sum(set3)  # 15+40+55 = 120
 
 print(set_total_sum)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the enumerate( ) function to loop through a set of values
+# invoke the enumerate() function to loop through a set of values
 
 set1,set2,set3 = (
     {1,2,3,4,5},
@@ -1261,7 +1261,7 @@ for x,y in enumerate(set2):print(y)
 
 for x,y in enumerate(set3):print(y)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# invoke the zip( ) function to loop through a set of values.
+# invoke the zip() function to loop through a set of values.
 # Note: the zip() function must contain exactly the same
 # number of value items; the shortest value set will cut off
 # values in the other sets
@@ -1565,7 +1565,7 @@ num_set = {9,1,2,3,5,4,6,7,8,0}
 
 print(num_set) # check your set values: optional
 
-# count the values in the set with the len( ) function
+# count the values in the set with the len() function
 
 print(len(num_set)) # there are ten values in the set, zero through nine
 
@@ -1970,7 +1970,7 @@ my_third_function_variables(
     'placeholder argument variable2', # value 2
     'placeholder argument variable3') # value 3
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create some argument def function( ) examples.
+# Let's create some argument def function() examples.
 
 def arg_funct(fname,lname,age):
     print(fname,lname,age)
@@ -2727,7 +2727,7 @@ for i in animals:
         print(f'The word "{i}" has {len(i)} letters in it.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # The logical 'in' is great to use if you want to know if a value
-# is 'in' a list[ ], a tuple( ), a dictionary{ }, a set() and a print( ) function.
+# is 'in' a list[ ], a tuple(), a dictionary{ }, a set() and a print() function.
 # in our first example, we are only using logical text as a single
 # value placeholder for the 'abc' variable. If a letter or value does
 # not belong to the 'abc' variable, the 'else:' clause will execute.
@@ -2743,7 +2743,7 @@ else:
     print(abc,'does not appear in the logical text.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the logical 'in' to check if a tuple value is present or not.
-# Note: when creating tuples( ), a default tuple is a tuple without ( )
+# Note: when creating tuples(), a default tuple is a tuple without ()
 # parentheses. That means you cannot modify, change the tuple
 # values in logical expressions. Whereas lists[ ] can be changed,
 # modified; meaning tuples are immutable and lists are mutable.
@@ -2756,7 +2756,7 @@ if 'more text' in my_default_tuple:
 else:
     print('does not appear in the default tuple.')
 
-# This is a tuple( ). Not a default tuple.
+# This is a tuple(). Not a default tuple.
 
 my_tuple = ('text',1,3,4,5,'more text')  # change the values and re-execute the program.
 
@@ -3077,8 +3077,8 @@ loop = integer_num,binary_base_2,hexadecimal_base_16
 for i in loop:
     text_print(f'{i(255)}. You only need one print statement with a list of variables.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# If you create classes with just print( ) functions inside them,
-# they run as if nothing was used but a simple print( ) function.
+# If you create classes with just print() functions inside them,
+# they run as if nothing was used but a simple print() function.
 # These classes will not wait to be run. They look as if they don't
 # matter at all. So if you get into creating classes, don't do it this
 # way.
@@ -3100,7 +3100,7 @@ class Single_class:
 print(Single_class('argument1','argument2','argument3').arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a skeletal scheme of how to create a single class without
-# attributes but only a def function( ) inside it.
+# attributes but only a def function() inside it.
 
 class Single_class:
     def inner_function():
@@ -3109,8 +3109,8 @@ class Single_class:
 Single_class.inner_function()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a skeletal scheme of how to create a single class with
-# attributes and a def function( ) inside it. Note: you cannot call
-# the def function, 'inner_function( )' at the same time you call
+# attributes and a def function() inside it. Note: you cannot call
+# the def function, 'inner_function()' at the same time you call
 # the 'Single_class' attributes. Instead, you have to call each
 # one separately.
 
@@ -3127,7 +3127,7 @@ print(Single_class('argument1','argument2','argument3').arg1)
 Single_class.inner_function()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # It does not matter the order of how you place the inner def
-# function( ) and the Single_class attributes. However, you still
+# function() and the Single_class attributes. However, you still
 # cannot call both at the same time. The example above is less
 # confusing looking than the example shown here.
 
@@ -3145,7 +3145,7 @@ Single_class.inner_function()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a def function with a return statement inside the
 # Single_class act. Once again, you cannot call both the Single_class
-# attributes and the inner def function( ) at the same time. However,
+# attributes and the inner def function() at the same time. However,
 # in this example below, it does matter about the order you place
 # the single class attributes in. Once you create a return function,
 # the cursor will automatically jump right out of the indented
@@ -3163,7 +3163,7 @@ print(Single_class('argument1','argument2','argument3').arg1)
 
 print(Single_class.inner_function('argument placeholder value'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create a 'Super_class' and invoke the 'super( ) function so we
+# Let's create a 'Super_class' and invoke the 'super() function so we
 # don't have to repeat any attributes with in our super_function_class.
 
 class Super_class:
@@ -3172,7 +3172,7 @@ class Super_class:
         self.arg2=arg2  # attribute
         self.arg3=arg3  # attribute
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# The super( ) function reduces redundant Python code, so you can keep
+# The super() function reduces redundant Python code, so you can keep
 # Python code nice and 'DRY!' ( "Don't Repeat Yourself!" )
 
 class Super_function_class(Super_class):
@@ -3202,7 +3202,7 @@ print(Super_function_class(
     'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # It does not matter the order of how you place the Super_function_class
-# attributes. You can place the super( ) function before the Super_function_class
+# attributes. You can place the super() function before the Super_function_class
 # attributes. However, the example above is less confusing looking than the
 # example shown here.
 
@@ -3216,10 +3216,10 @@ class Super_function_class(Super_class):
 print(Super_function_class(
     'argument1','argument2','argument3','argument4','argument5','argument6').arg5)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Lastly, if we create a class with just a simple 'print( )' function, it won't really do
-# anything, but print out text inside the print( ) function as if we didn't even create
+# Lastly, if we create a class with just a simple 'print()' function, it won't really do
+# anything, but print out text inside the print() function as if we didn't even create
 # a class at all; there is simply nothing to call. So the class is practically ignored;
-# the print( ) function executes/runs anyway. So avoid stuff like this if you want
+# the print() function executes/runs anyway. So avoid stuff like this if you want
 # your Python classes to work properly. Classes love 'ATTRIBUTES' and proper
 # classes need attributes to work correctly, so we call them when we want to
 # call them. Not when they want to be called. Remember! We're the Boss, not
@@ -3230,9 +3230,9 @@ class Single_class:
     print("I don't really do anything, but show printed text.")
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a skeletal scheme of how to create a single class, using variables.
-# Next, we will get into for loops, using a tuple( ) for our class argument
+# Next, we will get into for loops, using a tuple() for our class argument
 # values. Tuples are immutable; they cannot be changed or modified.
-# Tuple indexes[ ] always start at zero, not one. Let's create a tuple( ) that
+# Tuple indexes[ ] always start at zero, not one. Let's create a tuple() that
 # will hold all our class attribute argument values
 
 class_arguments_tuple = ('argument1','argument2','argument3')
@@ -3243,7 +3243,7 @@ class Single_class:
         self.arg2=arg2  # attribute
         self.arg3=arg3  # attribute
 
-# If you don't have enough room to see the whole print( ) function text and or
+# If you don't have enough room to see the whole print() function text and or
 # variables on one line, you can do the following.
 
 print(
@@ -3253,20 +3253,20 @@ print(
     class_arguments_tuple[2]   # index[2]
     ).arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Here is the very same print( ) function that's all on one line. When you type this
-# out, you won't be able to see all the Python code inside the print( ) function
+# Here is the very same print() function that's all on one line. When you type this
+# out, you won't be able to see all the Python code inside the print() function
 # without having to scroll your cursor all the way to the end, until you can see the
-# text and or variables at the end of the entire print( ) function. So to keep things
-# like this from occurring, we will always use the above example for our print( )
+# text and or variables at the end of the entire print() function. So to keep things
+# like this from occurring, we will always use the above example for our print()
 # functions
 
 print(Single_class(class_arguments_tuple[0],class_arguments_tuple[1],class_arguments_tuple[2]).arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a for loop that will loop through all the class argument variables
-# and show all the class argument values on the screen with only one print( )
+# and show all the class argument values on the screen with only one print()
 # function. Again, we will use a tuple, and then use the tuple's variable name
 # to count the actual for loop values. We can also do this all with one, single
-# line of Python code. We can place the print( ) function right after the for loop's
+# line of Python code. We can place the print() function right after the for loop's
 # colon : on the same line as the for loop. However, this will only work if you
 # don't have any other code blocks within the for loop. This will not work if you
 # have other indented Python commands within the for loop.
@@ -3282,7 +3282,7 @@ tuple_loop = (
     Single_class('argument1','argument2','argument3').arg2,
     Single_class('argument1','argument2','argument3').arg3)
 
-# See how we drastically reduced our Python code, using a tuple( )?
+# See how we drastically reduced our Python code, using a tuple()?
 # Also, we used the tuple's variable name 'tuple_loop' to do the counting
 # of the tuple_loop values for us automatically without the worry of how
 # high we have to make the for loop count.
@@ -3290,7 +3290,7 @@ tuple_loop = (
 for i in tuple_loop:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Now, let's create a list[ ] and do exactly the same as we did before with
-# with our tuple( ). Lists are mutable, meaning they can be changed or
+# with our tuple(). Lists are mutable, meaning they can be changed or
 # modified, whereas tuples cannot be changed or modified. In most
 # cases, it's a good idea to use a list[ ] if you want your list of values to
 # change over time throughout your Python program.
@@ -3303,7 +3303,7 @@ class Single_class:
         self.arg2=arg2  # attribute
         self.arg3=arg3  # attribute
 
-# If you don't have enough room to see the whole print( ) function text and or
+# If you don't have enough room to see the whole print() function text and or
 # variables on one line, you can do the following.
 
 print(
@@ -3314,10 +3314,10 @@ print(
     ).arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a for loop that will loop through all the class argument variables
-# and show all the class argument values on the screen with only one print( )
+# and show all the class argument values on the screen with only one print()
 # function. Again, we will use a list, and then use the list's variable name
 # to count the actual for loop values. We can also do this all with one, single
-# line of Python code. We can place the print( ) function right after the for loop's
+# line of Python code. We can place the print() function right after the for loop's
 # colon : on the same line as the for loop. However, this will only work if you
 # don't have any other code blocks within the for loop. This will not work if you
 # have other indented Python commands within the for loop.
@@ -3341,7 +3341,7 @@ list_loop = [
 for i in list_loop:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Now, let's create a dictionary{ } and do exactly the same as we did
-# before with our tuple( ) and our list[ ] Python program examples.
+# before with our tuple() and our list[ ] Python program examples.
 # We are about to get our feet just a wee bit more wet this time.
 
 class_arguments_dictionary = {1:'argument1',2:'argument2',3:'argument3'}
@@ -3352,7 +3352,7 @@ class Single_class:
         self.arg2=arg2  # attribute
         self.arg3=arg3  # attribute
 
-# If you don't have enough room to see the whole print( ) function text and or
+# If you don't have enough room to see the whole print() function text and or
 # variables on one line, you can do the following.
 
 print(
@@ -3363,8 +3363,8 @@ print(
     ).arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a for loop that will loop through all the class argument variables
-# and show all the class argument values on the screen with only one print( )
-# function. Again, we will use a dictionary. However, we need to use the 'range( )
+# and show all the class argument values on the screen with only one print()
+# function. Again, we will use a dictionary. However, we need to use the 'range()
 # function this time. The variable ' i ' won't work within the .get() function part,
 # so we have to use the variable 'dictionary_loop.get(i+1)'. Why the variable ' i '
 # does not work for the variable dictionary_loop is a complete mystery? However,
@@ -3389,7 +3389,7 @@ dictionary_loop = (
 for i in range(3):print(dictionary_loop.get(i+1))
 
 # I hope this helped you understand how to create classes with for loops
-# using one, single 'print( )' function, which drastically reduces redundant
+# using one, single 'print()' function, which drastically reduces redundant
 # Python code.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is a skeletal scheme of how to create classes with sub classes,
@@ -3479,7 +3479,7 @@ print(All_classes('argument1','argument2','argument3').arg3)
 # such as myself am; I'm still pretty new to adapting to creating classes.
 # You can also create as many sub classes as you please.
 
-# The super( ) function reduces redundant Python code, so you can keep
+# The super() function reduces redundant Python code, so you can keep
 # Python code nice and 'DRY!' ( "Don't Repeat Yourself!" )
 
 class Main_class:
@@ -3577,15 +3577,15 @@ print(person2.first_name,person2.last_name,person2.age)
 
 print(person3.first_name,person3.last_name,person3.age)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a class that has def function( ) with attributes in it.
-# Use the __init__( ) initialize constructor to be able to use the
+# Create a class that has def function() with attributes in it.
+# Use the __init__() initialize constructor to be able to use the
 # def function's attributes: self, fname, lname and age within
 # the My_first_class_act Python program example. Note: you
 # can call the word 'self' any name you wish, but Python
 # programmers always, always use 'self' as a standard. The
-# 'self' variable calls the def function( ) attributes. Thus, the
-# def function( ) calls itself back up with 'self', along with its
-# class attributes, which are inside the def function( ).
+# 'self' variable calls the def function() attributes. Thus, the
+# def function() calls itself back up with 'self', along with its
+# class attributes, which are inside the def function().
 
 class My_first_class_act:
 
@@ -3600,7 +3600,7 @@ print(My_first_class_act('John','Smith',19).last_name)
 
 print(My_first_class_act('John','Smith',19).age)
 
-# Let's shorten some of these bulky print( ) functions using variables.
+# Let's shorten some of these bulky print() functions using variables.
 
 my_variable = My_first_class_act('John','Smith',19)
 
@@ -3610,15 +3610,15 @@ print(my_variable.last_name)
 
 print(my_variable.age)
 
-# Now we can keep things short and sweet with just one print( ) function.
+# Now we can keep things short and sweet with just one print() function.
 
 print(my_variable.first_name,my_variable.last_name,my_variable.age)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a Grandmother class with other classes that can share her
-# attributes. Use the super( ) function so you don't repeat any Python
+# attributes. Use the super() function so you don't repeat any Python
 # code inside other classes that share the same attribute variables
-# alike. Also, you can create return def functions( ) that allow the
-# other classes to use them as well. Note: return def functions( ) are
+# alike. Also, you can create return def functions() that allow the
+# other classes to use them as well. Note: return def functions() are
 # optional; you don't need to use them with classes. But it's great
 # to know that you can if you like, which also adds more functionality
 # in your Python programs.
@@ -3680,7 +3680,7 @@ print(Daughter('Jean','Smith').last_name)
 
 print(Son('John','Smith').last_name)
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.grandmother('returned value'))
 
@@ -3690,7 +3690,7 @@ print(Daughter.daughter('returned value'))
 
 print(Son.son('returned value'))
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.grandmother('returned value'))
 
@@ -3700,7 +3700,7 @@ print(Daughter.grandmother('returned value'))
 
 print(Son.grandmother('returned value'))
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.grandmother('returned value'))
 
@@ -3712,7 +3712,7 @@ print(Son.mom('returned value'))
 
 print(Son.daughter('returned value'))
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.dog('returned value'))
 
@@ -3722,7 +3722,7 @@ print(Daughter.fish('returned value'))
 
 print(Son.bird('returned value'))
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.dog('returned value'))
 
@@ -3732,7 +3732,7 @@ print(Daughter.dog('returned value'))
 
 print(Son.dog('returned value'))
 
-# call def function( ) return values
+# call def function() return values
 
 print(Grandmother.dog('returned value'))
 
@@ -3811,7 +3811,7 @@ print(Inherit_return_result.exponent(8,2))  # call me up
 print(Inherit_return_result.power(8,2))  # call me up
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's get lazy and shorten some Python code within the print() function
-# with a tuple( ). Note: you can also create a list[ ] if you like, but a tuple( )
+# with a tuple(). Note: you can also create a list[ ] if you like, but a tuple()
 # is what we are using in our Python program example below.
 
 class Inherit_return_result(
@@ -3839,8 +3839,8 @@ print(class_inherit[3](num1,num2))  # call me up
 print(class_inherit[4](num1,num2))  # call me up
 print(class_inherit[5](num1,num2))  # call me up
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's get real lazy and shorten some more Python code within the print( )
-# function using a for loop to iterate through the 'class_inherit( ) tuple.
+# Let's get real lazy and shorten some more Python code within the print()
+# function using a for loop to iterate through the 'class_inherit() tuple.
 
 class Inherit_return_result(
     Return_result_addition,
@@ -3863,9 +3863,9 @@ num1,num2 = 8,2  # variable and value packing with one equals = sign
 for i in class_inherit:print(i(num1,num2))  # call me up in a for loop
 
 # Tip: remember to keep it DRY (Don't Repeat Yourself). Use a for loop
-# to allow the use of just one print( ) function. That way, you can
+# to allow the use of just one print() function. That way, you can
 # easily change your num1 and num2 values on the fly instead of
-# having to change values in a bunch of repeated print( ) functions.
+# having to change values in a bunch of repeated print() functions.
 
 # Create classes with def functions() inside them and call each one up.
 
@@ -3975,7 +3975,7 @@ mf3()  # call me up
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create an immutable default tuple for loop of our class
 # def functions, using the hard return backslash ' \ ' instead of
-# using parentheses ' ( ) '
+# using parentheses ' () '
 
 class_def_functions = \
                     Child.first_def_function_grandpa,\
@@ -4147,8 +4147,8 @@ Child.d()
 Child.m()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is a simple way to learn multi class inheritance. The first example will
-# demonstrate this without the use of the super( ) function, and the next example
-# will demonstrate the use of the super( ) function with class inheritance.
+# demonstrate this without the use of the super() function, and the next example
+# will demonstrate the use of the super() function with class inheritance.
 
 class Mom:
     def __init__(self,name,age):
@@ -4171,7 +4171,7 @@ print(Dad('John',35).age)
 print(Child('Jan',30).name)
 print(Child('John',35).age)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Unlike the class example above, the super( ) function is very useful in that you
+# Unlike the class example above, the super() function is very useful in that you
 # don't have to repeat your class attributes in the 'Dad' class and the 'Child' class act.
 
 class Mom:
@@ -4194,9 +4194,9 @@ print(Child('Jan',30).name)
 print(Child('Joh',35).age)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is a simple way to learn multi class inheritance. The first example will
-# demonstrate this without the use of the super( ) function, and the next example
-# will demonstrate the use of the super( ) function with class inheritance.
-# We will use variables this time for the print( ) functions.
+# demonstrate this without the use of the super() function, and the next example
+# will demonstrate the use of the super() function with class inheritance.
+# We will use variables this time for the print() functions.
 
 class Mom:
     def __init__(self,name,age):
@@ -4223,7 +4223,7 @@ print(variable2)
 print(variable3)
 print(variable4)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Unlike the class example above, the super( ) function is very useful in that you
+# Unlike the class example above, the super() function is very useful in that you
 # don't have to repeat your class attributes in the 'Dad' class and the 'Child' class act.
 
 class Mom:
@@ -4249,11 +4249,11 @@ print(variable2)
 print(variable3)
 print(variable4)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This is the simplest way I could explain what the super( ) function does.
-# Take a look at the two examples and you will see how the super( ) function
+# This is the simplest way I could explain what the super() function does.
+# Take a look at the two examples and you will see how the super() function
 # makes it so you don't have to repeat all the class attributes in the Dad class
 
-# Without the super( ) function, you would have to repeat your code.
+# Without the super() function, you would have to repeat your code.
 
 class Mom:
 
@@ -4273,7 +4273,7 @@ print(Mom('Jane','Smith',23).first_name)
 
 print(Dad('John','Smith',28).first_name)
 
-# This is much better as not to repeat your code using the super( ) function.
+# This is much better as not to repeat your code using the super() function.
 
 class Mom:
 
@@ -4328,7 +4328,7 @@ print(Mom('Jane','Smith',23).age)
 print(Dad('John','Smith',28,'Pike').fishing)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a multiple inheritance class, called 'Child'. However,
-# we cannot use the super( ) function here. In the Child class we
+# we cannot use the super() function here. In the Child class we
 # only need to call the def __init__ parameters, without repeating
 # our code. Although, we do have to repeat the Mom and Dad class
 # code as shown below.
@@ -4419,7 +4419,7 @@ print(Child.mom('placeholder'))  # return argument placeholder value
 print(Child.dad('placeholder'))  # return argument placeholder value
 print(Child.child('placeholder'))  # return argument placeholder value
 
-# Let's use variables to shrink down our print( ) functions.
+# Let's use variables to shrink down our print() functions.
 
 variable1 = Mom.mom('placeholder')  # return argument placeholder value
 variable2 = Dad.dad('placeholder')  # return argument placeholder value
@@ -4434,8 +4434,8 @@ print(variable4)
 print(variable5)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try these class acts Python program examples with return statements.
-# and the super( ) function. Note: the Child class has to call up the Dad class
-# when using return statements and the super( ) function. The Child class
+# and the super() function. Note: the Child class has to call up the Dad class
+# when using return statements and the super() function. The Child class
 # calls up the Dad class and the Dad class calls up the Mom class. This allows
 # the Child class to have full access to the Mom and Dad class; the Child calls
 # the Dad class and the Dad class calls the Mom class.
@@ -4459,7 +4459,7 @@ class Child(Dad):  # call the Dad class inheritance variable
     def child(self):
         return "I'm still your Child, Mom and Dad!"
 
-# Let's use variables to shrink down our print( ) functions.
+# Let's use variables to shrink down our print() functions.
 
 variable1 = Mom('Jan',30).name
 variable2 = Dad('John',35).age
@@ -4471,7 +4471,7 @@ print(variable2)
 print(variable3)
 print(variable4)
 
-# Let's use variables to shrink down our print( ) functions.
+# Let's use variables to shrink down our print() functions.
 
 variable1 = Mom('Jane',30).name
 variable2 = Dad('John',35).age
@@ -4495,7 +4495,7 @@ print(variable8)
 print(variable9)
 
 # You can also use these, via the return statements.
-# Let's use variables to shrink down our print( ) functions.
+# Let's use variables to shrink down our print() functions.
 
 variable1 = Mom.mom('placeholder')  # return argument placeholder value
 variable2 = Dad.dad('placeholder')  # return argument placeholder value
@@ -4509,7 +4509,7 @@ print(variable3)
 print(variable4)
 print(variable5)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create some classes with argument def function( ) examples.
+# Let's create some classes with argument def function() examples.
 
 class Function:
     def arg_funct(fname,lname,age):
@@ -4548,7 +4548,7 @@ x = Function.arg_funct('John','Smith',30)
 print(x)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create some classes with attributes and return argument
-# def functions( ), along with a 'child' class act Python program example.
+# def functions(), along with a 'child' class act Python program example.
 
 class Return_class_function1:
 
@@ -4603,7 +4603,7 @@ print(Return_all_class_functions.arg_funct2('John','Smith',35))
 print(Return_all_class_functions.arg_funct3('Ron','Smith',10))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create some classes with attributes and return argument
-# def functions( ), along with a 'child' class act Python program example.
+# def functions(), along with a 'child' class act Python program example.
 
 class Return_class_function1:
 
@@ -4646,7 +4646,7 @@ class Return_all_class_functions(
         Return_class_function3.__init__(first_name,last_name,age)  # inheritance
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's now create three tuples called fnames, lnames and ages to use within
-# 'zip( )' functions. Here are three separate zip( ) function examples for the three
+# 'zip()' functions. Here are three separate zip() function examples for the three
 # individual classes.
 
 fnames = 'Jane','John','Ron'
@@ -4662,7 +4662,7 @@ for index1,index2,index3 in zip(fnames,lnames,ages):
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(Return_class_function3.arg_funct3(index1,index2,index3))
 
-# Here are three separite zip( ) function examples for the three child class acts.
+# Here are three separite zip() function examples for the three child class acts.
 
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(Return_all_class_functions.arg_funct1(index1,index2,index3))
@@ -4673,21 +4673,21 @@ for index1,index2,index3 in zip(fnames,lnames,ages):
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(Return_all_class_functions.arg_funct3(index1,index2,index3))
 
-# Let's shrink down these Python program examples, using just one zip( ) function.
+# Let's shrink down these Python program examples, using just one zip() function.
 
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(Return_class_function1.arg_funct1(index1,index2,index3))
     print(Return_class_function2.arg_funct2(index1,index2,index3))
     print(Return_class_function3.arg_funct3(index1,index2,index3))
 
-# Let's shrink down these Python program examples, using just one zip( ) function.
+# Let's shrink down these Python program examples, using just one zip() function.
 
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(Return_all_class_functions.arg_funct1(index1,index2,index3))
     print(Return_all_class_functions.arg_funct2(index1,index2,index3))
     print(Return_all_class_functions.arg_funct3(index1,index2,index3))
 
-# Let's shrink down this Python program even more, with just one print( ) function.
+# Let's shrink down this Python program even more, with just one print() function.
 
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(
@@ -4695,7 +4695,7 @@ for index1,index2,index3 in zip(fnames,lnames,ages):
         Return_class_function2.arg_funct2(index1,index2,index3),
         Return_class_function3.arg_funct3(index1,index2,index3))
 
-# Let's shrink down this Python program even more, with just one print( ) function.
+# Let's shrink down this Python program even more, with just one print() function.
 
 for index1,index2,index3 in zip(fnames,lnames,ages):
     print(
@@ -4704,7 +4704,7 @@ for index1,index2,index3 in zip(fnames,lnames,ages):
         Return_all_class_functions.arg_funct3(index1,index2,index3))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create some classes with attributes and return argument
-# def functions( ), along with a 'child' class act Python program example.
+# def functions(), along with a 'child' class act Python program example.
 
 class Return_class_function1:
 
@@ -4747,7 +4747,7 @@ class Return_all_class_functions(
         Return_class_function3.__init__(first_name,last_name,age)  # inheritance
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's now create three tuples called fnames, lnames and ages to use within
-# 'enumerate( )' functions. Here are three separate enumerate( ) function examples
+# 'enumerate()' functions. Here are three separate enumerate() function examples
 # for the three individual classes.
 
 fnames = 'Jane','John','Ron'
@@ -4794,7 +4794,7 @@ print(type(1.0))  # <class 'float'>
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Python scoping with strings and integer values
 
-# The 'dir( )' function shows you the complete directory of what you can
+# The 'dir()' function shows you the complete directory of what you can
 # use within Python programs you create. Type and execute/run these
 # simple Python program examples and study the screen output.
 
@@ -4816,7 +4816,7 @@ print(id(2))
 
 print(help)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Use the 'dir( ) function with nothing inside the parentheses
+# Use the 'dir() function with nothing inside the parentheses
 
 print(dir())
 
@@ -4825,7 +4825,7 @@ print(dir())
 ['__annotations__', '__builtins__', '__doc__', '__file__', '__loader__',
 '__name__', '__package__', '__spec__']
 '''
-# Use the 'dir( ) function with a number inside the parentheses
+# Use the 'dir() function with a number inside the parentheses
 
 print(dir(1))
 
@@ -5196,6 +5196,74 @@ mytripler=myfunc(3)
 print(mydoubler(11)) 
 print(mytripler(11))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try these define functions() Python program examples:
+
+# Created by Joseph C. Richardson, GitHub.com
+
+def simple_define_function():
+    print('Simple Define Function:')
+
+simple_define_function() # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_argument_define_function(arg):
+    print('Simple Argument Define Function:')
+
+simple_argument_define_function('argument placeholder value') # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_multi_argument_define_function(arg1,arg2):
+    print('Simple Multi Argument Define Function:')
+
+simple_multi_argument_define_function(
+    'argument placeholder value 1','argument placeholder value 2') # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_args_define_function(*args):
+    print('Simple Args Define Function:')
+
+simple_args_define_function(
+    'argument placeholder value 1','argument placeholder value 2') # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_kwargs_define_function(**kwargs):
+    print('Simple Kwargs Define Function:')
+
+simple_kwargs_define_function(
+    kwargs1='argument placeholder value 1',
+    kwargs2='argument placeholder value 2') # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_argument_define_function(arg):
+    return 'Simple Return Argument Define Function:'
+
+print(simple_return_argument_define_function('argument placeholder value'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_multi_argument_define_function(arg1,arg2):
+    return 'Simple Return Multi Argument Define Function:'
+
+print(simple_return_multi_argument_define_function(
+    'argument placeholder value 1','argument placeholder value 2'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_multi_argument_define_function(num1,num2):
+    return num1+num2
+
+print(simple_return_multi_argument_define_function(2,3))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_args_define_function(*args):
+    return 'Simple Return Args Define Function:'
+
+print(simple_return_args_define_function(
+    'argument placeholder value 1','argument placeholder value 2'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_args_define_function(*args):
+    return 2+3
+
+print(simple_return_args_define_function(
+    'argument placeholder value 1','argument placeholder value 2'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def simple_return_kwargs_define_function(**kwargs):
+    return 'Simple Return Kwargs Define Function:'
+
+print(simple_return_kwargs_define_function(
+    kwargs1='argument placeholder value 1',
+    kwargs2='argument placeholder value 2')) # call the function to see the output
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''
 Python clock functions allow you to program the actual time in real time.
 Python clock functions work internally, in sync with the Windows clock.
@@ -5420,7 +5488,7 @@ while True:
 # For brand new programmers, this is a must to learn, so let Python teach
 # you how to read computer numbers.
 
-# define function( ) example:
+# define function() example:
 
 def digital_translator():
 
