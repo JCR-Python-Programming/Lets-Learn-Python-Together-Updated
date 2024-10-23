@@ -27,7 +27,7 @@ wave_sound='TYPE'
 
 text_words=(
 f'{single_line_break}{indent}"Python Programmer\'s Glossary Bible" \
-{single_line_break}{indent}by Joseph C. Richardson{double_line_break}{indent}\
+{single_line_break}\n{indent}by Joseph C. Richardson, GitHub.com{double_line_break}{indent}\
 My Python Programmer\'s Glossary Bible has everything you need to get{single_line_break}\
 {indent}started. Because great programming always starts with a great programmer’s\
 {single_line_break}{indent}manual.{double_line_break}{indent}You can find \
@@ -64,19 +64,19 @@ while length<=len(text_words[0]):
     for i in text_colours:
         print(i+text_words[0][:length])
         winsound.PlaySound(wave_sound,winsound.SND_ASYNC)
-        time.sleep(.06)
+        time.sleep(.08)
         os.system(text_words[2])
         length+=1
 
-print(text_colours[6]+text_words[0]);time.sleep(3)
+print(text_colours[6]+text_words[0]);time.sleep(5)
 
 length=0
 
 while length<=len(text_words[1]):    
     print(text_colours[5]+text_words[1][:length])
     winsound.PlaySound(wave_sound,winsound.SND_ASYNC)
-    time.sleep(.06)
+    time.sleep(.08)
     os.system(text_words[2])
     length+=1
 
-print(text_colours[6]+text_words[1]);time.sleep(3)
+print(text_colours[6]+text_words[1]);time.sleep(5)
