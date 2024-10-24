@@ -57,7 +57,7 @@ imagination.{double_line_break}{indent}And I now welcome you to the awesome Robo
 S1 Comes to Life concept in{single_line_break}{indent}robotics science...','cls')
 
 length=0
-
+input()
 while length<=len(text_words[0]):
     for i in text_colours:
         print(i+text_words[0][:length])
