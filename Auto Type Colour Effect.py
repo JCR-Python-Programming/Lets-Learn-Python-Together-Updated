@@ -2,8 +2,6 @@
 
 # Created by Joseph C. Richardson, GitHub.com
 
-# HIGHLIGHT AND COPY CODE, THEN PASTE INTO YOUR PREFERABLE PYTHON APP/IDLE
-
 # Note: after you save your file, you must double click this file to view it's cool coloured
 # text and layout.
 
