@@ -5,7 +5,7 @@
 # Note: after you save your file, you must double click this file to view its cool coloured
 # text effects and layout.
 
-import time,os
+import os,time
 
 text_colours=(
     '\x1b[31m', # index 0 = red
