@@ -25,7 +25,7 @@ wave_sound='TYPE'
 
 text_words=(
 f'{single_line_break}{indent}"Python Programmer\'s Glossary Bible" \
-{single_line_break}\n{indent}by Joseph C. Richardson, GitHub.com{double_line_break}{indent}\
+{double_line_break}{indent}by Joseph C. Richardson, GitHub.com{double_line_break}{indent}\
 My Python Programmer\'s Glossary Bible has everything you need to get{single_line_break}\
 {indent}started. Because great programming always starts with a great programmer’s\
 {single_line_break}{indent}manual.{double_line_break}{indent}You can find \
