@@ -20,8 +20,7 @@ text_colours=(
     )
 
 text_words=(
-    f'\n"Python Programmer\'s Glossary Bible" by Joseph C. Richardson','cls'
-    )
+    f'\n"Python Programmer\'s Glossary Bible" by Joseph C. Richardson','cls')
 
 length=0
 while length<=len(text_words[0]):
