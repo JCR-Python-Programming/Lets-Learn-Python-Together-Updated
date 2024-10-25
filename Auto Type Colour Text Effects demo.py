@@ -1,13 +1,11 @@
-# Auto Type Colour Effect Demo Python program example.
+# Auto Type Colour Text Effects demo Python program example.
 
 # Created by Joseph C. Richardson, GitHub.com
 
-# HIGHLIGHT AND COPY CODE, THEN PASTE INTO YOUR PREFERABLE PYTHON APP/IDLE
+# Note: after you save your file, you must double click this file to view its cool coloured
+# text effects and layout.
 
-# Note: after you save your file, you must double click this file to view it's cool coloured
-# text and layout.
-
-import time,os;os.system('')
+import time,os
 
 text_colours=(
     '\x1b[31m', # index 0 = red
@@ -20,7 +18,7 @@ text_colours=(
     )
 
 text_words=(
-    f'\n"Python Programmer\'s Glossary Bible" by Joseph C. Richardson','cls')
+    f'\n"Python Programmer\'s Glossary Bible" by Joseph C. Richardson, GitHub.com','cls')
 
 length=0
 while length<=len(text_words[0]):
@@ -32,4 +30,4 @@ while length<=len(text_words[0]):
 
 print(i+text_words[0])
 
-input('\nPress Enter to exit.')
+input('\nPress Enter to exit:')
