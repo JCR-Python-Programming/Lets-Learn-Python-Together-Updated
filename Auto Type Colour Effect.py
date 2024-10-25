@@ -54,7 +54,7 @@ appearance of a real, living thing{single_line_break}{indent}that is as unpredic
 other real, living being alike.{double_line_break}{indent}I now bring you into the wonderful \
 world of robotics and computer science,{single_line_break}{indent}combined with dash of \
 imagination.{double_line_break}{indent}And I now welcome you to the awesome Robomaster \
-S1 Comes to Life concept in{single_line_break}{indent}robotics science...','cls')
+S1 Comes to Life concept in{single_line_break}{indent}robotics science...',f'{clear_screen}')
 
 length=0
 
