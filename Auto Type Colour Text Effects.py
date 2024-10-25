@@ -1,9 +1,11 @@
-# AUTO TYPE COLOUR TEXT EFECTS Python program example.
+# Auto Type Colour Text Effects Python program example.
 
 # Created by Joseph C. Richardson, GitHub.com
 
-# Note: after you save your file, you must double click this file to view it's cool coloured
-# text and layout.
+# Note: after you save your file, you must double click this file to view its cool coloured
+# text effects and layout. Next, create a folder for your typing sound effect and your Python
+# file so they can execute/run together. Note: all sound files must be wave format, Python
+# will not execute/run sound files in mp3 format.
 
 import os,time,winsound
 
