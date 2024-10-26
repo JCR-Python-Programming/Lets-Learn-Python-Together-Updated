@@ -1,4 +1,4 @@
-# Auto Type Colour Text Effects demo Python program example.
+# Auto Type Colour Text Effects Demo Python program example.
 
 # Created by Joseph C. Richardson, GitHub.com
 
