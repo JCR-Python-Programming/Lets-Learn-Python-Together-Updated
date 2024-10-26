@@ -1,4 +1,4 @@
-# Auto Type Colour Text Effects with sound Python program example 1.
+# Auto Type Colour Text Effects with Sound Python program example 1.
 
 # Created by Joseph C. Richardson, GitHub.com
 
