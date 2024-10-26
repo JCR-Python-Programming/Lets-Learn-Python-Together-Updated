@@ -30,4 +30,4 @@ while length<=len(text_words[0]):
 
 print(i+text_words[0])
 
-input('\nPress Enter to exit:')
+input('\nPress Enter to exit and close the program:')
