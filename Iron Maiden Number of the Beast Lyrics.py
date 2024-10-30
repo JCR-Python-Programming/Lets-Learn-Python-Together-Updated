@@ -56,4 +56,4 @@ eht nokcer gnidnatsrednu htah ohw mih teL .trohs
 si emit eht swonk eh esuaceB .htarw htiw tsaeb eht
 sdnes liveD eht roF aes dna htrae ho ,uoy ot eoW
 '''
-Eddie(IRON_MAIDEN_Number_of_The_Beast_lyrics[::-1])
+Eddie(IRON_MAIDEN_Number_of_The_Beast_lyrics[::-1])  # invoke this [::-1] to create reverse text words
