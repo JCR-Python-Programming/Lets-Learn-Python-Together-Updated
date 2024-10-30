@@ -6,54 +6,54 @@
 
 # Written lyrics by Iron Maiden
 
-xof=(ord('x')+ord('o')+ord('f'))*2
+xof=(ord('x')+ord('o')+ord('f'))*2 # Number of The Beast
 
-Eddie = print
+Eddie = print # Iron Maiden's dedicated mascot, Eddie
 
 IRON_MAIDEN_Number_of_The_Beast_lyrics = f'''
 
-...esruoc sti ekat live ym ekam ot rewop eht evah
-I .ecrof eht evah I ,erif eht evah I .nrub uoy ekam ll'I dna
-ydob ruoy ssessop ll'I dnA .nruter lliw I ,kcab gnimoc m'I
+Woe to you, oh earth and sea For the Devil sends
+the beast with wrath. Because he knows the time is
+short. Let him who hath understanding reckon the
+number of the beast. For it is a human number Its
+number is 666
 
-em dna uoy rof eno eht ,666
-tsaeb eht fo rebmun eht ,666
+I left alone, my mind was blank. I needed time to
+think to get the memories from my mind. What did
+I see? Can I believe? That what I saw that night
+was real and not just fantasy?
 
-seye rieht diova
-t'nac ,eziremsem ot meeS .sedroh gnitnahc eht sdrawot
-nward leef I tuB ?maerd yzarc emos tsuj ro ,laer eb
-llits siht naC .wal eht mrofni tsum I ,no og t'nac sihT
+Just what I saw in my old dreams. Were they reflections
+of my warped mind staring back at me? 'Cause in my
+dreams it's always there. The evil face that twists my
+mind and brings me to despair
 
-thginot no gniog si ecifircaS
-tsaeb eht fo rebmun eht ,666
+Night was black, was no use holding back 'Cause I
+just had to see, was someone watching me? In the
+mist, dark figures move and twist Was all this for real
+or just some kind of Hell?
 
-.enod
-si krow s'nataS ,nugeb sah lautir ehT .thgirb gninrub era
-serif eht ,thgin eht nI yks eht ot dleh sdnah ,yrc ot trats
-yeht sA .desiarp erew stnahc dercas dna dezalb sehcroT
+666, the number of the beast Hell and fire was spawned
+to be released
 
-desaeler eb ot
-denwaps saw erif dna lleH tsaeb eht fo rebmun eht ,666
+Torches blazed and sacred chants were praised. As they
+start to cry, hands held to the sky In the night, the fires
+are burning bright. The ritual has begun, Satan's work is
+done.
 
-?lleH fo dnik emos tsuj ro
-laer rof siht lla saW tsiwt dna evom serugif krad ,tsim
-eht nI ?em gnihctaw enoemos saw ,ees ot dah tsuj
-I esuaC' kcab gnidloh esu on saw ,kcalb saw thgiN
+666, the number of the beast
+Sacrifice is going on tonight
 
-riapsed ot em sgnirb dna dnim
-ym stsiwt taht ecaf live ehT .ereht syawla s'ti smaerd
-ym ni esuaC' ?em ta kcab gnirats dnim depraw ym fo
-snoitcelfer yeht ereW .smaerd dlo ym ni was I tahw tsuJ
+This can't go on, I must inform the law. Can this still
+be real, or just some crazy dream? But I feel drawn
+towards the chanting hordes. Seem to mesmerize, can't
+avoid their eyes
 
-?ysatnaf tsuj ton dna laer saw
-thgin taht was I tahw tahT ?eveileb I naC ?ees I
-did tahW .dnim ym morf seiromem eht teg ot kniht
-ot emit dedeen I .knalb saw dnim ym ,enola tfel I
+666, the number of the beast
+666, the one for you and me
 
-666 si rebmun
-stI rebmun namuh a si ti roF .tsaeb eht fo rebmun
-eht nokcer gnidnatsrednu htah ohw mih teL .trohs
-si emit eht swonk eh esuaceB .htarw htiw tsaeb eht
-sdnes liveD eht roF aes dna htrae ho ,uoy ot eoW
+I'm coming back, I will return. And I'll possess your body
+and I'll make you burn. I have the fire, I have the force. I
+have the power to make my evil take its course...
 '''
-Eddie(IRON_MAIDEN_Number_of_The_Beast_lyrics[::-1])  # invoke this [::-1] to create reverse text words
+Eddie(IRON_MAIDEN_Number_of_The_Beast_lyrics[::-1])  # invoke this [::-1] to create reverse text
