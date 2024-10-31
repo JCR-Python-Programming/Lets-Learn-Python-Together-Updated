@@ -572,8 +572,8 @@ input('Press Enter to exit the program')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here are 90 emojis you can use within your Python programs.
 # Please note: these were not easy to create. The emojis can't
-# be copied into a list as easy as ordinary Python lists. If
-# you add any of your own, make sure you don't make any mistakes.
+# be copied into a list as easy as ordinary Python lists. If you
+# add any of your own, make sure you don't make any mistakes.
 # Python's undo button and or ctrl+z does not work; you have
 # to keep undoing the mistake or the ones you don't want in the
 # list, and emojis you add to the Python list. As I said, these
