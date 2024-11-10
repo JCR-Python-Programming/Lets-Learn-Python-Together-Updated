@@ -105,9 +105,10 @@ while length<=len(input_text_words):
         os.system(clear_screen)
         length+=1
 
-input(f'{double_line_break}{indent}Press Enter to view the next example:')
+input(f'{double_line_break}{indent}Press Enter to view the bonus example:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# I have one more text trick up my sleave that you're gonna like.
+# I have one more text trick effect up my sleave that you're gonna
+# like. This is how you can create a scrolling text marquee in Python.
 
 indent=' '*4
 delay=.08
@@ -125,6 +126,47 @@ for x in range(2):
         os.system(clear_screen)
     
 print(double_line_break+indent+' '*j+text_variable)
+
+input(f'{double_line_break}{indent}Press Enter to view the next bonus example:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+indent=' '*4
+delay=.08
+
+text_variable='This is how you can create a scrolling text marquee in Python.'
+
+for x in range(2):
+    for i in range(50):
+        print(double_line_break+indent+' '*i+text_variable)
+        time.sleep(delay)
+        os.system(clear_screen)        
+    for j in range(i,-1,-1):
+        print(double_line_break+indent+' '*j+text_variable[::-1])
+        time.sleep(delay)
+        os.system(clear_screen)
+    
+print(double_line_break+indent+' '*j+text_variable[::-1])
+
+input(f'{double_line_break}{indent}Press Enter to view the next bonus example:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+indent=' '*4
+delay=.08
+
+text_tuple_variable=(
+    'This is how you can create a scrolling text marquee in Python.',
+    'You can create a tuple or a list of text sentences to make a scrolling \
+text marquee more fun.')
+
+for x in range(2):
+    for i in range(50):
+        print(double_line_break+indent+' '*i+text_tuple_variable[0])
+        time.sleep(delay)
+        os.system(clear_screen)        
+    for j in range(i,-1,-1):
+        print(double_line_break+indent+' '*j+text_tuple_variable[1])
+        time.sleep(delay)
+        os.system(clear_screen)
+    
+print(double_line_break+indent+' '*j+text_tuple_variable[1])
 
 # Place an input() function so you can press the Enter key to close the
 # Python program when you want to, without it closing right away after
