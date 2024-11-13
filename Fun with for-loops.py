@@ -39,6 +39,14 @@ for i in nums:
 # Loop through a tuple using a for-loop, along with
 # a 'print' statement message 'I am number'
 
+tuple_loop=(
+    'One','Two',
+    'Three','Four',
+    'Five','Six',
+    'Seven','Eight',
+    'Nine','Ten'
+    )
+
 for i in tuple_loop:
     print('I am number '+i+'.')
 
