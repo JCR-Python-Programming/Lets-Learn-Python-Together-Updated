@@ -26,8 +26,9 @@ for i in range(1,21,2):
 # the entire multi dimensional list, but the commas that
 # join multi dimensional lists to other lists are not shown
 # on the screen output. All you need to do is add the commas
-# yourself, if you want to use the program for real. You can
-# use a multi dimensional list, and let Python fill in the gaps.
+# yourself, if you want to use the program for real. You
+# can use a multi dimensional list, and let Python fill in
+# the gaps.
 
 auto_multi_dimensional_list = []
 
