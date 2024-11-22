@@ -47,7 +47,7 @@ print(auto_multi_dimensional_list[3])
 # can clearly see below.
 
 real_auto_multi_dimensional_list=(
-    
+
     [1],
     [1, 2],
     [1, 2, 3],
@@ -96,13 +96,13 @@ print(real_auto_multi_dimensional_list[2][2])
 
 print(real_auto_multi_dimensional_list[9][8])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create an Integer Number line with a for-loop, using
-# a start value of 10, a stop value of 11 and a step value
-# of 1
+# Create an integer line with a for-loop that decrements
+# integer numbers, until it increments integer numbers
+# after the number zero.
 
-for i in range(-10,11,1):
+for i in range(-10,11):
     print(i,end=', ')
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''    
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a for-loop that breaks when i==10.
 
 nums=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
@@ -137,7 +137,7 @@ tuple_loop=(
 for i in tuple_loop:
     print('I am number '+i+'.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Loop through a tuple using a for-loop.        
+# Loop through a tuple using a for-loop.
 
 tuple_loop=(
     'One','Two',
@@ -161,7 +161,7 @@ while i<=30:
     if i==20:
         print(f'"{i}" I found number "{i}". I will break the loop now.')
         break
- 
+
 i=1
 while i<=30:
     print(i)
@@ -175,7 +175,7 @@ while i<=30:
 
 while True:
     try:
-        enter_num=int(input('Please enter a number, or numbers ').strip())    
+        enter_num=int(input('Please enter a number, or numbers: ').strip())  # strip() clears whitespace
         for i in range(1,enter_num+1):
             print('* '*i,i)
         break
@@ -188,7 +188,7 @@ while True:
 
 while True:
     try:
-        enter_num=int(input('Enter any number up to 20 and I will find it. ').strip())    
+        enter_num=int(input('Enter any number up to 20 and I will find it. ').strip())  # strip() clears whitespace
         for i in nums:
             if i==enter_num:
                 print(f'{i}: I found number "{i}" ')
@@ -201,6 +201,109 @@ while True:
                 break
             print(i)
         break
+    except ValueError:
+        print('Sorry! Numbers only please.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a for-loop that allows the user to input how many times
+# the for-loop repeats itself.
+
+while True:
+    try:
+        message=int(input('How many times do you want to repeat the for-loop? '))
+        if message==0:
+            print("Sorry Hero! Zero doen't count...")
+            continue
+        elif message<=-1:
+            print('No negative integers allowed:')        
+            continue
+        for i in range(1,message+1):
+            print(f'The for-loop and print() function repeated {i} times...')
+        break
+    except ValueError:
+        print('Numbers only please: ')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's have some fun with the random generator by importing the
+# random module, so we can use the random.randint() function to
+# create random words on the screen output.
+
+import random
+
+word_list=(
+    "I'm a dog.","I'm a cat.","I'm a bird.",
+    "I'm a fish.","I'm a frog.","I'm a monkey.",
+    "I'm a turtle.","I'm a shark.","I'm a dolphin.")
+
+word_list_length=len(word_list)
+
+print(f'You have {word_list_length} values in your word_list variable.')
+
+rand_word=random.randint(0,word_list_length)
+
+print(f'Tom says,',word_list[rand_word],'What are you?')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Make the user guess the lucky number.
+
+import random
+
+rand_num=random.randint(0,10)
+
+while True:
+    try:
+        message=int(input('Guess the lucky number between one and ten: ').strip())  # strip() clears whitespace
+        if message==rand_num:
+            print(f"You Win! '{rand_num}' was the lucky number...")
+            break
+        else:
+            continue
+    except ValueError:
+        print('Sorry! Numbers only please.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Tell the user if the lucky number is too low or too high
+# so they know which numbers to try next, before they get
+# the right, lucky number.
+
+import random
+
+rand_num=random.randint(1,10)
+
+while True:
+    try:
+        message=int(input('Guess the lucky number between one and ten: ').strip())  # strip() clears whitespace
+        if message<rand_num:
+            print('Too Low!')
+        elif message>rand_num:
+            print('Too High!')
+        elif message==rand_num:
+            print(f'You Win! {rand_num} was your lucky number...')
+            break
+    except ValueError:
+        print('Sorry! Numbers only please.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Tell the user if the lucky number is too low or too high
+# so they know which numbers to try next, before they get
+# the right, lucky number.  But this time, they have only
+# three guesses to get the right, lucky number.
+
+import random
+
+rand_num=random.randint(1,11)
+
+guess_count=1
+
+while guess_count<=3:
+    try:
+        message=int(input('Guess the lucky number between one and ten: ').strip())  # strip() clears whitespace
+        if guess_count==3:
+            print('Sorry! You lost...')
+            break
+        if message<rand_num:
+            print('Too Low!')
+        elif message>rand_num:
+            print('Too High!')        
+        elif message==rand_num:
+            print(f'You Win! {rand_num} was your lucky number...')
+            break
+        guess_count+=1
     except ValueError:
         print('Sorry! Numbers only please.')
 
