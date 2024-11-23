@@ -25,10 +25,10 @@ for i in range(1,21,2):
 # example. However, the output on the screen shows
 # the entire multi dimensional list, but the commas that
 # join multi dimensional lists to other lists are not shown
-# on the screen output. All you need to do is add the commas
-# yourself, if you want to use the program for real. You
-# can use a multi dimensional list, and let Python fill in
-# the gaps.
+# on the screen output. All you need to do is add the
+# commas yourself, if you want to use the program for
+# real. You can use a multi dimensional list, and let Python
+# fill in the gaps.
 
 auto_multi_dimensional_list = []
 
@@ -204,8 +204,8 @@ while True:
     except ValueError:
         print('Sorry! Numbers only please.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a for-loop that allows the user to input how many times
-# the for-loop repeats itself.
+# Create a for-loop that allows the user to input how many
+# times the for-loop repeats itself.
 
 while True:
     try:
@@ -240,6 +240,25 @@ print(f'You have {word_list_length} values in your word_list variable.')
 rand_word=random.randint(0,word_list_length)
 
 print(f'Tom says,',word_list[rand_word],'What are you?')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Press the 'Enter key' to see a random word in the sentence.
+# Press 'q' to quit and break out of the while-loop.
+
+import random
+
+words=('paper','tinfoil','straw','wood.','brick.','metal')
+
+word_length=len(words)
+
+while True:
+    rand_num=random.randint(0,word_length)
+    try:
+        message=input(f'My house is made out of {words[rand_num]} Press \
+Enter or press (q) to quit: ').lower().strip()  # strip() clears whitespace)
+        if message=='q':
+            break
+    except IndexError:
+        pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Make the user guess the lucky number.
 
