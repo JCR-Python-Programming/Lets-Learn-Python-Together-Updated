@@ -214,7 +214,7 @@ while True:
             print("Sorry Hero! Zero doen't count...")
             continue
         elif message<=-1:
-            print('No negative integers allowed:')        
+            print('No negative integers allowed:')
             continue
         for i in range(1,message+1):
             print(f'The for-loop and print() function repeated {i} times...')
@@ -318,7 +318,7 @@ while guess_count<=3:
         if message<rand_num:
             print('Too Low!')
         elif message>rand_num:
-            print('Too High!')        
+            print('Too High!')
         elif message==rand_num:
             print(f'You Win! {rand_num} was your lucky number...')
             break
