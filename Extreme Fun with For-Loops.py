@@ -264,7 +264,7 @@ Enter or press (q) to quit: ').lower().strip()  # strip() clears whitespace)
 
 import random
 
-rand_num=random.randint(0,10)
+rand_num=random.randint(1,11)
 
 while True:
     try:
