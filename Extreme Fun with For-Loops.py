@@ -235,11 +235,14 @@ word_list=(
 
 word_list_length=len(word_list)
 
-print(f'You have {word_list_length} values in your word_list variable.')
+try:
+    print(f'You have {word_list_length} values in your word_list variable.')
 
-rand_word=random.randint(0,word_list_length)
+    rand_word=random.randint(0,word_list_length)
 
-print(f'Tom says,',word_list[rand_word],'What are you?')
+    print(f'Tom says,',word_list[rand_word],'What are you?')
+except IndexError:
+    pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Press the 'Enter key' to see a random word in the sentence.
 # Press 'q' to quit and break out of the while-loop.
