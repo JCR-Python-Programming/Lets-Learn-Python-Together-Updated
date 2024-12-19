@@ -118,6 +118,7 @@ round_num = round
 super_function = super
 text_input = input
 text_print = print
+type_error = TypeError
 value_error = ValueError
 value_length = len
 you_quitter = quit
@@ -146,7 +147,7 @@ nums = 1,2,3,4,5,6,7,8,9 # this is a tuple by default, without parentheses ' () 
 
 # this:
 
-print(sum(nums))
+print(add_nums(nums))
 
 # or this:
 
@@ -179,17 +180,17 @@ for i in loop:
 # Here are some ways to create Binary Base 2, Hexadecimal
 # Base 16 and Octal Base 8 systems in Python.
 
-print(bin(255))  # 0b11111111 = 255
+text_print(binary_base_2(255))  # 0b11111111 = 255
 
-print(f'{255:b}')  # 11111111 = 255
+text_print(f'{255:b}')  # 11111111 = 255
 
-print(hex(255))  # 0xff = 255
+text_print(hexadecimal_base_16(255))  # 0xff = 255
 
-print(f'{255:x}')  # ff = 255
+text_print(f'{255:x}')  # ff = 255
 
-print(oct(255))  # 0o377 = 255
+text_print(octal_base_8(255))  # 0o377 = 255
 
-print(f'{255:o}')  # 377 = 255
+text_print(f'{255:o}')  # 377 = 255
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # ASCII (American Standard Code for Information Interchange)
 
@@ -198,82 +199,82 @@ print(f'{255:o}')  # 377 = 255
 
 # lowercase ASCII code values
 
-print(ord('a'))  # 97
+text_print(ascii_character_num('a'))  # 97
 
-print(chr(97))  # a
+text_print(ascii_character_value(97))  # a
 
-print(ord('b'))  # 98
+text_print(ascii_character_num('b'))  # 98
 
-print(chr(98))  # b
+text_print(ascii_character_value(98))  # b
 
-print(ord('c'))  # 99
+text_print(ascii_character_num('c'))  # 99
 
-print(chr(99))  # c
+text_print(ascii_character_value(99))  # c
 
 # uppercase ASCII code values
 
-print(ord('A'))  # 65
+text_print(ascii_character_num('A'))  # 65
 
-print(chr(65))  # A
+text_print(ascii_character_value(65))  # A
 
-print(ord('B'))  # 66
+text_print(ascii_character_num('B'))  # 66
 
-print(chr(66))  # B
+text_print(ascii_character_value(66))  # B
 
-print(ord('C'))  # 67
+text_print(ascii_character_num('C'))  # 67
 
-print(chr(67))  # C
+text_print(ascii_character_value(67))  # C
 
 # Let's create a for loop that will print out the alphabet in lowercase
 # characters. We will also use the (end=' ') prefix to keep all the
 # printed alphabet values to stay on one, single line.
 
-for i in range(97,123):print(chr(i),end=' ')
+for i in range(97,123):text_print(ascii_character_value(i),end=' ')
 
 # Let's create a for loop that will print out the alphabet in uppercase
 # characters. We will also use the (end=' ') prefix to keep all the
 # printed alphabet values to stay on one, single line.
 
-for i in range(65,91):print(chr(i),end=' ')
+for i in range(65,91):text_print(ascii_character_value(i),end=' ')
 
 # Let's create integer characters from 0 through 9 with a for loop,
 # using ASCII code values.
 
-for i in range(48,58):print(chr(i),end=' ')
+for i in range(48,58):text_print(ascii_character_value(i),end=' ')
 
 # Let's create integer character values out of ASCII code values
 # and add them.
 
-print(chr(48+1))  # 0 + 1 = 1
+text_print(ascii_character_value(48+1))  # 0 + 1 = 1
 
-print(chr(49+1))  # 1 + 1 = 2
+text_print(ascii_character_value(49+1))  # 1 + 1 = 2
 
-print(chr(50+1))  # 2 + 1 = 3
+text_print(ascii_character_value(50+1))  # 2 + 1 = 3
 
-print(chr(51+1))  # 3 + 1 = 4
+text_print(ascii_character_value(51+1))  # 3 + 1 = 4
 
-print(chr(52+1))  # 4 + 1 = 5
+text_print(ascii_character_value(52+1))  # 4 + 1 = 5
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # The ascii() function returns a readable version of any object, like
 # strings, tuples, lists, etc.
 
-print(ascii('sam'))  # 'sam'
+text_print(ascii_character('sam'))  # 'sam'
 
-print(ascii('s\am'))  # 's\x07m'
+text_print(ascii_character('s\am'))  # 's\x07m'
 
-print(ascii('sa\m'))  # 'sa\\m'
+text_print(ascii_character('sa\m'))  # 'sa\\m'
 
-print(ascii('\a'))  # '\x07'
+text_print(ascii_character('\a'))  # '\x07'
 
-print(ascii('\b'))  # '\x08'
+text_print(ascii_character('\b'))  # '\x08'
 
-print(ascii('\c'))  # '\\c'
+text_print(ascii_character('\c'))  # '\\c'
 
 # Store the ascii() function inside a variable called 'ascii_function'.
 
-ascii_function = ascii('s\am')
+ascii_function = ascii_character('s\am')
 
-print(ascii_function)  # 's\x07m'
+text_print(ascii_function)  # 's\x07m'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use the := Walrus Operator to create the following Python prgram
 # examples, using tuples(), lists[] and dictionaries{}.
@@ -282,19 +283,19 @@ if my_tuple := (
     'Value 0','Value 1','Value 2',
     'Value 3','Value 4','Value 5'):pass
 
-for value in my_tuple:print(value)
+for value in my_tuple:text_print(value)
 
 if my_list := [
     'Value 0','Value 1','Value 2',
     'Value 3','Value 4','Value 5']:pass
 
-for value in my_list:print(value)
+for value in my_list:text_print(value)
 
 if my_dictionary := {
     1:'Value 1',2:'Value 2',3:'Value 3',
     4:'Value 4',5:'Value 5',6:'Value 6'}:pass
 
-for value in my_dictionary:print(
+for value in my_dictionary:text_print(
     my_dictionary.get(value+1,f"There are no more values to loop \
 through after 'Value {value}'."))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -309,9 +310,9 @@ through after 'Value {value}'."))
 
 if x := (0,1,2,3,4,5):
     try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
+        text_print(x[6],'is in the "x" variable tuple().')
+    except index_error:
+        text_print('The IndexError handler stops index errors from occurring.')
 
 # The 'pass' prefix is for code place holding if you don't wish to write
 # any code blocks underneath expressions that use code blocks, such
@@ -319,8 +320,8 @@ if x := (0,1,2,3,4,5):
 
 if x := (0,1,2,3,4,5):
     try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
+        text_print(x[6],'is in the "x" variable tuple().')
+    except index_error:
         pass
 
 # Without the use of the walrus := operator.
@@ -329,9 +330,9 @@ x = (0,1,2,3,4,5)
 
 if x == x:
     try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
+        text_print(x[6],'is in the "x" variable tuple().')
+    except index_error:
+        text_print('The IndexError handler stops index errors from occurring.')
 
 # With the 'pass' prefix placeholder for code blocks.
 
@@ -339,8 +340,8 @@ x = (0,1,2,3,4,5)
 
 if x == x:
     try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
+        text_print(x[6],'is in the "x" variable tuple().')
+    except index_error:
         pass
 
 # Let's use one 'try:' and two exception handlers, alongside the walrus
@@ -350,12 +351,12 @@ if x == x:
 
 if x := (0,1,2,3,4,5):
     try:
-        print(x[6],'is in the "x" variable tuple().')
-        print(x[4]+'character string')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
-    except TypeError:
-        print('The TypeError handler stops Type errors from occurring.')
+        text_print(x[6],'is in the "x" variable tuple().')
+        text_print(x[4]+'character string')
+    except index_error:
+        text_print('The IndexError handler stops index errors from occurring.')
+    except type_error:
+        text_print('The TypeError handler stops Type errors from occurring.')
 
 # Python executes/runs its programs from the top downward, as the
 # very same way you can see the code order. Each instruction is first
@@ -364,12 +365,12 @@ if x := (0,1,2,3,4,5):
 
 if x := (0,1,2,3,4,5):
     try:
-        print(x[4]+'character string text.')
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
-    except TypeError:
-        print('The TypeError handler stops Type errors from occurring.')
+        text_print(x[4]+'character string text.')
+        text_print(x[6],'is in the "x" variable tuple().')
+    except index_error:
+        text_print('The IndexError handler stops index errors from occurring.')
+    except type_error:
+        text_print('The TypeError handler stops Type errors from occurring.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use the := Walrus Operator to tempararly check for values in tuples,
 # lists, dictionaries and sets. That way, you can be a bit lazy and
@@ -378,20 +379,20 @@ if x := (0,1,2,3,4,5):
 # Python cannot seem to see the values as either strings, nor integers
 # when using the := walrus operator.
 
-print(x := 1,2,3,4,5,6,7,8,9)  # x creates a default tuple of values
+text_print(x := 1,2,3,4,5,6,7,8,9)  # x creates a default tuple of values
 
-print(x[0]) # TypeError: 'int' object is not subscriptable
+text_print(x[0]) # TypeError: 'int' object is not subscriptable
 
-print(x := (1,2,3,4,5,6,7,8,9))  # x creates a tuple of values
+text_print(x := (1,2,3,4,5,6,7,8,9))  # x creates a tuple of values
 
-print(x[0]) # tuple index[0] is the value '1'
+text_print(x[0]) # tuple index[0] is the value '1'
 
-print(x := [1,2,3,4,5,6,7,8,9])  # x creates a list of values
+text_print(x := [1,2,3,4,5,6,7,8,9])  # x creates a list of values
 
-print(x[0]) # list index[0] is the value '1'
+text_print(x[0]) # list index[0] is the value '1'
 
-print(x := {1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9})  # x creates a dictionary of values
+text_print(x := {1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9})  # x creates a dictionary of values
 
-print(x.get(1,'Not Found!'))
+text_print(x.get(1,'Not Found!'))
 
-print(x := {1,2,3,4,5,6,7,8,9})  # x creates a set of values
+text_print(x := {1,2,3,4,5,6,7,8,9})  # x creates a set of values
