@@ -85,13 +85,13 @@ print(text_values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Did you know you can create variables for some of these Python
 # commands/functions? This will give us much more opertunities
-# to use variables as Python code in a for loop that loops through
-# a list of values, which are actual Python commands/functions.
+# to use variables as Python function code in a for loop that loops
+# through a list of values, which are actual Python commands/functions.
 # You can create two or more Python commands/functions with
-# just one for loop alone. Let's explore what these variables can
-# do for us, using actual Python code itself.
+# just one for loop alone. Let's explore what some of these variables
+# can do for us, using actual Python function code itself.
 
-absolute_num = abs
+absolute_value = abs
 add_nums = sum
 ascii_character = ascii
 ascii_character_num = ord
@@ -109,6 +109,7 @@ George_Boole = bool
 hexadecimal_base_16 = hex
 index_error = IndexError
 integer_num = int
+range_loop = range
 maximum_num = max
 memory_error = MemoryError
 minimum_num = min
@@ -121,7 +122,7 @@ text_print = print
 type_error = TypeError
 value_error = ValueError
 value_length = len
-you_quitter = quit
+quit_program = quit
 
 # Let's try a simple print() command/function and see what this does
 # We will also create a variable to be a text placeholder, so we don't
@@ -229,18 +230,18 @@ text_print(ascii_character_value(67))  # C
 # characters. We will also use the (end=' ') prefix to keep all the
 # printed alphabet values to stay on one, single line.
 
-for i in range(97,123):text_print(ascii_character_value(i),end=' ')
+for i in range_loop(97,123):text_print(ascii_character_value(i),end=' ')
 
 # Let's create a for loop that will print out the alphabet in uppercase
 # characters. We will also use the (end=' ') prefix to keep all the
 # printed alphabet values to stay on one, single line.
 
-for i in range(65,91):text_print(ascii_character_value(i),end=' ')
+for i in range_loop(65,91):text_print(ascii_character_value(i),end=' ')
 
 # Let's create integer characters from 0 through 9 with a for loop,
 # using ASCII code values.
 
-for i in range(48,58):text_print(ascii_character_value(i),end=' ')
+for i in range_loop(48,58):text_print(ascii_character_value(i),end=' ')
 
 # Let's create integer character values out of ASCII code values
 # and add them.
@@ -396,3 +397,26 @@ text_print(x := {1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9})  # x creates a dictionary
 text_print(x.get(1,'Not Found!'))
 
 text_print(x := {1,2,3,4,5,6,7,8,9})  # x creates a set of values
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Return an absolute value of a negative integer number with the
+# abs() function.
+
+text_print(absolute_value(-3))  # 3
+
+# or:
+
+x = absolute_value(-3)  # 3
+
+text_print(x)  # 3
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's use the exec() function to store a for loop inside it and
+# make it execute every time we call the exe() function. Invoke
+# three single ( ''' ''' ) quote marks on each side of the code
+# block as shown below.
+
+redundant_code = '''
+for i in range(10):
+    print(i,end=',')
+'''
+execute_program_code(redundant_code)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
