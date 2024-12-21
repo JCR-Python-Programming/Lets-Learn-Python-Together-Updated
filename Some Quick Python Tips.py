@@ -555,7 +555,7 @@ for key,value in dictionary.items():text_print(value)
 
 # Check to see how many keys and values there are in the dictionary.
 
-for key,value in dictionary.items():print(key,value)
+for key,value in dictionary.items():text_print(key,value)
 
 # Let's call a dictionary value by getting a key.
 
