@@ -83,13 +83,12 @@ text_values = poem.split()
 
 print(text_values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Did you know you can create variables for some of these Python
-# commands/functions? This will give us much more opertunities
-# to use variables as Python function code in a for loop that loops
-# through a list of values, which are actual Python commands/functions.
-# You can create two or more Python commands/functions with
-# just one for loop alone. Let's explore what some of these variables
-# can do for us, using actual Python function code itself.
+# Did you know you can create variables for these Python
+# commands/functions? From here onward, we are going
+# to store Python commands/functions inside variables
+# and use them instead of actual Python command/functions,
+# such as abs(), sum(), ascii() and so on. Copy down and
+# refer to this Python command/functions chart below:
 
 absolute_value = abs
 add_number_values = sum
@@ -399,6 +398,14 @@ text_print(x.get(1,'Not Found!'))
 
 text_print(x := {1,2,3,4,5,6,7,8,9})  # x creates a set of values
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke the int() integer function to create integer numbers.
+
+text_print(integer_num(4.5))  # 4
+
+# Invoke the float() floating point function to create floats
+
+text_print(float_num(4))  # 4.0
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Return an absolute value of a negative integer number with the
 # abs() function.
 
@@ -409,6 +416,26 @@ text_print(absolute_value(-3))  # 3
 x = absolute_value(-3)  # 3
 
 text_print(x)  # 3
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's find the minimum number in this nums_list with the min()
+# function.
+
+nums_list = [1,2,3,4,5,6,7,8,9]
+
+text_print(minimum_num(nums_list))
+
+# Let's find the maximum number the nums_list with the max()
+# function.
+
+text_print(maximum_num(nums_list))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's round off numbers with the round() function,
+
+text_print(round_num(3.5))  # 4
+
+# Round off two decimal places to the right.
+
+text_print(round_num(3.567,2))  # 3.57
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the exec() function to store a for loop inside it and
 # make it execute every time we call the exe() function. Invoke
@@ -421,8 +448,8 @@ for i in range(10):
 '''
 execute_program_code(redundant_code)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's turn an immutable tuple into a mutable list by casting it with
-# the list() function.
+# Let's turn an immutable tuple into a mutable list by casting it
+# with the list() function.
 
 tuple_variable = ('Dog','Cat','Bird','Fish')
 
@@ -464,20 +491,22 @@ reconvert = cast_to_list(convert)
 
 sort_values = sorted_values(reconvert)
 
-print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
+text_print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
 
 # Let's check the length of the sort_values list values with the len(),
 # length function to know how many values there are.
 
-print('You have',value_length(sort_values),'values:')  # You have 4 values:
+text_print('You have',value_length(sort_values),'values:')  # You have 4 values:
 
 # Call the sort_value list by its index[] number
 
-print('I love my',sort_values[0],'so much...')
+text_print('I love my',sort_values[0],'so much...')
 
-print('I love my',sort_values[1],'so much...')
+text_print('I love my',sort_values[1],'so much...')
 
-print('I love my',sort_values[2],'so much...')
+text_print('I love my',sort_values[2],'so much...')
 
-print('I love my',sort_values[3],'so much...')
+text_print('I love my',sort_values[3],'so much...')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs...
