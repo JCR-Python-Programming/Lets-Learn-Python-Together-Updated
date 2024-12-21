@@ -92,7 +92,7 @@ print(text_values)
 # can do for us, using actual Python function code itself.
 
 absolute_value = abs
-add_nums = sum
+add_number_values = sum
 ascii_character = ascii
 ascii_character_num = ord
 ascii_character_value = chr
@@ -116,6 +116,7 @@ minimum_num = min
 octal_base_8 = oct
 redundant_code = exec
 round_num = round
+sorted_values = sorted
 super_function = super
 text_input = input
 text_print = print
@@ -148,11 +149,11 @@ nums = 1,2,3,4,5,6,7,8,9 # this is a tuple by default, without parentheses ' () 
 
 # this:
 
-print(add_nums(nums))
+print(add_number_values(nums))
 
 # or this:
 
-text_print(add_nums(nums))
+text_print(add_number_values(nums))
 
 # Let's try a simple input() command/function and see what this does We will
 # create a variable to be a text placeholder, so we don't have to keep rewriting
@@ -382,7 +383,7 @@ if x := (0,1,2,3,4,5):
 
 text_print(x := 1,2,3,4,5,6,7,8,9)  # x creates a default tuple of values
 
-text_print(x[0]) # TypeError: 'int' object is not subscriptable
+##text_print(x[0]) # TypeError: 'int' object is not subscriptable
 
 text_print(x := (1,2,3,4,5,6,7,8,9))  # x creates a tuple of values
 
@@ -419,4 +420,64 @@ for i in range(10):
     print(i,end=',')
 '''
 execute_program_code(redundant_code)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's turn an immutable tuple into a mutable list by casting it with
+# the list() function.
+
+tuple_variable = ('Dog','Cat','Bird','Fish')
+
+convert = cast_to_list(tuple_variable)
+
+text_print(convert)  # ['Dog', 'Cat', 'Bird', 'Fish']
+
+# Let's sort the list values with the sorted() function, without sorting
+# the actual list values.
+
+sort_values = sorted_values(convert)
+
+text_print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
+
+# Let's turn the sorted mutable list back into an immutable sorted
+# tuple by casting it with the tuple() function.
+
+convert = cast_to_tuple(sort_values)
+
+text_print(convert)  # ('Bird', 'Cat', 'Dog', 'Fish')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's turn an immutable tuple into a set by casting it with the set()
+# function. Sets allow us to get rid of duplicate values to be sure
+# that none get mistaken, due to programmer error. Note: set values
+# are always in random order on the screen output as shown below.
+
+tuple_variable = ('Fish','Dog','Cat','Dog','Bird','Fish')
+
+convert = cast_to_set(tuple_variable)
+
+text_print(convert)  # {'Cat', 'Dog', 'Fish', 'Bird'}
+
+# Let's turn the converted set into a sorted out converted list by casting
+# it with the list() function, and then using the sorted() function to sort
+# the values. Now we have no more duplicates in our converted, sorted
+# list, that was an immutable tuple.
+
+reconvert = cast_to_list(convert)
+
+sort_values = sorted_values(reconvert)
+
+print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
+
+# Let's check the length of the sort_values list values with the len(),
+# length function to know how many values there are.
+
+print('You have',value_length(sort_values),'values:')  # You have 4 values:
+
+# Call the sort_value list by its index[] number
+
+print('I love my',sort_values[0],'so much...')
+
+print('I love my',sort_values[1],'so much...')
+
+print('I love my',sort_values[2],'so much...')
+
+print('I love my',sort_values[3],'so much...')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
