@@ -392,7 +392,7 @@ if x := (0,1,2,3,4,5):
 
 text_print(x := 1,2,3,4,5,6,7,8,9)  # x creates a default tuple of values
 
-#text_print(x[0]) # TypeError: 'int' object is not subscriptable
+text_print(x[0]) # TypeError: 'int' object is not subscriptable
 
 text_print(x := (1,2,3,4,5,6,7,8,9))  # x creates a tuple of values
 
