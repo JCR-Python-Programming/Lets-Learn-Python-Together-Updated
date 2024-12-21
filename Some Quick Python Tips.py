@@ -83,6 +83,16 @@ text_values = poem.split()
 
 print(text_values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke the str() string function to mix string characters with
+# non-string characters, like numbers to do calculations within
+# print() function text strings.
+
+print('String Value mixed with a non-String Value',str(1+2))  # 3
+
+# or:
+
+print('String Value mixed with a non-String Value '+str(1+2))  # 3
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Did you know you can create variables for these Python
 # commands/functions? From here onward, we are going
 # to store Python commands/functions inside variables
@@ -100,7 +110,7 @@ cast_to_list = list
 cast_to_set = set
 cast_to_tuple = tuple
 character_string = str
-dictionary = dict
+create_dictionary = dict
 execute_program_code = exec
 exit_program = exit
 float_num = float
@@ -382,7 +392,7 @@ if x := (0,1,2,3,4,5):
 
 text_print(x := 1,2,3,4,5,6,7,8,9)  # x creates a default tuple of values
 
-text_print(x[0]) # TypeError: 'int' object is not subscriptable
+#text_print(x[0]) # TypeError: 'int' object is not subscriptable
 
 text_print(x := (1,2,3,4,5,6,7,8,9))  # x creates a tuple of values
 
@@ -405,6 +415,20 @@ text_print(integer_num(4.5))  # 4
 # Invoke the float() floating point function to create floats
 
 text_print(float_num(4))  # 4.0
+
+# Invoke the int() integer function to convert string characters
+# into non-string integer numbers
+
+text_print('1'+'2')  # 12 is wrong!
+
+text_print(integer_num('1')+integer_num('2'))  # 3 correct!
+
+# Invoke the float() float function to convert string characters
+# into non-string floating point numbers.
+
+text_print('1.2'+'2.1')  # 1.22.1 is wrong!
+
+text_print(float_num('1.2')+float_num('2.1'))  # 3.3 correct!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Return an absolute value of a negative integer number with the
 # abs() function.
@@ -429,7 +453,7 @@ text_print(minimum_num(nums_list))
 
 text_print(maximum_num(nums_list))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's round off numbers with the round() function,
+# Let's round off numbers with the round() function.
 
 text_print(round_num(3.5))  # 4
 
@@ -443,8 +467,7 @@ text_print(round_num(3.567,2))  # 3.57
 # block as shown below.
 
 redundant_code = '''
-for i in range(10):
-    print(i,end=',')
+for i in range(10):print(i,end=',')
 '''
 execute_program_code(redundant_code)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -469,6 +492,8 @@ text_print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
 
 convert = cast_to_tuple(sort_values)
 
+# Check to see how many values there are in the convert tuple.
+
 text_print(convert)  # ('Bird', 'Cat', 'Dog', 'Fish')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's turn an immutable tuple into a set by casting it with the set()
@@ -479,6 +504,8 @@ text_print(convert)  # ('Bird', 'Cat', 'Dog', 'Fish')
 tuple_variable = ('Fish','Dog','Cat','Dog','Bird','Fish')
 
 convert = cast_to_set(tuple_variable)
+
+# Check to see how many values there are in the convert set.
 
 text_print(convert)  # {'Cat', 'Dog', 'Fish', 'Bird'}
 
@@ -491,6 +518,8 @@ reconvert = cast_to_list(convert)
 
 sort_values = sorted_values(reconvert)
 
+# Check to see how many values there are in the sort_values list.
+
 text_print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
 
 # Let's check the length of the sort_values list values with the len(),
@@ -498,7 +527,7 @@ text_print(sort_values)  # ['Bird', 'Cat', 'Dog', 'Fish']
 
 text_print('You have',value_length(sort_values),'values:')  # You have 4 values:
 
-# Call the sort_value list by its index[] number
+# Call a sort_value list value by its index[] number.
 
 text_print('I love my',sort_values[0],'so much...')
 
@@ -508,5 +537,29 @@ text_print('I love my',sort_values[2],'so much...')
 
 text_print('I love my',sort_values[3],'so much...')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a dictionary with the dict() dictionary function.
+
+dictionary = create_dictionary(key1='Value One',key2='Value Two',key3='Value Three')
+
+# Check to see how many keys and values there are in the dictionary.
+
+text_print(dictionary)  # {'key1': 'Value One', 'key2': 'Value Two', 'key3': 'Value Three'}
+
+# Check to see how many keys there are in the dictionary.
+
+for key,value in dictionary.items():text_print(key)
+
+# Check to see how many values there are in the dictionary.
+
+for key,value in dictionary.items():text_print(value)
+
+# Check to see how many keys and values there are in the dictionary.
+
+for key,value in dictionary.items():print(key,value)
+
+# Let's call a dictionary value by getting a key.
+
+text_print(dictionary.get('key1'))  # Value One
+
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs...
