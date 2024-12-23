@@ -1,7 +1,16 @@
 # Here are some quick tips for the print() function and others in Python.
+# These Python program examples might be a bit advanced for the
+# beginner/novice Python programmer. However, I say: experiment
+# and try each of these Python programming examples...
 
 # Created by Joseph C. Richardson, GitHub.com
-
+'''
+                          Let's learn it!
+                            Let's do it!
+                          Let's know it!
+                          Let's teach it!
+                            Let's GO!!
+'''
 # Invoke the ( \ ) backslash in print() function text to force a hard
 # line break to make Python print() function text code be on multiple
 # lines.
@@ -97,8 +106,13 @@ print('String Value mixed with a non-String Value '+str(1+2))  # 3
 # commands/functions? From here onward, we are going
 # to store Python commands/functions inside variables
 # and use them instead of actual Python command/functions,
-# such as abs(), sum(), ascii() and so on. Copy down and
-# refer to this Python command/functions chart below:
+# such as abs(), sum(), ascii() and so on. Note: the super()
+# function cannot be stored inside a variable and that's why
+# it's not shown in the Python commands/functions chart.
+# Also note: the MemoryError handler variable does work,
+# but there are no examples shown on how and when to use
+# it in Python programs. Copy down and refer to this Python
+# command/functions chart below:
 
 absolute_value = abs
 add_number_values = sum
@@ -112,7 +126,7 @@ cast_to_tuple = tuple
 character_string = str
 create_dictionary = dict
 execute_program_code = exec
-exit_program = exit
+exit_Python_idle = exit
 float_num = float
 George_Boole = bool
 hexadecimal_base_16 = hex
@@ -126,13 +140,12 @@ octal_base_8 = oct
 redundant_code = exec
 round_num = round
 sorted_values = sorted
-super_function = super
 text_input = input
 text_print = print
 type_error = TypeError
 value_error = ValueError
 value_length = len
-quit_program = quit
+quit_Python_idle = quit
 
 # Let's try a simple print() command/function and see what this does
 # We will also create a variable to be a text placeholder, so we don't
@@ -461,6 +474,64 @@ text_print(round_num(3.5))  # 4
 
 text_print(round_num(3.567,2))  # 3.57
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke the bool() George Boole function to produce logical true
+# and false outcomes, combined with True and False conditionals
+# and logical operators.
+
+# Equals operator: ==
+
+# Not Equals operator: !=
+
+# Greater Than operator: >
+
+# Less Than operator: <
+
+text_print(George_Boole(4==4))  # True
+
+text_print(George_Boole(3==4))  # False
+
+text_print(George_Boole(4==3))  # False
+
+text_print(George_Boole(4!=4))  # False
+
+text_print(George_Boole(3!=4))  # True
+
+text_print(George_Boole(4!=3))  # True
+
+text_print(George_Boole(4>3))  # True
+
+text_print(George_Boole(3>4))  # False
+
+text_print(George_Boole(3<4))  # True
+
+text_print(George_Boole(4<3))  # False
+
+text_print(George_Boole(4>=3))  # True
+
+text_print(George_Boole(3>=4))  # False
+
+text_print(George_Boole(3<=4))  # True
+
+text_print(George_Boole(4<=3))  # False
+
+# True and False conditionals.
+
+text_print(George_Boole(True is True))  # True, ==
+
+text_print(George_Boole(False is False))  # True, ==
+
+text_print(George_Boole(True is False))  # False, ==
+
+text_print(George_Boole(False is True))  # False, ==
+
+text_print(George_Boole(True is not False))  # True, !=
+
+text_print(George_Boole(False is not True))  # True, !=
+
+text_print(George_Boole(True is not True))  # False, !=
+
+text_print(George_Boole(False is not False))  # False, !=
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the exec() function to store a for loop inside it and
 # make it execute every time we call the exe() function. Invoke
 # three single ( ''' ''' ) quote marks on each side of the code
@@ -510,7 +581,7 @@ convert = cast_to_set(tuple_variable)
 text_print(convert)  # {'Cat', 'Dog', 'Fish', 'Bird'}
 
 # Let's turn the converted set into a sorted out converted list by casting
-# it with the list() function, and then using the sorted() function to sort
+# it with the list() function, and then invoking the sorted() function to sort
 # the values. Now we have no more duplicates in our converted, sorted
 # list, that was an immutable tuple.
 
@@ -537,6 +608,33 @@ text_print('I love my',sort_values[2],'so much...')
 
 text_print('I love my',sort_values[3],'so much...')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let Python help you create a list of values faster with this Python program example
+
+empty_list = []
+
+while True:
+    user_input = text_input("Let's create a list of values for 'empty_list': ").lower().strip()
+
+    empty_list.append(user_input)
+
+    if user_input == 'quit':
+        break
+    elif user_input == '':
+        empty_list.pop(0)
+
+empty_list.pop() # removes the very last value 'quit' in the empty_list
+
+# check your 'empty_list' values that you created
+
+text_print(f"\nPython helped you create your 'empty_list' values:\n{empty_list}")
+
+# call an 'empty_list' value with its index value range
+
+try:
+    text_print(empty_list[0])
+except index_error:
+    text_print('index out of range:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a dictionary with the dict() dictionary function.
 
 dictionary = create_dictionary(key1='Value One',key2='Value Two',key3='Value Three')
@@ -560,6 +658,93 @@ for key,value in dictionary.items():text_print(key,value)
 # Let's call a dictionary value by getting a key.
 
 text_print(dictionary.get('key1'))  # Value One
+
+# If a dictionary key isn't found, we can simply do this instead.
+
+text_print(dictionary.get('key4'))  # None
+
+# or this:
+
+text_print(dictionary.get('key4','Key Not Found:'))  # Key Not Found:
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke the exit() exit function to exit the Python idle program execution.
+
+exit_Python_idle()
+
+# Invoke the quit() quit function to quit the Python idle program execution.
+
+quit_Python_idle()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Bonus Python program exercise example:
+
+# See what happens when you type and execute/run this guessing
+# game Python program example below. Note: you must execute/run
+# the Python program from the OS output screen, via double-clicking
+# the Python program file itself to see all the cool coloured text effects.
+
+# Save the Python file as 'Know Your Polygons.py'
+
+# import the os module
+
+import os
+
+text_colour=(
+    '\x1b[31m',
+    '\x1b[32m',
+    '\x1b[33m',
+    '\x1b[34m',
+    '\x1b[35m',
+    '\x1b[36m',
+    '\x1b[37m',
+    'cls'
+    )
+
+question_prompts1=(
+    f'{text_colour[2]}How many sides does a Triangle have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}three sides\n{text_colour[1]}(c) {text_colour[2]}two sides',
+    
+    f'{text_colour[2]}How many sides does a Square have?\n\n{text_colour[1]}(a) {text_colour[2]}Two sides\n\
+{text_colour[1]}(b) {text_colour[2]}Three sides\n{text_colour[1]}(c) {text_colour[2]}Four sides',
+    
+    f'{text_colour[2]}How many sides does a Pentagon have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}five sides\n{text_colour[1]}(c) {text_colour[2]}Three sides',
+    
+    f'{text_colour[2]}How many sides does a Hexagon have?\n\n{text_colour[1]}(a) {text_colour[2]}six sides\n\
+{text_colour[1]}(b) {text_colour[2]}five sides\n{text_colour[1]}(c) {text_colour[2]}two sides',
+    
+    f'{text_colour[2]}How many sides does a Octagon have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}six sides\n{text_colour[1]}(c) {text_colour[2]}eight sides',
+    
+    f'{text_colour[2]}How many sides does a Dodecagon have?\n\n{text_colour[1]}(a) {text_colour[2]}eight \
+sides\n{text_colour[1]}(b) {text_colour[2]}three sides\n{text_colour[1]}(c) {text_colour[2]}twelve sides',
+    
+    f'{text_colour[2]}How many sides does a Hexadecagon have?\n\n{text_colour[1]}(a) {text_colour[2]}sixteen \
+sides\n{text_colour[1]}(b) {text_colour[2]}eight sides\n{text_colour[1]}(c) {text_colour[2]}six sides'
+    )
+
+prompt=('b','c','b','a','c','c','a')
+
+score = 0
+loop = 0
+
+while loop<=6:    
+    os.system(text_colour[7])
+    button=text_input((text_colour[1])+'\nKnow Your Polygons!\n\n'+\
+    (text_colour[2])+'Know Your Polygons\n\n'+question_prompts1[loop]+\
+    '\n\n'+(text_colour[0])+'READY:'+(text_colour[1])).strip()
+    
+    if button==(prompt[loop]):
+        score+=1
+        
+    loop+=1
+    
+    os.system(text_colour[7])    
+text_print(f'\n{text_colour[2]}Know Your Polygons\n\n{text_colour[2]}You got \
+{score}/{value_length(question_prompts1)} questions correct.\nCongratulations! \
+Your total Prize Winnings: {text_colour[1]}${score*100*score:,}.00 {text_colour[2]}\
+Dollars.\n\n{text_colour[0]}READY:')
+
+text_input('\nEND OF PROGRAM! Press Enter to quit.')
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs...
