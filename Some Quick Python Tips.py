@@ -700,26 +700,40 @@ text_colour=(
     )
 
 question_prompts1=(
-    f'{text_colour[2]}How many sides does a Triangle have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
-{text_colour[1]}(b) {text_colour[2]}three sides\n{text_colour[1]}(c) {text_colour[2]}two sides',
+    f'{text_colour[2]}How many sides does a Triangle \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}three sides\n\
+{text_colour[1]}(c) {text_colour[2]}two sides',
     
-    f'{text_colour[2]}How many sides does a Square have?\n\n{text_colour[1]}(a) {text_colour[2]}Two sides\n\
-{text_colour[1]}(b) {text_colour[2]}Three sides\n{text_colour[1]}(c) {text_colour[2]}Four sides',
+    f'{text_colour[2]}How many sides does a Square \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}Two sides\n\
+{text_colour[1]}(b) {text_colour[2]}Three sides\n\
+{text_colour[1]}(c) {text_colour[2]}Four sides',
     
-    f'{text_colour[2]}How many sides does a Pentagon have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
-{text_colour[1]}(b) {text_colour[2]}five sides\n{text_colour[1]}(c) {text_colour[2]}Three sides',
+    f'{text_colour[2]}How many sides does a Pentagon \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}five sides\n\
+{text_colour[1]}(c) {text_colour[2]}Three sides',
     
-    f'{text_colour[2]}How many sides does a Hexagon have?\n\n{text_colour[1]}(a) {text_colour[2]}six sides\n\
-{text_colour[1]}(b) {text_colour[2]}five sides\n{text_colour[1]}(c) {text_colour[2]}two sides',
+    f'{text_colour[2]}How many sides does a Hexagon \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}six sides\n\
+{text_colour[1]}(b) {text_colour[2]}five sides\n\
+{text_colour[1]}(c) {text_colour[2]}two sides',
     
-    f'{text_colour[2]}How many sides does a Octagon have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
-{text_colour[1]}(b) {text_colour[2]}six sides\n{text_colour[1]}(c) {text_colour[2]}eight sides',
+    f'{text_colour[2]}How many sides does a Octagon \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}four sides\n\
+{text_colour[1]}(b) {text_colour[2]}six sides\n\
+{text_colour[1]}(c) {text_colour[2]}eight sides',
     
-    f'{text_colour[2]}How many sides does a Dodecagon have?\n\n{text_colour[1]}(a) {text_colour[2]}eight \
-sides\n{text_colour[1]}(b) {text_colour[2]}three sides\n{text_colour[1]}(c) {text_colour[2]}twelve sides',
+    f'{text_colour[2]}How many sides does a Dodecagon \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}eight \
+sides\n{text_colour[1]}(b) {text_colour[2]}three sides\n\
+{text_colour[1]}(c) {text_colour[2]}twelve sides',
     
-    f'{text_colour[2]}How many sides does a Hexadecagon have?\n\n{text_colour[1]}(a) {text_colour[2]}sixteen \
-sides\n{text_colour[1]}(b) {text_colour[2]}eight sides\n{text_colour[1]}(c) {text_colour[2]}six sides'
+    f'{text_colour[2]}How many sides does a Hexadecagon \
+have?\n\n{text_colour[1]}(a) {text_colour[2]}sixteen \
+sides\n{text_colour[1]}(b) {text_colour[2]}eight sides\n\
+{text_colour[1]}(c) {text_colour[2]}six sides'
     )
 
 prompt=('b','c','b','a','c','c','a')
