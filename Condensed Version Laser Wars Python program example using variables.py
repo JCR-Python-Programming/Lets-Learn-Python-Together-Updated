@@ -1,13 +1,15 @@
-# Condensed Version: Laser Wars Python program example using variables
+# Condensed Version: Tkinter LASER WARS screensaver
+# Python program example using variables.
 
 # Created by Joseph C. Richardson, GitHub.com
 
 from time import sleep as wait
 from random import*
 from tkinter import*
+
 laser_wars = Tk()
 
-laser_wars.title('LASER WARS')
+laser_wars.title('Condensed Version: Tkinter LASER WARS')
 everything = 'all'
 
 def random_colour_code():
@@ -47,3 +49,6 @@ while True:
     laser_canvas.delete(everything)
 
 laser_wars.mainloop()
+
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs...
