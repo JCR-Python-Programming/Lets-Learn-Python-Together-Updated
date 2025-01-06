@@ -19,11 +19,11 @@ print(a)
 # you will get an error such as this:
 
 def non_global_variable():
-    b = 'non global variables won\'t work outside their functions()'
+    a = 'non global variables won\'t work outside their functions()'
 
 non_global_variable()
 
-print(b)
+print(a)
 
 #    Traceback (most recent call last):
 #      File "C:\Users\mogie54321\Desktop\EXP Python.py", line 16, in <module>
