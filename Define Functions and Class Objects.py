@@ -919,16 +919,121 @@ class Sub_class_example_six(Main_class_example_six):
     print(Main_class_example_six.number_one_example(2,5))
     print(Sub_class_example_six.number_two_example(2,5))
 
-Main_class_example_six('John','Smith',23)
+# this:
 
-Sub_class_example_six('Jane','Smith',22,'German Shepherd','Tabby Cat','Parrot','Angelfish')
+Main_class_example_six('John','Smith',23).first_name
+
+Sub_class_example_six('Jane','Smith',22,'German Shepherd','Tabby Cat','Parrot','Angelfish').dog
+
+# or this:
+
+a = Main_class_example_six('John','Smith',23).first_name
+
+b = Sub_class_example_six('Jane','Smith',22,'German Shepherd','Tabby Cat','Parrot','Angelfish').dog
+
+print(a)
+print(b)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Bonus Mega Superclass Python Program Exercise
+
+class Main_class_attribute_properties:
+
+    def __init__(self,cars,boats,planes):
+        self.cars=cars
+        self.boats=boats
+        self.planes=planes
+
+class Sub_class1_attribute_properties(Main_class_attribute_properties):
+
+    def __init__(self,cars,boats,planes,helicopters):
+        super().__init__(cars,boats,planes)
+
+        self.helicopters=helicopters
+
+class Sub_class2_attribute_properties(
+    Sub_class1_attribute_properties,Main_class_attribute_properties):
+
+    def __init__(self,cars,boats,planes,helicopters,drones):
+        super().__init__(cars,boats,planes,helicopters)
+
+        self.drones=drones
+
+class Sub_class3_attribute_properties(
+    Sub_class2_attribute_properties,
+    Sub_class1_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(self,cars,boats,planes,helicopters,drones,starships):
+        super().__init__(cars,boats,planes,helicopters,drones)
+
+        self.starships=starships
+
+class Sub_class4_attribute_properties(
+    Sub_class3_attribute_properties,
+    Sub_class2_attribute_properties,
+    Sub_class1_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(self,cars,boats,planes,helicopters,drones,starships,submarines):
+        super().__init__(cars,boats,planes,helicopters,drones,starships)
+
+        self.submarines=submarines
+
+# The Sub_class5_attribute_properties have the exact same attribute
+# properties as the Sub_class4_attribute_properties. No other new class
+# attribute properties exist in the Sub_class5_attribute_properties.
+
+class Sub_class5_attribute_properties(
+    Sub_class4_attribute_properties,
+    Sub_class3_attribute_properties,
+    Sub_class2_attribute_properties,
+    Sub_class1_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(self,cars,boats,planes,helicopters,drones,starships,submarines):
+        super().__init__(cars,boats,planes,helicopters,drones,starships,submarines)
+
+main_class = Main_class_attribute_properties('My car','My boat','My plane').planes
+
+sub_class1 = Sub_class1_attribute_properties(
+    'My car','My boat','My airplane','My helicopter').helicopters
+
+sub_class2 = Sub_class2_attribute_properties(
+    'My car','My boat','My airplane','My helicopter','My drone').drones
+
+sub_class3 = Sub_class3_attribute_properties(
+    'My car','My boat','My airplane','My helicopter','My drone','My starship').starships
+
+sub_class4 = Sub_class4_attribute_properties(
+    'My car','My boat','My airplane','My helicopter','My drone','My starship','My submarine').submarines
+
+# The Sub_class5_attribute_properties have the exact same attribute
+# properties as the Sub_class4_attribute_properties. No other new class
+# attribute properties exist in the Sub_class5_attribute_properties.
+
+sub_class5 = Sub_class5_attribute_properties(
+    'My car','My boat','My airplane','My helicopter','My drone','My starship','My submarine').submarines
+
+# Create a variable called 'auto_class' to store all six class object values.
+
+auto_class = (
+    main_class,sub_class1,
+    sub_class2,sub_class3,
+    sub_class4,sub_class5)
+
+# Create a for loop that loops through all six auto_class values
+
+for i in auto_class:
+    print(i)
 
 # Now, we can clearly see how this all pans out to be. We've come such a
 # very long way, as we've learned so much about how to create define functions,
 # return define functions and classes, along with the super() function and
 # string concatenation. Let's now take a much needed break! But practice,
-# practice and more practice, practice; we must constantly practice anything
-# we strive to become.
+# practice and more practice, practice; we must constantly practice at anything
+# we strive to become. Even while being great at what we do, we should
+# always continue to practice, practice, practice and more practice, practice,
+# practice to keep on top of our game. No matter what!
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs...
