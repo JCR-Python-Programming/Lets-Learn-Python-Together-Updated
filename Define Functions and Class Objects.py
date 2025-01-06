@@ -1,4 +1,3 @@
-
 # Let's learn some heavy Python programming skills with define functions
 # and class objects. These Python programming examples are not for the
 # beginner/novice Python programmer. To those, who are starting into
