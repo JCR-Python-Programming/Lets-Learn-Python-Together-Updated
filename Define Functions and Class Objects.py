@@ -1,4 +1,4 @@
-# Let's learn some heavy Python programming skills with define functions
+# Let's learn some deep Python programming skills with define functions
 # and class objects. These Python programming examples are not for the
 # beginner/novice Python programmer. To those, who are starting into
 # computer programming, do not start off with these Python program
@@ -8,6 +8,11 @@
 # programming examples, I say. Why not!! But you might become lost
 # and quickly confused if you are just starting fresh into computer
 # programming at large...
+
+# Most of these Python programming examples will go into both robots
+# that I have. I have a Robomaster S1 robot and a brand new Robomaster
+# EP Core robot. Both are from dji. The EP Core robot is coming in the
+# not too distant future from now. So be looking out for it.
 
 # Created by Joseph C. Richardson, GitHub.com
 
@@ -224,6 +229,138 @@ display or type (q) to quit: ').lower().strip()  # strip() clears whitespace)
             print('Sorry! No subroutine for that.')
             break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Global Variables in Python
+
+# What are 'global variables'? Global variables are used within
+# define functions() when you want to call a variable outside the
+# actual define function(), you need the prefix 'global' to be able
+# to call a variable outside the actual define function() itself. For
+# example here is what calling a variable, using the prefix 'global'
+# does.
+
+def global_variable():
+    global a
+    a = 'global variables work outside their define functions()'
+
+global_variable()
+
+print(a)
+
+# If you try to call a variable outside a define function() with no
+# 'global' prefix attached to it, you will get an error such as this:
+
+def non_global_variable():
+    b = 'non global variables won\'t work outside their define functions()'
+
+non_global_variable()
+
+print(b)
+
+#    Traceback (most recent call last):
+#      File "C:\Users\mogie54321\Desktop\EXP Python.py", line 16, in <module>
+#        print(a)
+#    NameError: name 'a' is not defined
+
+# You can, however do this if you don't want to invoke the 'global' prefix. So
+# instead, we can do this:
+
+b = 'outside variables work outside their define functions()'
+
+def non_global_variable():
+    print(b)
+
+non_global_variable()
+
+# Simply create a variable outside the define function and then
+# call it in from outside it. Let's do more global variables to get
+# the hang of things with a group of them.
+
+def global_variables():
+    global a
+    global b
+    global c
+
+    a = 'global variable (a) works outside its define functions()'
+    b = 'global variable (b) works outside its define functions()'
+    c = 'global variable (c) works outside its define functions()'
+
+global_variables()
+
+print(a)
+
+# Here is one thing you should avoid doing. If you call an outside
+# variable with the same name as this example below shows, you
+# won't get the desired output you want. If you want outside variables
+# outside of global variables, you must give them different names so
+# they can know who is who.
+
+a = 'oops! This outside variable (a) was overwritten by the global variable (a).'
+
+def global_variables():
+    global a
+    global b
+    global c
+
+    a = 'global variable (a) works outside its define functions()'
+    b = 'global variable (b) works outside its define functions()'
+    c = 'global variable (c) works outside its define functions()'
+
+global_variables()
+
+print(a)
+
+# Now that we used a different name for the outside variable, the
+# global variables and the outside variable will know who is who,
+# when being called upon. Note: you can also use an uppercase 'A'
+# for the outside variable; computers are case sensitive: 'a' and 'A'
+# are not the same to a computer. Therefore, the computer treats
+# the variables as totally different names. So please keep this in
+# mind at all times.
+
+abc = 'Now I know which one of us variables are being called.'
+
+def global_variables():
+    global a
+    global b
+    global c
+
+    a = 'global variable (a) works outside its define functions()'
+    b = 'global variable (b) works outside its define functions()'
+    c = 'global variable (c) works outside its define functions()'
+
+global_variables()
+
+print(abc)
+print(a)
+
+# The computer thinks this is a totally different variable name altogether.
+
+A = 'I still know which one of us variables are being called.'
+
+def global_variables():
+    global a
+    global b
+    global c
+
+    a = 'global variable (a) works outside its define functions()'
+    b = 'global variable (b) works outside its define functions()'
+    c = 'global variable (c) works outside its define functions()'
+
+global_variables()
+
+print(A)
+print(a)
+
+# Let's pack global variables with just one 'global' prefix to use
+# them outside the define function().
+
+def global_variables():
+    global a,b,c
+
+    a = 'pack global variable (a) works outside its define functions()'
+    b = 'pack global variable (b) works outside its define functions()'
+    c = 'pack global variable (c) works outside its define functions()'
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a class with three parameter variables, including the 'self'
 # variable. Create three print() functions outside the class that will
 # display the three class values on the screen output, when executed.
@@ -353,11 +490,12 @@ Main_class_example_one('John','Smith',23)
 
 Sub_class_example_one('Jane','Smith',22)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Here is a small example of the 'super()' function to show how it works.
-# The 'super()' function not only inherits all attribute properties from the
-# main class, but it also carries its very own sub class attribute properties
-# as well. This way, we can create different sub class attribute properties
-# as you will clearly notice in the next class example.
+# Here is a small example of the 'super()' function to show how
+# it works. The 'super()' function not only inherits all attribute
+# properties from the main class, but it also carries its very own
+# sub class attribute properties as well. This way, we can create
+# different sub class attribute properties as you will clearly notice
+# in the next class example.
 
 class Main_class_example_two:
 
@@ -400,8 +538,8 @@ print(Main_class_attributes('Jane','Smith',22).first_name)
 
 print(Sub_class_attributes('John','Smith',23).first_name)
 
-# Let's fix this redundant attribute property problem, once and for all with
-# the super() function.
+# Let's fix this redundant attribute property problem, once and for all
+# with the super() function.
 
 class Main_class_attributes:
 
@@ -470,7 +608,8 @@ Sub_class_example_three('Jane','Smith',22,'German Shepherd','Tabby Cat','Parrot'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is the very same main class Python program example as
 # shown above. The only difference is, the print() functions are
-# all outside from the two classes: main class and the sub class acts.
+# all outside from the two classes: main class and the sub class
+# acts.
 
 class Main_class_example_four:
 
@@ -489,7 +628,8 @@ class Sub_class_example_four(Main_class_example_four):
         self.bird=bird
         self.fish=fish
 
-# All print() functions are outside from the main class and the sub class acts.
+# All print() functions are outside from the main class and the sub
+# class acts.
 
 print(Main_class_example_four('John','Smith',23).first_name)
 print(Main_class_example_four('John','Smith',23).last_name)
@@ -507,8 +647,8 @@ print(Sub_class_example_four('Jane','Smith',22,'German Shepherd','Tabby Cat','Pa
 # Let's now take all that we've learned so far and start to have some
 # serious Python programming fun! Let's create some text strings
 # to make the Python program be a piece of programming art, as
-# well as taking a huge step into computer science in general. Believe
-# it or not!
+# well as taking a huge step into computer science in general.
+# Believe it or not!
 
 class Main_class_example_five:
 
