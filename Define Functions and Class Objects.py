@@ -1162,8 +1162,7 @@ auto_class = (
 
 # Create a for loop that loops through all six auto_class values
 
-for i in auto_class:
-    print(i)
+for i in auto_class:print(i)
 
 # Now, we can clearly see how this all pans out to be. We've come such a
 # very long way, as we've learned so much about how to create define functions,
