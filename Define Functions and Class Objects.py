@@ -256,10 +256,10 @@ non_global_variable()
 
 print(b)
 
-#    Traceback (most recent call last):
-#      File "C:\Users\mogie54321\Desktop\EXP Python.py", line 16, in <module>
-#        print(a)
-#    NameError: name 'a' is not defined
+# Traceback (most recent call last):
+#   File "C:\Users\mogie54321\Downloads\Define Functions and Class Objects.py", line 257, in <module>
+#    print(b)
+# NameError: name 'b' is not defined
 
 # You can, however do this if you don't want to invoke the 'global' prefix. So
 # instead, we can do this:
@@ -280,9 +280,9 @@ def global_variables():
     global b
     global c
 
-    a = 'global variable (a) works outside its define functions()'
-    b = 'global variable (b) works outside its define functions()'
-    c = 'global variable (c) works outside its define functions()'
+    a = 'global variable (a) works outside its define function()'
+    b = 'global variable (b) works outside its define function()'
+    c = 'global variable (c) works outside its define function()'
 
 global_variables()
 
