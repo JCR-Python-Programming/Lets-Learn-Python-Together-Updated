@@ -361,6 +361,64 @@ def global_variables():
     b = 'pack global variable (b) works outside its define functions()'
     c = 'pack global variable (c) works outside its define functions()'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn what class objects are all about with simple class attribute
+# properties, so we can start to have an understanding of what class
+# object attribute property values are all about, as well as how many
+# argument placeholder values each class object needs to satisfy for
+# their argument values and visa versa.
+
+class Class_attribute_properties_example_one:
+
+    def __init__(self,var):
+        self.class_var=var
+
+a = Class_attribute_properties_example_one(
+    'This is an instance of a single class object with one attribute property.').class_var
+
+print(a)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Class_attribute_properties_example_two:
+
+    def __init__(self,var1,var2):
+        self.class_var1=var1
+        self.class_var2=var2
+
+b = Class_attribute_properties_example_two(
+    'This is an instance of a single class object with two attribute properties.',
+    'This is an instance of a single class object with two attribute properties.').class_var2
+
+print(b)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Class_attribute_properties_example_three:
+
+    def __init__(self,var1,var2,var3):
+        self.class_var1=var1
+        self.class_var2=var2
+        self.class_var3=var3
+
+c = Class_attribute_properties_example_three(
+    'This is an instance of a single class object with three attribute properties.',
+    'This is an instance of a single class object with three attribute properties.',
+    'This is an instance of a single class object with three attribute properties.').class_var3
+
+print(c)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Class_attribute_properties_example_four:
+
+    def __init__(self,var1,var2,var3,var4):
+        self.class_var1=var1
+        self.class_var2=var2
+        self.class_var3=var3
+        self.class_var4=var4
+
+d = Class_attribute_properties_example_four(
+    'This is an instance of a single class object with four attribute properties.',
+    'This is an instance of a single class object with four attribute properties.',
+    'This is an instance of a single class object with four attribute properties.',
+    'This is an instance of a single class object with four attribute properties.').class_var4
+
+print(d)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a class with three parameter variables, including the 'self'
 # variable. Create three print() functions outside the class that will
 # display the three class values on the screen output, when executed.
@@ -561,8 +619,8 @@ print(Sub_class_attributes('John','Smith',23).first_name)
 # function does. We can create a sub class with its very own atribute
 # properties, without having to create redundancy on our programming
 # part. We have to invoke all the main class atribute properties into the
-# super() function, along with the sub class attribute properties. But
-# we don't have to recreate main class atribute property redundancy at all.
+# super() function, along with the sub class attribute properties. But we
+# don't have to recreate main class atribute property redundancy at all.
 
 class Main_class_example_three:
 
@@ -1171,7 +1229,7 @@ for i in auto_class:print(i)
 # practice and more practice, practice; we must constantly practice at anything
 # we strive to become. Even while being great at what we do, we should
 # always continue to practice, practice, practice and more practice, practice,
-# practice to keep on top of our game. No matter what!
+# practice to keep on top of our game. No matter what it takes!
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs...
