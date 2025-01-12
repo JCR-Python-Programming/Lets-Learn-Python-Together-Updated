@@ -9,10 +9,10 @@
 # and quickly confused if you are just starting fresh into computer
 # programming at large...
 
-# Most of these Python programming examples will go into both robots
-# that I have. I have a Robomaster S1 robot and a brand new Robomaster
-# EP Core robot. Both are from dji. The EP Core robot is coming in the
-# not too distant future from now. So be looking out for it.
+# Most of these Python programming examples will go into both robots.
+# I have a Robomaster S1 robot and a brand new Robomaster EP Core
+# robot. Both are from dji. The EP Core robot is coming in the not too
+# distant future from now. So be looking out for it.
 
 # Created by Joseph C. Richardson, GitHub.com
 
