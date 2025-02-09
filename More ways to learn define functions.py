@@ -1,4 +1,3 @@
-
 # Here are more ways to create and use define functions in Python.
 # This Python programming topic does not include many comments
 # about each define function example. However, if you study any
