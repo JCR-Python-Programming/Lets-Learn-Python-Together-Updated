@@ -1,6 +1,10 @@
+# Welcome to the JCR Majestic Calculator Python program exercise.
+
+# Created by Joseph C. Richardson, GitHub.com
+
 import os,time
 
-text_features=(
+text_features = (
     'cls',  # index 0 = clear screen
     '\x1b[31m',  # index 1 = red
     '\x1b[32m',  # index 2 = green
@@ -10,7 +14,7 @@ text_features=(
     'title JCR Majestic Calculator'  # index 6 = window title
     )
 
-text_words=(
+text_words = (
     f'\n  {text_features[3]}JCR Majestic Calculator\n\n {text_features[5]}Press (1) for Standard \
 Decimal Base 10 Calculator\n Press (2) for Binary Base 2 Calculator\n Press (3) for Octal \
 Base 8 Calculator\n Press (4) for Hexadecimal Base 16 Calculator\n\n {text_features[3]}(BIN) \
@@ -58,11 +62,9 @@ Translator\n Press (6) for Octal Base 8 Number Translator\n Press (7) for Hexade
     f'\n  {text_features[3]}Thanks for choosing JCR Majestic Calculator'  # index 19 = text_words
     )
 
-operator=(
-    chr(43),chr(45),chr(42),chr(47)  # math operators in ASCII codes
-    )
+operator = chr(43),chr(45),chr(42),chr(47)  # math operators in ASCII codes
 
-button=('1','2','3','4','5','6','7','q')  # button choices, q = quit
+button = '1','2','3','4','5','6','7','q'  # button choices, q = quit
 
 def stan_cal():
     while True:
@@ -215,7 +217,7 @@ def bin_cal():
 
         except ValueError:
             os.system(text_features[0])
-            print(f' {text_words[1]}{text_words[17]}')
+            print(f' {text_words[2]}{text_words[17]}')
             time.sleep(2)
 
 def oct_cal():
@@ -463,3 +465,6 @@ def jcr_maj_cal():
             break
 
 jcr_maj_cal()
+
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
