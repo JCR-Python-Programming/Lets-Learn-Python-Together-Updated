@@ -1,4 +1,4 @@
-import os,time,math;from math import*
+import os,time
 
 text_features=(
     'cls', # index 0 = clear screen
@@ -146,16 +146,16 @@ def bin_cal():
             num1=int(input(f' {text_words[2]}{text_words[12]}').lower().strip())
 
             os.system(text_features[0])
-            oper=input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)}{text_words[13]}').lower().strip()
+            oper=input(f' {text_words[2]}\n\n {text_features[2]}{num1}{text_words[13]}').lower().strip()
 
             if oper==operator[0]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
+                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
 {operator[0]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
-{operator[0]} {bin(num2)} = {text_features[5]}" {bin(num1+num2)} " \
+                but=input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
+{operator[0]} {num2} = {text_features[5]}" {num1+num2:b} " \
 {text_features[2]}= {text_features[5]}" {int(num1+num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -165,12 +165,12 @@ def bin_cal():
 
             elif oper==operator[1]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
+                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
 {operator[1]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
-{operator[1]} {bin(num2)} = {text_features[5]}" {bin(num1-num2)} " \
+                but=input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
+{operator[1]} {num2} = {text_features[5]}" {num1-num2:b} " \
 {text_features[2]}= {text_features[5]}" {int(num1-num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -180,12 +180,12 @@ def bin_cal():
 
             elif oper==operator[2]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
+                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
 {operator[2]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
-{operator[2]} {bin(num2)} = {text_features[5]}" {bin(num1*num2)} " \
+                but=input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
+{operator[2]} {num2} = {text_features[5]}" {num1*num2:b} " \
 {text_features[2]}= {text_features[5]}" {int(num1*num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -195,12 +195,12 @@ def bin_cal():
 
             elif oper==operator[3]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{bin(num1)} \
+                num2=int(input(f' {text_words[2]}\n\n {text_features[2]}{num1} \
 {operator[3]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f'{text_words[2]}\n\n {text_features[2]}{bin(num1)} \
-{operator[3]} {bin(num2)} = {text_features[5]}" {bin(int(num1/num2))} " \
+                but=input(f'{text_words[2]}\n\n {text_features[2]}{num1} \
+{operator[3]} {num2} = {text_features[5]}" {int(num1/num2):b} " \
 {text_features[2]}= {text_features[5]}" {int(num1/num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -225,16 +225,16 @@ def oct_cal():
             num1=int(input(f' {text_words[3]}{text_words[12]}').lower().strip())
 
             os.system(text_features[0])
-            oper=input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)}{text_words[13]}').lower().strip()
+            oper=input(f' {text_words[3]}\n\n {text_features[2]}{num1}{text_words[13]}').lower().strip()
 
             if oper==operator[0]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
+                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
 {operator[0]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
-{operator[0]} {oct(num2)} = {text_features[5]}" {oct(num1+num2)} " \
+                but=input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
+{operator[0]} {num2} = {text_features[5]}" {num1+num2:o} " \
 {text_features[2]}= {text_features[5]}" {int(num1+num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -244,12 +244,12 @@ def oct_cal():
 
             elif oper==operator[1]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
+                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
 {operator[1]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
-{operator[1]} {oct(num2)} = {text_features[5]}" {oct(num1-num2)} " \
+                but=input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
+{operator[1]} {num2} = {text_features[5]}" {num1-num2:o} " \
 {text_features[2]}= {text_features[5]}" {int(num1-num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -259,12 +259,12 @@ def oct_cal():
 
             elif oper==operator[2]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
+                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
 {operator[2]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
-{operator[2]} {oct(num2)} = {text_features[5]}" {oct(num1*num2)} " \
+                but=input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
+{operator[2]} {num2} = {text_features[5]}" {num1*num2:o} " \
 {text_features[2]}= {text_features[5]}" {int(num1*num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -274,12 +274,12 @@ def oct_cal():
 
             elif oper==operator[3]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{oct(num1)} \
+                num2=int(input(f' {text_words[3]}\n\n {text_features[2]}{num1} \
 {operator[3]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f'{text_words[3]}\n\n {text_features[2]}{oct(num1)} \
-{operator[3]} {oct(num2)} = {text_features[5]}" {oct(int(num1/num2))} " \
+                but=input(f'{text_words[3]}\n\n {text_features[2]}{num1} \
+{operator[3]} {num2} = {text_features[5]}" {int(num1/num2):o} " \
 {text_features[2]}= {text_features[5]}" {int(num1/num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -304,16 +304,16 @@ def hex_cal():
             num1=int(input(f' {text_words[4]}{text_words[12]}').lower().strip())
 
             os.system(text_features[0])
-            oper=input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)}{text_words[13]}').lower().strip()
+            oper=input(f' {text_words[4]}\n\n {text_features[2]}{num1}{text_words[13]}').lower().strip()
 
             if oper==operator[0]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
+                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
 {operator[0]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
-{operator[0]} {hex(num2)} = {text_features[5]}" {hex(num1+num2)} " \
+                but=input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
+{operator[0]} {num2} = {text_features[5]}" {num1+num2:x} " \
 {text_features[2]}= {text_features[5]}" {int(num1+num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -323,12 +323,12 @@ def hex_cal():
 
             elif oper==operator[1]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
+                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
 {operator[1]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
-{operator[1]} {hex(num2)} = {text_features[5]}" {hex(num1-num2)} " \
+                but=input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
+{operator[1]} {num2} = {text_features[5]}" {num1-num2:x} " \
 {text_features[2]}= {text_features[5]}" {int(num1-num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -338,27 +338,27 @@ def hex_cal():
 
             elif oper==operator[2]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
+                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
 {operator[2]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f'{text_words[4]}\n\n {text_features[2]}{hex(num1)} \
-{operator[2]} {hex(num2)} = {text_features[5]}" {hex(num1*num2)} " \
+                but=input(f'{text_words[4]}\n\n {text_features[2]}{num1} \
+{operator[2]} {num2} = {text_features[5]}" {num1*num2:x} " \
 {text_features[2]}= {text_features[5]}" {int(num1*num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
                     continue
                 elif but==button[7]:
                     break
-                
+
             elif oper==operator[3]:
                 os.system(text_features[0])
-                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
+                num2=int(input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
 {operator[3]}{text_words[14]}').lower().strip())
 
                 os.system(text_features[0])
-                but=input(f' {text_words[4]}\n\n {text_features[2]}{hex(num1)} \
-{operator[3]} {hex(num2)} = {text_features[5]}" {hex(int(num1/num2))} " \
+                but=input(f' {text_words[4]}\n\n {text_features[2]}{num1} \
+{operator[3]} {num2} = {text_features[5]}" {int(num1/num2):x} " \
 {text_features[2]}= {text_features[5]}" {int(num1/num2)} " \n {text_words[18]}').lower().strip()
 
                 if but==('\r'):
@@ -384,7 +384,7 @@ def bin_trans():
 
             os.system(text_features[0])
             but=input(f'{ text_words[8]}\n\n {text_features[2]}{num_trans} = {text_features[5]}\
-" {bin(num_trans)} "\n {text_words[18]}').lower().strip()
+" {num_trans:b} "\n {text_words[18]}').lower().strip()
 
             if but==('\r'):
                 continue
@@ -404,7 +404,7 @@ def oct_trans():
 
             os.system(text_features[0])
             but=input(f' {text_words[9]}\n\n {text_features[2]}{num_trans} = {text_features[5]}\
-" {oct(num_trans)} "\n {text_words[18]}').lower().strip()
+" {num_trans:o} "\n {text_words[18]}').lower().strip()
 
             if but==('\r'):
                 continue
@@ -424,7 +424,7 @@ def hex_trans():
 
             os.system(text_features[0])
             but=input(f' {text_words[10]}\n\n {text_features[2]}{num_trans} = {text_features[5]}\
-" {hex(num_trans)} "\n {text_words[18]}').lower().strip()
+" {num_trans:x} "\n {text_words[18]}').lower().strip()
 
             if but==('\r'):
                 continue
@@ -442,27 +442,20 @@ def maj_cal():
         os.system(text_features[0])
         choice=input(text_words[0]).lower().strip()
 
-        if choice==button[0]:
-            stan_cal()
-            pass
-        elif choice==button[1]:
-            bin_cal()
-            pass
-        elif choice==button[2]:
-            oct_cal()
-            pass
-        elif choice==button[3]:
-            hex_cal()
-            pass
-        elif choice==button[4]:
-            bin_trans()
-            pass
-        elif choice==button[5]:
-            oct_trans()
-            pass
-        elif choice==button[6]:
-            hex_trans()
-            pass
+        if choice==button[0]:stan_cal()
+
+        elif choice==button[1]:bin_cal()
+
+        elif choice==button[2]:oct_cal()
+
+        elif choice==button[3]:hex_cal()
+
+        elif choice==button[4]:bin_trans()
+
+        elif choice==button[5]:oct_trans()
+
+        elif choice==button[6]:hex_trans()
+
         elif choice==button[7]:
             os.system(text_features[0])
             print(text_words[19])
