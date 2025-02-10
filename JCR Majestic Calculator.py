@@ -7,7 +7,7 @@ text_features=(
     '\x1b[33m', # index 3 = yellow
     '\x1b[34m', # index 4 = blue
     '\x1b[37m', # index 5 = white
-    'title Majestic Calculator' # index 6 = window title
+    'title JCR Majestic Calculator' # index 6 = window title
     )
 
 text_words=(
