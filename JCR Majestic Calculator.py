@@ -11,7 +11,7 @@ text_features=(
     )
 
 text_words=(
-    f'\n  {text_features[3]}Majestic Calculator\n\n {text_features[5]}Press (1) for Standard \
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n {text_features[5]}Press (1) for Standard \
 Decimal Base 10 Calculator\n Press (2) for Binary Base 2 Calculator\n Press (3) for Octal \
 Base 8 Calculator\n Press (4) for Hexadecimal Base 16 Calculator\n\n {text_features[3]}(BIN) \
 (OCT) (HEX) Number Translator\n\n {text_features[5]}Press (5) for Binary Base 2 Number \
@@ -19,25 +19,25 @@ Translator\n Press (6) for Octal Base 8 Number Translator\n Press (7) for Hexade
 16 Number Translator\n\n Press (Q) to quit\n\n\
  {text_features[1]}READY:{text_features[5]}', # index 0 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Standard Decimal Base 10 Calculator', # index 1 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Standard Decimal Base 10 Calculator', # index 1 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Binary Base 2 Calculator', # index 2 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Binary Base 2 Calculator', # index 2 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Octal Base 8 Calculator', # index 3 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Octal Base 8 Calculator', # index 3 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Hexadecimal Base 16 Calculator', # index 4 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Hexadecimal Base 16 Calculator', # index 4 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Binary Base 2 Number Translator', # index 5 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Binary Base 2 Number Translator', # index 5 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Octal Base 8 Number Translator', # index 6 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Octal Base 8 Number Translator', # index 6 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Hexadecimal Base 16 Number Translator', # index 7 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Hexadecimal Base 16 Number Translator', # index 7 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Binary Base 2 Translator', # index 8 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Binary Base 2 Translator', # index 8 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Octal Base 8 Translator', # index 9 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Octal Base 8 Translator', # index 9 = text_words
 
-    f'\n  {text_features[3]}Majestic Calculator\n\n Hexadecimal Base 16 Translator', # index 10 = text_words
+    f'\n  {text_features[3]}JCR Majestic Calculator\n\n Hexadecimal Base 16 Translator', # index 10 = text_words
 
     f'\n\n {text_features[5]}Please enter a decimal base 10 number:{text_features[2]}', # index 11 = text_words
 
@@ -55,7 +55,7 @@ Translator\n Press (6) for Octal Base 8 Number Translator\n Press (7) for Hexade
 
     f'\n {text_features[5]}Do you wish to continue? Press (Enter) or press (Q) to quit:', # index 18 = text_words
 
-    f'\n  {text_features[3]}Thanks for choosing Majestic Calculator' # index 19 = text_words
+    f'\n  {text_features[3]}Thanks for choosing JCR Majestic Calculator' # index 19 = text_words
     )
 
 operator=(
