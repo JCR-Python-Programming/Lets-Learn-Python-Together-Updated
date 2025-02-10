@@ -436,7 +436,7 @@ def hex_trans():
             print(f'{text_words[10]}{text_words[17]}')
             time.sleep(2)
 
-def maj_cal():
+def jcr_maj_cal():
     os.system(text_features[6])
     while True:
         os.system(text_features[0])
@@ -462,4 +462,4 @@ def maj_cal():
             time.sleep(3)
             break
 
-maj_cal()
+jcr_maj_cal()
