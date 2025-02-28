@@ -406,6 +406,6 @@ def return_function_octal_number_values(oct_num1,oct_num2,oct_num3,oct_num4,oct_
 octal_num = return_function_octal_number_values(f'{1:o}',f'{2:o}',f'{3:o}',f'{4:o}',f'{250+5:o}')
 
 print(octal_num)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
