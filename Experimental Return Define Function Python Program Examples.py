@@ -9,36 +9,57 @@
 # do. I'll leave that all up to YOU to tinker with these Python
 # program experiments for yourself.
 
-def return_function_name_values(name1,name2,name3,name4,name5):
+def return_function_name_values():
 
-    return 'Rob','Bob','Tom','Terry','Mary'
+    return 'Rob','Bob','Terry','Mary'
 
-print(return_function_name_values(
-    'argument placeholder value',
-    'argument placeholder value',
-    'argument placeholder value',
-    'argument placeholder value',
-    'argument placeholder value',)[0])
+try:
+    
+    print(return_function_name_values()[0])
+
+    print(return_function_name_values()[1])
+
+    print(return_function_name_values()[2])
+
+    print(return_function_name_values()[3])
+    
+except IndexError:pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-def return_function_name_values(name1,name2,name3,name4,name5):
+def return_function_name_values(name1,name2,name3,name4):
 
     return 'Rob','Bob','Tom','Terry','Mary'
+
+try:
+    
+    print(return_function_name_values(
+        'argument placeholder value',
+        'argument placeholder value',
+        'argument placeholder value',
+        'argument placeholder value',)[3])
+    
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_function_name_values(name1,name2,name3,name4):
+
+    return 'Rob','Bob','Terry','Mary'
 
 tuple_var = return_function_name_values(
-    'argument placeholder value',
     'argument placeholder value',
     'argument placeholder value',
     'argument placeholder value',
     'argument placeholder value')
 
-print(f'Hi {tuple_var[0]}. How are you?')
+try:
+    
+    print(f'Hi {tuple_var[3]}. How are you?')
+    
+except IndexError:pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-def return_function_name_values(name1,name2,name3,name4,name5):
+def return_function_name_values(name1,name2,name3,name4):
 
-    return 'Rob','Bob','Tom','Terry','Mary'
+    return 'Rob','Bob','Terry','Mary'
 
 tuple_var = return_function_name_values(
-    'argument placeholder value',
     'argument placeholder value',
     'argument placeholder value',
     'argument placeholder value',
@@ -59,6 +80,7 @@ def mega_return_function_text_values():
         )
 
 try:
+    
     print(mega_return_function_text_values()[17])
 
 except IndexError:pass
@@ -75,6 +97,7 @@ def mega_return_function_text_values():
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values()[i])
 
@@ -92,6 +115,7 @@ def mega_return_function_text_values(argument_parameter):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values('argument placeholder value')[i])
 
@@ -110,6 +134,7 @@ def mega_return_function_text_values(argument_parameter1,argument_parameter2):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values(
             'argument placeholder value',
@@ -130,6 +155,7 @@ def mega_return_function_text_values(*args):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values()[i])
 
@@ -147,6 +173,7 @@ def mega_return_function_text_values(*args):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values(
             'argument placeholder value',
@@ -167,6 +194,7 @@ def mega_return_function_text_values(keyword_argument_parameter):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values(
             keyword_argument_parameter='keyword argument placeholder value')[i])
@@ -188,6 +216,7 @@ def mega_return_function_text_values(
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values(
             keyword_argument_parameter1='keyword argument placeholder value',
@@ -208,6 +237,7 @@ def mega_return_function_text_values(**kwargs):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values()[i])
 
@@ -225,6 +255,7 @@ def mega_return_function_text_values(**kwargs):
         )
 
 try:
+    
     for i in range(18):
         print(mega_return_function_text_values(
             keyword_argument_parameter1='keyword argument placeholder value',
@@ -406,6 +437,238 @@ def return_function_octal_number_values(oct_num1,oct_num2,oct_num3,oct_num4,oct_
 octal_num = return_function_octal_number_values(f'{1:o}',f'{2:o}',f'{3:o}',f'{4:o}',f'{250+5:o}')
 
 print(octal_num)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value():
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob','Bob'
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d}'   
+   
+print(return_global_value())
+
+print(f'The values {a}, {b}, {c} and {d} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value(argument_parameter):
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob','Bob'
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d}'   
+   
+print(return_global_value('argument placeholder value'))
+
+print(f'The values {a}, {b}, {c} and {d} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value(keyword_argument_parameter):
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob','Bob'
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d}'   
+   
+print(return_global_value(keyword_argument_parameter = 'keyword argument placeholder value'))
+
+print(f'The values {a}, {b}, {c} and {d} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value(*args):
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob','Bob'
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d}'   
+   
+print(return_global_value())
+
+print(f'The values {a}, {b}, {c} and {d} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value(**kwargs):
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob','Bob'
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d}'   
+   
+print(return_global_value())
+
+print(f'The values {a}, {b}, {c} and {d} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value():
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Ron','Rob',('Bob','Tom')
+    
+    return f'Hi {a}. Hi {b}. Hi {c}. Hi {d[1]}'   
+   
+print(return_global_value())
+
+print(f'The values {a}, {b}, {c}, {d[0]} and {d[1]} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_global_value():
+    
+    global a,b,c,d
+    
+    a,b,c,d = 'John','Jane',('Ron','Rob'),('Bob','Tom')
+    
+    return f'Hi {a}. Hi {b}. Hi {c[1]}. Hi {d[1]}'   
+   
+print(return_global_value())
+
+print(f'The values {a}, {b}, {c[1]}, {d[0]} and {d[1]} can be called \
+outside the def function through global variables.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+crazy_tuple = (
+    ('value1','value2'),
+    ('value3','value4'),
+    ('value5','value6'))
+
+try:
+    
+    print(crazy_tuple[0][0])
+
+    print(crazy_tuple[0][1])
+
+    print(crazy_tuple[1][0])
+
+    print(crazy_tuple[1][1])
+
+    print(crazy_tuple[2][0])
+
+    print(crazy_tuple[2][1])
+    
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+crazy_list = (
+    ['value1','value2'],
+    ['value3','value4'],
+    ['value5','value6'])
+
+try:
+    
+    print(crazy_list[0][0])
+
+    print(crazy_list[0][1])
+
+    print(crazy_list[1][0])
+
+    print(crazy_list[1][1])
+
+    print(crazy_list[2][0])
+
+    print(crazy_list[2][1])
+    
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+crazy_dictionary = (
+    {'key1':'value1','key2':'value2'},
+    {'key3':'value3','key4':'value4'},
+    {'key5':'value5','key6':'value6'})
+
+try:
+    
+    print(crazy_dictionary[0].get('key1','key not found:'))
+
+    print(crazy_dictionary[0].get('key2','key not found:'))
+
+    print(crazy_dictionary[1].get('key3','key not found:'))
+
+    print(crazy_dictionary[1].get('key4','key not found:'))
+
+    print(crazy_dictionary[2].get('key5','key not found:'))
+
+    print(crazy_dictionary[2].get('key6','key not found:'))
+    
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+a,b,c,d = (
+    ('value1','value2'),
+    ('value3','value4'),
+    ('value5','value6'),
+    ('value7','value8'))
+
+try:
+
+    print(a[0])
+
+    print(a[1])
+
+    print(b[0])
+
+    print(b[1])
+
+    print(c[0])
+
+    print(c[1])
+
+    print(d[0])
+
+    print(d[1])
+
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+a,b,c,d = (
+    ['value1','value2'],
+    ['value3','value4'],
+    ['value5','value6'],
+    ['value7','value8'])
+
+try:
+
+    print(a[0])
+
+    print(a[1])
+
+    print(b[0])
+
+    print(b[1])
+
+    print(c[0])
+
+    print(c[1])
+
+    print(d[0])
+
+    print(d[1])
+
+except IndexError:pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+a,b,c,d = (
+    {'key1':'value1','key2':'value2'},
+    {'key3':'value3','key4':'value4'},
+    {'key5':'value5','key6':'value6'},
+    {'key7':'value7','key8':'value8'})
+
+try:
+
+    print(a.get('key1','key not found:'))
+
+    print(a.get('key2','key not found:'))
+
+    print(b.get('key3','key not found:'))
+
+    print(b.get('key4','key not found:'))
+
+    print(c.get('key5','key not found:'))
+
+    print(c.get('key6','key not found:'))
+
+    print(d.get('key7','key not found:'))
+
+    print(d.get('key8','key not found:'))
+
+except IndexError:pass
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
