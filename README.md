@@ -1,5 +1,5 @@
 # README
-![Binary Photo Circuit Board](https://github.com/JCR-Python-Programming/Lets-Learn-Python-Together-Updated/assets/34896540/b550eb8a-8e05-4276-b818-a579d238bb70)
+![Me in Binary Numbers 2](https://github.com/user-attachments/assets/06f453bb-46fb-4ee8-9c81-406b3f473b6c)
 ![SCIENCE](https://github.com/ROBOMASTER-S1/Lets-Learn-Python-Together/assets/34896540/4d9df1e3-2b05-4d1e-bd9e-48c61483ea2f)
 Learn Python Programming with me.
 
