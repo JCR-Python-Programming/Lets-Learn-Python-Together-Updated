@@ -498,11 +498,11 @@ from time import sleep
 
 while True:
     random_num = random.randint(1,10)
-    if  random_num is 10:
-        print('is equal to 10. The loop breaks')
+    if  random_num == 10:
+        print(f'{random_num} is equal to 10. The loop breaks')
         break
-    elif random_num is not 10:
-        print('is not equal to 10. The loop repeats')
+    elif random_num != 10:
+        print(f'{random_num} is not equal to 10. The loop repeats')
         sleep(1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This conditional while-loop example compares a random number
@@ -1103,3 +1103,6 @@ except ValueError:
     print('Sorry! Numbers only please.')
 finally:
     print('finally always executes no matter the outcome.')
+
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
