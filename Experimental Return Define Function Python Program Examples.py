@@ -1,3 +1,5 @@
+# Experimental Return Define Function Python Program Examples:
+
 # Here are some ways to create return define functions in
 # Python. Please note: there are no comments about these
 # Python program experiments below. This is how I do most
@@ -7,7 +9,10 @@
 # first. As for right now, I'm just too darn lazy to write a bunch
 # comments about what these Python program experiments
 # do. I'll leave that all up to YOU to tinker with these Python
-# program experiments for yourself.
+# program experiments for yourself. Because, this is what
+# computer programming is truly all about.
+
+# Created by Joseph C. Richardson, GitHub.com
 
 def return_function_name_values():
 
