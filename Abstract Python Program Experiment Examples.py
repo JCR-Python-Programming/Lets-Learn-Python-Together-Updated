@@ -1,4 +1,4 @@
-# Abstract Python Program Examples:
+# Abstract Python Program Experiment Examples:
 
 # Created by Joseph C. Richardson, GitHub.com
 
