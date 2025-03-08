@@ -1016,7 +1016,7 @@ except Exception:
     print('Exception:')
 finally:
     print('finally always executes no matter the outcome.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
     print('Raising a ValueError:')
     raise ValueError
@@ -1024,7 +1024,7 @@ except ValueError:
     print('ValueError:')
 finally:
     print('finally always executes no matter the outcome.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
     print('Raising a TypeError:')
     raise TypeError
@@ -1032,7 +1032,7 @@ except TypeError:
     print('TypeError:')
 finally:
     print('finally always executes no matter the outcome.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
     print('Raising a NameError:')
     raise NameError
@@ -1040,7 +1040,7 @@ except NameError:
     print('NameError:')
 finally:
     print('finally always executes no matter the outcome.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
     print('Raising a IndexError:')
     raise IndexError
@@ -1048,7 +1048,7 @@ except IndexError:
     print('IndexError:')
 finally:
     print('finally always executes no matter the outcome.')
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
     print('Raising a MemoryEorror:')
     raise MemoryError
