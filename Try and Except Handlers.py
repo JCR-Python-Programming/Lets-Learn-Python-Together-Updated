@@ -323,7 +323,7 @@ while True:
     except ValueError:
         print('Sorry! Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-x = 4
+x = 3
 
 if x != 4:
     raise ValueError(f'ERROR! {x} is the incorrect value:')
