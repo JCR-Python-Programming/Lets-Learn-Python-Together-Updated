@@ -120,7 +120,7 @@ whenever a letter key is pressed instead of a number key.')
 # while-loop to break out and the 'print' function statement ('End
 # of program') is then ran/executed.
 
-name = input('\nwhat is your name please? ').strip()
+name = input('\nWhat is your name please? ').strip()
 
 while True:
     try:
@@ -160,7 +160,7 @@ try:
     print(name_error_variabl)
 
 except NameError:
-    print('Please correct this variable name to name_error_variable :')
+    print('Please correct this variable name to name_error_variable:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 type_error_variable = 'Rob','Bob','Terry','Mary'
 
@@ -184,15 +184,15 @@ try:
 except ZeroDivisionError:
     print('cannot divide by zero:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Below is a whole list of exception handlers. The 'except Exception:
-# handler right below will except all Python programming errors,
-# but it's not good practice to use this all the time. Invoke the right
-# kind of error handler for the right kind of error, such as 'except
-# ValueError: for example. Note: whenever your Python Idle reads
-# back an error message to you after crashing, read what the error
-# message says, and then use that same error handler, like TypeError:,
+# Below is a whole list of 68 exception handlers. The 'except Exception:
+# handler right below will except all Python programming errors, but
+# it's not good practice to use this all the time. Invoke the right kind
+# of exception handler for the right kind of error, such as 'except
+# ValueError: for example. Note: whenever your Python Idle reads back
+# an error message to you after crashing, read what the error message
+# says, and then use that same exception handler, like TypeError:,
 # NameError: IndexError and ValueError. You will see error messages
-# that display the actual error handler to use.
+# that display the actual exception handler to use.
 '''
 except Exception:  Note: the Exception: handler will except 'all' errors.
 
@@ -273,6 +273,84 @@ else:
      pass
 finally:  # the finally statement is optional
      pass
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's raise some errors, via invoking the 'raise' statement along
+# with the right type of exception handler with a custom message.
 
+name_error = 'Rob'
+
+if name_error == 'John':
+    print('Hello World!')
+
+else:
+    raise NameError(f'ERROR!! My name is {name_error}:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+while True:
+    type_error = input('\nWhat is your name please? ').strip()
+
+    if type_error < str([type_error]):
+        raise TypeError('Sorry! Character text only please:')
+            
+    elif len(type_error) < 3:
+        raise ValueError('Your name must be over 2 characters long:')
+
+    elif len(type_error) > 10:
+        raise ValueError('Your name must be less < than or equal = to 10 characters long:')
+
+    else:
+        print(f'\nHi {type_error.title()}. How are you?')
+        break
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+password_error = input('What is the password? ').strip()
+
+if password_error == 'open sesame':
+    print('access granted:')
+
+else:
+    raise TypeError('Sorry! access denied:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+while True:
+    try:
+        age_error = int(input('How old are you? ').strip())
+
+        if age_error >= 21:
+            print('You are old enough to drink.')
+            break
+
+        elif age_error < 21:
+            raise Exception('You are much too young to drink:')
+
+    except ValueError:
+        print('Sorry! Numbers only please:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x = 4
+
+if x != 4:
+    raise ValueError(f'ERROR! {x} is the incorrect value:')
+
+else:
+    print(f'{x} is the correct value:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x = 1
+y = 5
+
+if x > y:
+    print(f'{x} is greater > than {y}:')
+
+elif x == y:
+    print(f'{x} is equal = to {y}:')
+
+else:
+    raise ValueError(f'{x} is less < than {y}')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+x = int(input('Please input amount: ').strip())
+
+if x <= 2000:
+    print(f'{x} is less < than or equal = to 2000:')
+
+elif x > 2000:
+    raise ValueError(f'{x} is greater > than 2000')
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
