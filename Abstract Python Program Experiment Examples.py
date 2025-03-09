@@ -830,7 +830,7 @@ while True:
 
     else:
         break
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 while True:
     last_name = input(f'\nNice to meet you {first_name.title()}. \
 What is your last name please? ').strip()
@@ -846,7 +846,7 @@ What is your last name please? ').strip()
 
     else:
         break
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 while True:
     try:
         age = int(input(f'\nHow old are you {first_name.title()}? ').strip())
