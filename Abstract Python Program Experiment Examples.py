@@ -29,7 +29,7 @@ name1,name2,name3 = 'Bob','Rob','John'
 
 print(name1,'and',name2,'went to',name3+"'s",'house for dinner.')
 
-# You can use the 'f' format to make the above print statement
+# You can use the f' string format to make the above print statement
 # read like this.
 
 print(f"{name1} and {name2} went to {name3}'s house for dinner.")
