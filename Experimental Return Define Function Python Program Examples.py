@@ -3,14 +3,15 @@
 # Here are some ways to create return define functions in
 # Python. Please note: there are no comments about these
 # Python program experiments below. This is how I do most
-# of my computer programming experiments in Python. I don't
-# always place comments into programs I create, until I'm
-# happy with my computer programming experiments first. As
-# for right now, I'm just too darn lazy to write a bunch of
-# comments about what these Python program experiments do.
-# I'll leave that all up to YOU to tinker with these Python
-# program experiments for yourself. Because, this is what
-# computer programming is truly all about.
+# of my computer programming experiments in Python. I
+# don't always place comments into programs I create, until
+# I'm happy with my computer programming experiments
+# first. As for right now, I'm just too darn lazy to write a
+# bunch of comments about what these Python program
+# experiments do. I'll leave that all up to YOU to tinker with
+# these Python program experiments for yourself. Because,
+# this is what computer programming is truly all about; it's
+# all about trial and error and some extreme insanity...
 
 # Created by Joseph C. Richardson, GitHub.com
 
