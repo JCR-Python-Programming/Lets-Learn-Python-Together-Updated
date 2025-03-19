@@ -304,12 +304,12 @@ finally:
 # handler are ignored, but the 'finally' statement will always execute
 # no matter the outcome.
 
-multi_dim_list = [
+multi_dim_list = (
     ['Value pos:0','Value pos:1','Value pos:2','Value pos:3'],
     ['Value pos:4','Value pos:5','Value pos:6','Value pos:7'],
     ['Value pos:8','Value pos:9','Value pos:10','Value pos:11'],
     ['Value pos:12','Value pos:13','Value pos:14','Value pos:15']
-    ]
+    )
 
 try:
     print(multi_dim_list[0][4])
