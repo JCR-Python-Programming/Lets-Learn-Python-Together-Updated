@@ -28,7 +28,5 @@ num_list = [1,2,3,4,5]
 nums = [num for num in num_list]
 print(nums)
 
-num_list = []
-
 nums = [num for num in range(20)]
 print(nums)
