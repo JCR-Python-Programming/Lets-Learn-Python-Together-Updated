@@ -141,20 +141,24 @@ while True:
 # I never ever explored list comprehension at all. This is like killing two
 # birds with one stone's throw. List comprehension shortens for loops
 # down when looping through a list, using a for loop right inside the
-# list[ ] brackets.
+# list [ ] brackets.
 
 # Create a list of values using list comprehension.
 
 text_list_values = ['dog','cat','bird','fish','turtle']
+
+text_list_values.sort()
 
 values = [value for value in text_list_values]
 
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a list of values using list comprehension. Invoke the 'if' and
-# 'else' statements that override all values, except the value 'bird'
+# 'else' statements that override all values, except the value 'bird'.
 
 text_list_values = ['dog','cat','bird','fish','turtle']
+
+text_list_values.sort()
 
 values = [value if value == 'bird' else 'frog' for value in text_list_values]
 
@@ -164,15 +168,28 @@ print(values)
 
 num_list_values = [1,2,3,4,5,6,7,8,9,10]
 
-nums = [value for value in num_list_values]
+num_list_values.sort()
 
-print(nums)
+values = [value for value in num_list_values]
+
+print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a list of values using list comprehension. Invoke the 'if' and
+# 'else' statements that override all values, except the value '9'.
+
+num_list_values = [1,2,3,4,5,6,7,8,9,10]
+
+num_list_values.sort()
+
+values = [value if value == 9 else 100 for value in num_list_values]
+
+print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create an integer number line using list comprehension.
 
-nums = [value for value in range(-10,+11)]
+values = [value for value in range(-10,+11)]
 
-print(nums)
+print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a multi dimensional
 # integer list for us with this Python program example: Execute/run
