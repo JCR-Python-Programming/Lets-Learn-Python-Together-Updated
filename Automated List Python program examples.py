@@ -289,7 +289,7 @@ print(values)
 # Create a list of values using list comprehension. Invoke the 'if' and
 # 'else' statements that override all values, except the value '9'.
 
-num_list_values = [1,2,3,4,5,6,7,8,9,10]
+num_list_values = [6,2,5,1,3,4,8,7,10,9]
 
 num_list_values.sort()
 
