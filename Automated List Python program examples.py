@@ -26,6 +26,7 @@ while True:
         user_input_value = input(f'\nuser input data list value = ').lower().strip()
         
         user_input_data_list_values.append(user_input_value)
+        
         user_input_data_list_values.sort()
 
         if user_input_value == m:
@@ -69,10 +70,11 @@ while True:
         user_input_value = input(f'\nuser input data list value = ').lower().strip()
 
         user_input_data_list_values.append(user_input_value)
+        
         user_input_data_list_values.sort()
 
-        if user_input_value < str([user_input_data_list_values]):
-            user_input_data_list_values.remove(user_input_value)
+        if user_input_value < str([user_input_data_list_values]):            
+            user_input_data_list_values.remove(user_input_value)            
             print(text_error_message)
 
         elif user_input_value == m:
@@ -117,6 +119,7 @@ while True:
             user_input_value = int(input(f'\nuser input data list value = ').lower().strip())
 
             user_input_data_list_values.append(user_input_value)
+            
             user_input_data_list_values.sort()
 
             if user_input_value == m:
