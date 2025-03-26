@@ -39,8 +39,58 @@ while True:
     else:
         print(
             f'''\nuser_input_data_list_values = {user_input_data_list_values}
-\nprint('You have {len(user_input_data_list_values)} user input data list values:')
-\nprint(user_input_data_list_values[0])''')
+
+print('You have {len(user_input_data_list_values)} user input data list values:')
+
+print(user_input_data_list_values[0])''')
+        break
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's use the Python Idle that will help us create a list of values for us.
+# You must type two or more values to start creating your list. Execute/run
+# the Python program example below to view your created list of values,
+# along with their variable name. Simply highlight all the blue text output,
+# and then copy then paste that blue Python Idle text output back into your
+# Python Idle editor. Next, execute/run the pasted python code and watch
+# it create a list of values, as if you had created the actual Python list and
+# layout yourself.
+
+m = 'make'
+
+user_input_data_list_values = [ ]
+
+print('''
+Let me help you create a sorted list of values with Python.
+Please type each data list value, one at a time, followed by
+the "Enter" key. Type "make" to create and view your user
+input data list values:''')
+
+while True:
+    while True:
+        user_input_value = input(f'\nuser input data list value = ').lower().strip()
+
+        user_input_data_list_values.append(user_input_value)
+
+        convert_list = set(user_input_data_list_values)
+
+        reconvert_list = list(convert_list)
+
+        reconvert_list.sort()
+
+        if user_input_value == m:
+                reconvert_list.remove(user_input_value)
+                break
+
+    if len(reconvert_list) < 2:
+        print(f'''\nYour user input data list must be over two values long.
+No duplicate values allowed.''')
+
+    else:
+        print(
+            f'''\nuser_input_data_list_values = {reconvert_list}
+
+print('You have {len(reconvert_list)} user input data list values:')
+
+print(reconvert_list[0])''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -87,8 +137,10 @@ while True:
     else:
         print(
             f'''\nuser_input_data_list_values = {user_input_data_list_values}
-\nprint('You have {len(user_input_data_list_values)} user input data list values:')
-\nprint(user_input_data_list_values[0])''')
+
+print('You have {len(user_input_data_list_values)} user input data list values:')
+
+print(user_input_data_list_values[0])''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -135,8 +187,10 @@ while True:
     else:
         print(
             f'''\nuser_input_data_list_values = {user_input_data_list_values}
-\nprint('You have {len(user_input_data_list_values)} user input data list values:')
-\nprint(user_input_data_list_values[0])''')
+
+print('You have {len(user_input_data_list_values)} user input data list values:')
+
+print(user_input_data_list_values[0])''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Like always, I research when I want to learn something new, or new
