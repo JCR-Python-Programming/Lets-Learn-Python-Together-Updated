@@ -193,6 +193,61 @@ print('You have {len(user_input_data_list_values)} user input data list values:'
 print(user_input_data_list_values[0])''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's use the Python Idle that will help us create a list of values for us.
+# You must type two or more values to start creating your list. However,
+# this time we are forced type text numbers only. Execute/run the Python
+# program example below to view your created list of values, along with
+# their variable name. Simply highlight all the blue text output, and then
+# copy then paste that blue Python Idle text output back into your Python
+# Idle editor. Next, execute/run the pasted python code and watch it create
+# a list of values, as if you had created the actual Python list and layout
+# yourself.
+
+m = 9999
+
+user_input_data_list_values = [ ]
+
+text_error_message = '\ntext numbers only please:'
+
+print('''
+Let me help you create a sorted list of values with Python.
+Please type each data list value, one at a time, followed by
+the "Enter" key. Type "9999" to create and view your user
+input data list values:''')
+
+while True:
+    while True:        
+        try:
+            user_input_value = int(input(f'\nuser input data list value = ').lower().strip())
+
+            user_input_data_list_values.append(user_input_value)
+
+            convert_list = set(user_input_data_list_values)
+
+            reconvert_list = list(convert_list)
+
+            reconvert_list.sort()
+            
+            if user_input_value == m:
+                reconvert_list.remove(user_input_value)
+                break
+            
+        except ValueError:
+            print(text_error_message)
+
+    if len(reconvert_list) < 2:
+        print(f'''\nYour user input data list must be over two values long.
+No duplicate values allowed.''')
+
+    else:
+        print(
+            f'''\nuser_input_data_list_values = {reconvert_list}
+
+print('You have {len(reconvert_list)} user input data list values:')
+
+print(reconvert_list[0])''')
+        break
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Like always, I research when I want to learn something new, or new
 # to me. Since the years I've played around with Python programming,
 # I never ever explored list comprehension at all. This is like killing two
@@ -223,7 +278,7 @@ print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a list of values using list comprehension.
 
-num_list_values = [1,2,3,4,5,6,7,8,9,10]
+num_list_values = [6,2,5,1,3,4,8,7,10,9]
 
 num_list_values.sort()
 
