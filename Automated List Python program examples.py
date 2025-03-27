@@ -22,11 +22,11 @@ the "Enter" key. Type "make" to create and view your user
 input data list values:''')
 
 while True:
-    while True:    
+    while True:
         user_input_value = input(f'\nuser input data list value = ').lower().strip()
-        
+
         user_input_data_list_values.append(user_input_value)
-        
+
         user_input_data_list_values.sort()
 
         if user_input_value == m:
@@ -42,7 +42,7 @@ while True:
 
 print('You have {len(user_input_data_list_values)} user input data list values:')
 
-print(user_input_data_list_values[0])''')
+print(user_input_data_list_values)''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -90,7 +90,7 @@ No duplicate values allowed.''')
 
 print('You have {len(reconvert_list)} user input data list values:')
 
-print(reconvert_list[0])''')
+print(reconvert_list)''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -120,11 +120,11 @@ while True:
         user_input_value = input(f'\nuser input data list value = ').lower().strip()
 
         user_input_data_list_values.append(user_input_value)
-        
+
         user_input_data_list_values.sort()
 
-        if user_input_value < str([user_input_data_list_values]):            
-            user_input_data_list_values.remove(user_input_value)            
+        if user_input_value < str([user_input_data_list_values]):
+            user_input_data_list_values.remove(user_input_value)
             print(text_error_message)
 
         elif user_input_value == m:
@@ -140,7 +140,7 @@ while True:
 
 print('You have {len(user_input_data_list_values)} user input data list values:')
 
-print(user_input_data_list_values[0])''')
+print(user_input_data_list_values)''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -166,18 +166,18 @@ the "Enter" key. Type "9999" to create and view your user
 input data list values:''')
 
 while True:
-    while True:        
+    while True:
         try:
             user_input_value = int(input(f'\nuser input data list value = ').lower().strip())
 
             user_input_data_list_values.append(user_input_value)
-            
+
             user_input_data_list_values.sort()
 
             if user_input_value == m:
                 user_input_data_list_values.remove(user_input_value)
                 break
-            
+
         except ValueError:
             print(text_error_message)
 
@@ -190,7 +190,7 @@ while True:
 
 print('You have {len(user_input_data_list_values)} user input data list values:')
 
-print(user_input_data_list_values[0])''')
+print(user_input_data_list_values)''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's use the Python Idle that will help us create a list of values for us.
@@ -216,7 +216,7 @@ the "Enter" key. Type "9999" to create and view your user
 input data list values:''')
 
 while True:
-    while True:        
+    while True:
         try:
             user_input_value = int(input(f'\nuser input data list value = ').lower().strip())
 
@@ -227,11 +227,11 @@ while True:
             reconvert_list = list(convert_list)
 
             reconvert_list.sort()
-            
+
             if user_input_value == m:
                 reconvert_list.remove(user_input_value)
                 break
-            
+
         except ValueError:
             print(text_error_message)
 
@@ -245,7 +245,7 @@ No duplicate values allowed.''')
 
 print('You have {len(reconvert_list)} user input data list values:')
 
-print(reconvert_list[0])''')
+print(reconvert_list)''')
         break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Like always, I research when I want to learn something new, or new
