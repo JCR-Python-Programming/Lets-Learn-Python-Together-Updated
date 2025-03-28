@@ -93,3 +93,6 @@ print(variable1.value1)
 print(variable2.value2)
 print(variable3.value3)
 print(variable4.value4)  # four attribute value extensions
+
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
