@@ -1,3 +1,7 @@
+# Class Object Layout Templates Python program examples:
+
+# Created by Joseph C. Richardson, GitHub.com
+
 class Class_object_layout_template:
     
     def __init__(self,value):
