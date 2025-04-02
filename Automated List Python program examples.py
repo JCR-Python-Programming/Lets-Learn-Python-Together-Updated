@@ -7,7 +7,7 @@
 # the Python program example below to view your created list of values,
 # along with their variable name. Simply highlight all the blue text output,
 # and then copy then paste that blue Python Idle text output back into your
-# Python Idle editor. Next, execute/run the pasted python code and watch
+# Python Idle editor. Next, execute/run the pasted Python code and watch
 # it create a list of values, as if you had created the actual Python list and
 # layout yourself.
 
@@ -50,7 +50,7 @@ print(user_input_data_list_values)''')
 # the Python program example below to view your created list of values,
 # along with their variable name. Simply highlight all the blue text output,
 # and then copy then paste that blue Python Idle text output back into your
-# Python Idle editor. Next, execute/run the pasted python code and watch
+# Python Idle editor. Next, execute/run the pasted Python code and watch
 # it create a list of values, as if you had created the actual Python list and
 # layout yourself.
 
@@ -99,7 +99,7 @@ print(reconvert_list)''')
 # program example below to view your created list of values, along with
 # their variable name. Simply highlight all the blue text output, and then
 # copy then paste that blue Python Idle text output back into your Python
-# Idle editor. Next, execute/run the pasted python code and watch it create
+# Idle editor. Next, execute/run the pasted Python code and watch it create
 # a list of values, as if you had created the actual Python list and layout
 # yourself.
 
@@ -149,7 +149,7 @@ print(user_input_data_list_values)''')
 # program example below to view your created list of values, along with
 # their variable name. Simply highlight all the blue text output, and then
 # copy then paste that blue Python Idle text output back into your Python
-# Idle editor. Next, execute/run the pasted python code and watch it create
+# Idle editor. Next, execute/run the pasted Python code and watch it create
 # a list of values, as if you had created the actual Python list and layout
 # yourself.
 
@@ -199,7 +199,7 @@ print(user_input_data_list_values)''')
 # program example below to view your created list of values, along with
 # their variable name. Simply highlight all the blue text output, and then
 # copy then paste that blue Python Idle text output back into your Python
-# Idle editor. Next, execute/run the pasted python code and watch it create
+# Idle editor. Next, execute/run the pasted Python code and watch it create
 # a list of values, as if you had created the actual Python list and layout
 # yourself.
 
@@ -309,7 +309,7 @@ print(values)
 # of values, along with their variable name. Simply highlight all
 # the blue text output, and then copy then paste that blue Python
 # Idle text output back into your Python Idle editor. Next, execute/run
-# the pasted python code and watch it create a list of values, as
+# the pasted Python code and watch it create a list of values, as
 # if you had created the actual Python list and layout yourself.
 
 auto_multi_dimensional_integer_list_creator = [ ]
