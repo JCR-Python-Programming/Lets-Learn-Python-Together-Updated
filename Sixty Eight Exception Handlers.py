@@ -1,4 +1,3 @@
-
 sorting = [
     "except Exception:  Note: the Exception: handler will catch 'all' errors.",
     'except BaseException:',
@@ -71,6 +70,10 @@ sorting = [
 
 sorting.sort()
 
-print(len(sorting))
+for i in sorting:
+    print(i)
 
+print(f'\nYou have {len(sorting)} Exception Handlers available:')
 
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
