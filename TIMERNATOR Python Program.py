@@ -4,8 +4,8 @@
 
 # Try this fun Timernator Clock Python program example.
 
-# Note: you must execute/run the program from
-# the OS output screen, via double-clicking the Python
+# Note: you must execute/run the program from the
+# OS output screen, via double-clicking the Python
 # program file itself.
 
 import os,datetime,asyncio,winsound
