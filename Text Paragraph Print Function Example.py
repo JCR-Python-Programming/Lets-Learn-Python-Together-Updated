@@ -207,11 +207,11 @@ paragraphs = f'''{text_colours[5]}{dash_paragraph_break}
   these Python files and Python programs:
 
   I am almost a complete Walking Human Computer Science
-  Research Laboratory Machine on Two Legs. 😁
+  Research Laboratory Machine on Two Legs... 😁
 '''
 print(paragraphs) # The paragraphs variable is inside the print() function.
 
 input(f'\n{text_colours[3]}End of program. Press Enter to exit and close the OS window:')
 
 # I am almost a complete Walking Human Computer Science Research Laboratory
-# Machine on Two Legs. 😁
+# Machine on Two Legs... 😁
