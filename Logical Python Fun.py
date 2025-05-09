@@ -131,3 +131,6 @@ minutes = {user_input*days1*hours*minutes*seconds:,} seconds:')
             break
     except ValueError:
         print('Numbers only please:')
+
+# I am almost a complete Walking Human Computer Science Research Laboratory
+# Machine on Two Legs... 😁
