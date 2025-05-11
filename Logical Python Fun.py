@@ -1,13 +1,3 @@
-first_name = 'John'
-last_name = 'Smith'
-age = 25
-
-print('{} {} is {} years old using old format().'.format(first_name,last_name,age))
-
-print('{} {} is {} years old'.format(first_name,last_name,age),'using old format().')
-
-print('{} {} is {} years old'.format(first_name,last_name,age)+' using old format().')
-
 # Logical Python Fun
 
 # Created by JCR, GitHub.com
