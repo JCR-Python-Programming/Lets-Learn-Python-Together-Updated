@@ -104,6 +104,11 @@ seconds = 60
 minutes = 60
 hours = 24
 
+# Thirty days has September, April, June, and November, All the rest have
+# thirty-one, February is twenty-eight days, But a leap year adds an extra
+# day; February has one extra day making it 29 days. A leap year happens
+# every four years on even year numbers, evenly divisible by four.
+
 days1 = 30  # 30 day month
 days2 = 31  # 31 day month
 days3 = 28  # 28 day month
@@ -126,11 +131,6 @@ minutes = {user_input*days1*hours*minutes*seconds:,} = seconds:')
             break
     except ValueError:
         print('Numbers only please:')
-
-# Thirty days has September, April, June, and November, All the rest have
-# thirty-one, February is twenty-eight days, But a leap year adds an extra
-# day; February has one extra day making it 29 days. A leap year happens
-# every four years on even year numbers, evenly divisible by four.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 seconds = 60
 minutes = 60
@@ -238,7 +238,8 @@ while True:
             print('No such age exist:')
             continue
         else:
-            print(f'''\nYou have been on Earth for {age} years.
+            print(f'''
+You have been on Earth for {age} years.
 
 You have been on Earth for {age*string_tuple[0]:,} months.
 
@@ -291,8 +292,8 @@ print('{}'.format(LNU)) # screen output: 1000000
 
 print('{:,}'.format(LNU)) # screen output: 1,000,000 via the :, colon : and the comma ,
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's walk the dinosaur and see what it's like to go back in the early days
-# of Python, way before the f' string format came along. The format()
+# Let's walk the dinosaur again and see what it's like to go back in the early
+# days of Python, way before the f' string format came along. The format()
 # function was used before the f' string format came into being.
 
 first_name = 'John'
@@ -304,6 +305,76 @@ print('{} {} is {} years old using old format().'.format(first_name,last_name,ag
 print('{} {} is {} years old'.format(first_name,last_name,age),'using old format().')
 
 print('{} {} is {} years old'.format(first_name,last_name,age)+' using old format().')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Now, let's get prehistoric and visit the T-Rex Python program example, using
+# the prehistoric version of how many seconds you have been on Earth for.
+# This is what is called 'The Old Format' string, now depreciated in later Python
+# versions; three and up. Note: you must place your variables in the correct
+# order as shown in the first two, smaller examples of the old format method.
+
+# However, 'The Old Format' string method does work very well still; it's useful
+# when you have very long string variables with others, such as this illustration
+# snippet of Python code shows:
+
+# age*days*string_tuple[3]*string_tuple[4]*string_tuple[5]
+
+# Sometimes it's a grand idea to use 'The Old Format' string method for very
+# long string variables. That way your printed text code inside print() functions
+# won't have all them bulky string variables all throughout your print() function
+# text code. Just make sure 'The Old Format' string variables are in ORDER
+# within print() function text code, via the {} curly braces that are placeholders
+# for the variables that reside within the 'The Old Format' string code section
+# as illustrated below:
+
+# .format(
+#    age,age*string_tuple[0],age*string_tuple[1],
+#    age*string_tuple[2],age*string_tuple[2]*string_tuple[3],
+#    age*string_tuple[2]*string_tuple[3]*string_tuple[4],
+#    age*days*string_tuple[3]*string_tuple[4]*string_tuple[5]),'Optional use...')
+
+months = 12
+weeks = 52
+days = 365
+
+hours_per_day = 24
+minuts_per_hour = 60
+seconds_per_minute = 60
+
+string_tuple = (
+    months,weeks,days,
+    hours_per_day,
+    minuts_per_hour,
+    seconds_per_minute
+    )
+
+while True:
+    try:
+        age = int(input('How old are you? ').strip())
+        if age <= 0:
+            print('No such age exist:')
+            continue
+        else:
+            print('''
+You have been on Earth for {} years.
+
+You have been on Earth for {:,} months.
+
+You have been on Earth for {:,} weeks.
+
+You have been on Earth for {:,} days.
+
+You have been on Earth for {:,} hours.
+
+You have been on Earth for {:,} minutes.
+
+You have been on Earth for {:,} seconds.'''.format(
+    age,age*string_tuple[0],age*string_tuple[1],
+    age*string_tuple[2],age*string_tuple[2]*string_tuple[3],
+    age*string_tuple[2]*string_tuple[3]*string_tuple[4],
+    age*days*string_tuple[3]*string_tuple[4]*string_tuple[5]),'Optional use...')
+        break
+    except ValueError:
+        print('Numbers only please:')
 
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
