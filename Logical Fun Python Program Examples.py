@@ -656,6 +656,73 @@ print(f'{255:o}')  # 377 = 255
 print(chr(65))  # ascii character value for the letter 'A'
 print(ord('A'))  # unicode code for the ascii character value '65'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a Python program that can display hidden ascii code
+# mesages. Execute/run this Python program below, and then
+# copy, and then paste the screen output of all the ascii numbers
+# into a tuple or list as shown below:
+
+text_string_value = 'Learning Python is so much FUN!'
+
+for i in text_string_value:
+  print(ord(i),end=',')
+
+# screen output: 76,101,97,114,110,105,110,103,32,80,121,
+# 116,104,111,110,32,105,115,32,115,111,32,109,117,99,104,32
+
+# After you highlight and copy the screen output, paste it
+# back into a tuple of any variable name you choose. Make
+# sure the Python program example above works first before
+# you delete it. Create the following Python program example
+# below and make hidden text messages with ascii codes only.
+# Make Python create your ascii codes for you first to make
+# programming ascii codes much faster. Make sure this Python
+# program example below works first, then delete the first Python
+# program example above after you made it create the tuple of
+# ascii codes for the hidden text message, as was shown above.
+
+ascii_code_dec_values = (  # Create a variable name for your ascii code values.
+  76,101,97,114,110,105,110,103,32,80,121,116,104,111,110,
+  32,105,115, 32,115,111,32,109,117,99,104,32,70,85,78,33,)  # Paste the screen output values.
+
+for i in ascii_code_dec_values:
+  print(chr(i),end='')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Display the ascii code characters in binary, hexadecimal, octal
+# and decimal numbers, along with their ascii character values.
+
+text_string_value = 'Learning Python is so much FUN!'
+
+for i in text_string_value:
+  print(f'binary value: {ord(i):b} = ascii character value ({i})')
+
+for i in text_string_value:
+  print(f'hexadecimal value: {ord(i):x} = ascii character value ({i})')
+
+for i in text_string_value:
+  print(f'octal value: {ord(i):o} = ascii character value ({i})')
+
+for i in text_string_value:
+  print(f'decimal value: {ord(i)} = ascii character value ({i})')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Display all the ascii code characters in binary, hexadecimal, octal
+# and decimal numbers, along with their ascii character values.
+
+ascii_charactors = (
+  ''' !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL\
+MNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~''')
+
+for i in ascii_charactors:
+  print(f'binary value: {ord(i):b} = ascii character value ({i})')
+
+for i in ascii_charactors:
+  print(f'hexadecimal value: {ord(i):x} = ascii character value ({i})')
+
+for i in ascii_charactors:
+  print(f'octal value: {ord(i):o} = ascii character value ({i})')
+
+for i in ascii_charactors:
+  print(f'decimal value: {ord(i)} = ascii character value ({i})')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # There are OS screen colours, which colours text. These OS screen
 # colour codes colour individual text characters. Note: you must
 # execute/run the program from the OS output screen, via double-
@@ -940,6 +1007,32 @@ print(text_colours[6]+text_words[0])
 # place an input() function so you can press the Enter key to to close the program.
 
 input(f'{double_line_break}{indent}Press Enter to exit and close the program:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Stars Game Python program example:
+
+# Execute/run this program example and see how the while-loop only
+# breaks when one of the two 'break' statements is executed. If none
+# of them gets executed, the while-loop keeps on iterating. This program
+# example is another great example of how the conditional 'if:' and
+# 'elif:' statements work in conjunction with the logical operators.
+
+while True:
+    try:
+        stars=int(input(f'How many stars would you like? ').strip())
+        if stars>1:
+            print(f'\n{stars} Stars: [',' * '*stars,f']\n\nI gave you {stars} \
+Stars!\n\nI hope you enjoy your {stars} Stars...')
+            break
+
+        elif stars==1:
+            print(f'\n{stars} Star: [','*'*stars,f']\n\nI gave you {stars} \
+Star!\n\nI hope you enjoy your \'One\' and \'Only\', single Star...')
+            break
+
+        elif stars==0:
+            print('\nSorry Hero! Zero doesn\'t count.\n')
+    except ValueError:
+        print('\nNumbers only please!\n')
 
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
