@@ -1,4 +1,3 @@
-
 def function():
   print('This define function prints text only.')
 
@@ -127,4 +126,53 @@ def return_function(*args):
   return args[0]+args[1]-args[2]*args[3]/args[4]**args[5]
 
 print(return_function(5,4,3,6,3,2))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_fuction_one(arg):
+  return arg
+def return_fuction_two(arg):
+  return arg
+def return_fuction_three(arg):
+  return arg
+def return_fuction_four(arg):
+  return arg
+
+print(return_fuction_one('One'))
+print(return_fuction_two('Two'))
+print(return_fuction_three('Three'))
+print(return_fuction_four('Four'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def multi_return_function():
+  def return_fuction_one(arg):
+    return arg
+  def return_fuction_two(arg):
+    return arg
+  def return_fuction_three(arg):
+    return arg
+  def return_fuction_four(arg):
+    return arg
+
+  print(return_fuction_one('One'))
+  print(return_fuction_two('Two'))
+  print(return_fuction_three('Three'))
+  print(return_fuction_four('Four'))
+
+multi_return_function()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def multi_return_function(arg):
+  def return_fuction_one(arg):
+    return arg
+  def return_fuction_two(arg):
+    return arg
+  def return_fuction_three(arg):
+    return arg
+  def return_fuction_four(arg):
+    return arg
+
+  print(return_fuction_one('One'))
+  print(return_fuction_two('Two'))
+  print(return_fuction_three('Three'))
+  print(return_fuction_four('Four'))
+  print(f"And that's how it's {arg}")
+
+multi_return_function('Done!!')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
