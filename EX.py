@@ -1,3 +1,4 @@
+
 def function():
   print('This define function prints text only.')
 
@@ -176,6 +177,10 @@ def multi_return_function(arg):
 
 multi_return_function('Done!!')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+lambda_function = lambda first_name,last_name: first_name+last_name
+
+print(lambda_function('Jim',' Doe'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 lambda_function = lambda x: x
 
 print(lambda_function(4))
@@ -230,4 +235,41 @@ try:
   print(lambda_function(2,12,2,2, user_input))
 except ValueError:
   print('Numbers only please:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+lambda_function = lambda x,y: x == y if x > y else x
+
+print(lambda_function(3,6))
+
+
+lambda_function = lambda x,y: x == y if x > y else y
+
+print(lambda_function(3,6))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+lambda_function = lambda x,y: x == y if x < y else x
+
+print(lambda_function(6,3))
+
+
+lambda_function = lambda x,y: x == y if x < y else y
+
+print(lambda_function(6,3))
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+lambda_function = lambda x,y: x > y if x < y else x
+
+print(lambda_function(6,3))
+
+
+lambda_function = lambda x,y: x > y if x < y else y
+
+print(lambda_function(6,3))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+lambda_function = lambda x,y: x < y if x > y else x
+
+print(lambda_function(3,6))
+
+
+lambda_function = lambda x,y: x < y if x > y else y
+
+print(lambda_function(3,6))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
