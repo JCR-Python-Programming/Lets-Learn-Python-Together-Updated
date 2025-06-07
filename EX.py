@@ -273,3 +273,41 @@ lambda_function = lambda x,y: x < y if x > y else y
 
 print(lambda_function(3,6))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+num = 4
+
+lambda_function = lambda x: x if num%2 == 0 else f'{num} is an odd number.'
+
+print(lambda_function(f'{num} is an even number.'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+num = 4
+
+lambda_function = lambda x: x if num%2 == 1 else f'{num} is an even number.'
+
+print(lambda_function(f'{num} is an odd number.'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+user_input = int(input('Give me an odd or even number: '))
+
+lambda_function = lambda x: x if user_input%2 == 0 else f'{user_input} is an odd number.'
+
+print(lambda_function(f'{user_input} is an even number.'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+user_input = int(input('Give me an odd or even number: '))
+
+lambda_function = lambda x: x if user_input%2 == 1 else f'{user_input} is an even number.'
+
+print(lambda_function(f'{user_input} is an odd number.'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+user_input = int(input('Give me an odd or even number: '))
+
+if user_input%2 == 0:
+  print(f'{user_input} is an even number.')
+else:
+  print(f'{user_input} is an odd number.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+user_input = int(input('Give me an odd or even number: '))
+
+if user_input%2 == 1:
+  print(f'{user_input} is an odd number.')
+else:
+  print(f'{user_input} is an even number.')
+  
