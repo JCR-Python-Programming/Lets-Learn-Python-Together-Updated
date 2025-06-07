@@ -1,5 +1,5 @@
 # README
-![Me in Binary Numbers 2](https://github.com/user-attachments/assets/06f453bb-46fb-4ee8-9c81-406b3f473b6c)
+![Big Bin Python Logo Red](https://github.com/user-attachments/assets/3a074cb0-37fc-45cc-8dcd-fa37c1a0da7a)
 ![SCIENCE](https://github.com/ROBOMASTER-S1/Lets-Learn-Python-Together/assets/34896540/4d9df1e3-2b05-4d1e-bd9e-48c61483ea2f)
 Learn Python Programming with me.
 
