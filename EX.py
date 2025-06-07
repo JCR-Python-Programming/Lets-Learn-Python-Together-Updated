@@ -1,29 +1,28 @@
-
 def function():
   print('This define function prints text only.')
 
 function()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def function_argument(argument):
-  print('This define function retrieves one argument',argument)
+  print('This define function retrieves one argument',argument)  # non formatted string
 
 function_argument('value.')
 
 
 def function_argument(argument):
-  print('This define function retrieves one argument '+argument)
+  print('This define function retrieves one argument '+argument)  # non formatted string
 
 function_argument('value.')
 
 
 def function_argument(argument):
-  print('This define function retrieves one argument {}'.format(argument))
+  print('This define function retrieves one argument {}'.format(argument))  # old format string
 
 function_argument('value.')
 
 
 def function_argument(argument):
-  print(f'This define function retrieves one argument {argument}')
+  print(f'This define function retrieves one argument {argument}')  # new f' string format
 
 function_argument('value.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -40,25 +39,29 @@ function_argument('function','argument','values.')
 def return_function(argument):
   return 'value.'
 
-print('This define function returns one argument',return_function('argument placeholder value'))
+print('This define function returns one argument',return_function(  # non formatted string
+  'argument placeholder value'))
 
 
 def return_function(argument):
   return 'value.'
 
-print('This define function returns one argument '+return_function('argument placeholder value'))
+print('This define function returns one argument '+return_function(  # non formatted string
+  'argument placeholder value'))
 
 
 def return_function(argument):
   return 'value.'
 
-print('This define function returns one argument {} '.format(return_function('argument placeholder value')))
+print('This define function returns one argument {} '.format(return_function(  # old format string
+  'argument placeholder value')))
 
 
 def return_function(argument):
   return 'value.'
 
-print(f'This define function returns one argument {return_function("argument placeholder value")}')
+print(f'This define function returns one argument \
+{return_function ("argument placeholder value")}')  # new f' string format
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_function(argument1,argument2):
   return 'argument','values.'
@@ -66,8 +69,7 @@ def return_function(argument1,argument2):
 print(f'This define function returns two \
 {return_function("argument placeholder value","argument placeholder value")[0]} \
 {return_function("argument placeholder value","argument placeholder value")[1]}')
-
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_function(*args):
   return 'argument','values.'
 
@@ -82,8 +84,7 @@ print(f'This define function returns three \
 {return_function("argument placeholder value","argument placeholder value","argument placeholder value")[0]} \
 {return_function("argument placeholder value","argument placeholder value","argument placeholder value")[1]} \
 {return_function("argument placeholder value","argument placeholder value","argument placeholder value")[2]}')
-
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_function(*args):
   return 'argument','values.','WOW!'
 
@@ -121,8 +122,7 @@ def return_function(num1,num2,num3,num4,num5,num6):
   return num1+num2-num3*num4/num5**num6
 
 print(return_function(5,4,3,6,3,2))
-
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_function(*args):
   return args[0]+args[1]-args[2]*args[3]/args[4]**args[5]
 
@@ -225,7 +225,14 @@ lambda_function = lambda a,b,x,y,z: a+b-x*y/y == z if z == z else False
 
 print(lambda_function(2,12,2,2, 12))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Follow the rules for 'ORDER of OPERATION' to get the correct answer.
+# Follow the rules for 'ORDER of OPERATION' to get the correct answer. First multiply or
+# divide integer numbers. Next add or subtract integer numbers. Watch the signs + and -
+# are used for creating positive and negative integer numbers. For example: -2*3 = -6 not
+# +6, which is just 6, without writing the + sign. Negative integer numbers always show
+# the - sign. All computers follow the 'Order of Operation', which also means that you
+# must have an understanding of 'BEDMAS' and the order of operation. A wee bit of basic
+# algebra knowledge wouldn't hurt, but it's not required for computer programming; it just
+# makes computer programming that much more dynamic and fun.
 
 try:
   user_input = int(input('What does 2+12-2*2/2 equal? ').strip())   # 2+12 -2*2/2 = 2+12 -4/2 = 2+12-2 = 14-2 = 12
@@ -233,6 +240,7 @@ try:
   lambda_function = lambda a,b,x,y,z: a+b-x*y/y == z if z == user_input else False
 
   print(lambda_function(2,12,2,2, user_input))
+
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -285,29 +293,43 @@ lambda_function = lambda x: x if num%2 == 1 else f'{num} is an even number.'
 
 print(lambda_function(f'{num} is an odd number.'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-user_input = int(input('Give me an odd or even number: '))
+try:
+  user_input = int(input('Give me an odd or even number: '))
 
-lambda_function = lambda x: x if user_input%2 == 0 else f'{user_input} is an odd number.'
+  lambda_function = lambda x: x if user_input%2 == 0 else f'{user_input} is an odd number.'
 
-print(lambda_function(f'{user_input} is an even number.'))
+  print(lambda_function(f'{user_input} is an even number.'))
+
+except ValueError:
+  print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-user_input = int(input('Give me an odd or even number: '))
+try:
+  user_input = int(input('Give me an odd or even number: '))
 
-lambda_function = lambda x: x if user_input%2 == 1 else f'{user_input} is an even number.'
+  lambda_function = lambda x: x if user_input%2 == 1 else f'{user_input} is an even number.'
 
-print(lambda_function(f'{user_input} is an odd number.'))
+  print(lambda_function(f'{user_input} is an odd number.'))
+except ValueError:
+  print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-user_input = int(input('Give me an odd or even number: '))
+try:
+  user_input = int(input('Give me an odd or even number: '))
 
-if user_input%2 == 0:
-  print(f'{user_input} is an even number.')
-else:
-  print(f'{user_input} is an odd number.')
+  if user_input%2 == 0:
+    print(f'{user_input} is an even number.')
+  else:
+    print(f'{user_input} is an odd number.')
+
+except ValueError:
+  print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-user_input = int(input('Give me an odd or even number: '))
+try:
+  user_input = int(input('Give me an odd or even number: '))
 
-if user_input%2 == 1:
-  print(f'{user_input} is an odd number.')
-else:
-  print(f'{user_input} is an even number.')
-  
+  if user_input%2 == 1:
+    print(f'{user_input} is an odd number.')
+  else:
+    print(f'{user_input} is an even number.')
+
+except ValueError:
+  print('Numbers only please:')
