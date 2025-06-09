@@ -231,8 +231,8 @@ print(lambda_function(2,12,2,2, 12))
 # +6, which is just 6, without writing the + sign. Negative integer numbers always show
 # the - sign. All computers follow the 'Order of Operation', which also means that you
 # must have an understanding of 'BEDMAS' and the order of operation. A wee bit of basic
-# algebra knowledge wouldn't hurt, but it's not required for computer programming; it just
-# makes computer programming that much more dynamic and fun.
+# algebra knowledge wouldn't hurt, but it's not required for computer programming; it
+# just makes computer programming that much more dynamic and fun.
 
 try:
   user_input = int(input('What does 2+12-2*2/2 equal? ').strip())   # 2+12 -2*2/2 = 2+12 -4/2 = 2+12-2 = 14-2 = 12
@@ -294,7 +294,7 @@ lambda_function = lambda x: x if num%2 == 1 else f'{num} is an even number.'
 print(lambda_function(f'{num} is an odd number.'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
-  user_input = int(input('Give me an odd or even number: '))
+  user_input = int(input('Give me an odd or even number: ').strip())
 
   lambda_function = lambda x: x if user_input%2 == 0 else f'{user_input} is an odd number.'
 
@@ -304,7 +304,7 @@ except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
-  user_input = int(input('Give me an odd or even number: '))
+  user_input = int(input('Give me an odd or even number: ').strip())
 
   lambda_function = lambda x: x if user_input%2 == 1 else f'{user_input} is an even number.'
 
@@ -313,7 +313,7 @@ except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
-  user_input = int(input('Give me an odd or even number: '))
+  user_input = int(input('Give me an odd or even number: ').strip())
 
   if user_input%2 == 0:
     print(f'{user_input} is an even number.')
@@ -324,7 +324,7 @@ except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
-  user_input = int(input('Give me an odd or even number: '))
+  user_input = int(input('Give me an odd or even number: ').strip())
 
   if user_input%2 == 1:
     print(f'{user_input} is an odd number.')
@@ -333,3 +333,64 @@ try:
 
 except ValueError:
   print('Numbers only please:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Note: the different ways you can create these Python program examples below...
+
+count = 100
+
+for i in range(1,count+1):
+  if i%2 == 0:
+    print(f'{i} is an even number.')
+
+
+for i in range(1,count+1):
+  if i%2 == 1:
+    print(f'{i} is an odd number.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+count = 100
+
+for i in range(1,count+1):
+ if i%2 == 0:
+   print(f'{i} is an even number.')
+ else:
+   print(f'{i} is an odd number.')
+
+
+for i in range(1,count+1):
+  if i%2 == 1:
+    print(f'{i} is an odd number.')
+  else:
+    print(f'{i} is an even number.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This Python program example is an accidental, Happy Accident. It's probably one
+# of my later and one of my most favorite computer programming discoveries to happen.
+# I will be using this discovery within my future robotics and Raspberry Pi4 Python
+# programs. The '%' modulo operator is fascinating; the things you can do with it.
+
+message = (
+  "Type a number equal to or higher than '8': ",
+  '\nThe value is not high enough.\n',
+  '\nNumbers only please:\n')
+
+add_even = 'Even numbers: ','Odd numbers: '
+
+while True:
+  try:
+    user_input = int(input(message[0]).strip())
+
+    if user_input < 8:print(message[1])
+
+    elif user_input >= 8:
+
+      for i in range(3):  # If you increase this value, the IndexError: handler will execute.
+        nums = []
+        for j in range(1,user_input+1):
+          if j%2 == i:nums.append(j)
+        print('\n'+add_even[i],nums)
+      break
+
+  except ValueError:
+    print(message[2])
+
+  except IndexError:
+    pass;break
