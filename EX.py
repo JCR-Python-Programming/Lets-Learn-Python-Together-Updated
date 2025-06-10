@@ -362,10 +362,11 @@ for i in range(1,count+1):
   else:
     print(f'{i} is an even number.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This Python program example is an accidental, Happy Accident. It's probably one
-# of my later and one of my most favorite computer programming discoveries to happen.
-# I will be using this discovery within my future robotics and Raspberry Pi4 Python
-# programs. The '%' modulo operator is fascinating; the things you can do with it.
+# This Python program example is an accidental, Happy Accident. It's probably
+# one of my later and one of my most favorite computer programming discoveries
+# to happen. I will be using this discovery within my future robotics and Raspberry
+# Pi4 Python programs. The '%' modulo operator is fascinating; the things you can
+# do with it.
 
 message = (
   "Type a number equal to or higher than '8': ",
@@ -394,3 +395,4 @@ while True:
 
   except IndexError:
     pass;break
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
