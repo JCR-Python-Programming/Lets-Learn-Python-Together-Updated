@@ -313,6 +313,26 @@ except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 try:
+  user_input = int(input('Give me an even number: ').strip())
+
+  lambda_function = lambda x: x if user_input%2 == 0 else 'I want an even number only.'
+
+  print(lambda_function(f'{user_input} is an even number.'))
+
+except ValueError:
+  print('Numbers only please:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+try:
+  user_input = int(input('Give me an even number: ').strip())
+
+  lambda_function = lambda x: x if user_input%2 == 1 else f'{user_input} is an even number.'
+
+  print(lambda_function('I want an even number only.'))
+
+except ValueError:
+  print('Numbers only please:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+try:
   user_input = int(input('Give me an odd or even number: ').strip())
 
   if user_input%2 == 0:
@@ -383,7 +403,7 @@ while True:
 
     elif user_input >= 8:
 
-      for i in range(3):  # If you increase this value, the IndexError: handler will execute.
+      for i in range(2):  # If you increase this value, the IndexError: handler will execute.
         nums = []
         for j in range(1,user_input+1):
           if j%2 == i:nums.append(j)
@@ -396,3 +416,16 @@ while True:
   except IndexError:
     pass;break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+while True:
+  try:
+    user_input = int(input('Give me an even number: ').strip())
+
+    if not user_input%2==0:
+      print('I want an even number only.')
+
+    elif not user_input%2==1:
+      print(f'{user_input} is an even number:')
+      break
+  
+  except ValueError:
+    print('Numbers only please:')
