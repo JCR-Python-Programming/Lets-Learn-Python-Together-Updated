@@ -62,6 +62,35 @@ oval.pack()
 
 oval_graphics.mainloop()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Tkinter Digital String Art Design Python program example:
+
+from tkinter import*
+
+digital_string_art = Tk()
+
+black = '#000000'
+white = '#ffffff'
+red = '#ff0000'
+yellow = '#ffff00'
+blue = '#0000ff'
+green = '#00ff00'
+pink = '#ff00ff'
+cyan = '#00ffff'
+
+x = 0
+y = 740
+
+digital_string_art.title('Digital String Art Design')
+
+draw = Canvas(digital_string_art,height = y,width = y,background = black)
+
+for i in range(x,y,4):
+    draw.create_line(x+i,x+i ,y,x,y,x,y,y,y,y,y,y,y,y,x,y,x+i,x+i,fill = cyan)
+
+draw.pack()
+
+digital_string_art.mainloop()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Tkinter Rectangle & Oval Zoom I/O Python program example:
 
 from tkinter import*
@@ -241,7 +270,8 @@ try:
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
-                fill=random_colour_code(),
+                outline = random_colour_code(),
+                fill = random_colour_code(),
                 width = random_width)
 
         rectangles_canvas.update()
@@ -301,7 +331,8 @@ try:
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
-                fill=random_colour_code(),
+                outline = random_colour_code(),
+                fill = random_colour_code(),
                 width = random_width)
 
         ovals_canvas.update()
@@ -369,6 +400,7 @@ try:
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
+                outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
 
@@ -377,6 +409,7 @@ try:
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
                 randint(randint1+x,randint2+x),
+                outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
 
@@ -386,35 +419,6 @@ try:
 except TclError:pass
 
 random_shapes.mainloop()
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Tkinter Digital String Art Design Python program example:
-
-from tkinter import*
-
-digital_string_art = Tk()
-
-black = '#000000'
-white = '#ffffff'
-red = '#ff0000'
-yellow = '#ffff00'
-blue = '#0000ff'
-green = '#00ff00'
-pink = '#ff00ff'
-cyan = '#00ffff'
-
-x = 0
-y = 740
-
-digital_string_art.title('Digital String Art Design')
-
-draw = Canvas(digital_string_art,height = y,width = y,background = black)
-
-for i in range(x,y,4):
-    draw.create_line(x+i,x+i ,y,x,y,x,y,y,y,y,y,y,y,y,x,y,x+i,x+i,fill = cyan)
-
-draw.pack()
-
-digital_string_art.mainloop()
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
