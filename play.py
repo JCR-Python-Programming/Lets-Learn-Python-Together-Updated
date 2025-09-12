@@ -806,7 +806,7 @@ values = [value for value in range(-10,+11)]
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Find the mean of a list of number values in Python. Create a list of number
-# values, and then add them all up, and then devide by how many number
+# values, and then add them all up, and then divide by how many number
 # values there are in the list of number values.
 
 mean_value = [1,2,3,4,5,6,7,8,9,10]
@@ -830,7 +830,7 @@ print('{} divided by {} = {}:'.format(sum(mean_value),len(mean_value),answer))  
 print(f'{sum(mean_value)} divided by {len(mean_value)} = {answer}:')  # new f' string format
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Find the mean of a list of number values in Python. Create a list comprehension
-# of number values, and then add them all up, and then devide by how many
+# of number values, and then add them all up, and then divide by how many
 # number values there are in the list comprehension of number values.
 
 mean_value = [value for value in range(1,11)]
