@@ -934,3 +934,137 @@ list_values2 = [value for value in range(11,21)]
 list_values1.extend(list_values2)
 
 print(list_values1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# reverse two lists, and then join two lists together with the extend() function.
+
+list_values1 = [1,2,3,4,5,6,7,8,9,10]
+list_values2 = [11,12,13,14,15,16,17,18,19,20]
+
+list_values1.reverse()
+list_values2.reverse()
+
+list_values1.extend(list_values2)
+
+print(list_values1)
+
+# or this:
+
+# reverse two list comprehensions, and then join two list comprehensions together with the
+# extend() function.
+
+list_values1 = [value for value in range(1,11)]
+list_values2 = [value for value in range(11,21)]
+
+list_values1.reverse()
+list_values2.reverse()
+
+list_values1.extend(list_values2)
+
+print(list_values1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create three different integer sets that will combine/unionize all three sets into one single
+# set. Convert the single set into a list, using the list() function. Next, view the contents
+# of the list, along with the slice() function to set the range of list content values to display
+# on the screen.
+
+# Type and execute/run this Python program example below.
+
+# To reduce lines of code, create packed variables and their
+# packed values.
+
+x,y,z = (
+    {1,2,3,4,9,6,7,8,5,9,10},
+    {11,12,13,14,15,16,17},
+    {18,19,20,21,22,23,24})
+
+a = slice(24) # slice the set with the slice() function
+
+# To reduce lines of code, create packed variables and their
+# packed values.
+
+length1,length2,length3 = len(x),len(y),len(z)
+
+unionize = x.union(y,z) # unionize x to y and z with the value v.union() function
+
+convert = list(unionize) # cast the set to a list with the list() function
+
+answer = length1,length2,length3
+
+# Add the total values between length1, length2 and length3 with the sum()
+# function.
+
+total_sum = sum(answer) # add all three values of answer together with the sum() function
+
+# View the contents of x, y and z in their combined, converted sets to a list.
+
+print('View the value contents of the unionized list to check it:\n\n'+str(convert[a]))
+
+# Create a variable called sentence_loop, along with all its values.
+
+sentence_loop = (
+    f'\nThe length of (x) = {length1}',f'The length of (y) = {length2}',
+    f'The length of (z) = {length3}',f'\nThe total lengths of x+y+z = {total_sum}')
+
+# Create a for loop that will loop through the sentence_loop variable, using a single print()
+# function. The for loop will iterate until all the values are cycled through the sentence_loop
+# variable.
+
+for i in sentence_loop:print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+nums1 = {1,1,2,3,4,5,6}
+nums2 = {1,2,2,3,4}
+
+print(nums1 | nums2)  # Union
+
+print(nums1.union(nums2))  # Union
+
+nums1 = {1,1,2,3,4,5,6}
+nums2 = {1,2,2,3,4}
+
+print(nums1 & nums2)  # Intersection
+
+print(nums1.intersection(nums2))  # Intersection
+
+nums1 = {1,1,2,3,4,5,6}
+nums2 = {1,2,2,3,4}
+
+print(nums1 - nums2)  # Difference
+
+print(nums1.difference(nums2))  # Difference
+
+nums1 = {1,1,2,3,4,5,6}
+nums2 = {1,2,2,3,4}
+
+print(nums1 ^ nums2)  # Symmetric Difference
+
+print(nums1.symmetric_difference(nums2))  # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+nums1 = {0,1,2,3,1,3,4,10,5,6,6,7,8,9,10,23}
+nums2 = {1,2,7,1,3,4,10,5,6,6,7,8,9,10,11,22}
+
+print(nums1.union(nums2))  # Union
+print(nums1.intersection(nums2))  # Intersection
+print(nums1.difference(nums2))  # Difference
+print(nums1.symmetric_difference(nums2))  # Symmetric Difference
+
+# or this:
+
+nums1 = {0,1,2,3,1,3,4,10,5,6,6,7,8,9,10,23}
+nums2 = {1,2,7,1,3,4,10,5,6,6,7,8,9,10,11,22}
+
+print(nums1 | nums2)  # Union
+print(nums1 & nums2)  # Intersection
+print(nums1 - nums2)  # Difference
+print(nums1 ^ nums2)  # Symmetric Difference
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Cast two integer lists into two, sorted sets, via the set() function.
+
+nums1 = [0,1,2,3,1,3,4,10,5,6,6,7,8,9,10,23]
+nums2 = [1,2,7,1,3,4,10,5,6,6,7,8,9,10,11,22]
+
+convert1,convert2 = set(nums1),set(nums2)
+
+print(convert1 | convert2)  # Union
+print(convert1 & convert2)  # Intersection
+print(convert1 - convert2)  # Difference
+print(convert1 ^ convert2)  # Symmetric Difference
