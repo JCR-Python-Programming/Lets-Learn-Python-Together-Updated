@@ -1372,6 +1372,9 @@ print(len(dictionary_one.keys()))
 print(len(dictionary_two.keys()))
 print(len(dictionary_three.keys()))
 
+# Invoke the length, len() function to check how many dictionary values there are.
+
 print(len(dictionary_one.values()))
 print(len(dictionary_two.values()))
 print(len(dictionary_three.values()))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
