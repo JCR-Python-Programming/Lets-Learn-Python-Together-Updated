@@ -1341,8 +1341,7 @@ set_one,set_two,set_three = (
 print(set_one,set_two,set_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pack three separate dictionary variables, along with their separate key and value groups
-# with just one equals = sign. This also works with tuples ( ), lists [ ], sets { } and dictionaries
-# { } alike.
+# with just one equals = sign. This also works with tuples ( ), lists [ ] and sets { } alike.
 
 dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
@@ -1350,3 +1349,29 @@ dictionary_one,dictionary_two,dictionary_three = (
   {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
 
 print(dictionary_one,dictionary_two,dictionary_three)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Display dictionary keys and dictionary values, via the keys() function and the values()
+# function.
+
+dictionary_one,dictionary_two,dictionary_three = (
+  {1:1,2:2,3:3,4:4,5:5},
+  {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+
+print(dictionary_one.keys())
+print(dictionary_two.keys())
+print(dictionary_three.keys())
+
+print(dictionary_one.values())
+print(dictionary_two.values())
+print(dictionary_three.values())
+
+# Invoke the length, len() function to check how many dictionary keys there are.
+
+print(len(dictionary_one.keys()))
+print(len(dictionary_two.keys()))
+print(len(dictionary_three.keys()))
+
+print(len(dictionary_one.values()))
+print(len(dictionary_two.values()))
+print(len(dictionary_three.values()))
