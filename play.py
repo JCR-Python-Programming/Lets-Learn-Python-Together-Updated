@@ -542,6 +542,18 @@ text(knowledge_poem[0])
 
 input('\nPress Enter to close this Python program:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Count how many times a number appears in a list of integer values with the count() function.
+
+count_like_values = [1,2,3,4,5,2,6,7,3,8,2,9,10].count(2)
+
+print(count_like_values)
+
+# Count how many times a letter appears in a list of text values with the count() function.
+
+count_like_values = ['a','b','c','d','d','c','d','e','f'].count('d')
+
+print(count_like_values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create reverse text with Python, and then ask the user to type letters or words, via the
 # input() function. Invoke the count() function that counts how many times letters or
 # words have been used within the text. Lastly, invoke the reverse indexing [::-1] method
@@ -572,6 +584,44 @@ user_input = message(
   " :nettirw neeb s'ti semit ynam woh uoy llet nac I dna ,meop siht ni drow ro rettel a epyT"[::-1]).strip()
 
 text(f"\n'{user_input}' has been written {knowledge_poem.lower().count(user_input[::-1])} times.")
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke these text functions to create lower case text, upper case text, capital text and
+# title text.
+
+lower_case = 'LOWER CASE TEXT:'.lower()
+
+print(lower_case)
+
+
+upper_case = 'upper case text:'.upper()
+
+print(upper_case)
+
+
+capital_case = 'capital case text:'.capitalize()
+
+print(capital_case)
+
+
+title_case = 'title case text'.title()
+
+print(title_case)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke these text functions to right justify text, left justify text and center justify text.
+
+right_justified = 'Right Justified Text:'.rjust(40)
+
+print('Right justified:',right_justified)
+
+
+left_justified = 'Left Justified Text:'.ljust(40)
+
+print(left_justified,'Left justified:')
+
+
+center_justified = 'Center Justified Text:'.center(40)
+
+print('Center justified:',center_justified,'Center justified:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Invoke the 'match' and 'case' methods that shows the days in a week and the days in a
 # weekend. Note: the 'case_' which tells Python to return a case, without returning a week
@@ -1186,13 +1236,13 @@ fun_list1 = ['John','Bob','Rob','Tom']  # four values
 fun_list2 = ['Dog','Cat','Bird','Fish']  # four values
 fun_list3 = ['Desktop','Laptop','Cellphone','Notebook']  # four values
 
-# The zip() function is sometimes better than a simple for-loop or a simple enumerate() function,
-# in that it uses less lines of code and it can also achieve a far better programming style approach
-# over program code redundancy on the programmer's part.
+# The zip() function is sometimes better than a simple for-loop or a simple enumerate()
+# function, in that it uses less lines of code and it can also achieve a far better programming
+# style approach over program code redundancy on the programmer's part.
 
-# Let's try one more example to prove this to be true. let's create another fun_list, zip() function
-# Python program example. Type and execute/run this Python program below and see what
-# happens with the output.
+# Let's try one more example to prove this to be true. let's create another fun_list, zip()
+# function Python program example. Type and execute/run this Python program below
+# and see what happens with the output.
 
 fun_list1 = ['John','Bob','Rob','Tom']
 fun_list2 = ['Dog','Cat','Bird','Fish']
@@ -1241,3 +1291,62 @@ george_boole = True
 x = 1 if george_boole else 0
 
 print(x)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pack three separate list variables, along with their separate value groups with just one
+# equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
+
+list_one,list_two,list_three = [1,2,3,4,5],['a','b','c','d','e'],['text 1','text 2','text 3','text 4','text 5']
+
+print(list_one)
+print(list_two)
+print(list_three)
+
+# or this:
+
+list_one,list_two,list_three = (
+  [1,2,3,4,5],['a','b','c','d','e'],['text 1','text 2','text 3','text 4','text 5'])
+
+print(list_one,list_two,list_three)
+
+# or this:
+
+list_one,list_two,list_three = (
+  [1,2,3,4,5],
+  ['a','b','c','d','e'],
+  ['text 1','text 2','text 3','text 4','text 5'])
+
+print(list_one,list_two,list_three)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pack three separate tuple variables, along with their separate value groups with just one
+# equals = sign. This also works with lists [ ], sets { } and dictionaries { } alike.
+
+tuple_one,tuple_two,tuple_three = (
+  (1,2,3,4,5),
+  ('a','b','c','d','e'),
+  ('text 1','text 2','text 3','text 4','text 5'))
+
+print(tuple_one,tuple_two,tuple_three)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pack three separate set variables, along with their separate value groups with just one
+# equals = sign. This also works with tuples ( ), lists [ ] and dictionaries { } alike. Note:
+# sets are always in random order, and sets also get rid of duplicate values. However,
+# sets with integer values only, are always ordered and also gets rid of duplicate values
+# as well.
+
+set_one,set_two,set_three = (
+  {1,2,3,4,5},
+  {'a','b','c','d','d','e'},
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+
+print(set_one,set_two,set_three)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pack three separate dictionary variables, along with their separate key and value groups
+# with just one equals = sign. This also works with tuples ( ), lists [ ], sets { } and dictionaries
+# { } alike.
+
+dictionary_one,dictionary_two,dictionary_three = (
+  {1:1,2:2,3:3,4:4,5:5},
+  {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+
+print(dictionary_one,dictionary_two,dictionary_three)
