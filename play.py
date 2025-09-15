@@ -1334,7 +1334,7 @@ print(tuple_one,tuple_two,tuple_three)
 # as well.
 
 set_one,set_two,set_three = (
-  {1,2,3,4,5},
+  {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
   {'text 1','text 2','text 3','text 4','text 5','text 4'})
 
@@ -1378,3 +1378,82 @@ print(len(dictionary_one.values()))
 print(len(dictionary_two.values()))
 print(len(dictionary_three.values()))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d tuple collection and check it, and then call up two indexes to display
+# an actual value by itself.
+
+multi_2d_tuple_collection = (
+  (1,2,3,4,5),
+  ('a','b','c','d','e'),
+  ('text 1','text 2','text 3','text 4','text 5'))
+
+print(multi_2d_tuple_collection)  # ((1, 2, 3, 4, 5), ('a', 'b', 'c', 'd', 'e'), ('text 1', 'text 2', 'text 3', 'text 4', 'text 5'))
+
+print(multi_2d_tuple_collection[1][0])  # a
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d tuple and check it, and then call up two indexes to display an actual
+# value by itself.
+
+tuple_one,tuple_two,tuple_three = (
+  (1,2,3,4,5),
+  ('a','b','c','d','e'),
+  ('text 1','text 2','text 3','text 4','text 5'))
+
+multi_2d_tuple = tuple_one,tuple_two,tuple_three
+
+print(tuple_one,tuple_two,tuple_three)  # (1, 2, 3, 4, 5) ('a', 'b', 'c', 'd', 'e') ('text 1', 'text 2', 'text 3', 'text 4', 'text 5')
+
+print(multi_2d_tuple[1][0])  # a
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d list collection and check it, and then call up two indexes to display
+# an actual value by itself.
+
+multi_2d_list_collection = (
+  [1,2,3,4,5],
+  ['a','b','c','d','e'],
+  ['text 1','text 2','text 3','text 4','text 5'])
+
+print(multi_2d_list_collection)  # ([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e'], ['text 1', 'text 2', 'text 3', 'text 4', 'text 5'])
+
+print(multi_2d_list_collection[1][0])  # a
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d list and check it, and then call up two indexes to display an actual value
+# by itself.
+
+list_one,list_two,list_three = (
+  [1,2,3,4,5],
+  ['a','b','c','d','e'],
+  ['text 1','text 2','text 3','text 4','text 5'])
+
+multi_2d_list = list_one,list_two,list_three
+
+print(list_one,list_two,list_three)  # [1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e'], ['text 1', 'text 2', 'text 3', 'text 4', 'text 5']
+
+print(multi_2d_list[1][0])  # a
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d set collection and check it.
+
+multi_2d_set_collection = (
+  {1,2,3,4,5,2,4},
+  {'a','b','c','d','d','e'},
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+
+print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a multi 2d set collection and check it. Note: sets do not have indexes [ ] for them;
+# you have to cast a set into a list, via the list() function to display values by themselves.
+# Invoke the sort() function to sort random list values from the random set of values.
+
+multi_2d_set_collection = (
+  {1,2,3,4,5,2,4},
+  {'a','b','c','d','d','e'},
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+
+print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
+
+cast_my_set_into_list = list(multi_2d_set_collection[2])
+
+cast_my_set_into_list.sort()  # invoke the sort() function to sort the list
+
+print(cast_my_set_into_list[0])  # text 1
