@@ -1404,7 +1404,6 @@ multi_2d_tuple = tuple_one,tuple_two,tuple_three
 print(tuple_one,tuple_two,tuple_three)  # (1, 2, 3, 4, 5) ('a', 'b', 'c', 'd', 'e') ('text 1', 'text 2', 'text 3', 'text 4', 'text 5')
 
 print(multi_2d_tuple[1][0])  # a
-
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a multi 2d list collection and check it, and then call up two indexes to display
 # an actual value by itself.
