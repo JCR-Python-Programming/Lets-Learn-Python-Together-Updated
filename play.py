@@ -498,10 +498,10 @@ while True:
   try:
     user_input = int(input('Give me an even number: ').strip())
 
-    if not user_input%2==0:
+    if not user_input%2 == 0:
       print('I want an even number only.')
 
-    elif not user_input%2==1:
+    elif not user_input%2 == 1:
       print(f'{user_input} is an even number:')
       break
 
@@ -532,11 +532,11 @@ universe itself! If you dream it, you can be it. Believe it!''','cls',len)
 
 length=0
 
-while length<=knowledge_poem[2](knowledge_poem[0]):
+while length <= knowledge_poem[2](knowledge_poem[0]):
   text(knowledge_poem[0][:length])
   time.sleep(.05)
   os.system(knowledge_poem[1])
-  length+=1
+  length += 1
 
 text(knowledge_poem[0])
 
@@ -622,6 +622,30 @@ print(left_justified,'Left justified:')
 center_justified = 'Center Justified Text:'.center(40)
 
 print('Center justified:',center_justified,'Center justified:')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create 30 blank spaces to indent text with this ' '*n
+
+print(' '*30,'My indented text')  #                               My indented text
+
+# this:
+
+print(' '*30+'My indented text')  #                              My indented text
+
+# or this:
+
+print(f'{' '*30}My indented text')  #                             My indented text
+
+# Create 30 dashes with this ' '*n
+
+print('-'*30)  # ------------------------------
+
+# Create 10 text words with this ' '*n
+
+print('text '*10)  # text text text text text text text text text text
+
+# or:
+
+print(' '*20+'text '*10)  #                    text text text text text text text text text text
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Invoke the 'match' and 'case' methods that shows the days in a week and the days in a
 # weekend. Note: the 'case_' which tells Python to return a case, without returning a week
@@ -824,7 +848,7 @@ def base_define_function(*args):
 
 base_define_function('decorator','base','function')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-redundant_code='''
+redundant_code = '''
 print("Python Programmer's Glossary Bible")
 print('This block of code can be used and reused again and again.')
 '''
@@ -842,7 +866,7 @@ for i in range(3):
 # Let's create a for loop inside an exec() function and see what happens when
 # execute/run this Python program example:
 
-reuse_code='''
+reuse_code = '''
 for i in range(10):print(i)
 '''
 exec(reuse_code) # Call the exec() function as many times as you please.
@@ -1149,7 +1173,7 @@ for index,name in enumerate(name_list,start=1):
 
 name = ['John','Bob','Rob','Tom']
 pet = ['Dog','Cat','Bird','Fish']
-compute = ['Desktop','Laptop','Cellphone','Notebook']
+computer = ['Desktop','Laptop','Cellphone','Notebook']
 
 # Note: the zip() function only goes to the shortest length in a multi list. However, you can simply
 # keep them the same size such as the list examples above, which shows three lists called name,
@@ -1456,3 +1480,451 @@ cast_my_set_into_list = list(multi_2d_set_collection[2])
 cast_my_set_into_list.sort()  # invoke the sort() function to sort the list
 
 print(cast_my_set_into_list[0])  # text 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a list with the copy() function.
+
+my_list = ['text 1','text 2','text 3','text 4','text 5']
+
+list_copy = my_list.copy()
+
+print(list_copy)  # ['text 1', 'text 2', 'text 3', 'text 4', 'text 5']
+
+print(list_copy[0])  # text 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a dictionary with the copy() function.
+
+my_dictionary = {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5'}
+
+dictionary_copy = my_dictionary.copy()
+
+print(dictionary_copy)  # {'text 5', 'text 2', 'text 1', 'text 3', 'text 4'}
+
+print(dictionary_copy.get('key1'))  # value 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a set with the copy() function.
+
+my_set = {'text 1','text 2','text 3','text 4','text 5'}
+
+set_copy = my_set.copy()
+
+print(set_copy)  # {'text 5', 'text 2', 'text 1', 'text 3', 'text 4'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# You can do a lot with for loops. I practice Python everyday and I'm
+# always tripping onto things, just by trial and error alone. I wasn't
+# shown this at all. This is one of my own happy accidents. I got really
+# bored and did this for us all.
+
+names1 = ['Bob','Rob','dog','cat']
+names2 = ['John','Tom','bird','fish']
+names3 = ['Terry','Mary','turtle','monkey']
+
+for i,x,y,z in names1,names2,names3:
+    print('Hello',i+'. How are you? You bought a cute',y,'I see...')
+    print('Hello',x+'. How are you? You bought a cute',z,'I see...')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+names1 = ['Bob','Rob','dog','cat']
+names2 = ['John','Tom','bird','fish']
+names3 = ['Terry','Mary','turtle','monkey']
+
+sentence= 'Hello','. How are you? You bought a cute','I see...'
+
+for i,x,y,z in names1,names2,names3:
+    print(sentence[0],i+sentence[1],y,sentence[2])
+    print(sentence[0],x+sentence[1],z,sentence[2])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+names1 = ['Bob','Rob','dog','cat']
+names2 = ['John','Tom','bird','fish']
+names3 = ['Terry','Mary','turtle','monkey']
+
+sentence = 'Hello','. How are you? You bought a cute','I see...'
+
+for i,x,y,z in names1,names2,names3:
+    print('{} {} {} {}'.format(sentence[0],i+sentence[1],y,sentence[2]))  # old formatted string
+    print('{} {} {} {}'.format(sentence[0],x+sentence[1],z,sentence[2]))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+names1 = ['Bob','Rob','dog','cat']
+names2 = ['John','Tom','bird','fish']
+names3 = ['Terry','Mary','turtle','monkey']
+
+sentence = 'Hello','. How are you? You bought a cute','I see...'
+
+for i,x,y,z in names1,names2,names3:
+    print(f'{sentence[0]} {i}{sentence[1]} {y} {sentence[2]}')  # new f' string format
+    print(f'{sentence[0]} {x}{sentence[1]} {z} {sentence[2]}')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base 8.
+# Type in ASCII codes and see what they look like. For example: print(bin(65)) is the ASCII
+# code value for the capital letter 'A' in binary base 2 as: '0b1000001'. Note: the '0b' is Python's
+# prefix, which simply tells Python to work with binary base 2 numbers.
+
+# Convert any number into a binary base 2 number.
+
+print(bin(255))
+
+# Convert any number into a hexadecimal base 16 number.
+
+print(hex(255))
+
+# Convert any number into an octal base 8 number.
+
+print(oct(255))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Type and execute/run each of these program examples below and see what happens.
+
+comp_nums = int(input('Please type any number to see its binary base 2 number value: ').strip())
+
+print(f'The number {comp_nums} = the binary base 2 number value: {bin(comp_nums)}.')
+
+comp_nums = int(input('Please type any number to see its hexadecimal base 16 number value: ').strip())
+
+print(f'The number {comp_nums} = the hexadecimal base 16 number value: {hex(comp_nums)}.')
+
+comp_nums = int(input('Please type any number to see its octal base 8 number value: ').strip())
+
+print(f'The number {comp_nums} = the octal base 8 number value: {oct(comp_nums)}.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base 8.
+# Type in ASCII codes and see what they look like. For example: print(f'{65:b}') is the ASCII
+# code value for the capital letter 'A' in binary base 2 as: '1000001'. Note: the 'b' is Python's
+# prefix, which simply tells Python to work with binary base 2 numbers.
+
+# Convert any number into a binary base 2 number.
+
+print(f'{255:b}')
+
+# Convert any number into a hexadecimal base 16 number.
+
+print(f'{255:x}')
+
+# Convert any number into an octal base 8 number.
+
+print(f'{255:o}')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Type and execute/run each of these program examples below and see what happens.
+
+comp_nums = int(input('Please type any number to see its binary base 2 number value: ').strip())
+
+print(f'The number {comp_nums} = the binary base 2 number value: {comp_nums:b}.')
+
+comp_nums = int(input('Please type any number to see its hexadecimal base 16 number value: ').strip())
+
+print(f'The number {comp_nums} = the hexadecimal base 16 number value: {comp_nums:x}.')
+
+comp_nums = int(input('Please type any number to see its octal base 8 number value: ').strip())
+
+print(f'The number {comp_nums} = the octal base 8 number value: {comp_nums:o}.')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is for advanced Python programmers, who want something a little bit saltier. Create
+# this Welcome To The Binary Beat In Motion Python program using a single print() function.
+# Use the backslash '\' to create line breaks within the print() function.
+
+# It's now time to forget all about the f' string format. Let's also forget all about creating
+# variables, assigned to text messages. Let's do it the old fashioned pioneering way, when
+# computer programming was young and looked a bit like this. However the old way of
+# programming was much more confusing looking, than what you can only see here.
+# Just imagine having to do computer programming without any formatting of strings at
+# all. Variables are always, always a must; they help make data much more flexible, and
+# manipulative to the core. Let's have some 'Dirty Code' fun with one of my faves below:
+
+# Note: after you save your file, you must double click this file to view it's cool coloured
+# text and layout.
+
+from time import sleep as delay;import os;os.system('title binary beat'.title())
+
+red = '\x1b[31m'
+green = '\x1b[32m'
+blue = '\x1b[34m'
+yellow = '\x1b[33m'
+purple = '\x1b[35m'
+white = '\x1b[37m'
+os.system('cls')
+n=0
+
+while True:
+    print(white+'\n'+' '*6+'welcome to the binary beat in motion python program example:'.title()
+          +yellow+'\n\n'+' '*6+'1     1    1    1    1   1   1   1 = eight bits or one byte'
+          +'\n\n'+' '*6+'128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = decimal number: 255''\n\n'+' '*2
+          +'binary base: 2, octal base: 8, hexadecimal base: 16, decimal base: 10'.title()
+          +'\n\n'+' '*3+yellow,len(f'{n:b}'),green+'binary digits: '.title()
+          +yellow+f'{n:b} '+red+'=\n\n'+' '*3+yellow,len(f'{n:o}'),green+'octal digits: '.title()
+          +yellow+f'{n:o} '+red+'=\n\n'+green+' '*3+yellow,len(f'{n:x}'),green+'hexadecimal digits: '.title()
+          +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
+          +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is for advanced Python programmers, who want something a little bit saltier. Create
+# this Fibonary Bits In Action! Python program using a single print() function. Use the
+# backslash '\' to create line breaks within the print() function.
+
+# Type and execute/run this Python program example below and see what happens.
+
+# Note: after you save your file, you must double click this file to view it's cool coloured
+# text and layout.
+
+import os;os.system('title fibonary bits in action!'.title())
+from time import sleep as delay
+
+red = '\x1b[31m'
+green = '\x1b[32m'
+blue = '\x1b[34m'
+yellow = '\x1b[33m'
+purple = '\x1b[35m'
+white = '\x1b[37m'
+
+title_text = f'fibonary bits in action!'.title(),'fibonacci natural number sequence:'.title()
+text = (' binary digits: ',' octal digits: ',' hexadecimal digits: ',' decimal digits:',' fibonacci digits: '.title())
+
+lb = '\n';lbb = '\n\n'; elb = ' =\n';eq = ' = ';sp = ' '
+
+num1 = 0;num2 = 1
+fib = [num1,num2]
+
+pause=1
+
+while True:
+    os.system('cls')
+    num3 = num1+num2
+    fib.append(num3)
+    num1 = num2;num2 = num3
+
+    b = f'{num3:b}';o = f'{num3:o}'
+    x = f'{num3:X}';d = f'{num3:d}'
+
+# f' string formatted print() function example:
+
+    print(f'{white}{lb}{sp*16}{title_text[0]}{lb}{red}{lb}{sp*4}{len(b)}{green}{text[0].title()}'
+          f'{yellow}{b}{blue}{elb}{sp*4}{green}{red}{len(o)}{green}{text[1].title()}{yellow}'
+          f'{o}{blue}{elb}{sp*4}{green}{red}{len(x)}{green}{text[2].title()}{yellow}{x}'
+          f'{blue}{eq}{green}{lb}{sp*4}{red}{len(d)}{green}{text[3].title()}{blue}{eq}{yellow}'
+          f'{d}{lbb}{white}{sp*11}{title_text[1]}{lbb}{green}{sp*3}{text[4]}{yellow}{num3:,d}')
+
+    delay(pause)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is for advanced Python programmers, who want something a little bit saltier. Create
+# this Fibonacci Natural Number Sequence in Action... Python program using a single print()
+# function. Use the backslash '\' to create line breaks within the print() function.
+
+# Type and execute/run this Python program example below and see what happens.
+
+# Note: after you save your file, you must double click this file to view it's cool coloured
+# text and layout.
+
+import os,time;os.system(f'title fibonacci natural number sequence'.title())
+
+text_colours=(
+    '\x1b[31m', # index 0 = red
+    '\x1b[32m', # index 1 = green
+    '\x1b[33m', # index 2 = yellow
+    '\x1b[34m', # index 3 = blue
+    '\x1b[35m', # index 4 = purple
+    '\x1b[36m', # index 5 = cyan
+    '\x1b[37m'  # index 6 = white
+    )
+
+text_words = (
+    f'{text_colours[1]}Fibonacci Natural Number Sequence in Action...',
+
+    f'\n\n{text_colours[2]}Fibonacci Natural Number Sequence example: \
+[0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610...]',
+
+    f'\n\n{text_colours[5]}Fibonacci Natural Numbers go on forever!',
+    f'\n\nFibonacci Natural Numbers can only be found in \
+nature, such as plants and animals...'
+    )
+
+for i in range(25):
+    print('\n',' '*i,text_words[0])
+    time.sleep(.25)
+    os.system('cls')
+
+num1 = 0
+num2 = 1
+fib = [num1,num2]
+
+while True:
+    num3 = num1+num2
+    fib.append(num3)
+    num1 = num2
+    num2 = num3
+    clock = (time.asctime())
+
+    print('\n',' '*25,text_words[0],text_words[1],text_words[2])
+
+    print(f'\nFibonacci Natural Number Sequence: {text_colours[2]}\
+{num1} {text_colours[5]}+ {text_colours[2]}{num2}{text_colours[5]} = \
+({text_colours[0]}{num1+num3}{text_colours[5]}){text_colours[5]}\n\n\
+Fibonacci Natural Numbers: "{text_colours[0]}{num1+num3:,}{text_colours[5]}\
+"\n\n{text_colours[0]}Date & Time:\n\n{clock}')
+
+    time.sleep(1),os.system('cls')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# input Fibonacci Number Sequence program example, using a set{}
+
+num1,num2 = 0,1
+
+fib = {num1,num2}
+
+words = (
+    'is in the Fibonacci Sequence.',
+    'is not in the Fibonacci Sequence.',
+    'Please enter a correct Fibonacci Sequence Number: ',
+    'Sorry! Numbers only.',
+    'Memory Error!'
+    )
+
+while True:
+    try:
+        x=int(input(words[2]).strip())
+
+        for i in range(x):
+            fib_num=num1+num2
+            fib.add(fib_num)
+            num1=num2
+            num2=fib_num
+
+        if x in fib:
+            print(x,words[0])
+            break
+
+        elif x not in fib:
+            print(x,words[1])
+
+    except ValueError:
+        print(words[3])
+
+    except MemoryError:
+        print(words[4])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is for advanced Python programmers, who want something a little bit saltier. Create
+# this Fibonacci ASCII CODE NUMERIC VALUE TRANSLATOR Python program. Use the
+# backslash '\' to create line breaks within the print() function.
+
+# Type and execute/run this Python program example below and see what happens.
+
+# Note: after you save your file, you must double click this file to view it's cool coloured
+# text and layout.
+
+import os,time
+
+text_features = (
+    'cls', # index 0 = clear screen
+    '\x1b[31m', # index 1 = red
+    '\x1b[32m', # index 2 = green
+    '\x1b[33m', # index 3 = yellow
+    '\x1b[34m', # index 4 = blue
+    '\x1b[37m'  # index 5 = red
+    )
+
+text_words = (
+    f'\n{text_features[3]}ASCII CODE NUMERIC VALUE TRANSLATOR\n', # index 0 = text_words
+
+    f'\n{text_features[3]}ASCII CODE CHARACTER VALUE TRANSLATOR\n', # index 1 = text_words
+
+    f'\n{text_features[3]}ASCII CODE TRANSLATOR', # index 2 = text_words
+
+    f'\n{text_features[3]}Thanks for choosing ASCII CODE TRANSLATOR', # index 3 = text_words
+
+    'title ASCII CODE TRANSLATOR' # index 4 = text_words
+    )
+
+word_info = (
+    f'{text_features[5]}Please type a number, then press \
+(Enter) to confirm: {text_features[2]}', # index 0 = word_info
+
+    f'{text_features[5]}Please type a letter key or a number key, then press \
+(Enter) to confirm: {text_features[2]}', # index 1 = word_info
+
+    f'\n{text_features[3]}Please choose which ASCII code translator you \
+would like to use:\n\n{text_features[5]}Press (1) for ASCII code number \
+values.\nPress (2) for ASCII code character values.\nPress \
+(Q) to quit.{text_features[2]} ', # index 2 = word_info
+
+    f'\n\n{text_features[3]}Do you wish to continue? Press \
+(Enter) or press (Q) to quit: {text_features[2]}', # index 3 = word_info
+
+    f'\n{text_features[1]}This is a Value Error!', # index 4 = word_info
+
+    f'\n{text_features[1]}This is a Type Error!' # index 5 = word_info
+    )
+
+button = ('1','2','q')
+
+def ascii_codes():
+    os.system(text_words[4])
+    def subroutine1():
+        while True:
+            os.system(text_features[0])
+            print(text_words[0])
+
+            try:
+                ascii_code = int(input(word_info[0]).strip())
+                ascii_code = input(f'\n{text_features[2]}{chr(ascii_code)}\
+{text_features[5]} = ASCII code: " {text_features[2]}{ascii_code}\
+{text_features[5]} " {word_info[3]}').lower().lower().strip()
+                if ascii_code == button[2]:
+                    break
+
+            except ValueError:
+                print(word_info[4])
+                time.sleep(2)
+
+    def subroutine2():
+        while True:
+            os.system(text_features[0])
+            print(text_words[1])
+
+            try:
+                ascii_code = input(word_info[1]).strip()
+                ascii_code = input(f'\n{text_features[2]}{ascii_code}\
+{text_features[5]} = ASCII code: " {text_features[2]}{ord(ascii_code)}\
+{text_features[5]} " {word_info[3]}').lower().strip()
+                if ascii_code == button[2]:
+                    break
+
+            except TypeError:
+                print(word_info[5])
+                time.sleep(2)
+
+    while True:
+        os.system(text_features[0])
+        print(text_words[2])
+
+        butt=input(word_info[2]).lower().strip()
+        if butt == button[0]:
+            subroutine1()
+        elif butt == button[1]:
+           subroutine2()
+
+        else:
+            if butt == button[2]:
+                os.system(text_features[0])
+                print(text_words[3])
+                time.sleep(3)
+                break
+
+ascii_codes()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# I created The Devil's Lucky Number Python program example out of sheer boredom. This
+# was a complete accident, when I was just playing with names of animals and names of
+# things. About the forth name of an animal was the fox, and when I saw the output on my
+# computer screen. I sort of jumped back in my seat. I tried the word 'dog'. I tried the word
+# 'cat', I then tried the word bird. After that, I was playing with names of things, and then I
+# tried the word 'fox' for another attempt at finding a number of some sort, and I found it.
+# It scares the heck right out of me actually. This is the only time, that one of my own
+# computer programming discoveries actually, really scares me. I'm not new to self taught
+# computer programming. Not by a longshot. But this discovery still scares me. Yet however,
+# computer science is sometimes a scary, mathematical reality in itself...
+
+# Invoke the ord() function to get the ascii code values to the lower case letters of the word 'fox'
+
+fox = (ord('f')+ord('o')+ord('x'))*2
+
+print("And The Devi's Lucky Number is:",fox)
+
+print("And The Devi's Lucky Number is: "+str(fox))
+
+print("And The Devi's Lucky Number is: {}".format(fox))
+
+print(f"And The Devi's Lucky Number is: {fox}")
+
+# I am almost a complete Walking Human Computer Science Research Laboratory
+# Machine on Two Legs... 😁
