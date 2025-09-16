@@ -1,4 +1,10 @@
 
+# Welcome to the Wonderful World of Python Programming. Welcome to Python World!
+
+# Created by Joseph C. Richardson, GitHub.com
+
+# Because a great programming always starts with a great programmer's manual...
+
 # Easy define function program example:
 
 def function():
@@ -1794,6 +1800,48 @@ while True:
     except MemoryError:
         print(words[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+#                ascii: (American Standard Code for Information Interchange)
+
+# Below is the ascii code character chart. Each character has an ascii code value. Note: the
+# ascii code value for the spacebar, or blank space character key is 32
+
+# blank space = 32, ! = 33, " = 34, # = 35, $ = 36, % = 37, & = 38, ' = 39, ( = 40, ) = 41, * = 42
+# + = 43, , = 44, - = 45, . = 46, / = 47, 0 = 48, 1 = 49, 2 = 50, 3 = 51, 4 = 52, 5 = 53, 6 = 54, 7 = 55
+# 8 = 56, 9 = 57, : = 58, ; = 59, < = 60, = = 61, > = 62, ? = 63, @ = 64, A = 65, B = 66, C = 67
+# D = 68, E = 69, F = 70, G = 71, H = 72, I = 73, J = 74, K = 75, L = 76, M = 77, N = 78, O = 79
+# P = 80, Q = 81, R = 82, S = 83, T = 84, U = 85, V = 86, W = 87, X = 88, Y = 89, Z = 90, [ = 91
+# \ = 92, ] = 93, ^ = 94, _ = 95, ` = 96, a = 97, b = 98, c = 99, d = 100, e = 101, f = 102, g = 103
+# h = 104, i = 105, j = 106, k = 107, l = 108, m = 109, n = 110, o = 111, p = 112, q = 113, r = 114
+# s = 115, t = 116, u = 117, v = 118, w = 119, x = 120, y = 121, z = 122, { = 123, | = 124, } = 125
+# ~ = 126
+
+# To get the ASCII code value of any letter, number or symbol keys, simply type and execute/run
+# the program examples below and see what happens. Try using different letters, numbers
+# and symbols to see their ASCII code values.
+
+print(chr(65))
+print(ord('A'))
+
+print(chr(97))
+print(ord('a'))
+
+print(chr(66))
+print(ord('B'))
+
+print(chr(98))
+print(ord('b'))
+
+print('ASCII code',ord('A'),'is the uppercase letter',chr(65))
+print('ASCII code',ord('a'),'is the lowercase letter',chr(97))
+
+print('ASCII code',ord('B'),'is the uppercase letter',chr(66))
+print('ASCII code',ord('b'),'is the lowercase letter',chr(98))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a for loop that prints out the ascii code character chart, via invoking the chr(n)
+# character function.
+
+for i in range(32,127):print(chr(i),'=',i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is for advanced Python programmers, who want something a little bit saltier. Create
 # this Fibonacci ASCII CODE NUMERIC VALUE TRANSLATOR Python program. Use the
 # backslash '\' to create line breaks within the print() function.
@@ -1918,13 +1966,121 @@ ascii_codes()
 
 fox = (ord('f')+ord('o')+ord('x'))*2
 
-print("And The Devi's Lucky Number is:",fox)
+print("And The Devil's Lucky Number is:",fox)
 
-print("And The Devi's Lucky Number is: "+str(fox))
+print("And The Devil's Lucky Number is: "+str(fox))
 
-print("And The Devi's Lucky Number is: {}".format(fox))
+print("And The Devil's Lucky Number is: {}".format(fox))
 
-print(f"And The Devi's Lucky Number is: {fox}")
+print(f"And The Devil's Lucky Number is: {fox}")
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Python clock functions allow you to program the actual time in real time.Python clock
+# functions work internally, in sync with the Windows clock. With Python clock functions;
+# you can set the hour, minute, second, month, week, day and date. See Python clock
+# function prefix descriptions below.
 
+#  '%I' 12-hour prefix
+#  '%H' 24-hour prefix
+#  '%M' Minutes prefix
+#  '%S' Seconds prefix
+#  '%p' AM/PM prefix
+#  '%A' Day of week prefix
+#  '%B' Month prefix
+#  '%d' Date prefix
+#  '%Y' Year prefix
+#  '%U' Weeks per year prefix
+#  '%j' Days per year prefix
+
+# Let's create a simple Python clock by invoking the Python clock function prefixes. First,
+# however, we also need to import two modules; 'time' and 'datetime'. Type and execute/run
+# the program example below and see what happens.
+
+import time,datetime
+
+print(datetime.datetime.now().strftime('%I:%M:%S:%p'))
+print(datetime.datetime.now().strftime('%H:%M:%S'))
+print(datetime.datetime.now().strftime('%A %B %d,%Y'))
+print(datetime.datetime.now().strftime('Week %U'))
+print(datetime.datetime.now().strftime('Day %j'))
+
+# Remember you can reduce balky code via, using string variables. Let's use 'timer' as
+# the variable and use 'datetime.datetime.now()' as the value. Type and execute/run the
+# program example below and see what happens.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+import time,datetime
+
+timer = datetime.datetime.now()
+
+print(timer.strftime('%I:%M:%S:%p'))
+print(timer.strftime('%H:%M:%S'))
+print(timer.strftime('%A %B %d,%Y'))
+print(timer.strftime('Week %U'))
+print(timer.strftime('Day %j'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Now, let's create a tuple variable called 'show_time' so we can reduce even more balky
+# code, and also gain greater manipulative programming skills at the same time. Type and
+# execute/run the program example below and see what happens.
+
+import time,datetime
+
+show_time = (
+    '%I:%M:%S:%p',
+    '%H:%M:%S',
+    '%A %B %d,%Y',
+    'Week %U',
+    'Day %j'
+    )
+
+timer = datetime.datetime.now()
+
+print(timer.strftime(show_time[0]))
+print(timer.strftime(show_time[1]))
+print(timer.strftime(show_time[2]))
+print(timer.strftime(show_time[3]))
+print(timer.strftime(show_time[4]))
+
+# Now change and rearrange the tuple number values [0] through [4] in# the program example
+# above and re-execute/run the program and see what happens.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Now, let's make our Python clock come to life. Let's also keep the code less balky and
+# much more program manipulative at the same time. To make the Python clock come to
+# life, we are simply going to use a while loop to constantly refresh the screen output. A
+# 'time.sleep()' function will also be implemented to create a one-second sleep delay in
+# the screen output. Let's also implement the 'os.system()' function to clear the screen
+# output right after every one-second 'time.sleep' delay. Type and execute/run the program
+# example below and see what happens.
+
+import os,time,datetime
+
+show_time = (
+    '%I:%M:%S:%p',
+    '%H:%M:%S',
+    '%A %B %d,%Y',
+    'Week %U',
+    'Day %j'
+    )
+
+while True:
+    timer = datetime.datetime.now()
+    print(timer.strftime(show_time[0]))
+    print(timer.strftime(show_time[1]))
+    print(timer.strftime(show_time[2]))
+    print(timer.strftime(show_time[3]))
+    print(timer.strftime(show_time[4]))
+
+    time.sleep(1)
+    os.system('cls')
+
+# Let's shorten our code by reducing our print() functions down to only one, using a for
+# loop inside the while loop.
+
+while True:
+    for i in range(5):
+        timer = datetime.datetime.now()
+        print(timer.strftime(show_time[i]))
+
+    time.sleep(1)
+    os.system('cls')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
