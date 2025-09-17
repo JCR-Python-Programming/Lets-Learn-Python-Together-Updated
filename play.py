@@ -1,10 +1,19 @@
 
 # Welcome to the Wonderful World of Python Programming. Welcome to Python World!
 
+# This is my most advanced Python programming materials yet, thus far. I've studied
+# Python just about every single day for the past seven and a half years, since Christmas
+# day, 2017. Everyone is more than welcome to learn Python through my Python
+# programming manuals. I create these videos for when I cannot get access to github.com
+# for any reason, I can at least refer to my own research notes, via YouTube, without
+# losing my research, entirely. I can also be away from home and just quickly refer to
+# my research notes on YouTube, without having to log onto github.com to refer to
+# my research note studies.
+
 # Created by Joseph C. Richardson, GitHub.com
 
-# Because a great programming always starts with a great programmer's manual...
-
+# Because a Great Programmer always starts with a Great Programmer's Manual... 😁
+'''---------------------------------------------------------------------------------------------------------------------------'''
 # Easy define function program example:
 
 def function():
@@ -157,9 +166,9 @@ def return_function(num1,num2,num3,num4,num5,num6):
 
 print(return_function(5,4,3,6,3,2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# With *args, you can create as many argument placeholder values without the worry of
-# how many argument placeholder values to how may parameter variables, needed to be
-# satisfied.
+# With *args, you can create as many argument placeholder values without the worry
+# of how many argument placeholder values to how may parameter variables, needed
+# to be satisfied.
 
 def return_function(*args):
   return args[0]+args[1]-args[2]*args[3]/args[4]**args[5]
@@ -207,8 +216,8 @@ def multi_return_function():
 
 multi_return_function()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create multi return functions inside one define function with one parameter variable and
-# one argument placeholder value program example:
+# Create multi return functions inside one define function with one parameter variable
+# and one argument placeholder value program example:
 
 def multi_return_function(arg):
   def return_fuction_one(arg):
@@ -281,14 +290,14 @@ lambda_function = lambda a,b,x,y,z: a+b-x*y/y == z if z == z else False
 
 print(lambda_function(2,12,2,2,12))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Follow the rules for 'ORDER of OPERATION' to get the correct answer. First multiply or
-# divide integer numbers. Next add or subtract integer numbers. Watch the signs + and -
-# are used for creating positive and negative integer numbers. For example: -2*3 = -6 not
-# +6, which is just 6, without writing the + sign. Negative integer numbers always show
-# the - sign. All computers follow the 'Order of Operation', which also means that you
-# must have an understanding of 'BEDMAS' and the order of operation. A wee bit of basic
-# algebra knowledge wouldn't hurt, but it's not required for computer programming; it
-# just makes computer programming that much more dynamic and fun.
+# Follow the rules for 'ORDER of OPERATION' to get the correct answer. First multiply
+# or divide integer numbers. Next add or subtract integer numbers. Watch the signs +
+# and - are used for creating positive and negative integer numbers. For example:
+# -2*3 = -6 not +6, which is just 6, without writing the + sign. Negative integer numbers
+# always show the - sign. All computers follow the 'Order of Operation', which also means
+# that you must have an understanding of 'BEDMAS' and the order of operation. A wee
+# bit of basic algebra knowledge wouldn't hurt, but it's not required for computer
+# programming; it just makes computer programming that much more dynamic and fun.
 
 try:
   user_input = int(input('What does 2+12-2*2/2 equal? ').strip())   # 2+12 -2*2/2 = 2+12 -4/2 = 2+12-2 = 14-2 = 12
@@ -379,8 +388,8 @@ try:
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that demands the user for an even number only, via the input()
-# function, along with a lambda function.
+# Create a Python program that demands the user for an even number only, via the
+# input() function, along with a lambda function.
 
 try:
   user_input = int(input('Give me an even number: ').strip())
@@ -392,8 +401,8 @@ try:
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that demands the user for an even number only, via the input()
-# function, along with a lambda function.
+# Create a Python program that demands the user for an even number only, via the
+# input() function, along with a lambda function.
 
 try:
   user_input = int(input('Give me an even number: ').strip())
@@ -463,10 +472,10 @@ for i in range(1,count+1):
   else:
     print(f'{i} is an even number.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This Python program example is an accidental, Happy Accident. It's probably one of my
-# later and one of my most favorite computer programming discoveries to happen. I will be
-# using this discovery within my future robotics and Raspberry Pi4 Python programs. The
-# modulo % operator is fascinating; the things you can do with it.
+# This Python program example is an accidental, Happy Accident. It's probably one
+# of my later and one of my most favorite computer programming discoveries to happen.
+# I will be using this discovery within my future robotics and Raspberry Pi4 Python
+# programs. The modulo % operator is fascinating; the things you can do with it.
 
 message = (
   "Type a number equal to or higher than '8': ",
@@ -496,9 +505,9 @@ while True:
   except IndexError:
     pass;break
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that demands the user for an even number only, via the input()
-# function and the modulo % operator. Let's create a while loop that won't end, until the
-# user types an even number only.
+# Create a Python program that demands the user for an even number only, via the
+# input() function and the modulo % operator. Let's create a while loop that won't end,
+# until the user types an even number only.
 
 while True:
   try:
@@ -548,7 +557,8 @@ text(knowledge_poem[0])
 
 input('\nPress Enter to close this Python program:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Count how many times a number appears in a list of integer values with the count() function.
+# Count how many times a number appears in a list of integer values with the count()
+# function.
 
 count_like_values = [1,2,3,4,5,2,6,7,3,8,2,9,10].count(2)
 
@@ -560,10 +570,10 @@ count_like_values = ['a','b','c','d','d','c','d','e','f'].count('d')
 
 print(count_like_values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create reverse text with Python, and then ask the user to type letters or words, via the
-# input() function. Invoke the count() function that counts how many times letters or
-# words have been used within the text. Lastly, invoke the reverse indexing [::-1] method
-# to create reverse text effects.
+# Create reverse text with Python, and then ask the user to type letters or words, via
+# the input() function. Invoke the count() function that counts how many times letters
+# or words have been used within the text. Lastly, invoke the reverse indexing [::-1]
+# method to create reverse text effects.
 
 text,message,knowledge_poem = print,input,(f'''
 !ti eveileB .ti eb nac uoy ,ti maerd uoy fI !flesti esrevinu
@@ -591,8 +601,8 @@ user_input = message(
 
 text(f"\n'{user_input}' has been written {knowledge_poem.lower().count(user_input[::-1])} times.")
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Invoke these text functions to create lower case text, upper case text, capital text and
-# title text.
+# Invoke these text functions to create lower case text, upper case text, capital text
+# and title text.
 
 lower_case = 'LOWER CASE TEXT:'.lower()
 
@@ -653,9 +663,9 @@ print('text '*10)  # text text text text text text text text text text
 
 print(' '*20+'text '*10)  #                    text text text text text text text text text text
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Invoke the 'match' and 'case' methods that shows the days in a week and the days in a
-# weekend. Note: the 'case_' which tells Python to return a case, without returning a week
-# day or a weekend day value.
+# Invoke the 'match' and 'case' methods that shows the days in a week and the days
+# in a weekend. Note: the 'case_' which tells Python to return a case, without returning
+# a week day or a weekend day value.
 
 def week_day(day):
   match day:
@@ -670,8 +680,8 @@ def week_day(day):
 
 print(week_day('Saturday'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create decorator @ define functions in Python. Add other define functions to the base
-# define function, without changing the base define function itself.
+# Create decorator @ define functions in Python. Add other define functions to the
+# base define function, without changing the base define function itself.
 
 def add_define_function_one(funct):
   def inner_define_function():
@@ -805,12 +815,12 @@ def base_define_function(text1,text2,text3):
 base_define_function('decorator','base','function')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create the same decorator define function Python program example as above.
-# However, let's also give the base define function only one argument variable of its own,
-# via invoking the *args prefix to satisfy as many argument placeholder values as we wish.
-# We have to use index brackets with index numbers [n] to call up each argument placeholder
-# value: 'decorator','base','function', via invoking args[n] to do the job. Note: you can call
-# *args any name you wish, but the argument variable name 'args' is the standard for the
-# *args prefix.
+# However, let's also give the base define function only one argument variable of its
+# own, via invoking the *args prefix to satisfy as many argument placeholder values
+# as we wish. We have to use index brackets with index numbers [n] to call up each
+# argument placeholder value: 'decorator','base','function', via invoking args[n] to do
+# the job. Note: you can call *args any name you wish, but the argument variable name
+# 'args' is the standard for the *args prefix.
 
 def add_define_function_one(funct):
   def inner_define_function(*args,**kwargs):
@@ -869,8 +879,8 @@ exec(redundant_code)
 for i in range(3):
     exec(redundant_code)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create a for loop inside an exec() function and see what happens when
-# execute/run this Python program example:
+# Let's create a for loop inside an exec() function and see what happens
+# when execute/run this Python program example:
 
 reuse_code = '''
 for i in range(10):print(i)
@@ -954,8 +964,8 @@ print('{} and {} are the range values.'.format(min(range_values),max(range_value
 
 print(f'{min(range_values)} and {max(range_values)} are the range values.')  # new f' string format
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Find the range of a list comprehension of number values, via invoking the min() and max()
-# functions.
+# Find the range of a list comprehension of number values, via invoking the min()
+# and max() functions.
 
 range_values = [value for value in range(1,11)]
 
@@ -1029,8 +1039,8 @@ print(list_values1)
 
 # or this:
 
-# reverse two list comprehensions, and then join two list comprehensions together with the
-# extend() function.
+# reverse two list comprehensions, and then join two list comprehensions together
+# with the extend() function.
 
 list_values1 = [value for value in range(1,11)]
 list_values2 = [value for value in range(11,21)]
@@ -1042,10 +1052,10 @@ list_values1.extend(list_values2)
 
 print(list_values1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create three different integer sets that will combine/unionize all three sets into one single
-# set. Convert the single set into a list, using the list() function. Next, view the contents
-# of the list, along with the slice() function to set the range of list content values to display
-# on the screen.
+# Create three different integer sets that will combine/unionize all three sets into one
+# single set. Convert the single set into a list, using the list() function. Next, view the
+# contents of the list, along with the slice() function to set the range of list content
+# values to display on the screen.
 
 # Type and execute/run this Python program example below.
 
@@ -1085,9 +1095,9 @@ sentence_loop = (
     f'\nThe length of (x) = {length1}',f'The length of (y) = {length2}',
     f'The length of (z) = {length3}',f'\nThe total lengths of x+y+z = {total_sum}')
 
-# Create a for loop that will loop through the sentence_loop variable, using a single print()
-# function. The for loop will iterate until all the values are cycled through the sentence_loop
-# variable.
+# Create a for loop that will loop through the sentence_loop variable, using a single
+# print() function. The for loop will iterate until all the values are cycled through the
+# sentence_loop variable.
 
 for i in sentence_loop:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1149,8 +1159,8 @@ print(convert1 & convert2)  # Intersection
 print(convert1 - convert2)  # Difference
 print(convert1 ^ convert2)  # Symmetric Difference
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Use the enumerate() function to loop through a list, using only two lines of code; one
-# for the for-index enumerate() function and the other for the 'print' statement.
+# Use the enumerate() function to loop through a list, using only two lines of code;
+# one for the for-index enumerate() function and the other for the 'print' statement.
 
 name_list = ['John','Bob','Rob','Tom']
 
@@ -1161,9 +1171,9 @@ for index in name_list:
     print(index)
 
 # The for-loop example above is fine, but it has its limitations when it comes to multi indexing
-# through a tuple or list alike. With the enumerate() function, such things are possible. Try
-# these enumerate() function Python program examples below and see what happens when
-# you experiment with them.
+# through a tuple or list alike. With the enumerate() function, such things are possible.
+# Try these enumerate() function Python program examples below and see what happens
+# when you experiment with them.
 
 for index,name in enumerate(name_list):
     print(index)
@@ -1181,12 +1191,12 @@ name = ['John','Bob','Rob','Tom']
 pet = ['Dog','Cat','Bird','Fish']
 computer = ['Desktop','Laptop','Cellphone','Notebook']
 
-# Note: the zip() function only goes to the shortest length in a multi list. However, you can simply
-# keep them the same size such as the list examples above, which shows three lists called name,
-# pet and computer. Each list has four values in them. This way, every value gets called inside
-# one, single 'print' statement. Try these different examples below. Note: you can rename the words
-# 'index1, index2 and index3' to any names you wish. You can also rename the name variable if
-# you like.
+# Note: the zip() function only goes to the shortest length in a multi list. However, you
+# can simply keep them the same size such as the list examples above, which shows
+# three lists called name, pet and computer. Each list has four values in them. This way,
+# every value gets called inside one, single 'print' statement. Try these different examples
+# below. Note: you can rename the words 'index1, index2 and index3' to any names you
+# wish. You can also rename the name variable if you like.
 
 for index1,index2,index3 in zip(name,pet,computer):
     print(index1)
@@ -1230,10 +1240,10 @@ for index in zip(my_2d_list):
 for index in zip(my_2d_list):
     print(index[0][0],index[0][1],index[0][2],index[0][3])
 
-# Let's try some fun experiment examples with some of what we've learned so far about the
-# enumerate() function. Let's create a program that uses a sentence for each value in the fun_list1,
-# fun_list2 and fun_list3 lists. Let's use the f' format to make string concatenations much easier
-# to create.
+# Let's try some fun experiment examples with some of what we've learned so far
+# about the enumerate() function. Let's create a program that uses a sentence for
+# each value in the fun_list1, fun_list2 and fun_list3 lists. Let's use the f' format to
+# make string concatenations much easier to create.
 
 fun_list1 = ['John','Bob','Rob','Tom']
 fun_list2 = ['Dog','Cat','Bird','Fish']
@@ -1248,19 +1258,19 @@ for index,name in enumerate(fun_list2):
 for index,name in enumerate(fun_list3):
     print(f"I am a {name}. I'm the value from the fun_list3, position {index}")
 
-# These enumerate() function examples are great, but let's beef it up just a lot more with the
-# zip() function, so we can create complex actions with all our fun_lists combined into complete,
-# separate sentences, just simply using two lines of code. See what happens when you type
-# and execute/run this Python program example below:
+# These enumerate() function examples are great, but let's beef it up just a lot more
+# with the zip() function, so we can create complex actions with all our fun_lists combined
+# into complete, separate sentences, just simply using two lines of code. See what
+# happens when you type and execute/run this Python program example below:
 
 for list1,list2,list3 in zip(fun_list1,fun_list2,fun_list3):
     print(f"My name is {list1} and I have a {list2} picture on my {list3} screen.")
 
-# The zip() function is very useful, but it can only reach as far as its shortest list length. That
-# means, if you have two, three or more lists, the shortest list out of the three or more lists
-# values will be cut off from the rest if one or more lists have extra values inside them. To
-# avoid this from occurring, make all your lists the same size in each of their values. take a
-# look at the example below:
+# The zip() function is very useful, but it can only reach as far as its shortest list length.
+# That means, if you have two, three or more lists, the shortest list out of the three or
+# more lists values will be cut off from the rest if one or more lists have extra values
+# inside them. To avoid this from occurring, make all your lists the same size in each
+# of their values. take a look at the example below:
 
 fun_list1 = ['John','Bob','Rob','Tom']  # four values
 fun_list2 = ['Dog','Cat','Bird','Fish']  # four values
@@ -1270,9 +1280,9 @@ fun_list3 = ['Desktop','Laptop','Cellphone','Notebook']  # four values
 # function, in that it uses less lines of code and it can also achieve a far better programming
 # style approach over program code redundancy on the programmer's part.
 
-# Let's try one more example to prove this to be true. let's create another fun_list, zip()
-# function Python program example. Type and execute/run this Python program below
-# and see what happens with the output.
+# Let's try one more example to prove this to be true. let's create another fun_list,
+# zip() function Python program example. Type and execute/run this Python program
+# below and see what happens with the output.
 
 fun_list1 = ['John','Bob','Rob','Tom']
 fun_list2 = ['Dog','Cat','Bird','Fish']
@@ -1283,8 +1293,8 @@ fun_list5 = ['fed his',"didn't feed his",'plays with his',"doesn't play with his
 for list1,list2,list3,list4,list5 in zip(fun_list1,fun_list2,fun_list3,fun_list4,fun_list5):
     print(f'{list1} {list4} {list3} and {list5} {list2}.')
 
-# Well, I think we pretty much learned what the enumerate() and zip() functions do. Now,
-# it'spractice, practice, practice and more practice, practice, practice...
+# Well, I think we pretty much learned what the enumerate() and zip() functions do.
+# Now, it'spractice, practice, practice and more practice, practice, practice...
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Just a little something else to gnaw on, while you practice.
 
@@ -1322,8 +1332,8 @@ x = 1 if george_boole else 0
 
 print(x)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Pack three separate list variables, along with their separate value groups with just one
-# equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
+# Pack three separate list variables, along with their separate value groups with just
+# one equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
 
 list_one,list_two,list_three = [1,2,3,4,5],['a','b','c','d','e'],['text 1','text 2','text 3','text 4','text 5']
 
@@ -1347,8 +1357,8 @@ list_one,list_two,list_three = (
 
 print(list_one,list_two,list_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Pack three separate tuple variables, along with their separate value groups with just one
-# equals = sign. This also works with lists [ ], sets { } and dictionaries { } alike.
+# Pack three separate tuple variables, along with their separate value groups with just
+# one equals = sign. This also works with lists [ ], sets { } and dictionaries { } alike.
 
 tuple_one,tuple_two,tuple_three = (
   (1,2,3,4,5),
@@ -1357,11 +1367,11 @@ tuple_one,tuple_two,tuple_three = (
 
 print(tuple_one,tuple_two,tuple_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Pack three separate set variables, along with their separate value groups with just one
-# equals = sign. This also works with tuples ( ), lists [ ] and dictionaries { } alike. Note:
-# sets are always in random order, and sets also get rid of duplicate values. However,
-# sets with integer values only, are always ordered and also gets rid of duplicate values
-# as well.
+# Pack three separate set variables, along with their separate value groups with just
+# one equals = sign. This also works with tuples ( ), lists [ ] and dictionaries { } alike.
+# Note: sets are always in random order, and sets also get rid of duplicate values.
+# However, sets with integer values only, are always ordered and also gets rid of
+# duplicate values as well.
 
 set_one,set_two,set_three = (
   {1,2,3,4,5,2,4},
@@ -1370,8 +1380,9 @@ set_one,set_two,set_three = (
 
 print(set_one,set_two,set_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Pack three separate dictionary variables, along with their separate key and value groups
-# with just one equals = sign. This also works with tuples ( ), lists [ ] and sets { } alike.
+# Pack three separate dictionary variables, along with their separate key and value
+# groups with just one equals = sign. This also works with tuples ( ), lists [ ] and sets
+# { } alike.
 
 dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
@@ -1447,8 +1458,8 @@ print(multi_2d_list_collection)  # ([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e'], 
 
 print(multi_2d_list_collection[1][0])  # a
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a multi 2d list and check it, and then call up two indexes to display an actual value
-# by itself.
+# Create a multi 2d list and check it, and then call up two indexes to display an actual
+# value by itself.
 
 list_one,list_two,list_three = (
   [1,2,3,4,5],
@@ -1470,9 +1481,10 @@ multi_2d_set_collection = (
 
 print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a multi 2d set collection and check it. Note: sets do not have indexes [ ] for them;
-# you have to cast a set into a list, via the list() function to display values by themselves.
-# Invoke the sort() function to sort random list values from the random set of values.
+# Create a multi 2d set collection and check it. Note: sets do not have indexes [ ] for
+# them; you have to cast a set into a list, via the list() function to display values by
+# themselves. Invoke the sort() function to sort random list values from the random
+# set of values.
 
 multi_2d_set_collection = (
   {1,2,3,4,5,2,4},
@@ -1515,10 +1527,9 @@ set_copy = my_set.copy()
 
 print(set_copy)  # {'text 5', 'text 2', 'text 1', 'text 3', 'text 4'}
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# You can do a lot with for loops. I practice Python everyday and I'm
-# always tripping onto things, just by trial and error alone. I wasn't
-# shown this at all. This is one of my own happy accidents. I got really
-# bored and did this for us all.
+# You can do a lot with for loops. I practice Python everyday and I'm always tripping
+# onto things, just by trial and error alone. I wasn't shown this at all. This is one of my
+# own happy accidents. I got really bored and did this for us all.
 
 names1 = ['Bob','Rob','dog','cat']
 names2 = ['John','Tom','bird','fish']
@@ -1558,10 +1569,10 @@ for i,x,y,z in names1,names2,names3:
     print(f'{sentence[0]} {i}{sentence[1]} {y} {sentence[2]}')  # new f' string format
     print(f'{sentence[0]} {x}{sentence[1]} {z} {sentence[2]}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base 8.
-# Type in ASCII codes and see what they look like. For example: print(bin(65)) is the ASCII
-# code value for the capital letter 'A' in binary base 2 as: '0b1000001'. Note: the '0b' is Python's
-# prefix, which simply tells Python to work with binary base 2 numbers.
+# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base
+# 8. Type in ASCII codes and see what they look like. For example: print(bin(65)) is the
+# ASCII code value for the capital letter 'A' in binary base 2 as: '0b1000001'. Note: the
+# '0b' is Python's prefix, which simply tells Python to work with binary base 2 numbers.
 
 # Convert any number into a binary base 2 number.
 
@@ -1589,10 +1600,10 @@ comp_nums = int(input('Please type any number to see its octal base 8 number val
 
 print(f'The number {comp_nums} = the octal base 8 number value: {oct(comp_nums)}.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base 8.
-# Type in ASCII codes and see what they look like. For example: print(f'{65:b}') is the ASCII
-# code value for the capital letter 'A' in binary base 2 as: '1000001'. Note: the 'b' is Python's
-# prefix, which simply tells Python to work with binary base 2 numbers.
+# Generate computer numbers in binary base 2, hexadecimal base 16 and octal base
+# 8. Type in ASCII codes and see what they look like. For example: print(f'{65:b}') is the
+# ASCII code value for the capital letter 'A' in binary base 2 as: '1000001'. Note: the 'b'
+# is Python's prefix, which simply tells Python to work with binary base 2 numbers.
 
 # Convert any number into a binary base 2 number.
 
@@ -1620,19 +1631,20 @@ comp_nums = int(input('Please type any number to see its octal base 8 number val
 
 print(f'The number {comp_nums} = the octal base 8 number value: {comp_nums:o}.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This is for advanced Python programmers, who want something a little bit saltier. Create
-# this Welcome To The Binary Beat In Motion Python program using a single print() function.
-# Use the backslash '\' to create line breaks within the print() function.
+# This is for advanced Python programmers, who want something a little bit saltier.
+# Create this Welcome To The Binary Beat In Motion Python program using a single
+# print() function. Use the backslash '\' to create line breaks within the print() function.
 
 # Welcome to Python Programming Boot Camp!
 
 # It's now time to forget all about the f' string format. Let's also forget all about creating
-# variables, assigned to text messages. Let's do it the old fashioned pioneering way, when
-# computer programming was young and looked a bit like this. However the old way of
-# programming was much more confusing looking, than what you can only see here.
-# Just imagine having to do computer programming without any formatting of strings at
-# all. Variables are always, always a must; they help make data much more flexible and
-# manipulative to the core. Let's have some 'Dirty Code' fun with one of my faves below:
+# variables, assigned to text messages. Let's do it the old fashioned pioneering way,
+# when computer programming was young and looked a bit like this. However the old
+# way of programming was much more confusing looking, than what you can only see
+#  here. Just imagine having to do computer programming without any formatting of
+# strings at all. Variables are always, always a must; they help make data much more
+# flexible and manipulative to the core. Let's have some 'Dirty Code' fun with one of
+# my faves below:
 
 # Note: after you save your file, you must double click this file to view it's cool coloured
 # text and layout.
@@ -1659,9 +1671,9 @@ while True:
           +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
           +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This is for advanced Python programmers, who want something a little bit saltier. Create
-# this Fibonary Bits In Action! Python program using a single print() function. Use the
-# backslash '\' to create line breaks within the print() function.
+# This is for advanced Python programmers, who want something a little bit saltier.
+# Create this Fibonary Bits In Action! Python program using a single print() function.
+# Use the backslash '\' to create line breaks within the print() function.
 
 # Welcome to Python Programming Boot Camp!
 
@@ -1709,9 +1721,10 @@ while True:
 
     delay(pause)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This is for advanced Python programmers, who want something a little bit saltier. Create
-# this Fibonacci Natural Number Sequence in Action... Python program using a single print()
-# function. Use the backslash '\' to create line breaks within the print() function.
+# This is for advanced Python programmers, who want something a little bit saltier.
+# Create this Fibonacci Natural Number Sequence in Action... Python program using
+# a single print() function. Use the backslash '\' to create line breaks within the print()
+# function.
 
 # Welcome to Python Programming Boot Camp!
 
@@ -1808,8 +1821,8 @@ while True:
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 #                ASCII: (American Standard Code for Information Interchange)
 
-# Below is the ascii code character chart. Each character has an ascii code value. Note: the
-# ascii code value for the spacebar, or blank space character key is 32
+# Below is the ascii code character chart. Each character has an ascii code value. Note:
+# the ascii code value for the spacebar, or blank space character key is 32
 
 # blank space = 32, ! = 33, " = 34, # = 35, $ = 36, % = 37, & = 38, ' = 39, ( = 40, ) = 41, * = 42
 # + = 43, , = 44, - = 45, . = 46, / = 47, 0 = 48, 1 = 49, 2 = 50, 3 = 51, 4 = 52, 5 = 53, 6 = 54, 7 = 55
@@ -1849,9 +1862,9 @@ print('ASCII code',ord('b'),'is the lowercase letter',chr(98))
 
 for i in range(32,127):print(chr(i),'=',i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This is for advanced Python programmers, who want something a little bit saltier. Create
-# this Fibonacci ASCII CODE NUMERIC VALUE TRANSLATOR Python program. Use the
-# backslash '\' to create line breaks within the print() function.
+# This is for advanced Python programmers, who want something a little bit saltier.
+# Create this Fibonacci ASCII CODE NUMERIC VALUE TRANSLATOR Python program.
+# Use the backslash '\' to create line breaks within the print() function.
 
 # Welcome to Python Programming Boot Camp!
 
@@ -1960,16 +1973,16 @@ def ascii_codes():
 
 ascii_codes()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# I created The Devil's Lucky Number Python program example out of sheer boredom. This
-# was a complete accident, when I was just playing with names of animals and names of
-# things. About the forth name of an animal was the fox, and when I saw the output on my
-# computer screen. I sort of jumped back in my seat. I tried the word 'dog'. I tried the word
-# 'cat', I then tried the word bird. After that, I was playing with names of things, and then I
-# tried the word 'fox' for another attempt at finding a number of some sort, and I found it.
-# It scares the heck right out of me actually. This is the only time, that one of my own
-# computer programming discoveries actually, really scares me. I'm not new to self taught
-# computer programming. Not by a longshot. But this discovery still scares me. Yet however,
-# computer science is sometimes a scary, mathematical reality in itself...
+# I created The Devil's Lucky Number Python program example out of sheer boredom.
+# This was a complete accident, when I was just playing with names of animals and names
+# of things. About the forth name of an animal was the fox, and when I saw the output
+# on my computer screen. I sort of jumped back in my seat. I tried the word 'dog'. I tried
+# the word 'cat', I then tried the word bird. After that, I was playing with names of things,
+# and then I tried the word 'fox' for another attempt at finding a number of some sort,
+# and I found it. It scares the heck right out of me actually. This is the only time, that one
+# of my own computer programming discoveries actually, really scares me. I'm not new
+# to self taught computer programming. Not by a longshot. But this discovery still scares
+# me. Yet however, computer science is sometimes a scary, mathematical reality in itself...
 
 # Invoke the ord() function to get the ascii code values to the lower case letters of the word 'fox'
 
@@ -2004,9 +2017,9 @@ print(f"And The Devil's Lucky Number is: {fox}")
 #  '%U' Weeks per year prefix
 #  '%j' Days per year prefix
 
-# Let's create a simple Python clock by invoking the Python clock function prefixes. First,
-# however, we also need to import two modules; 'time' and 'datetime'. Type and execute/run
-# the program example below and see what happens.
+# Let's create a simple Python clock by invoking the Python clock function prefixes.
+# First, however, we also need to import two modules; 'time' and 'datetime'. Type
+# and execute/run the program example below and see what happens.
 
 import time,datetime
 
@@ -2016,9 +2029,9 @@ print(datetime.datetime.now().strftime('%A %B %d,%Y'))
 print(datetime.datetime.now().strftime('Week %U'))
 print(datetime.datetime.now().strftime('Day %j'))
 
-# Remember you can reduce balky code via, using string variables. Let's use 'timer' as
-# the variable and use 'datetime.datetime.now()' as the value. Type and execute/run the
-# program example below and see what happens.
+# Remember you can reduce balky code via, using string variables. Let's use 'timer'
+# as the variable and use 'datetime.datetime.now()' as the value. Type and execute/run
+# the program example below and see what happens.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 import time,datetime
 
@@ -2030,9 +2043,9 @@ print(timer.strftime('%A %B %d,%Y'))
 print(timer.strftime('Week %U'))
 print(timer.strftime('Day %j'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Now, let's create a tuple variable called 'show_time' so we can reduce even more balky
-# code, and also gain greater manipulative programming skills at the same time. Type and
-# execute/run the program example below and see what happens.
+# Now, let's create a tuple variable called 'show_time' so we can reduce even more
+# balky code, and also gain greater manipulative programming skills at the same time.
+# Type and execute/run the program example below and see what happens.
 
 import time,datetime
 
@@ -2052,16 +2065,16 @@ print(timer.strftime(show_time[2]))
 print(timer.strftime(show_time[3]))
 print(timer.strftime(show_time[4]))
 
-# Now change and rearrange the tuple number values [0] through [4] in# the program example
-# above and re-execute/run the program and see what happens.
+# Now change and rearrange the tuple number values [0] through [4] in# the program
+# example above and re-execute/run the program and see what happens.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Now, let's make our Python clock come to life. Let's also keep the code less balky and
-# much more program manipulative at the same time. To make the Python clock come to
-# life, we are simply going to use a while loop to constantly refresh the screen output. A
-# 'time.sleep()' function will also be implemented to create a one-second sleep delay in
-# the screen output. Let's also implement the 'os.system()' function to clear the screen
-# output right after every one-second 'time.sleep' delay. Type and execute/run the program
-# example below and see what happens.
+# Now, let's make our Python clock come to life. Let's also keep the code less balky
+# and much more program manipulative at the same time. To make the Python clock
+# come to life, we are simply going to use a while loop to constantly refresh the screen
+# output. A 'time.sleep()' function will also be implemented to create a one-second
+# sleep delay in the screen output. Let's also implement the 'os.system()' function to
+# clear the screen output right after every one-second 'time.sleep' delay. Type and
+# execute/run the program example below and see what happens.
 
 import os,time,datetime
 
@@ -2095,16 +2108,17 @@ while True:
     time.sleep(1)
     os.system('cls')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Use Python to open .txt files, such as notepad files. These two program examples do the
-# exact same thing. However, with the first program example, you must tell Python to close
-# the .txt file after reading it. In the second program example. Python will automatically close
-# the .txt file for you. You can create a notepad file, and then save it in the same folder as
-# your Python program with these program examples below to see how they work. This is
-# my notepad file's text message: Computer Science is Soo Much Fun!!. I named the notepad
-# file as Computer Science.txt; notepad will create the .txt extension for you. All you have to
-# do is name the notepad file whatever name you wish, and not worry about the .txt extension.
-# However, you will need to invoke the .txt extension part of the notepad file name, when
-# using Python to open and read notepad files.
+# Use Python to open .txt files, such as notepad files. These two program examples
+# do the exact same thing. However, with the first program example, you must tell
+# Python to close the .txt file after reading it. In the second program example. Python
+# will automatically close the .txt file for you. You can create a notepad file, and then
+# save it in the same folder as your Python program with these program examples
+# below to see how they work. This is my notepad file's text message: Computer
+# Science is Soo Much Fun!!. I named the notepad file as Computer Science.txt;
+# notepad will create the .txt extension for you. All you have to do is name the notepad
+# file whatever name you wish, and not worry about the .txt extension. However, you
+# will need to invoke the .txt extension part of the notepad file name, when using
+# Python to open and read notepad files.
 
 notepad_file = open('Computer Science.txt','r')  # .txt extension, 'r' means read
 
@@ -2115,6 +2129,23 @@ notepad_file.close()
 # or this:
 
 with open('Computer Science.txt') as notepad_file:
+          print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+
+# You can assign variables to create clean, cut code.
+
+text = 'Computer Science.txt'
+
+notepad_file = open(text,'r')  # .txt extension, 'r' means read
+
+print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+
+notepad_file.close()
+
+# or this:
+
+text = 'Computer Science.txt'
+
+with open(text) as notepad_file:
           print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to write to .txt files, such as notepad files.
@@ -2129,6 +2160,25 @@ notepad_file.close()
 
 with open('Computer Science.txt','w') as notepad_file:
           print(notepad_file.write('Welcome to Python World'))
+
+# You can assign variables to create clean, cut code.
+
+text1 = 'Computer Science.txt','w'
+text2 = 'Welcome to Python World'
+
+notepad_file = open(text1)  # .txt extension, 'w' means write
+
+print(notepad_file.write(text2))
+
+notepad_file.close()
+
+# or this:
+
+text1 = 'Computer Science.txt','w'
+text2 = 'Welcome to Python World'
+
+with open(text1,'w') as notepad_file:
+          print(notepad_file.write(text2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to append/add text to .txt files, such as notepad files.
 
@@ -2142,6 +2192,50 @@ notepad_file.close()
 
 with open('Computer Science.txt','a') as notepad_file:
           print(notepad_file.write('\nPython is Cool!!'))
+
+# You can assign variables to create clean, cut code.
+
+text1 = 'Computer Science.txt'
+text2 = '\nPython is Cool!!'
+
+notepad_file = open(text1,'a')  # .txt extension, 'a' means append
+
+print(notepad_file.write(text2))
+
+notepad_file.close()
+
+# or this:
+
+text1 = 'Computer Science.txt'
+text2 = '\nPython is Cool!!'
+
+with open(text1,'a') as notepad_file:
+          print(notepad_file.write(text2))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use Python to copy .txt files, such as notepad files. You must import the 'shutil' module.
+
+import shutil
+
+shutil.copyfile('Computer Science.txt','King Python.txt')  # .txt extension
+
+# You can assign variables to create clean, cut code.
+
+text1 = 'Computer Science.txt'
+text2 = 'King Python.txt'
+
+shutil.copyfile(text1,text2)  # .txt extension
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Delete/remove a .txt file, via the remove() function. You must import the 'os' module.
+
+import os
+
+os.remove('Computer Science.txt')  # .txt extension
+
+# You can assign variables to create clean, cut code.
+
+text = 'Computer Science.txt'
+
+os.remove(text)  # .txt extension
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
