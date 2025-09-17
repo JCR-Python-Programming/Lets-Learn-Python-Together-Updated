@@ -1624,12 +1624,14 @@ print(f'The number {comp_nums} = the octal base 8 number value: {comp_nums:o}.')
 # this Welcome To The Binary Beat In Motion Python program using a single print() function.
 # Use the backslash '\' to create line breaks within the print() function.
 
+# Welcome to Python Programming Boot Camp!
+
 # It's now time to forget all about the f' string format. Let's also forget all about creating
 # variables, assigned to text messages. Let's do it the old fashioned pioneering way, when
 # computer programming was young and looked a bit like this. However the old way of
 # programming was much more confusing looking, than what you can only see here.
 # Just imagine having to do computer programming without any formatting of strings at
-# all. Variables are always, always a must; they help make data much more flexible, and
+# all. Variables are always, always a must; they help make data much more flexible and
 # manipulative to the core. Let's have some 'Dirty Code' fun with one of my faves below:
 
 # Note: after you save your file, you must double click this file to view it's cool coloured
@@ -1660,6 +1662,8 @@ while True:
 # This is for advanced Python programmers, who want something a little bit saltier. Create
 # this Fibonary Bits In Action! Python program using a single print() function. Use the
 # backslash '\' to create line breaks within the print() function.
+
+# Welcome to Python Programming Boot Camp!
 
 # Type and execute/run this Python program example below and see what happens.
 
@@ -1708,6 +1712,8 @@ while True:
 # This is for advanced Python programmers, who want something a little bit saltier. Create
 # this Fibonacci Natural Number Sequence in Action... Python program using a single print()
 # function. Use the backslash '\' to create line breaks within the print() function.
+
+# Welcome to Python Programming Boot Camp!
 
 # Type and execute/run this Python program example below and see what happens.
 
@@ -1800,7 +1806,7 @@ while True:
     except MemoryError:
         print(words[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-#                ascii: (American Standard Code for Information Interchange)
+#                ASCII: (American Standard Code for Information Interchange)
 
 # Below is the ascii code character chart. Each character has an ascii code value. Note: the
 # ascii code value for the spacebar, or blank space character key is 32
@@ -1838,13 +1844,16 @@ print('ASCII code',ord('B'),'is the uppercase letter',chr(66))
 print('ASCII code',ord('b'),'is the lowercase letter',chr(98))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a for loop that prints out the ascii code character chart, via invoking the chr(n)
-# character function.
+# character function. Tip: if you use small code within a for loop, you can place it right
+# on the same line as the for loop, as shown.
 
 for i in range(32,127):print(chr(i),'=',i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is for advanced Python programmers, who want something a little bit saltier. Create
 # this Fibonacci ASCII CODE NUMERIC VALUE TRANSLATOR Python program. Use the
 # backslash '\' to create line breaks within the print() function.
+
+# Welcome to Python Programming Boot Camp!
 
 # Type and execute/run this Python program example below and see what happens.
 
@@ -1964,7 +1973,11 @@ ascii_codes()
 
 # Invoke the ord() function to get the ascii code values to the lower case letters of the word 'fox'
 
-fox = (ord('f')+ord('o')+ord('x'))*2
+animal = (chr(102)+chr(111)+chr(120))  # fox
+
+fox = (ord('f')+ord('o')+ord('x'))*2  # 102+111+120 = 333, 333*2 = The Devil's Lucky Number
+
+print(animal)
 
 print("And The Devil's Lucky Number is:",fox)
 
@@ -2081,6 +2094,54 @@ while True:
 
     time.sleep(1)
     os.system('cls')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use Python to open .txt files, such as notepad files. These two program examples do the
+# exact same thing. However, with the first program example, you must tell Python to close
+# the .txt file after reading it. In the second program example. Python will automatically close
+# the .txt file for you. You can create a notepad file, and then save it in the same folder as
+# your Python program with these program examples below to see how they work. This is
+# my notepad file's text message: Computer Science is Soo Much Fun!!. I named the notepad
+# file as Computer Science.txt; notepad will create the .txt extension for you. All you have to
+# do is name the notepad file whatever name you wish, and not worry about the .txt extension.
+# However, you will need to invoke the .txt extension part of the notepad file name, when
+# using Python to open and read notepad files.
+
+notepad_file = open('Computer Science.txt','r')  # .txt extension, 'r' means read
+
+print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+
+notepad_file.close()
+
+# or this:
+
+with open('Computer Science.txt') as notepad_file:
+          print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use Python to write to .txt files, such as notepad files.
+
+notepad_file = open('Computer Science.txt','w')  # .txt extension, 'w' means write
+
+print(notepad_file.write('Welcome to Python World'))
+
+notepad_file.close()
+
+# or this:
+
+with open('Computer Science.txt','w') as notepad_file:
+          print(notepad_file.write('Welcome to Python World'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use Python to append/add text to .txt files, such as notepad files.
+
+notepad_file = open('Computer Science.txt','a')  # .txt extension, 'a' means append
+
+print(notepad_file.write('\nPython is Cool!!'))
+
+notepad_file.close()
+
+# or this:
+
+with open('Computer Science.txt','a') as notepad_file:
+          print(notepad_file.write('\nPython is Cool!!'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
