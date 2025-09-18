@@ -14,6 +14,7 @@
 
 # Because a Great Programmer always starts with a Great Programmer's Manual... 😁
 '''---------------------------------------------------------------------------------------------------------------------------'''
+
 # Easy define function program example:
 
 def function():
@@ -1212,9 +1213,9 @@ for index1,index2,index3 in zip(name,pet,computer):
 
 # Let's try the enumerate() function with a 2d-list.
 
-my_2d_list = [
+my_2d_list = (
     ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook']]
+    ['Desktop','Laptop','Cellphone','Notebook'])
 
 for index,name in enumerate(my_2d_list):
     print(index)
@@ -1230,9 +1231,9 @@ for index,name in enumerate(my_2d_list,start=1):
 
 # Let's try the zip() function with a 2d-list.
 
-my_2d_list = [
+my_2d_list = (
     ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook']]
+    ['Desktop','Laptop','Cellphone','Notebook'])
 
 for index in zip(my_2d_list):
     print(index[0][0])
@@ -1449,10 +1450,10 @@ print(multi_2d_tuple[1][0])  # a
 # Create a multi 2d list collection and check it, and then call up two indexes to display
 # an actual value by itself.
 
-multi_2d_list_collection = (
+multi_2d_list_collection = [
   [1,2,3,4,5],
   ['a','b','c','d','e'],
-  ['text 1','text 2','text 3','text 4','text 5'])
+  ['text 1','text 2','text 3','text 4','text 5']]
 
 print(multi_2d_list_collection)  # ([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e'], ['text 1', 'text 2', 'text 3', 'text 4', 'text 5'])
 
@@ -1461,10 +1462,10 @@ print(multi_2d_list_collection[1][0])  # a
 # Create a multi 2d list and check it, and then call up two indexes to display an actual
 # value by itself.
 
-list_one,list_two,list_three = (
+list_one,list_two,list_three = [
   [1,2,3,4,5],
   ['a','b','c','d','e'],
-  ['text 1','text 2','text 3','text 4','text 5'])
+  ['text 1','text 2','text 3','text 4','text 5']]
 
 multi_2d_list = list_one,list_two,list_three
 
@@ -1474,10 +1475,10 @@ print(multi_2d_list[1][0])  # a
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a multi 2d set collection and check it.
 
-multi_2d_set_collection = (
+multi_2d_set_collection = {
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
 
 print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1486,10 +1487,10 @@ print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {
 # themselves. Invoke the sort() function to sort random list values from the random
 # set of values.
 
-multi_2d_set_collection = (
+multi_2d_set_collection = {
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
 
 print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
 
