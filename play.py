@@ -1063,10 +1063,10 @@ print(list_values1)
 # To reduce lines of code, create packed variables and their
 # packed values.
 
-x,y,z = (
+x,y,z = {
     {1,2,3,4,9,6,7,8,5,9,10},
     {11,12,13,14,15,16,17},
-    {18,19,20,21,22,23,24})
+    {18,19,20,21,22,23,24}}
 
 a = slice(24) # slice the set with the slice() function
 
@@ -1213,9 +1213,9 @@ for index1,index2,index3 in zip(name,pet,computer):
 
 # Let's try the enumerate() function with a 2d-list.
 
-my_2d_list = (
+my_2d_list = [
     ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook'])
+    ['Desktop','Laptop','Cellphone','Notebook']]
 
 for index,name in enumerate(my_2d_list):
     print(index)
@@ -1231,9 +1231,9 @@ for index,name in enumerate(my_2d_list,start=1):
 
 # Let's try the zip() function with a 2d-list.
 
-my_2d_list = (
+my_2d_list = [
     ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook'])
+    ['Desktop','Laptop','Cellphone','Notebook']]
 
 for index in zip(my_2d_list):
     print(index[0][0])
@@ -1344,17 +1344,17 @@ print(list_three)
 
 # or this:
 
-list_one,list_two,list_three = (
-  [1,2,3,4,5],['a','b','c','d','e'],['text 1','text 2','text 3','text 4','text 5'])
+list_one,list_two,list_three = [
+  [1,2,3,4,5],['a','b','c','d','e'],['text 1','text 2','text 3','text 4','text 5']]
 
 print(list_one,list_two,list_three)
 
 # or this:
 
-list_one,list_two,list_three = (
+list_one,list_two,list_three = [
   [1,2,3,4,5],
   ['a','b','c','d','e'],
-  ['text 1','text 2','text 3','text 4','text 5'])
+  ['text 1','text 2','text 3','text 4','text 5']]
 
 print(list_one,list_two,list_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1374,10 +1374,10 @@ print(tuple_one,tuple_two,tuple_three)
 # However, sets with integer values only, are always ordered and also gets rid of
 # duplicate values as well.
 
-set_one,set_two,set_three = (
+set_one,set_two,set_three = {
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'})
+  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
 
 print(set_one,set_two,set_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1385,20 +1385,20 @@ print(set_one,set_two,set_three)
 # groups with just one equals = sign. This also works with tuples ( ), lists [ ] and sets
 # { } alike.
 
-dictionary_one,dictionary_two,dictionary_three = (
+dictionary_one,dictionary_two,dictionary_three = {
   {1:1,2:2,3:3,4:4,5:5},
   {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'}}
 
 print(dictionary_one,dictionary_two,dictionary_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Display dictionary keys and dictionary values, via the keys() function and the values()
 # function.
 
-dictionary_one,dictionary_two,dictionary_three = (
+dictionary_one,dictionary_two,dictionary_three = {
   {1:1,2:2,3:3,4:4,5:5},
   {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'}}
 
 print(dictionary_one.keys())
 print(dictionary_two.keys())
@@ -1499,6 +1499,137 @@ cast_my_set_into_list = list(multi_2d_set_collection[2])
 cast_my_set_into_list.sort()  # invoke the sort() function to sort the list
 
 print(cast_my_set_into_list[0])  # text 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a default tuple and tuple index[n][n] mix
+
+test = 1,2,3,4,5,('a','b','c','d','e',('one','two','three','four','five'))
+
+print(test[0])  # 1
+
+print(test[5][2])  # c
+
+print(test[5][5][2])  # three
+
+# Create a tuple index[n][n] mix
+
+test = (1,2,3,4,5,('a','b','c','d','e',('one','two','three','four','five')))
+
+print(test[0])  # 1
+
+print(test[5][2])  # c
+
+print(test[5][5][2])  # three
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a default tuple and list index[n][n] mix
+
+test = 1,2,3,4,5,['a','b','c','d','e',['one','two','three','four','five']]
+
+print(test[0])  # 1
+
+print(test[5][2])  # c
+
+print(test[5][5][2])  # three
+
+# Create a list index[n][n] mix
+
+test = [1,2,3,4,5,['a','b','c','d','e',['one','two','three','four','five']]]
+
+print(test[0])  # 1
+
+print(test[5][2])  # c
+
+print(test[5][5][2])  # three
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Sort a list without sorting the actual list, via invoking the sorted() function
+
+my_list = ['a','c','b','e','d']
+
+my_list_sorted = sorted(my_list)
+
+print(my_list_sorted)  # ['a', 'b', 'c', 'd', 'e']
+
+print(my_list)  # ['a', 'c', 'b', 'e', 'd']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Sort an actual list, via invoking the sort() function
+
+my_list = ['a','c','b','e','d']
+
+my_list.sort()
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Invoke the insert() function to add new values to a list. Type an index[n] number, along
+# with the new value called 'apple'.
+
+my_list = ['a','b','c','d','e']
+
+my_list.insert(1,'apple')
+
+print(my_list)  # ['a', 'apple', 'b', 'c', 'd', 'e']
+
+my_list.insert(3,'banana')
+
+print(my_list)  # ['a', 'b', 'c', 'banana', 'd', 'e']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Change values in a list, via inserting an index[n] number, along with the new list value:
+# 'apple'.
+
+my_list = ['a','b','c','d','e']
+
+my_list[0] = 'apple'
+
+print(my_list)  # ['apple', 'c', 'b', 'e', 'd']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Remove values from a list, via invoking the pop(n) function.
+
+my_list = ['a','b','c','d','e']
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+
+my_list.pop(1)
+
+print(my_list)  # ['a', 'c', 'd', 'e']
+
+# Return popped values from a list, via invoking the pop(n) function.
+
+my_list = ['a','b','c','d','e']
+
+popped_value = my_list.pop(1)
+
+print(popped_value)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Remove values from a list, via invoking the remove() function.
+
+my_list = ['a','b','c','d','e']
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+
+my_list.remove('c',)
+
+print(my_list)  # ['a', 'b', 'd', 'e']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Clear all values from a list, via invoking the clear() function.
+
+my_list = ['a','b','c','d','e']
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+
+my_list.clear()
+
+print(my_list)  # []
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Delete an entire list, along with its name and its values alike.
+
+my_list = ['a','b','c','d','e']
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+
+del my_list
+
+try:
+  print(my_list)
+except NameError:
+  print('my_list[ ] no longer exists:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Copy a list with the copy() function.
 
