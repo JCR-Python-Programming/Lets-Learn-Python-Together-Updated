@@ -1063,10 +1063,10 @@ print(list_values1)
 # To reduce lines of code, create packed variables and their
 # packed values.
 
-x,y,z = {
+x,y,z = (
     {1,2,3,4,9,6,7,8,5,9,10},
     {11,12,13,14,15,16,17},
-    {18,19,20,21,22,23,24}}
+    {18,19,20,21,22,23,24})
 
 a = slice(24) # slice the set with the slice() function
 
@@ -1374,10 +1374,10 @@ print(tuple_one,tuple_two,tuple_three)
 # However, sets with integer values only, are always ordered and also gets rid of
 # duplicate values as well.
 
-set_one,set_two,set_three = {
+set_one,set_two,set_three = (
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
 
 print(set_one,set_two,set_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1385,20 +1385,20 @@ print(set_one,set_two,set_three)
 # groups with just one equals = sign. This also works with tuples ( ), lists [ ] and sets
 # { } alike.
 
-dictionary_one,dictionary_two,dictionary_three = {
+dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
   {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'}}
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
 
 print(dictionary_one,dictionary_two,dictionary_three)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Display dictionary keys and dictionary values, via the keys() function and the values()
 # function.
 
-dictionary_one,dictionary_two,dictionary_three = {
+dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
   {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'}}
+  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
 
 print(dictionary_one.keys())
 print(dictionary_two.keys())
@@ -1475,10 +1475,10 @@ print(multi_2d_list[1][0])  # a
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a multi 2d set collection and check it.
 
-multi_2d_set_collection = {
+multi_2d_set_collection = (
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
 
 print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1487,10 +1487,10 @@ print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {
 # themselves. Invoke the sort() function to sort random list values from the random
 # set of values.
 
-multi_2d_set_collection = {
+multi_2d_set_collection = (
   {1,2,3,4,5,2,4},
   {'a','b','c','d','d','e'},
-  {'text 1','text 2','text 3','text 4','text 5','text 4'}}
+  {'text 1','text 2','text 3','text 4','text 5','text 4'})
 
 print(multi_2d_set_collection)  # ({1, 2, 3, 4, 5}, {'d', 'b', 'e', 'a', 'c'}, {'text 2', 'text 4', 'text 3', 'text 5', 'text 1'})
 
@@ -2630,7 +2630,37 @@ print(int.__mul__(8,2))  # 16
 
 print(int.__divmod__(8,2))  # (4, 0)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_message():
+        return 'Returned Message 1','Returned Message 2','Returned Message 3'
 
+message = return_message()[1]
+
+print(message)
+
+# or:
+
+def return_message(message1,message2,message3):
+        return message1,message2,message3
+
+message = return_message('Returned Message 1','Returned Message 2','Returned Message 3')[1]
+
+print(message)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+def return_answer():
+        return 6+2+3
+
+answer = return_answer()
+
+print(answer)
+
+# or:
+
+def return_answer(num1,num2,num3):
+        return num1+num2+num3
+
+answer = return_answer(6,2,3)
+
+print(answer)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
