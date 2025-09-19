@@ -2574,10 +2574,63 @@ print(text)
 
 print(text[1]) # index[1] is the word: is
 
-# Let's use a for loop to call up all the words to the poem, without showing ugly
-# commas ' , ' and index[ ] brackets.
+# Let's use a for loop to call up all the words to the poem, without showing ugly commas
+# ' , ' and index[ ] brackets.
 
 for i in text:print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Python scoping with strings and integer values.
+
+print(type('string'))
+
+# <class 'str'>
+
+print(type(2))
+
+# <class 'int'>
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# View string functions and string methods. These dir(n) functions reveal a list of dunder
+# methods. Some of these dunder methods are shown in the following example. Note:
+# dunder methods are mainly used as class constructors, that tells the class how to behave,
+# with the given data attributes, such as text strings and integer numbers.
+
+print(dir('string'))
+
+# View integer fuctions and integer methods.
+
+print(dir(2))
+
+# Get the id from a string.
+
+print(id('string'))
+
+# Get the id from an integer.
+
+print(id(2))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# These two 'print' statements below use the dunder method 'add', which is the same as
+# the 'print' statements 'print(2+3)' and 'print('a'+'b')'. The 'int' function adds only integer
+# numbers together, whereas the str' function concatenates/joins character strings together.
+
+print(int.__add__(2,3))
+
+# Screen output:	5
+
+print(str.__add__('a','b'))
+
+# Screen output:	ab
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use dunder methods to do math calculations within print() functions.
+
+print(int.__add__(8,2))  # 10
+
+print(int.__sub__(8,2))  # 6
+
+print(int.__mul__(8,2))  # 16
+
+print(int.__divmod__(8,2))  # (4, 0)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
