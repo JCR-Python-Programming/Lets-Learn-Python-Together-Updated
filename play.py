@@ -660,7 +660,7 @@ print('-'*30)  # ------------------------------
 
 print('text '*10)  # text text text text text text text text text text
 
-# or:
+# or this:
 
 print(' '*20+'text '*10)  #                    text text text text text text text text text text
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1026,6 +1026,14 @@ list_values1.extend(list_values2)
 
 print(list_values1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Append/add values to a list, via invoking the append() function.
+
+list_values = [1,2,3,4,5,6,7,8,9,10]
+
+list_values.append(11)
+
+print(list_values)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # reverse two lists, and then join two lists together with the extend() function.
 
 list_values1 = [1,2,3,4,5,6,7,8,9,10]
@@ -1052,6 +1060,22 @@ list_values2.reverse()
 list_values1.extend(list_values2)
 
 print(list_values1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Replace string letters, numbers and text strings, via the replace() function.
+
+print('I love my dog so very much!'.replace('dog','cat'))
+
+# or this:
+
+text_string = 'I love my dog so very much!'
+
+print(text_string.replace('dog','cat'))
+
+# or this:
+
+text_string = 'I love my dog so very much!'.replace('dog','cat')
+
+print(text_string)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create three different integer sets that will combine/unionize all three sets into one
 # single set. Convert the single set into a list, using the list() function. Next, view the
@@ -1520,7 +1544,7 @@ print(test[5][2])  # c
 
 print(test[5][5][2])  # three
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a default tuple and list index[n][n] mix
+# Create a default tuple and list index[n][n] mix.
 
 test = 1,2,3,4,5,['a','b','c','d','e',['one','two','three','four','five']]
 
@@ -1540,7 +1564,7 @@ print(test[5][2])  # c
 
 print(test[5][5][2])  # three
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Sort a list without sorting the actual list, via invoking the sorted() function
+# Sort a list without sorting the actual list, via invoking the sorted() function.
 
 my_list = ['a','c','b','e','d']
 
@@ -1550,13 +1574,46 @@ print(my_list_sorted)  # ['a', 'b', 'c', 'd', 'e']
 
 print(my_list)  # ['a', 'c', 'b', 'e', 'd']
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Sort an actual list, via invoking the sort() function
+# Sort an actual list, via invoking the sort() function.
 
 my_list = ['a','c','b','e','d']
 
 my_list.sort()
 
 print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Sort and then reverse an actual list, via invoking the sort() function and the reverse()
+# function.
+
+my_list = ['a','c','b','e','d']
+
+my_list.sort(reverse = True)
+
+print(my_list)  # ['e', 'd', 'c', 'b', 'a']
+
+# or this:
+
+my_list.sort(reverse = False)
+
+print(my_list)  # ['a', 'b', 'c', 'd', 'e']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Reverse a list, without reversing the actual list, via invoking the reversed() function.
+
+my_list = ['a', 'b', 'c', 'd', 'e']
+
+my_list_reversed = reversed(my_list)
+
+for i in my_list_reversed:print(i)
+
+# or this:
+
+my_list = ['a', 'b', 'c', 'd', 'e']
+
+my_list_reversed = reversed(my_list)
+
+my_list_comprehension = [value for value in my_list_reversed]
+
+print(my_list_comprehension)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Invoke the insert() function to add new values to a list. Type an index[n] number, along
 # with the new value called 'apple'.
@@ -2371,8 +2428,8 @@ os.remove(text)  # .txt extension
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Walrus Operator Python program example.
 
-# Use the := Walrus Operator to create the following Python prgram examples, using tuples(),
-# lists[] and dictionaries{}.
+# Use the := Walrus Operator to create the following Python prgram examples, using
+# tuples(), lists[] and dictionaries{}.
 
 if my_tuple := (
     'Value 0','Value 1','Value 2',
@@ -2396,13 +2453,13 @@ through after 'Value {value}'."))
 
 # Look what you can do with Python's print() function.
 
-# Use three single ''' quotes to make string concatenation much easier and much more text
-# oriented.
+# Use three single ''' quotes to make string concatenation much easier and much more
+# text oriented.
 
 print('''That's 'GREAT' to "TRIPPLE QUOTES" ''')
 
-# Use three double " quotes to make string concatenation much easier
-# and much more text oriented.
+# Use three double " quote marks to make string concatenation much easier and much
+# more text oriented.
 
 print("""That's 'GREAT' to "TRIPPLE QUOTES" """)
 
@@ -2591,8 +2648,8 @@ print(type(2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # View string functions and string methods. These dir(n) functions reveal a list of dunder
 # methods. Some of these dunder methods are shown in the following example. Note:
-# dunder methods are mainly used as class constructors, that tells the class how to behave,
-# with the given data attributes, such as text strings and integer numbers.
+# dunder methods are mainly used as class constructors, that tells the class how to
+# behave, with the given data attributes, such as text strings and integer numbers.
 
 print(dir('string'))
 
@@ -2608,9 +2665,10 @@ print(id('string'))
 
 print(id(2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# These two 'print' statements below use the dunder method 'add', which is the same as
-# the 'print' statements 'print(2+3)' and 'print('a'+'b')'. The 'int' function adds only integer
-# numbers together, whereas the str' function concatenates/joins character strings together.
+# These two 'print' statements below use the dunder method 'add', which is the same
+# as the 'print' statements 'print(2+3)' and 'print('a'+'b')'. The 'int' function adds only
+# integer numbers together, whereas the str' function concatenates/joins character
+# strings together.
 
 print(int.__add__(2,3))
 
@@ -2630,37 +2688,106 @@ print(int.__mul__(8,2))  # 16
 
 print(int.__divmod__(8,2))  # (4, 0)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's do a quick recap on define() functions, so we can learn what classes are and
+# how define() functions become instances, within a class, called a class object. We
+# will use these programming examples below so can learn what classes are all about.
+
 def return_message():
         return 'Returned Message 1','Returned Message 2','Returned Message 3'
 
 message = return_message()[1]
 
-print(message)
+print(message)  # Returned Message 2
 
-# or:
+# or this:
+
+def return_message():
+        return 'Returned Message 1','Returned Message 2','Returned Message 3'
+
+message = return_message()
+
+print(message[1])  # Returned Message 2
+
+# or this:
 
 def return_message(message1,message2,message3):
         return message1,message2,message3
 
 message = return_message('Returned Message 1','Returned Message 2','Returned Message 3')[1]
 
-print(message)
+print(message)  # Returned Message 2
+
+# or this:
+
+def return_message(message1,message2,message3):
+        return message1,message2,message3
+
+message = return_message('Returned Message 1','Returned Message 2','Returned Message 3')
+
+print(message[1])  # Returned Message 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_answer():
         return 6+2+3
 
 answer = return_answer()
 
-print(answer)
+print(answer)  # 11
 
-# or:
+# or this:
 
 def return_answer(num1,num2,num3):
         return num1+num2+num3
 
 answer = return_answer(6,2,3)
 
-print(answer)
+print(answer)  # 11
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Classes are objects and define() functions are instances of class objects.
+
+class Message:
+
+  def return_message():
+    return 'Returned Message 1','Returned Message 2','Returned Message 3'
+
+print(Message.return_message()[0])  # Returned Message 1
+
+print(Message.return_message()[1])  # Returned Message 2
+
+print(Message.return_message()[2])  # Returned Message 3
+
+# or this:
+
+class Message:
+
+  def return_message():
+    return 'Returned Message 1','Returned Message 2','Returned Message 3'
+
+message1 = Message.return_message()[0]   # Returned Message 1
+message2 = Message.return_message()[1]   # Returned Message 2
+message3 = Message.return_message()[2]   # Returned Message 3
+
+print(message2)   # Returned Message 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Classes are objects and define() functions are instances of class objects.
+
+class Math:
+
+  def return_answer():
+    return 6+2+3
+
+print(Math.return_answer())  # 11
+
+# or this:
+
+class Math:
+
+  def return_answer(num1,num2,num3):
+    return num1+num2+num3
+
+answer = Math.return_answer(6,2,3)
+
+print(answer)  # 11
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
