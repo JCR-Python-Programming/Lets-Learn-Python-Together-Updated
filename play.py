@@ -2689,7 +2689,7 @@ print(int.__mul__(8,2))  # 16
 print(int.__divmod__(8,2))  # (4, 0)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's do a quick recap on define() functions, so we can learn what classes are and
-# how define() functions become instances, within a class, called a class object. We
+# how define() functions become instances, within a class, called class objects. We
 # will use these programming examples below so can learn what classes are all about.
 
 def return_message():
@@ -2742,7 +2742,15 @@ answer = return_answer(6,2,3)
 
 print(answer)  # 11
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Classes are objects and define() functions are instances of class objects.
+# Classes are objects and define() functions are instances of class objects. Note:
+# classes do not need return functions to work. However, they do need define functions
+# to work properly, nonetheless. These class examples below show the use of return
+# define() function values, so the define() function can do more instances, instead of
+# just one. This return function is also a Message class object by itself. With the use
+# of return define() functions, we can return values directly to print() functions outside
+# the define() function block, without calling the actual define() function to execute/run
+# any Python code inside it. return define functions are great for returning values
+# through class objects.
 
 class Message:
 
@@ -2787,6 +2795,230 @@ class Math:
 answer = Math.return_answer(6,2,3)
 
 print(answer)  # 11
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# These two class object examples show how class objects do not need return define()
+# functions to work properly. However, class do need define() functions to work properly,
+# nonetheless, as illustrated here:
+
+class Message:
+
+  def message():
+    print('This is a text string value inside this message define() function block.')
+
+text = Message.message
+
+text()  # This is a text string value inside this message define() function block.
+
+class Math:
+
+  def answer():
+    print(6+2+3)
+
+numbers = Math.answer
+
+numbers()  # This is a text string value inside this message define() function block.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's now create really cool classes and class objects to learn how they truly work.
+
+# These define() functions are instances within this Animals class. This class below is
+# what Object Oriented Programming in Python is truly all about.
+
+class Animals:
+
+  def dog():
+    print('This is a German Shepherd.')
+
+  def cat():
+    print('This is a Taby')
+
+  def bird():
+    print('This is Macaw')
+
+  def fish():
+      print('This is a Pleco')
+
+Animals.dog()  # This is a German Shepherd.
+Animals.cat()  # This is a Taby
+Animals.bird()  # This is Macaw
+Animals.fish()  # This is a Pleco
+
+# Let's create a Math class act that has math calculation instances within it. Note:
+# invoke the int() function to create integer numbers only. You can also try the
+# float() function to create floating-point numbers.
+
+class Math:
+
+  def addition():
+    print(int(6+2+3))
+
+  def subtraction():
+    print(int(6-2-3))
+
+  def multiplication():
+    print(int(6*2*3))
+
+  def division():
+      print(int(6/2/3))
+
+Math.addition()  # 11
+Math.subtraction()  # 1
+Math.multiplication()  # 36
+Math.division()  # 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Animals:
+
+  def dog():
+    return 'This is a German Shepherd.'
+
+  def cat():
+    return 'This is a Taby'
+
+  def bird():
+    return 'This is Macaw'
+
+  def fish():
+    return 'This is a Pleco'
+
+print(Animals.dog())  # This is a German Shepherd.
+print(Animals.cat())  # This is a Taby
+print(Animals.bird())  # This is Macaw
+print(Animals.fish())  # This is a Pleco
+
+# Let's do the same thing with our Math class act.
+
+class Math:
+
+  def addition():
+    return int(6+2+3)
+
+  def subtraction():
+    return int(6-2-3)
+
+  def multiplication():
+    return int(6*2*3)
+
+  def division():
+      return int(6/2/3)
+
+print(Math.addition())  # 11
+print(Math.subtraction())  # 1
+print(Math.multiplication())  # 36
+print(Math.division())  # 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create return define() functions so we can use them outside their define()
+# functions, via the print() function. We will use class constructors, called magic
+# methods or better known as dunder methods. The '__int__' initialize constructor
+# allows the class to talk to its attribute properties, such as self,animal for example.
+# The 'self' attribute calls itself to call the class constructor, along with its attributes
+# and attribute properties alike.
+
+class Animals:
+  def __int__(self,animal):
+
+    self.animal = animal
+
+  def pets(animal):
+    return animal
+
+print(Animals.pets('This is a German Shepherd.'))
+
+# or this:
+
+animals_class = Animals.pets('This is a German Shepherd.')
+
+print(animals_class)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+  def __int__(self,num):
+
+    self.num = num
+
+  def addition(num):
+    return num
+
+print(int(Math.addition(6+2+3)))
+
+# or this:
+
+math_class = int(Math.addition(6+2+3))
+
+print(math_class)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's broaden our understanding and invoke more class attribute properties that
+# can be returned through the pets() define function. Note: You can call each returned
+# value by its index[n] number: 0, 3.
+
+class Animals:
+  def __int__(self,animal1,animal2,animal3,animal4):
+
+    self.animal1 = animal1
+    self.animal2 = animal2
+    self.animal3 = animal3
+    self.animal4 = animal4
+
+  def pets(animal1,animal2,animal3,animal4):
+    return animal1,animal2,animal3,animal4
+
+print(Animals.pets('This is a German Shepherd.','This is a Taby','This is Macaw','This is a Pleco')[0])
+print(Animals.pets('This is a German Shepherd.','This is a Taby','This is Macaw','This is a Pleco')[1])
+print(Animals.pets('This is a German Shepherd.','This is a Taby','This is Macaw','This is a Pleco')[2])
+print(Animals.pets('This is a German Shepherd.','This is a Taby','This is Macaw','This is a Pleco')[3])
+
+# this:
+
+print(Animals.pets(
+  'This is a German Shepherd.',
+  'This is a Taby','This is Macaw',
+  'This is a Pleco')[0])
+
+# or this:
+
+animals_class = Animals.pets(
+  'This is a German Shepherd.',
+  'This is a Taby','This is Macaw',
+  'This is a Pleco')[0]
+
+print(animals_class)
+
+# or this:
+
+animals_class = Animals.pets(
+  'This is a German Shepherd.',
+  'This is a Taby','This is Macaw',
+  'This is a Pleco')
+
+print(animals_class[0])
+print(animals_class[1])
+print(animals_class[2])
+print(animals_class[3])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a class that calculates returned values. Let's invoke more class attribute
+# properties like we did before with the Animals class act.
+
+class Math:
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num = num1
+    self.num = num2
+    self.num = num3
+    self.num = num4
+
+  def addition(num1,num2,num3,num4):
+    return int(num1+num2+num3+num4)
+
+print(Math.addition(6,2,3,1))
+print(Math.addition(4,8,5,3))
+print(Math.addition(9,9,2,5))
+print(Math.addition(5,3,2,10))
+
+# or this:
+
+math_class1 = Math.addition(6,2,3,1)
+math_class2 = Math.addition(4,8,5,3)
+math_class3 = Math.addition(9,9,2,5)
+math_class4 = Math.addition(5,3,2,10)
+
+print(math_class2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 # I am almost a complete Walking Human Computer Science Research Laboratory
