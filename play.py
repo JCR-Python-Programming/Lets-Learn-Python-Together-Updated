@@ -2108,8 +2108,11 @@ values.\nPress (2) for ASCII code character values.\nPress \
 button = ('1','2','q')
 
 def ascii_codes():
+
     os.system(text_words[4])
+
     def subroutine1():
+
         while True:
             os.system(text_features[0])
             print(text_words[0])
@@ -3518,7 +3521,8 @@ Math_class_inheritance.name()  # My name is Billy The Child!
 # we need them. Creating variables helps to keep the spaghetti of long string values
 # out of the way, while creating this Monster Class Python program. After you create
 # your long string values, such as these below, You can then move onto the actual
-# cade that make these classes and subclasses sing and dance.
+# code that make these classes and subclasses sing and dance, along with their
+# define() function from within them.
 
 main_class = (
     'This is an instance of a main class object with three attribute properties value 1',
@@ -3865,6 +3869,6 @@ print(f'\n{return_value[0][7]}\n\n{h.attribute1}')
 print(f'\n{return_value[0][8]}\n\n{i.attribute1}')
 
 print(f'\n{return_value[0][9]}\n\n{j.attribute1}')
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
