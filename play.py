@@ -2905,14 +2905,15 @@ print(Math.subtraction())  # 1
 print(Math.multiplication())  # 36
 print(Math.division())  # 1
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create return define() functions so we can use them outside their define()
-# functions, via the print() function. We will use class constructors, called magic
-# methods or better known as dunder methods. The '__int__' initialize constructor
+# Let's create return define() functions so we can use their returned values outside
+# their define() functions, via the print() function. We will use class constructors, called
+# magic methods or better known as dunder methods. The '__int__' initialize constructor
 # allows the class to talk to its attribute properties, such as self,animal for example.
 # The 'self' attribute calls itself to call the class constructor, along with its attributes
 # and attribute properties alike.
 
 class Animals:
+
   def __int__(self,animal):
 
     self.animal = animal
@@ -2929,6 +2930,7 @@ animals_class = Animals.pets('This is a German Shepherd.')
 print(animals_class)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
+
   def __int__(self,num):
 
     self.num = num
@@ -2949,6 +2951,7 @@ print(math_class)
 # value by its index[n] number: 0, 3.
 
 class Animals:
+
   def __int__(self,animal1,animal2,animal3,animal4):
 
     self.animal1 = animal1
@@ -2996,6 +2999,7 @@ print(animals_class[3])
 # properties like we did before with the Animals class act.
 
 class Math:
+
   def __int__(self,num1,num2,num3,num4):
 
     self.num = num1
@@ -3020,6 +3024,320 @@ math_class4 = Math.addition(5,3,2,10)
 
 print(math_class2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# You can have as many return define() functions as you please within a class; only
+# two return define() functions are shown in this Python program example.
+
+class Animals:
+
+  def __int__(self,animal1,animal2,animal3,animal4):
+
+    self.animal1 = animal1
+    self.animal2 = animal2
+    self.animal3 = animal3
+    self.animal4 = animal4
+
+  def pets(animal1,animal2,animal3,animal4):
+    return animal1,animal2,animal3,animal4
+
+  def wild(animal1,animal2,animal3,animal4):
+    return animal1,animal2,animal3,animal4
+
+animal_pets = Animals.pets(
+  'This is a German Shepherd.',
+  'This is a Taby.','This is Macaw.',
+  'This is a Pleco.')
+
+animal_wild = Animals.wild(
+  'This is a Wolf.','This is a Tiger.',
+  'This is Hawk.','This is a Shark.')
+
+print(animal_pets[0])
+
+print(animal_wild[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# With classes, you can create mathematical objects with return define() functions
+# that can be called outside the actual define() function blocks and directly into
+# print() functions that reside outside, both the class block and the return define()
+# function block. Just remember that the 'return' statement means to return a value
+# or result of a define() function outside the define function block, via the print()
+# function.
+
+class Math:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num = num1
+    self.num = num2
+    self.num = num3
+    self.num = num4
+
+  def addition(num1,num2,num3,num4):
+    return int(num1+num2+num3+num4)
+
+  def subtraction(num1,num2,num3,num4):
+    return int(num1-num2-num3-num4)
+
+  def multiplication(num1,num2,num3,num4):
+    return int(num1*num2*num3*num4)
+
+  def division(num1,num2,num3,num4):
+    return int(num1/num2/num3/num4)
+
+math_addition = Math.addition(20,10,5,5)
+math_subtraction = Math.subtraction(40,20,10,5)
+math_multiplication = Math.multiplication(2,2,5,2)
+math_division = Math.division(40,2,2,1)
+
+print(math_addition)  # 40
+
+print(math_subtraction)  # 5
+
+print(math_multiplication)  # 40
+
+print(math_division)  # 10
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's use what we've learned so far about classes and create different kinds of
+# define() functions within the class object. We will create return define functions and
+# define() functions without the 'return' statement, and to see how they behave; the
+# way each define() function handles values and their results.
+
+class Class_object_mix:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num = num1
+    self.num = num2
+    self.num = num3
+    self.num = num4
+
+  def animal_pets(animal1,animal2,animal3,animal4):
+    return animal1,animal2,animal3,animal4
+
+  def animal_wild():
+    print('This is a Wolf.')
+
+  def addition(num1,num2,num3,num4):
+    return int(num1+num2+num3+num4)
+
+  def subtraction():
+    print(int(40-20-10-5))
+
+  def multiplication(num1,num2,num3,num4):
+    return int(num1*num2*num3*num4)
+
+  def division(num1,num2,num3,num4):
+    return int(num1/num2/num3/num4)
+
+animal_pet = Class_object_mix.animal_pets(
+  'This is a German Shepherd.',
+  'This is a Taby','This is Macaw',
+  'This is a Pleco')
+
+animal_wild = Class_object_mix.animal_wild
+
+math_addition = Class_object_mix.addition(20,10,5,5)
+math_subtraction = Class_object_mix.subtraction
+math_multiplication = Class_object_mix.multiplication(2,2,5,2)
+math_division = Class_object_mix.division(40,2,2,1)
+
+print(animal_pet[0])
+
+animal_wild()
+
+print(math_addition)
+
+math_subtraction()
+
+print(math_multiplication)
+print(math_division)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's use our knowledge about classes and let's create what is called, a class inheritance.
+# Classes can share and use attribute properties from other classes, hence class inheritance.
+# It's the Child_class act that contains the attribute properties from both the Mom_class
+# and the Dad_class acts. However, classes can have more than one child class act.
+# Classes can also have more than two parent class acts. Take a look at the synapses
+# of this class inheritance Python program example. All we need to do now is create class
+# constructors, along with class constructor attribute properties as we had learned.
+
+class Mom_class:
+  def text1():
+    print('I am in the Mom class act.')
+
+class Dad_class:
+  def text2():
+    print('I am in the Dad class act.')
+
+# The Child_class inherits all the properties from the Mom_class and the Dad_class acts.
+
+class Child_class(Mom_class,Dad_class):
+  pass
+
+Mom_class.text1()
+
+Dad_class.text2()
+
+Child_class.text1()
+
+Child_class.text2()
+
+# You can also give parent class and child class acts their own properties.
+
+class Child_class(Mom_class,Dad_class):
+  def name():
+    print('My name is Billy The Child!')
+
+Child_class.name()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's invoke the '__int__' initialize constructor to create class attribute properties.
+# In this Python program example below, the Mom and Dad classes each have one,
+# single attribute property only. The 'self' attribute calls itself to call the class constructor,
+# along with its attributes and attribute properties alike. And, remember that return
+# define() functions return values directly into print() functions outside the actual define()
+# functions themselves. Now, let's expand our understanding and add more class
+# attribute properties to each class act.
+
+class Mom_class_attributes:
+
+  def __int__(self,mom1,mom2,mom3,mom4):
+
+    self.mom1 = mom1
+    self.mom2 = mom2
+    self.mom3 = mom3
+    self.mom4 = mom4
+
+  def mom(mom1,mom2,mom3,mom4):
+      return mom1,mom2,mom3,mom4
+
+class Dad_class_attributes:
+
+  def __int__(self,dad1,dad2,dad3,dad4):
+
+    self.dad1 = dad1
+    self.dad2 = dad2
+    self.dad3 = dad3
+    self.dad4 = dad4
+
+  def dad(dad1,dad2,dad3,dad4):
+      return dad1,dad2,dad3,dad4
+
+class Child_class_inheritance(Mom_class_attributes,Dad_class_attributes):
+  pass
+
+mom_class_act = Mom_class_attributes.mom(
+  'I am the returned text value message from the Mom_class attribute: mom1.',
+  'I am the returned text value message from the Mom_class attribute: mom2.',
+  'I am the returned text value message from the Mom_class attribute: mom3.',
+  'I am the returned text value message from the Mom_class attribute: mom4.')
+
+dad_class_act = Dad_class_attributes.dad(
+  'I am the returned text value message from the Dad_class attribute: dad1.',
+  'I am the returned text value message from the Dad_class attribute: dad2.',
+  'I am the returned text value message from the Dad_class attribute: dad3.',
+  'I am the returned text value message from the Dad_class attribute: dad4.')
+
+child_class_act1 = Child_class_inheritance.mom(
+  'I am the returned text value message from the child_class attribute: mom1.',
+  'I am the returned text value message from the child_class attribute: mom2.',
+  'I am the returned text value message from the child_class attribute: mom3.',
+  'I am the returned text value message from the child_class attribute: mom4.')
+
+child_class_act2 = Child_class_inheritance.dad(
+  'I am the returned text value message from the child_class attribute: dad1.',
+  'I am the returned text value message from the child_class attribute: dad2.',
+  'I am the returned text value message from the child_class attribute: dad3.',
+  'I am the returned text value message from the child_class attribute: dad4.')
+
+print(mom_class_act[0])  # 'I am the returned text value message from the Mom_class attribute: mom1.
+
+print(dad_class_act[0])  # 'I am the returned text value message from the Mad_class attribute: dad1.
+
+print(child_class_act1[0])  # I am the returned text value message from the child_class attribute: mom1.
+
+print(child_class_act2[0])  # I am the returned text value message from the child_class attribute: dad1.
+
+# You can also give parent class and child class acts their own properties.
+
+class Child_class_inheritance(Mom_class_attributes,Dad_class_attributes):
+  def name():
+    print('My name is Billy The Child!')
+
+Child_class_inheritance.name()  # My name is Billy The Child!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math_class_attributes_addition:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def addition(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_subtraction:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def subtraction(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_multiplication:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def multiplication(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_division:
+
+  def __int__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def division(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+  pass
+
+math_class_act1 = Math_class_attributes_addition.addition(20+10+5+5, 40+20+10+5, 2+2+5+2, 40+2+2+1)
+math_class_act2 = Math_class_attributes_subtraction.subtraction(20-10-5-5, 40-20-10-5, 2-2-5-2, 40-2-2-1)
+math_class_act3 = Math_class_attributes_multiplication.multiplication(20*10*5*5, 40*20*10*5, 2*2*5*2, 40*2*2*1)
+math_class_act4 = Math_class_attributes_division.division(20/10/5/5, 40/20/10/5, 2/2/5/2, 40/2/2/1)
+
+print(int(math_class_act1[0]))  # 40
+
+print(int(math_class_act2[0]))  # 0
+
+print(int(math_class_act3[0]))  # 5000
+
+print(math_class_act4[0])  # 0.08
+
+# You can also give parent class and child class acts their own properties.
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+  def name():
+    print('My name is Billy The Child!')
+
+Math_class_inheritance.name()  # My name is Billy The Child!
 
 # I am almost a complete Walking Human Computer Science Research Laboratory
 # Machine on Two Legs... 😁
