@@ -2907,14 +2907,14 @@ print(Math.division())  # 1
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create return define() functions so we can use their returned values outside
 # their define() functions, via the print() function. We will use class constructors, called
-# magic methods or better known as dunder methods. The '__int__' initialize constructor
+# magic methods or better known as dunder methods. The '__init__' initialize constructor
 # allows the class to talk to its attribute properties, such as self,animal for example.
 # The 'self' attribute calls itself to call the class constructor, along with its attributes
 # and attribute properties alike.
 
 class Animals:
 
-  def __int__(self,animal):
+  def __init__(self,animal):
 
     self.animal = animal
 
@@ -2931,7 +2931,7 @@ print(animals_class)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-  def __int__(self,num):
+  def __init__(self,num):
 
     self.num = num
 
@@ -2952,7 +2952,7 @@ print(math_class)
 
 class Animals:
 
-  def __int__(self,animal1,animal2,animal3,animal4):
+  def __init__(self,animal1,animal2,animal3,animal4):
 
     self.animal1 = animal1
     self.animal2 = animal2
@@ -3000,7 +3000,7 @@ print(animals_class[3])
 
 class Math:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num = num1
     self.num = num2
@@ -3029,7 +3029,7 @@ print(math_class2)
 
 class Animals:
 
-  def __int__(self,animal1,animal2,animal3,animal4):
+  def __init__(self,animal1,animal2,animal3,animal4):
 
     self.animal1 = animal1
     self.animal2 = animal2
@@ -3064,7 +3064,7 @@ print(animal_wild[0])
 
 class Math:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num = num1
     self.num = num2
@@ -3103,7 +3103,7 @@ print(math_division)  # 10
 
 class Class_object_mix:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num = num1
     self.num = num2
@@ -3156,8 +3156,8 @@ print(math_division)
 # It's the Child_class act that contains the attribute properties from both the Mom_class
 # and the Dad_class acts. However, classes can have more than one child class act.
 # Classes can also have more than two parent class acts. Take a look at the synapses
-# of this class inheritance Python program example. All we need to do now is create class
-# constructors, along with class constructor attribute properties as we had learned.
+# of this class inheritance Python program example. All we need to do now is create
+# class constructors, along with class constructor attribute properties as we had learned.
 
 class Mom_class:
   def text1():
@@ -3188,7 +3188,7 @@ class Child_class(Mom_class,Dad_class):
 
 Child_class.name()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's invoke the '__int__' initialize constructor to create class attribute properties.
+# Let's invoke the '__init__' initialize constructor to create class attribute properties.
 # In this Python program example below, the Mom and Dad classes each have one,
 # single attribute property only. The 'self' attribute calls itself to call the class constructor,
 # along with its attributes and attribute properties alike. And, remember that return
@@ -3198,7 +3198,7 @@ Child_class.name()
 
 class Mom_class_attributes:
 
-  def __int__(self,mom1,mom2,mom3,mom4):
+  def __init__(self,mom1,mom2,mom3,mom4):
 
     self.mom1 = mom1
     self.mom2 = mom2
@@ -3210,7 +3210,7 @@ class Mom_class_attributes:
 
 class Dad_class_attributes:
 
-  def __int__(self,dad1,dad2,dad3,dad4):
+  def __init__(self,dad1,dad2,dad3,dad4):
 
     self.dad1 = dad1
     self.dad2 = dad2
@@ -3258,14 +3258,18 @@ print(child_class_act2[0])  # I am the returned text value message from the chil
 # You can also give parent class and child class acts their own properties.
 
 class Child_class_inheritance(Mom_class_attributes,Dad_class_attributes):
+
   def name():
     print('My name is Billy The Child!')
 
 Child_class_inheritance.name()  # My name is Billy The Child!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's now create similar classes that calculates attribute properties and returns the
+# result of values outside the define() functions, and directly into print() functions.
+
 class Math_class_attributes_addition:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num1 = num1
     self.num2 = num2
@@ -3277,7 +3281,7 @@ class Math_class_attributes_addition:
 
 class Math_class_attributes_subtraction:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num1 = num1
     self.num2 = num2
@@ -3289,7 +3293,7 @@ class Math_class_attributes_subtraction:
 
 class Math_class_attributes_multiplication:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num1 = num1
     self.num2 = num2
@@ -3301,7 +3305,7 @@ class Math_class_attributes_multiplication:
 
 class Math_class_attributes_division:
 
-  def __int__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
     self.num1 = num1
     self.num2 = num2
@@ -3334,10 +3338,533 @@ print(math_class_act4[0])  # 0.08
 class Math_class_inheritance(
   Math_class_attributes_addition,Math_class_attributes_subtraction,
   Math_class_attributes_multiplication,Math_class_attributes_division):
+
   def name():
     print('My name is Billy The Child!')
 
 Math_class_inheritance.name()  # My name is Billy The Child!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn how to use the super() function within class attribute properties. If there
+# are two or more classes that have the same attribute variable names, the super()
+# function can be used on classes, underneath other classes that have the same
+# attribute variable names, such as these:
 
-# I am almost a complete Walking Human Computer Science Research Laboratory
-# Machine on Two Legs... 😁
+#   self.num1 = num1
+#   self.num2 = num2
+#   self.num3 = num3
+#   self.num4 = num4
+
+# What the super() function does is help the programmer reuse code, not rewrite it.
+# Since all the classes have the same attribute variable names, this is where the super()
+# function truly shines. This is what the super() function looks like with its class attribute
+# properties inside it. Note: If you have different attribute variable names in each class,
+# the super() function cannot be used; they are not the same attribute variable names,
+# such was the case in our Mom and Dad class act Python program example.
+
+# super().__init__(num1,num2,num3,num4)
+
+class Math_class_attributes_addition:
+
+  def __init__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def addition(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_subtraction:
+
+  def __init__(self,num1,num2,num3,num4):
+    super().__init__(num1,num2,num3,num4)
+
+  def subtraction(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_multiplication:
+
+  def __init__(self,num1,num2,num3,num4):
+    super().__init__(num1,num2,num3,num4)
+
+  def multiplication(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_division:
+
+  def __init__(self,num1,num2,num3,num4):
+      super().__init__(num1,num2,num3,num4)
+
+  def division(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+  pass
+
+math_class_act1 = Math_class_attributes_addition.addition(20+10+5+5, 40+20+10+5, 2+2+5+2, 40+2+2+1)
+math_class_act2 = Math_class_attributes_subtraction.subtraction(20-10-5-5, 40-20-10-5, 2-2-5-2, 40-2-2-1)
+math_class_act3 = Math_class_attributes_multiplication.multiplication(20*10*5*5, 40*20*10*5, 2*2*5*2, 40*2*2*1)
+math_class_act4 = Math_class_attributes_division.division(20/10/5/5, 40/20/10/5, 2/2/5/2, 40/2/2/1)
+
+print(int(math_class_act1[0]))  # 40
+
+print(int(math_class_act2[0]))  # 0
+
+print(int(math_class_act3[0]))  # 5000
+
+print(math_class_act4[0])  # 0.08
+
+# You can also give parent class and child class acts their own properties.
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+
+  def name():
+    print('My name is Billy The Child!')
+
+Math_class_inheritance.name()  # My name is Billy The Child!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's now learn how to add attribute variables to super() functions. These are easy
+# peasy. If we want to have more attribute properties within a class, we can do this:
+
+class Math_class_attributes_addition:
+
+  def __init__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def addition(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_subtraction:
+
+  def __init__(self,num1,num2,num3,num4,num5): # Add the num5 attribute variable here.
+    super().__init__(num1,num2,num3,num4)
+
+    self.num5 = num5  # Create the attribute property for num5
+
+  def subtraction(num1,num2,num3,num4,num5):  # Add the num5 attribute variable here.
+      return num1,num2,num3,num4,num5  # Add the num5 attribute variable here.
+
+class Math_class_attributes_multiplication:
+
+  def __init__(self,num1,num2,num3,num4):
+    super().__init__(num1,num2,num3,num4)
+
+  def multiplication(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_attributes_division:
+
+  def __init__(self,num1,num2,num3,num4):
+      super().__init__(num1,num2,num3,num4)
+
+  def division(num1,num2,num3,num4):
+      return num1,num2,num3,num4
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+  pass
+
+math_class_act1 = Math_class_attributes_addition.addition(20+10+5+5, 40+20+10+5, 2+2+5+2, 40+2+2+1)
+math_class_act2 = Math_class_attributes_subtraction.subtraction(20-10-5-5, 40-20-10-5, 2-2-5-2, 40-2-2-1,'Hurray! You did it!')
+math_class_act3 = Math_class_attributes_multiplication.multiplication(20*10*5*5, 40*20*10*5, 2*2*5*2, 40*2*2*1)
+math_class_act4 = Math_class_attributes_division.division(20/10/5/5, 40/20/10/5, 2/2/5/2, 40/2/2/1)
+
+print(int(math_class_act1[0]))  # 40
+
+print(int(math_class_act2[0]))  # 0
+
+print(math_class_act2[4])  # Hurray! You did it!
+
+print(int(math_class_act3[0]))  # 5000
+
+print(math_class_act4[0])  # 0.08
+
+# You can also give parent class and child class acts their own properties.
+
+class Math_class_inheritance(
+  Math_class_attributes_addition,Math_class_attributes_subtraction,
+  Math_class_attributes_multiplication,Math_class_attributes_division):
+
+  def name():
+    print('My name is Billy The Child!')
+
+Math_class_inheritance.name()  # My name is Billy The Child!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# And before we go, I have just one more Python programming exercise. Believe me,
+# this Monster Class Act really took me out for a complete spin and back. This is one
+# of my hardest things, I had ever problem solved with computer programming, since
+# I started Python back on Christmas day, 2017. All I can say is when I first started
+# Python, it looked very confusing without actual line numbers to tell the code where
+# to go to, and act like a normal subroutine. That wouldn't come until much later, when
+# I finally just kept on tinkering with define() functions, and when I put a conditional
+# while loop into the mix, I had finally found my subroutine solution. Define() functions
+# and classes can call other define() functions and classes. However, you must include
+# the class variable name, followed by a period '.' and, then call the define() function
+# variable name. For example: 'Math_class_attributes_division.division'. It's now time
+# to take a much needed break. Because believe me, you will need it after this Monster
+# Class Act Python program exercise. All I can say, it's Head Banging time. Good Luck!
+
+# The very first thing we must do here is, create as many variables and their values as
+# we need them. Creating variables helps to keep the spaghetti of long string values
+# out of the way, while creating this Monster Class Python program. After you create
+# your long string values, such as these below, You can then move onto the actual
+# cade that make these classes and subclasses sing and dance.
+
+main_class = (
+    'This is an instance of a main class object with three attribute properties value 1',
+    'This is an instance of a main class object with three attribute properties value 2',
+    'This is an instance of a main class object with three attribute properties value 3')
+
+subclass1 = (
+    'This is an instance of a subclass1 object with three attribute properties value 1',
+    'This is an instance of a subclass1 object with three attribute properties value 2',
+    'This is an instance of a subclass1 object with three attribute properties value 3')
+
+subclass2 = (
+    'This is an instance of a subclass2 object with three attribute properties value 1',
+    'This is an instance of a subclass2 object with three attribute properties value 2',
+    'This is an instance of a subclass2 object with three attribute properties value 3')
+
+super_subclass1 = (
+     'This is an instance of a super subclass1 object with four attribute properties value 1',
+     'This is an instance of a super subclass1 object with four attribute properties value 2',
+     'This is an instance of a super subclass1 object with four attribute properties value 3',
+     'This is an instance of a super subclass1 object with four attribute properties value 4')
+
+super_subclass2 = (
+     'This is an instance of a super subclass2 object with five attribute properties value 1',
+     'This is an instance of a super subclass2 object with five attribute properties value 2',
+     'This is an instance of a super subclass2 object with five attribute properties value 3',
+     'This is an instance of a super subclass2 object with five attribute properties value 4',
+     'This is an instance of a super subclass2 object with five attribute properties value 5')
+
+super_subclass3 = (
+     'This is an instance of a super subclass3 object with five attribute properties value 1',
+     'This is an instance of a super subclass3 object with five attribute properties value 2',
+     'This is an instance of a super subclass3 object with five attribute properties value 3',
+     'This is an instance of a super subclass3 object with five attribute properties value 4',
+     'This is an instance of a super subclass3 object with five attribute properties value 5',
+     'This is an instance of a super subclass3 object with five attribute properties value 6')
+
+super_subclass4 = (
+     'This is an instance of a super subclass4 object with seven attribute properties value 1',
+     'This is an instance of a super subclass4 object with seven attribute properties value 2',
+     'This is an instance of a super subclass4 object with seven attribute properties value 3',
+     'This is an instance of a super subclass4 object with seven attribute properties value 4',
+     'This is an instance of a super subclass4 object with seven attribute properties value 5',
+     'This is an instance of a super subclass4 object with seven attribute properties value 6',
+     'This is an instance of a super subclass4 object with seven attribute properties value 7')
+
+super_subclass5 = (
+     'This is an instance of a super subclass5 object with eight attribute properties value 1',
+     'This is an instance of a super subclass5 object with eight attribute properties value 2',
+     'This is an instance of a super subclass5 object with eight attribute properties value 3',
+     'This is an instance of a super subclass5 object with eight attribute properties value 4',
+     'This is an instance of a super subclass5 object with eight attribute properties value 5',
+     'This is an instance of a super subclass5 object with eight attribute properties value 6',
+     'This is an instance of a super subclass5 object with eight attribute properties value 7',
+     'This is an instance of a super subclass5 object with eight attribute properties value 8')
+
+super_subclass6 = (
+     'This is an instance of a super subclass6 object with nine attribute properties value 1',
+     'This is an instance of a super subclass6 object with nine attribute properties value 2',
+     'This is an instance of a super subclass6 object with nine attribute properties value 3',
+     'This is an instance of a super subclass6 object with nine attribute properties value 4',
+     'This is an instance of a super subclass6 object with nine attribute properties value 5',
+     'This is an instance of a super subclass6 object with nine attribute properties value 6',
+     'This is an instance of a super subclass6 object with nine attribute properties value 7',
+     'This is an instance of a super subclass6 object with nine attribute properties value 8',
+     'This is an instance of a super subclass6 object with nine attribute properties value 9')
+
+super_subclass7 = (
+     'This is an instance of a super subclass7 object with ten attribute properties value 1',
+     'This is an instance of a super subclass7 object with ten attribute properties value 2',
+     'This is an instance of a super subclass7 object with ten attribute properties value 3',
+     'This is an instance of a super subclass7 object with ten attribute properties value 4',
+     'This is an instance of a super subclass7 object with ten attribute properties value 5',
+     'This is an instance of a super subclass7 object with ten attribute properties value 6',
+     'This is an instance of a super subclass7 object with ten attribute properties value 7',
+     'This is an instance of a super subclass7 object with ten attribute properties value 8',
+     'This is an instance of a super subclass7 object with ten attribute properties value 9',
+     'This is an instance of a super subclass7 object with ten attribute properties value 10')
+
+return_values = (
+    '"The Main Class Act"',
+    'Subclass Act One.',
+    'Subclass Act Two',
+    'Super Subclass Act One',
+    'Super Subclass Act Two',
+    'Super Subclass Act Three',
+    'Super Subclass Act Four',
+    'Super Subclass Act Five',
+    'Super Subclass Act Six',
+    'Super Subclass Act Seven')
+
+# This is where you do your Clean, Cut Python Code, without all that spaghetti of
+# long string values getting in the way.
+
+class Main_class_attribute_properties:
+
+    def return_function():
+        return return_values
+
+    def __init__(self,attribute1,attribute2,attribute3):
+
+        self.attribute1=attribute1
+        self.attribute2=attribute2
+        self.attribute3=attribute3
+
+class Subclass1_same_attribute_properties(  # inhert main class attribute properties only
+    Main_class_attribute_properties):pass
+
+class Subclass2_same_attribute_properties(  # inhert main class attribute properties only
+    Main_class_attribute_properties):pass
+
+class Super_subclass1_new_attribute_properties(
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(self,attribute1,attribute2,attribute3,attribute4):
+        super().__init__(attribute1, attribute2,attribute3)
+
+        self.attribute4=attribute4
+
+class Super_subclass2_new_attribute_properties(
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5):
+
+        super().__init__(attribute1,attribute2,attribute3,attribute4)
+
+        self.attribute5=attribute5
+
+class Super_subclass3_new_attribute_properties(
+    Super_subclass2_new_attribute_properties,
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5,attribute6):
+
+        super().__init__(
+            attribute1,attribute2,attribute3,attribute4,
+            attribute5)
+
+        self.attribute6=attribute6
+
+class Super_subclass4_new_attribute_properties(
+    Super_subclass3_new_attribute_properties,
+    Super_subclass2_new_attribute_properties,
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5,attribute6,attribute7):
+
+        super().__init__(
+            attribute1,attribute2,attribute3,attribute4,
+            attribute5,attribute6)
+
+        self.attribute7=attribute7
+
+class Super_subclass5_new_attribute_properties(
+    Super_subclass4_new_attribute_properties,
+    Super_subclass3_new_attribute_properties,
+    Super_subclass2_new_attribute_properties,
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5,attribute6,attribute7,attribute8):
+
+        super().__init__(
+            attribute1,attribute2,attribute3,attribute4,
+            attribute5,attribute6,attribute7)
+
+        self.attribute8=attribute8
+
+class Super_subclass6_new_attribute_properties(
+    Super_subclass5_new_attribute_properties,
+    Super_subclass4_new_attribute_properties,
+    Super_subclass3_new_attribute_properties,
+    Super_subclass2_new_attribute_properties,
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5,attribute6,attribute7,attribute8,
+
+        attribute9):
+        super().__init__(
+            attribute1,attribute2,attribute3,attribute4,
+            attribute5,attribute6,attribute7,attribute8)
+
+        self.attribute9=attribute9
+
+class Super_subclass7_new_attribute_properties(
+    Super_subclass6_new_attribute_properties,
+    Super_subclass5_new_attribute_properties,
+    Super_subclass4_new_attribute_properties,
+    Super_subclass3_new_attribute_properties,
+    Super_subclass2_new_attribute_properties,
+    Super_subclass1_new_attribute_properties,
+    Subclass2_same_attribute_properties,
+    Subclass1_same_attribute_properties,
+    Main_class_attribute_properties):
+
+    def __init__(
+        self,attribute1,attribute2,attribute3,attribute4,
+        attribute5,attribute6,attribute7,attribute8,
+        attribute9,attribute10):
+
+        super().__init__(
+            attribute1,attribute2,attribute3,attribute4,
+            attribute5,attribute6,attribute7,attribute8,
+            attribute9)
+
+        self.attribute10=attribute10
+
+a = Main_class_attribute_properties(main_class[0],main_class[1],main_class[2])
+
+b = Subclass1_same_attribute_properties(subclass1[0],subclass1[1],subclass1[2])
+
+c = Subclass2_same_attribute_properties(subclass2[0],subclass2[1],subclass2[2])
+
+d = Super_subclass1_new_attribute_properties(
+    super_subclass1[0],super_subclass1[1],
+    super_subclass1[2],super_subclass1[3])
+
+e = Super_subclass2_new_attribute_properties(
+    super_subclass2[0],super_subclass2[1],
+    super_subclass2[2],super_subclass2[3],
+    super_subclass2[4])
+
+f = Super_subclass3_new_attribute_properties(
+    super_subclass3[0],super_subclass3[1],
+    super_subclass3[2],super_subclass3[3],
+    super_subclass3[4],super_subclass3[5])
+
+g = Super_subclass4_new_attribute_properties(
+    super_subclass4[0],super_subclass4[1],
+    super_subclass4[2],super_subclass4[3],
+    super_subclass4[4],super_subclass4[5],
+    super_subclass4[6])
+
+h = Super_subclass5_new_attribute_properties(
+    super_subclass5[0],super_subclass5[1],
+    super_subclass5[2],super_subclass5[3],
+    super_subclass5[4],super_subclass5[5],
+    super_subclass5[6],super_subclass5[7])
+
+i = Super_subclass6_new_attribute_properties(
+    super_subclass6[0],super_subclass6[1],
+    super_subclass6[2],super_subclass6[3],
+    super_subclass6[4],super_subclass6[5],
+    super_subclass6[6],super_subclass6[7],
+    super_subclass6[8])
+
+j = Super_subclass7_new_attribute_properties(
+    super_subclass7[0],super_subclass7[1],
+    super_subclass7[2],super_subclass7[3],
+    super_subclass7[4],super_subclass7[5],
+    super_subclass7[6],super_subclass7[7],
+    super_subclass7[8],super_subclass7[9])
+
+class_attribute_tuple = (
+
+a.attribute1,a.attribute2,a.attribute3,
+
+b.attribute1,b.attribute2,b.attribute3,
+
+c.attribute1,c.attribute2,c.attribute3,
+
+d.attribute1,d.attribute2,d.attribute3,
+d.attribute4,
+
+e.attribute1,e.attribute2,e.attribute3,
+e.attribute4,e.attribute5,
+
+f.attribute1,f.attribute2,f.attribute3,
+f.attribute4,f.attribute5,f.attribute6,
+
+g.attribute1,g.attribute2,g.attribute3,
+g.attribute4,g.attribute5,g.attribute6,
+g.attribute7,
+
+h.attribute1,h.attribute2,h.attribute3,
+h.attribute4,h.attribute5,h.attribute6,
+h.attribute7,h.attribute8,
+
+i.attribute1,i.attribute2,i.attribute3,
+i.attribute4,i.attribute5,i.attribute6,
+i.attribute7,i.attribute8,i.attribute9,
+
+j.attribute1,j.attribute2,j.attribute3,
+j.attribute4,j.attribute5,j.attribute6,
+j.attribute7,j.attribute8,j.attribute9,
+j.attribute10)
+
+return_value = (
+
+    Main_class_attribute_properties.return_function(),
+
+    Subclass1_same_attribute_properties.return_function(),
+    Subclass2_same_attribute_properties.return_function(),
+
+    Super_subclass1_new_attribute_properties.return_function(),
+    Super_subclass2_new_attribute_properties.return_function(),
+    Super_subclass3_new_attribute_properties.return_function(),
+    Super_subclass4_new_attribute_properties.return_function(),
+    Super_subclass5_new_attribute_properties.return_function(),
+    Super_subclass6_new_attribute_properties.return_function(),
+    Super_subclass7_new_attribute_properties.return_function())
+
+print(f'\n{return_value[0][0]}\n\n{a.attribute1}')
+
+print(f'\n{return_value[0][1]}\n\n{b.attribute1}')
+
+print(f'\n{return_value[0][2]}\n\n{c.attribute1}')
+
+print(f'\n{return_value[0][3]}\n\n{d.attribute1}')
+
+print(f'\n{return_value[0][4]}\n\n{e.attribute1}')
+
+print(f'\n{return_value[0][5]}\n\n{f.attribute1}')
+
+print(f'\n{return_value[0][6]}\n\n{g.attribute1}')
+
+print(f'\n{return_value[0][7]}\n\n{h.attribute1}')
+
+print(f'\n{return_value[0][8]}\n\n{i.attribute1}')
+
+print(f'\n{return_value[0][9]}\n\n{j.attribute1}')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
