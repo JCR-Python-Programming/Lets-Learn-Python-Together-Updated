@@ -1411,18 +1411,37 @@ print(set_one,set_two,set_three)
 
 dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
-  {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+  {1:'value1',2:'value2',3:'value3',4:'value4',5:'value5,'},
+  {'key1':'value1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
 
-print(dictionary_one,dictionary_two,dictionary_three)
+print(dictionary_one,dictionary_two,dictionary_three)  # Check to see all the values.
+
+print(dictionary_one.get(1))
+
+print(dictionary_two.get(1))
+
+print(dictionary_three.get('key1'))
+
+# or this:
+
+# If a dictionary key is not found, it will display the screen output as ' None '.
+# However, you can place a message that tells the user that a key is not
+# found. For example:
+
+print(dictionary_three.get('key'))  # None
+
+# The example below will assure a better user friendly experience for your Python
+# programs you create.
+
+print(dictionary_three.get('key','key not found:'))  # key not found:
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Display dictionary keys and dictionary values, via the keys() function and the values()
 # function.
 
 dictionary_one,dictionary_two,dictionary_three = (
   {1:1,2:2,3:3,4:4,5:5},
-  {1:'value 1',2:'value2',3:'value3',4:'value4',5:'value5,'},
-  {'key1':'value 1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+  {1:'value1',2:'value2',3:'value3',4:'value4',5:'value5,'},
+  {'key1':'value1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
 
 print(dictionary_one.keys())
 print(dictionary_two.keys())
@@ -1444,6 +1463,26 @@ print(len(dictionary_one.values()))
 print(len(dictionary_two.values()))
 print(len(dictionary_three.values()))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Update a dictionary with the update() function, and then check the updated dictionary
+# keys and values in each dictionary Python program example.
+
+dictionary_one,dictionary_two,dictionary_three = (
+  {1:1,2:2,3:3,4:4,5:5},
+  {1:'value1',2:'value2',3:'value3',4:'value4',5:'value5,'},
+  {'key1':'value1','key2':'value2','key3':'value3','key4':'value4','key5':'value5,'})
+
+dictionary_one.update({6:6})
+dictionary_two.update({6:'value6'})
+dictionary_three.update({'key6':'value6'})
+
+print(dictionary_one)  # {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+print(dictionary_two)  # {1: 'value 1', 2: 'value2', 3: 'value3', 4: 'value4', 5: 'value5,', 6: 'value6'}
+print(dictionary_three)  # {'key1': 'value 1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4', 'key5': 'value5,', 'key6': 'value6'}
+
+print(dictionary_one.get(6))  # 6
+print(dictionary_two.get(6))  # value6
+print(dictionary_three.get('key6'))  # value6
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a multi 2d tuple collection and check it, and then call up two indexes to display
 # an actual value by itself.
 
@@ -1455,7 +1494,6 @@ multi_2d_tuple_collection = (
 print(multi_2d_tuple_collection)  # ((1, 2, 3, 4, 5), ('a', 'b', 'c', 'd', 'e'), ('text 1', 'text 2', 'text 3', 'text 4', 'text 5'))
 
 print(multi_2d_tuple_collection[1][0])  # a
-
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Create a multi 2d tuple and check it, and then call up two indexes to display an actual
 # value by itself.
@@ -1757,6 +1795,104 @@ sentence = 'Hello','. How are you? You bought a cute','I see...'
 for i,x,y,z in names1,names2,names3:
     print(f'{sentence[0]} {i}{sentence[1]} {y} {sentence[2]}')  # new f' string format
     print(f'{sentence[0]} {x}{sentence[1]} {z} {sentence[2]}')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn what casting a tuple( ), a list[ ] and a set{ } are all about, with these
+# casting functions: tuple(), list() and set(). Note, the dict() function only works
+# to create a dictionary from scratch; the dict() function is not a casting function.
+# However, we will learn to create a dictionary from scratch, via the dict() function.
+
+# Here is a really neat trick about casting tuples and such. Tuples can be casted
+# to lists, via the list() function to be able to sort the list, and then cast it back into
+# an immutable tuple, if you wish not to change or modify any tuple values after
+# casting the list back into a tuple. Here are some great cast examples below:
+
+my_tuple = ('dog','bird','fish','cat')
+
+cast_tuple_into_list = list(my_tuple)
+
+print(cast_tuple_into_list)  # ['dog', 'bird', 'fish', 'cat']
+
+print(cast_tuple_into_list[1])  # bird
+
+# Let's cast the list back into a tuple.
+
+cast_list_into_tuple = tuple(cast_tuple_into_list)
+
+print(cast_list_into_tuple)  # ('dog', 'bird', 'fish', 'cat')
+
+print(cast_list_into_tuple[1])  # bird
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Tuples cannot be modified or sorted. However, we can cast this tuple of values into
+# a sorted list of values, and then cast the sorted list back into a sorted tuple of values.
+
+my_tuple = ('dog','bird','fish','cat')
+
+cast_tuple_into_list = list(my_tuple)
+
+cast_tuple_into_list.sort()
+
+print(cast_tuple_into_list)  # ['bird', 'cat', 'dog', 'fish']
+
+# # Let's cast the list back into a sorted tuple.
+
+cast_list_into_tuple = tuple(cast_tuple_into_list)
+
+print(cast_list_into_tuple)  # ('bird', 'cat', 'dog', 'fish')
+
+print(cast_list_into_tuple[1])  # cat
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Sets are great, they get rid of any duplicate values. Set's can also sort integer number
+# values automatically only; sets cannot sort text string values, but they can still get
+# rid of duplicate text string values. Note: sets do not contain indexes [ ] and the
+# only way to get values from a set is to cast it into a tuple( ) or a list[ ]. Sets are also
+# in random order, which is probably why sets don't have any index[ ] value ranges.
+# Note: sets that have a mix of text string values and integer number values cannot
+# be sorted. Sets automatically sort integer number values. You have to create one
+# set{ } for integer values only, and one set{ } for text string values only. The sort()
+# and sorted() functions can only sort converted sets that have text string values only.
+# Sets are best used for integer number values; that's what sets are truly used for.
+
+my_set = {'dog','bird','fish','cat'}
+
+cast_set_into_list = list(my_set)
+
+cast_set_into_list.sort()
+
+print(cast_set_into_list)  # ['bird', 'cat', 'dog', 'fish']
+
+print(cast_set_into_list[1])  # cat
+
+# Let's cast the list back into a random, unsorted set.
+
+cast_list_into_set = set(cast_set_into_list)
+
+print(cast_list_into_set)  # {'fish', 'bird', 'cat', 'dog'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn how to create a dictionary from scratch with the dict() function. Note:
+# you cannot invoke integer numbers for keys when creating a dictionary from scratch.
+# This only works with actual dictionaries; you have to use text strings for keys, or
+# text strings with integer numbers to the right of the text strings as shown below:
+
+create_dictionary = dict(key1 = 'value1',key2 = 'value2',key3 = 'value3',key4 = 'value4',key5 = 'value5')
+
+print(create_dictionary)  # {'key1': 'value 1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4', 'key5': 'value5'}
+
+print(create_dictionary.get('key2','key not found:'))  # value 2
+
+# You can clearly see how dictionary keys can be numbers if you like, or be a mixture of
+# number and text strings.
+
+my_dictionary = {1:'value1',2:'value2',3:'value3',4:'value4',5:'value5'}
+
+print(my_dictionary.get(2,'key not found:'))  # value 2
+
+# This dictionary{ } has a mixture of both number and text lettrs as keys
+
+my_dictionary = {1:'value1','key2':'value2',3:'value3','key4':'value4',5:'value5'}
+
+print(my_dictionary)  # {1: 'value1', 2: 'value2', 3: 'value3', 4: 'value4', 5: 'value5'}
+
+print(my_dictionary.get('key2','key not found:'))  # value 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Generate computer numbers in binary base 2, hexadecimal base 16 and octal base
 # 8. Type in ASCII codes and see what they look like. For example: print(bin(65)) is the
@@ -3615,7 +3751,7 @@ return_values = (
     'Super Subclass Act Seven')
 
 # This is where you do your Clean, Cut Python Code, without all that spaghetti of
-# long string values getting in the way.
+# long string values getting in the way while you continue to write your code code.
 
 class Main_class_attribute_properties:
 
