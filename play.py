@@ -1879,14 +1879,14 @@ print(create_dictionary)  # {'key1': 'value 1', 'key2': 'value2', 'key3': 'value
 
 print(create_dictionary.get('key2','key not found:'))  # value 2
 
-# You can clearly see how dictionary keys can be numbers if you like, or be a mixture of
-# number and text strings.
+# You can clearly see how dictionary keys can be numbers if you like, or be a mixture
+# of number and text strings.
 
 my_dictionary = {1:'value1',2:'value2',3:'value3',4:'value4',5:'value5'}
 
 print(my_dictionary.get(2,'key not found:'))  # value 2
 
-# This dictionary{ } has a mixture of both number and text lettrs as keys
+# This dictionary{ } has a mixture of both number and text letters as keys
 
 my_dictionary = {1:'value1','key2':'value2',3:'value3','key4':'value4',5:'value5'}
 
@@ -3649,9 +3649,11 @@ Math_class_inheritance.name()  # My name is Billy The Child!
 # while loop into the mix, I had finally found my subroutine solution. Define() functions
 # and classes can call other define() functions and classes. However, you must include
 # the class variable name, followed by a period '.' and, then call the define() function
-# variable name. For example: 'Math_class_attributes_division.division'. It's now time
-# to take a much needed break. Because believe me, you will need it after this Monster
-# Class Act Python program exercise. All I can say, it's Head Banging time. Good Luck!
+# variable name. For example: 'Math_class_attributes_division.division'.
+
+# It's now time to take a much needed break. Because believe me, you will need it after
+# this Monster Class Act Python program exercise. All I can say, it's Head Banging time.
+# Good Luck!
 
 # The very first thing we must do here is, create as many variables and their values as
 # we need them. Creating variables helps to keep the spaghetti of long string values
