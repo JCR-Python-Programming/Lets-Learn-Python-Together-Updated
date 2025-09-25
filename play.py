@@ -2357,7 +2357,7 @@ print(datetime.datetime.now().strftime('%A %B %d,%Y'))
 print(datetime.datetime.now().strftime('Week %U'))
 print(datetime.datetime.now().strftime('Day %j'))
 
-# Remember you can reduce balky code via, using string variables. Let's use 'timer'
+# Remember you can reduce balky code, via using string variables. Let's use 'timer'
 # as the variable and use 'datetime.datetime.now()' as the value. Type and execute/run
 # the program example below and see what happens.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2819,13 +2819,15 @@ print(str.__add__('a','b'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use dunder methods to do math calculations within print() functions.
 
+print(add1/add2)  # 100
+
 print(int.__add__(8,2))  # 10
 
 print(int.__sub__(8,2))  # 6
 
 print(int.__mul__(8,2))  # 16
 
-print(int.__divmod__(8,2))  # (4, 0)
+print(int.__truediv__(8,2))  # 4.0
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's do a quick recap on define() functions, so we can learn what classes are and
 # how define() functions become instances, within a class, called class objects. We
@@ -3638,6 +3640,64 @@ class Math_class_inheritance(
     print('My name is Billy The Child!')
 
 Math_class_inheritance.name()  # My name is Billy The Child!
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn some magic with dunder methods or constructors, also known as Magic
+# Methods. These dunder methods tell define() functions how to behave. The print()
+# function at the bottom calls the dunder __add__ method, so the values can be returned
+# and added through it, via the return statement. The add1 + add2 = 20 + 5 = 25 are
+# the returned and added value results of add1 and add2.
+
+class Math:
+
+    def __init__(self,num1):
+        self.num1 = num1
+
+    def __add__(self,num2):
+        return self.num1 + num2.num1
+
+add1 = Math(20)
+add2 = Math(5)
+
+print(add1 + add2)  # 25
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1):
+        self.num1 = num1
+
+    def __sub__(self,num2):
+        return self.num1 - num2.num1
+
+add1 = Math(20)
+add2 = Math(5)
+
+print(add1 - add2)  # 15
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1):
+        self.num1 = num1
+
+    def __mul__(self,num2):
+        return self.num1 * num2.num1
+
+add1 = Math(20)
+add2 = Math(5)
+
+print(add1 * add2)  # 100
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1):
+        self.num1 = num1
+
+    def __truediv__(self,num2):
+        return self.num1 / num2.num1
+
+add1 = Math(20)
+add2 = Math(5)
+
+print(add1 / add2)  # 4.0
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
