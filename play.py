@@ -3643,6 +3643,64 @@ Math_class_inheritance.name()  # My name is Billy The Child!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn some magic with dunder methods or constructors, also known as Magic
 # Methods. These dunder methods tell define() functions how to behave. The print()
+# functions at the bottom calls the dunder __str__ method, so the values can be returned
+# through them, via the return statement. The __str__ method is for text string values
+# only.
+
+class Text_string:
+
+    def __init__(self,text_string):
+
+        self.text_string = text_string
+
+    def __str__(self):
+        return self.text_string
+
+my_text_string1 = Text_string('I am a text string only.')
+my_text_string2 = Text_string('I am also a text string only.')
+my_text_string3 = Text_string('And so am I also a text string only.')
+my_text_string4 = Text_string('This is what Magic Methods do...')
+
+print(my_text_string1)  # I am a text string only.
+
+print(my_text_string2)  # I am also a text string only.
+
+print(my_text_string3)  # And so am I also a text string only.
+
+print(my_text_string4)  # This is what Magic Methods do...
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# These class acts are the exact same things we did with dunder methods, thus far.
+# All we did differently here was create four class attribute properties, not one like
+# we did before.
+
+class Text_string:
+
+    def __init__(self,text_string1,text_string2,text_string3,text_string4):
+
+        self.text_string1 = text_string1
+        self.text_string2 = text_string2
+        self.text_string3 = text_string3
+        self.text_string4 = text_string4
+
+    def __str__(self):
+        return self.text_string4
+
+my_text_string1 = Text_string(
+    'I am a text string only.',
+    'I am also a text string only.',
+    'And so am I also a text string only.',
+    'This is what Magic Methods do...')
+
+my_text_string2 = Text_string(
+    'You can do a lot with Magic Methods.',
+    'Dunder methods modify the behavior of objects.',
+    'You can call these dunder methods, magic methods or a constructors',
+    "Magical Methods are like Harry Potter's wizard wand in Python programming.")
+
+print(my_text_string2)  # Magical Methods are like Harry Potter's wizard wand in Python programming.
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn some magic with dunder methods or constructors, also known as Magic
+# Methods. These dunder methods tell define() functions how to behave. The print()
 # function at the bottom calls the dunder __add__ method, so the values can be returned
 # and added through it, via the return statement. The add1 + add2 = 20 + 5 = 25 are
 # the returned and added value results of add1 and add2.
@@ -3650,6 +3708,7 @@ Math_class_inheritance.name()  # My name is Billy The Child!
 class Math:
 
     def __init__(self,num1):
+
         self.num1 = num1
 
     def __add__(self,num2):
@@ -3663,41 +3722,185 @@ print(add1 + add2)  # 25
 class Math:
 
     def __init__(self,num1):
+
         self.num1 = num1
 
     def __sub__(self,num2):
         return self.num1 - num2.num1
 
-add1 = Math(20)
-add2 = Math(5)
+sub1 = Math(20)
+sub2 = Math(5)
 
-print(add1 - add2)  # 15
+print(sub1 - sub2)  # 15
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
     def __init__(self,num1):
+
         self.num1 = num1
 
     def __mul__(self,num2):
         return self.num1 * num2.num1
 
-add1 = Math(20)
-add2 = Math(5)
+mult1 = Math(20)
+mult2 = Math(5)
 
-print(add1 * add2)  # 100
+print(mult1 * mult2)  # 100
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
     def __init__(self,num1):
+
         self.num1 = num1
 
     def __truediv__(self,num2):
         return self.num1 / num2.num1
 
-add1 = Math(20)
-add2 = Math(5)
+div1 = Math(20)
+div2 = Math(5)
 
-print(add1 / add2)  # 4.0
+print(int(div1 / div2))  # 4
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# These Math class acts are the exact, same things we did with dunder methods thus
+# far. All we did differently here was create four class attribute properties, not one like
+# we did before. Notice how we only needed to create one class. Donder methods
+# modify or change the behavior of class objects, all under one roof.
+
+class Math:
+
+    def __init__(self,num1,num2,num3,num4):
+
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        self.num4 = num4
+
+    def __add__(self,num5):
+        return self.num4 + num5.num4
+
+add1 = Math(10,20,30,40)
+add2 = Math(5,10,15,20)
+
+print(add1 + add2)  # 40 + 20 = 60
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1,num2,num3,num4):
+
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        self.num4 = num4
+
+    def __sub__(self,num5):
+        return self.num4 - num5.num4
+
+sub1 = Math(10,20,30,40)
+sub2 = Math(5,10,15,20)
+
+print(sub1 - sub2)  # 40 - 20 = 20
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1,num2,num3,num4):
+
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        self.num4 = num4
+
+    def __mul__(self,num5):
+        return self.num4 * num5.num4
+
+mult1 = Math(10,20,30,40)
+mult2 = Math(5,10,15,20)
+
+print(mult1 * mult2)  # 40 * 20 = 800
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+    def __init__(self,num1,num2,num3,num4):
+
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        self.num4 = num4
+
+    def __truediv__(self,num5):
+        return self.num4 / num5.num4
+
+div1 = Math(10,20,30,40)
+div2 = Math(5,10,15,20)
+
+print(int(div1 / div2))  # 40 / 20 = 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a Math class act that has four dunder methods in it, instead of only one.
+
+class Math:
+
+    def __init__(self,num1):
+
+        self.num1 = num1
+
+    def __add__(self,num2):
+        return self.num1 + num2.num1
+
+    def __sub__(self,num2):
+        return self.num1 - num2.num1
+
+    def __mul__(self,num2):
+        return self.num1 * num2.num1
+
+    def __truediv__(self,num2):
+        return self.num1 / num2.num1
+
+number1 = Math(20)
+number2 = Math(5)
+
+print(number1 + number2)  # 20 + 5 = 20
+
+print(number1 - number2)  # 20 - 5 = 15
+
+print(number1 * number2)  # 20 * 5 = 100
+
+print(int(number1 / number2))  # 20 / 5 = 4
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This Math class act is the exact, same thing we did with dunder methods thus far.
+# All we did differently here was create four class attribute properties, not one like
+# we did before. Notice how we only needed to create one class. Donder methods
+# modify or change the behavior of class objects, all under one roof.
+
+class Math:
+
+    def __init__(self,num1,num2,num3,num4):
+
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        self.num4 = num4
+
+    def __add__(self,num5):
+        return self.num4 + num5.num4
+
+    def __sub__(self,num5):
+        return self.num4 - num5.num4
+
+    def __mul__(self,num5):
+        return self.num4 * num5.num4
+
+    def __truediv__(self,num5):
+        return self.num4 / num5.num4
+
+number1 = Math(10,20,30,40)
+number2 = Math(5,10,15,20)
+
+print(number1 + number2)  # 40 + 20 = 60
+
+print(number1 - number2)  # 40 - 20 = 20
+
+print(number1 * number2)  # 40 * 20 = 800
+
+print(int(number1 / number2))  # 40 / 20 = 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
