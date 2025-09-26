@@ -2809,17 +2809,11 @@ print(id(2))
 # integer numbers together, whereas the str' function concatenates/joins character
 # strings together.
 
-print(int.__add__(2,3))
+print(int.__add__(2,3))  # 5
 
-# Screen output:	5
-
-print(str.__add__('a','b'))
-
-# Screen output:	ab
+print(str.__add__('a','b'))  # ab
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use dunder methods to do math calculations within print() functions.
-
-print(add1/add2)  # 100
 
 print(int.__add__(8,2))  # 10
 
@@ -2827,7 +2821,7 @@ print(int.__sub__(8,2))  # 6
 
 print(int.__mul__(8,2))  # 16
 
-print(int.__truediv__(8,2))  # 4.0
+print(int(int.__truediv__(8,2)))  # 4
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's do a quick recap on define() functions, so we can learn what classes are and
 # how define() functions become instances, within a class, called class objects. We
@@ -3901,6 +3895,94 @@ print(number1 - number2)  # 40 - 20 = 20
 print(number1 * number2)  # 40 * 20 = 800
 
 print(int(number1 / number2))  # 40 / 20 = 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try this really cool Math class with __dunder__ methods to change each class object's
+# behavior or outcome.
+
+class Math:
+
+    def __init__(self,num1):
+
+        self.num1 = num1
+
+    def __add__(self,num2):
+        return self.num1 + num2.num1
+
+    def __sub__(self,num2):
+      return self.num1 - num2.num1
+
+    def __mul__(self,num2):
+      return self.num1 * num2.num1
+
+    def __truediv__(self,num2):
+      return self.num1 / num2.num1
+
+    def __eq__(self,num2):
+        return self.num1 == num2.num1
+
+    def __gt__(self,num2):
+        return self.num1 > num2.num1
+
+    def __lt__(self,num2):
+      return self.num1 < num2.num1
+
+number1 = Math(20)
+number2 = Math(5)
+
+print(number1 + number2)  # 25
+
+print(number1 - number2)  # 15
+
+print(number1 * number2)  # 100
+
+print(int(number1 / number2))  # 4
+
+# Change the values (20) and (5) to any numbers you like, and then check the outcome
+# to see if number1 == number2, greater than: > or less than: < number2.
+
+print(number1 == number2)  # False
+
+print(number1 > number2)  # True
+
+print(number1 < number2)  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# The dunder __repr__ method checks for string value integrity within a class. If you
+# create a wrong dunder method, the __repr__ method will execute, letting you know
+# that something isn't right in the code. The __repr__ is used for debugging strings.
+# The __add__ dunder method should be changed to the __str__ dunder method and
+# all will be just fine...
+
+class Text_string:
+
+    def __init__(self,text_string):
+
+        self.text_string = text_string
+
+    def __add__(self):
+        return self.text_string
+
+    def __repr__(self):
+        return '''\
+The __repr__ dunder method is for debugging Python code.
+The dunder __add__ method is the wrong type. The __repr__
+dunder method will execute, letting you know that something
+isn't right. Change the __add__ to __str__ and all will be just fine...'''
+
+my_text_string = Text_string('All is just fine now...')
+
+print(my_text_string)  # All is fine now...
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Try these dunder string methods and see how they work within print() functions.
+
+string = 'my string value'
+
+print(str(string))  # my string value
+
+print(repr(string))  # 'my string value'
+
+print(str.__call__(string))  # my string value
+
+print(repr.__call__(string))  # 'my string value'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
