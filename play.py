@@ -3897,17 +3897,7 @@ print(number1 * number2)  # 40 * 20 = 800
 print(int(number1 / number2))  # 40 / 20 = 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try this really cool Math class with __dunder__ methods to change each class object's
-# behavior and outcome. Think of these class acts as OBJECTS! Each object has parts
-# on, or in it. Let's think of our classes as a teapot. A teapot has a spout, a handle and
-# it's a container that holds tea. Now, think about this same perspective when creating
-# classes and class objects alike. Define() functions are instances of a class. The teapot
-# has the spout we need. When we create more define() functions within a class, we end
-# up creating the entire teapot. Spout and all. We can now make our classes do more
-# things. With __dunder__ methods, we can now change the behavior of our class objects.
-# Thus, we can put a different spout on the teapot, or paint the teapot any colour of the
-# rainbow we like. This is why __dunder__ methods are also known as Magic Methods.
-# Also known as class constructors; they help change the shape and colour of our teapot
-# object.
+# behavior and outcome.
 
 class Math:
 
@@ -3994,6 +3984,40 @@ print(str.__call__(string))  # my string value
 
 print(repr.__call__(string))  # 'my string value'
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Magic Methods, also known as __dunder__ methods or class constructors change
+# the behavior of class objects. We can change this class act's behavior or outcome
+# to anything we like. The dunder __str__ works with text strings only. However, we
+# can also add more __dunder__ methods to this class object as we like, such was
+# the case before with our other class examples, thus far.
+
+class My_pets:
+
+    def __init__(self,pet1,pet2,pet3,pet4):
+
+        self.pet1 = pet1
+        self.pet2 = pet2
+        self.pet3 = pet3
+        self.pet4 = pet4
+
+    def __str__(self):
+      return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+
+my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
+my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
+my_pet3 = My_pets('a Hyena','a Tiger','a Vulture','two Piranha')
+my_pet4 = My_pets('a Rhinoceros','a Hippopotamus','an Elephant','a Giraffe')
+my_pet5 = My_pets('a Cobra','an Alligator','a Crocodile','a Komodo Dragon')
+
+# You can create a default tuple for all your variables, and then create a four loop
+# that prints out each class instance through it, without creating redundant print()
+# functions like we've been doing. And now that we are starting to get the hang of
+# things, we don't need redundant print() functions anymore; for loops take care of
+# that for us.
+
+class_objects = my_pet1,my_pet2,my_pet3,my_pet4,my_pet5
+
+for i in class_objects:print(i)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
 # of my hardest things, I had ever problem solved with computer programming, since
@@ -4009,6 +4033,17 @@ print(repr.__call__(string))  # 'my string value'
 # It's now time to take a much needed break. Because believe me, you will need it after
 # this Monster Class Act Python program exercise. All I can say, it's Head Banging time.
 # Good Luck!
+
+# Please note: because of how large this Python program exercise is, I do not use any
+# __dunder__ methods at all, except for the __init__ initialize dunder method. This
+# __init__ dunder method is what sets up and initiates the class attribute properties
+# within it. The ' self ' attribute calls all the other class attribute properties from within
+# the __init__ constructor that constructs all the class attributes, including the ' self '
+# attribute property that calls itself to bring all the other class attribute properties with
+# it, from within the __init__ constructor. If you create four class attributes, you have
+# initiate all four class attribute properties as well. For example: self.name = name.
+# However though, we will be invoking the 'super()' function all throughout this Monster
+# class act, Python program exercise. Ready? Let's go!
 
 # The very first thing we must do here is, create as many variables and their values as
 # we need them. Creating variables helps to keep the spaghetti of long string values
