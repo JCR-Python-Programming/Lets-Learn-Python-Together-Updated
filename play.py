@@ -3897,7 +3897,17 @@ print(number1 * number2)  # 40 * 20 = 800
 print(int(number1 / number2))  # 40 / 20 = 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try this really cool Math class with __dunder__ methods to change each class object's
-# behavior or outcome.
+# behavior and outcome. Think of these class acts as OBJECTS! Each object has parts
+# on, or in it. Let's think of our classes as a teapot. A teapot has a spout, a handle and
+# it's a container that holds tea. Now, think about this same perspective when creating
+# classes and class objects alike. Define() functions are instances of a class. The teapot
+# has the spout we need. When we create more define() functions within a class, we end
+# up creating the entire teapot. Spout and all. We can now make our classes do more
+# things. With __dunder__ methods, we can now change the behavior of our class objects.
+# Thus, we can put a different spout on the teapot, or paint the teapot any colour of the
+# rainbow we like. This is why __dunder__ methods are also known as Magic Methods.
+# Also known as class constructors; they help change the shape and colour of our teapot
+# object.
 
 class Math:
 
@@ -4107,9 +4117,9 @@ class Main_class_attribute_properties:
 
     def __init__(self,attribute1,attribute2,attribute3):
 
-        self.attribute1=attribute1
-        self.attribute2=attribute2
-        self.attribute3=attribute3
+        self.attribute1 = attribute1
+        self.attribute2 = attribute2
+        self.attribute3 = attribute3
 
 class Subclass1_same_attribute_properties(  # inhert main class attribute properties only
     Main_class_attribute_properties):pass
@@ -4124,7 +4134,7 @@ class Super_subclass1_new_attribute_properties(
     def __init__(self,attribute1,attribute2,attribute3,attribute4):
         super().__init__(attribute1, attribute2,attribute3)
 
-        self.attribute4=attribute4
+        self.attribute4 = attribute4
 
 class Super_subclass2_new_attribute_properties(
     Super_subclass1_new_attribute_properties,
@@ -4138,7 +4148,7 @@ class Super_subclass2_new_attribute_properties(
 
         super().__init__(attribute1,attribute2,attribute3,attribute4)
 
-        self.attribute5=attribute5
+        self.attribute5 = attribute5
 
 class Super_subclass3_new_attribute_properties(
     Super_subclass2_new_attribute_properties,
@@ -4155,7 +4165,7 @@ class Super_subclass3_new_attribute_properties(
             attribute1,attribute2,attribute3,attribute4,
             attribute5)
 
-        self.attribute6=attribute6
+        self.attribute6 = attribute6
 
 class Super_subclass4_new_attribute_properties(
     Super_subclass3_new_attribute_properties,
@@ -4173,7 +4183,7 @@ class Super_subclass4_new_attribute_properties(
             attribute1,attribute2,attribute3,attribute4,
             attribute5,attribute6)
 
-        self.attribute7=attribute7
+        self.attribute7 = attribute7
 
 class Super_subclass5_new_attribute_properties(
     Super_subclass4_new_attribute_properties,
@@ -4192,7 +4202,7 @@ class Super_subclass5_new_attribute_properties(
             attribute1,attribute2,attribute3,attribute4,
             attribute5,attribute6,attribute7)
 
-        self.attribute8=attribute8
+        self.attribute8 = attribute8
 
 class Super_subclass6_new_attribute_properties(
     Super_subclass5_new_attribute_properties,
@@ -4213,7 +4223,7 @@ class Super_subclass6_new_attribute_properties(
             attribute1,attribute2,attribute3,attribute4,
             attribute5,attribute6,attribute7,attribute8)
 
-        self.attribute9=attribute9
+        self.attribute9 = attribute9
 
 class Super_subclass7_new_attribute_properties(
     Super_subclass6_new_attribute_properties,
@@ -4236,7 +4246,7 @@ class Super_subclass7_new_attribute_properties(
             attribute5,attribute6,attribute7,attribute8,
             attribute9)
 
-        self.attribute10=attribute10
+        self.attribute10 = attribute10
 
 a = Main_class_attribute_properties(main_class[0],main_class[1],main_class[2])
 
