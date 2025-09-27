@@ -4016,6 +4016,10 @@ my_pet5 = My_pets('a Cobra','an Alligator','a Crocodile','a Komodo Dragon')
 
 class_objects = my_pet1,my_pet2,my_pet3,my_pet4,my_pet5
 
+for i in range(0,5):print(class_objects[i])
+
+# or this:
+
 for i in class_objects:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
