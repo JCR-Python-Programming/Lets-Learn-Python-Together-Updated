@@ -4130,7 +4130,7 @@ print(my_pet1['get ite'])  # item 'get ite' was not found:
 
 # It's now time to take a much needed break. Because believe me, you will need it after
 # this Monster Class Act Python program exercise. All I can say, it's Head Banging time.
-# Good Luck!
+# Good Luck! But most importantly, take your time; you can never rush a turtle.
 
 # Please note: because of how large this Python program exercise is, I do not use any
 # __dunder__ methods at all, except for the __init__ initialize dunder method. This
