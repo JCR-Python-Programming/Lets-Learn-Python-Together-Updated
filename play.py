@@ -4022,8 +4022,8 @@ for i in range(0,5):print(class_objects[i])
 
 for i in class_objects:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's learn what the __contains__ constructor does to find class attribute property
-# values.
+# Let's learn what the __contains__ class constructor does to find class attribute
+# property values.
 
 class My_pets:
 
@@ -4038,12 +4038,14 @@ class My_pets:
       return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
 
     def __contains__(self,keywords):
-        return keywords in self.pet1  # change this self.pet-n to find other values.
+      return keywords in self.pet1  # change this self.pet-n to find other values.
 
 my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
 my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
 my_pet3 = My_pets('a Hyena','a Tiger','a Vulture','two Piranha')
 my_pet4 = My_pets('a Rhinoceros','a Hippopotamus','an Elephant','a Giraffe')
+
+print(my_pet1)  # I have a German Shepherd, a Tabby, a Parrot and some Angelfish.
 
 print('a German Shepherd' in my_pet1)  # True
 
@@ -4076,6 +4078,43 @@ print('a Wolf' in my_pet2)  # False
 print('a Hyena' in my_pet3)  # False
 
 print('a Rhinoceros' in my_pet4)  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn what the __getitem__ class constructor does to get items from class
+# attribute property values.
+
+class My_pets:
+
+    def __init__(self,pet1,pet2,pet3,pet4):
+
+        self.pet1 = pet1
+        self.pet2 = pet2
+        self.pet3 = pet3
+        self.pet4 = pet4
+
+    def __str__(self):
+        return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+
+    def __contains__(self,keywords):
+        return keywords in self.pet1  # change this self.pet-n to find other values.
+
+    def __getitem__(self,item):
+        if item == 'get item':  # This string argument value can be any name you like.
+            return self.pet1
+        else:
+            return f"item '{item}' was not found:"
+
+my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
+my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
+my_pet3 = My_pets('a Hyena','a Tiger','a Vulture','two Piranha')
+my_pet4 = My_pets('a Rhinoceros','a Hippopotamus','an Elephant','a Giraffe')
+
+print(my_pet1)  # I have a German Shepherd, a Tabby, a Parrot and some Angelfish.
+
+print('a Rhinoceros' in my_pet4)  # True
+
+print(my_pet1['get item'])  # a German Shepherd
+
+print(my_pet1['get ite'])  # item 'get ite' was not found:
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
@@ -4437,25 +4476,7 @@ return_value = (
     Super_subclass6_new_attribute_properties.return_function(),
     Super_subclass7_new_attribute_properties.return_function())
 
-print(f'\n{return_value[0][0]}\n\n{a.attribute1}')
-
-print(f'\n{return_value[0][1]}\n\n{b.attribute1}')
-
-print(f'\n{return_value[0][2]}\n\n{c.attribute1}')
-
-print(f'\n{return_value[0][3]}\n\n{d.attribute1}')
-
-print(f'\n{return_value[0][4]}\n\n{e.attribute1}')
-
-print(f'\n{return_value[0][5]}\n\n{f.attribute1}')
-
-print(f'\n{return_value[0][6]}\n\n{g.attribute1}')
-
-print(f'\n{return_value[0][7]}\n\n{h.attribute1}')
-
-print(f'\n{return_value[0][8]}\n\n{i.attribute1}')
-
-print(f'\n{return_value[0][9]}\n\n{j.attribute1}')
+for i in range(0,10):print(f'\n{return_value[0][i]}\n\n{a.attribute1}')
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
