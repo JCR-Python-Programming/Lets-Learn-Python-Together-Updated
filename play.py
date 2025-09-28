@@ -4022,6 +4022,61 @@ for i in range(0,5):print(class_objects[i])
 
 for i in class_objects:print(i)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn what the __contains__ constructor does to find class attribute property
+# values.
+
+class My_pets:
+
+    def __init__(self,pet1,pet2,pet3,pet4):
+
+        self.pet1 = pet1
+        self.pet2 = pet2
+        self.pet3 = pet3
+        self.pet4 = pet4
+
+    def __str__(self):
+      return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+
+    def __contains__(self,keywords):
+        return keywords in self.pet1  # change this self.pet-n to find other values.
+
+my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
+my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
+my_pet3 = My_pets('a Hyena','a Tiger','a Vulture','two Piranha')
+my_pet4 = My_pets('a Rhinoceros','a Hippopotamus','an Elephant','a Giraffe')
+
+print('a German Shepherd' in my_pet1)  # True
+
+print('a Wolf' in my_pet2)  # True
+
+print('a Hyena' in my_pet3)  # True
+
+print('a Rhinoceros' in my_pet4)  # True
+
+# These are the right values for the class attributes. The problem is, that they are in
+# the wrong class attribute property positions. The __contains__ constructor will find
+# the right values, as long as they are in the right class attribute property positions.
+# For example:
+
+# self.pet1 = pet1  is for the value 'a German Shepherd'
+# self.pet2 = pet2  is for the value 'a Tabby'
+# self.pet3 = pet3  is for the value 'a Parrot'
+# self.pet4 = pet4  is for the value some Angelfish'
+
+# If we change the 'return keywords in' statement, from ' self.pet1 ' to ' self.pet2 ',
+# the class attribute property values will be in the wrong class attribute positions.
+# For example, the 'a German Shepherd' value is set for 'self.pet1', not for 'self.pet2'.
+# All these values are set at 'self.pet1'. To find other keyword values, place the right
+# value, along with the right 'self.pet-n' attribute property.
+
+print('a German Shepherd' in my_pet1)  # False
+
+print('a Wolf' in my_pet2)  # False
+
+print('a Hyena' in my_pet3)  # False
+
+print('a Rhinoceros' in my_pet4)  # False
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # And before we go, I have just one more Python programming exercise. Believe me,
 # this Monster Class Act really took me out for a complete spin and back. This is one
 # of my hardest things, I had ever problem solved with computer programming, since
