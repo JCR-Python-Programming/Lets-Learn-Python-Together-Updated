@@ -1,4 +1,3 @@
-
 # Welcome to the Wonderful World of Python Programming. Welcome to Python World!
 
 # This is my most advanced Python programming materials yet, thus far. I've studied
@@ -14,7 +13,6 @@
 
 # Because a Great Programmer always starts with a Great Programmer's Manual... 😁
 '''---------------------------------------------------------------------------------------------------------------------------'''
-
 # Easy define function program example:
 
 def function():
@@ -878,7 +876,7 @@ exec(redundant_code)
 # Here is an example, using a for-loop to call the 'exec()' function.
 
 for i in range(3):
-    exec(redundant_code)
+  exec(redundant_code)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's create a for loop inside an exec() function and see what happens
 # when execute/run this Python program example:
@@ -1088,9 +1086,9 @@ print(text_string)
 # packed values.
 
 x,y,z = (
-    {1,2,3,4,9,6,7,8,5,9,10},
-    {11,12,13,14,15,16,17},
-    {18,19,20,21,22,23,24})
+  {1,2,3,4,9,6,7,8,5,9,10},
+  {11,12,13,14,15,16,17},
+  {18,19,20,21,22,23,24})
 
 a = slice(24) # slice the set with the slice() function
 
@@ -1117,8 +1115,8 @@ print('View the value contents of the unionized list to check it:\n\n'+str(conve
 # Create a variable called sentence_loop, along with all its values.
 
 sentence_loop = (
-    f'\nThe length of (x) = {length1}',f'The length of (y) = {length2}',
-    f'The length of (z) = {length3}',f'\nThe total lengths of x+y+z = {total_sum}')
+  f'\nThe length of (x) = {length1}',f'The length of (y) = {length2}',
+  f'The length of (z) = {length3}',f'\nThe total lengths of x+y+z = {total_sum}')
 
 # Create a for loop that will loop through the sentence_loop variable, using a single
 # print() function. The for loop will iterate until all the values are cycled through the
@@ -1193,7 +1191,7 @@ name_list = ['John','Bob','Rob','Tom']
 # 0, followed by index 1 and then index 2, and finally index 3.
 
 for index in name_list:
-    print(index)
+  print(index)
 
 # The for-loop example above is fine, but it has its limitations when it comes to multi indexing
 # through a tuple or list alike. With the enumerate() function, such things are possible.
@@ -1201,16 +1199,16 @@ for index in name_list:
 # when you experiment with them.
 
 for index,name in enumerate(name_list):
-    print(index)
+  print(index)
 
 for index,name in enumerate(name_list):
-    print(name)
+  print(name)
 
 for index,name in enumerate(name_list):
-    print(index,name)
+  print(index,name)
 
 for index,name in enumerate(name_list,start=1):
-    print(index,name)
+  print(index,name)
 
 name = ['John','Bob','Rob','Tom']
 pet = ['Dog','Cat','Bird','Fish']
@@ -1224,46 +1222,46 @@ computer = ['Desktop','Laptop','Cellphone','Notebook']
 # wish. You can also rename the name variable if you like.
 
 for index1,index2,index3 in zip(name,pet,computer):
-    print(index1)
+  print(index1)
 
 for index1,index2,index3 in zip(name,pet,computer):
-    print(index2)
+  print(index2)
 
 for index1,index2,index3 in zip(name,pet,computer):
-    print(index3)
+  print(index3)
 
 for index1,index2,index3 in zip(name,pet,computer):
-    print(index1,index2,index3)
+  print(index1,index2,index3)
 
 # Let's try the enumerate() function with a 2d-list.
 
 my_2d_list = [
-    ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook']]
+  ['John','Bob','Rob','Tom'],
+  ['Desktop','Laptop','Cellphone','Notebook']]
 
 for index,name in enumerate(my_2d_list):
-    print(index)
+  print(index)
 
 for index,name in enumerate(my_2d_list):
-    print(name[0])
+  print(name[0])
 
 for index,name in enumerate(my_2d_list):
-    print(index,name[0])
+  print(index,name[0])
 
 for index,name in enumerate(my_2d_list,start=1):
-    print(index,name[0])
+  print(index,name[0])
 
 # Let's try the zip() function with a 2d-list.
 
 my_2d_list = [
-    ['John','Bob','Rob','Tom'],
-    ['Desktop','Laptop','Cellphone','Notebook']]
+  ['John','Bob','Rob','Tom'],
+  ['Desktop','Laptop','Cellphone','Notebook']]
 
 for index in zip(my_2d_list):
-    print(index[0][0])
+  print(index[0][0])
 
 for index in zip(my_2d_list):
-    print(index[0][0],index[0][1],index[0][2],index[0][3])
+  print(index[0][0],index[0][1],index[0][2],index[0][3])
 
 # Let's try some fun experiment examples with some of what we've learned so far
 # about the enumerate() function. Let's create a program that uses a sentence for
@@ -1275,13 +1273,13 @@ fun_list2 = ['Dog','Cat','Bird','Fish']
 fun_list3 = ['Desktop','Laptop','Cellphone','Notebook']
 
 for index,name in enumerate(fun_list1):
-    print(f"My name is {name}. I'm the value from the fun_list1, position {index}")
+  print(f"My name is {name}. I'm the value from the fun_list1, position {index}")
 
 for index,name in enumerate(fun_list2):
-    print(f"I am a {name}. I'm the value from the fun_list2, position {index}")
+  print(f"I am a {name}. I'm the value from the fun_list2, position {index}")
 
 for index,name in enumerate(fun_list3):
-    print(f"I am a {name}. I'm the value from the fun_list3, position {index}")
+  print(f"I am a {name}. I'm the value from the fun_list3, position {index}")
 
 # These enumerate() function examples are great, but let's beef it up just a lot more
 # with the zip() function, so we can create complex actions with all our fun_lists combined
@@ -1289,7 +1287,7 @@ for index,name in enumerate(fun_list3):
 # happens when you type and execute/run this Python program example below:
 
 for list1,list2,list3 in zip(fun_list1,fun_list2,fun_list3):
-    print(f"My name is {list1} and I have a {list2} picture on my {list3} screen.")
+  print(f"My name is {list1} and I have a {list2} picture on my {list3} screen.")
 
 # The zip() function is very useful, but it can only reach as far as its shortest list length.
 # That means, if you have two, three or more lists, the shortest list out of the three or
@@ -1316,7 +1314,7 @@ fun_list4 = ['loves my','hates my','found my','lost my']
 fun_list5 = ['fed his',"didn't feed his",'plays with his',"doesn't play with his"]
 
 for list1,list2,list3,list4,list5 in zip(fun_list1,fun_list2,fun_list3,fun_list4,fun_list5):
-    print(f'{list1} {list4} {list3} and {list5} {list2}.')
+  print(f'{list1} {list4} {list3} and {list5} {list2}.')
 
 # Well, I think we pretty much learned what the enumerate() and zip() functions do.
 # Now, it'spractice, practice, practice and more practice, practice, practice...
@@ -1763,8 +1761,8 @@ names2 = ['John','Tom','bird','fish']
 names3 = ['Terry','Mary','turtle','monkey']
 
 for i,x,y,z in names1,names2,names3:
-    print('Hello',i+'. How are you? You bought a cute',y,'I see...')
-    print('Hello',x+'. How are you? You bought a cute',z,'I see...')
+  print('Hello',i+'. How are you? You bought a cute',y,'I see...')
+  print('Hello',x+'. How are you? You bought a cute',z,'I see...')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 names1 = ['Bob','Rob','dog','cat']
 names2 = ['John','Tom','bird','fish']
@@ -1773,8 +1771,8 @@ names3 = ['Terry','Mary','turtle','monkey']
 sentence= 'Hello','. How are you? You bought a cute','I see...'
 
 for i,x,y,z in names1,names2,names3:
-    print(sentence[0],i+sentence[1],y,sentence[2])
-    print(sentence[0],x+sentence[1],z,sentence[2])
+  print(sentence[0],i+sentence[1],y,sentence[2])
+  print(sentence[0],x+sentence[1],z,sentence[2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 names1 = ['Bob','Rob','dog','cat']
 names2 = ['John','Tom','bird','fish']
@@ -1783,8 +1781,8 @@ names3 = ['Terry','Mary','turtle','monkey']
 sentence = 'Hello','. How are you? You bought a cute','I see...'
 
 for i,x,y,z in names1,names2,names3:
-    print('{} {} {} {}'.format(sentence[0],i+sentence[1],y,sentence[2]))  # old formatted string
-    print('{} {} {} {}'.format(sentence[0],x+sentence[1],z,sentence[2]))
+  print('{} {} {} {}'.format(sentence[0],i+sentence[1],y,sentence[2]))  # old formatted string
+  print('{} {} {} {}'.format(sentence[0],x+sentence[1],z,sentence[2]))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 names1 = ['Bob','Rob','dog','cat']
 names2 = ['John','Tom','bird','fish']
@@ -1793,8 +1791,8 @@ names3 = ['Terry','Mary','turtle','monkey']
 sentence = 'Hello','. How are you? You bought a cute','I see...'
 
 for i,x,y,z in names1,names2,names3:
-    print(f'{sentence[0]} {i}{sentence[1]} {y} {sentence[2]}')  # new f' string format
-    print(f'{sentence[0]} {x}{sentence[1]} {z} {sentence[2]}')
+  print(f'{sentence[0]} {i}{sentence[1]} {y} {sentence[2]}')  # new f' string format
+  print(f'{sentence[0]} {x}{sentence[1]} {z} {sentence[2]}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Let's learn what casting a tuple( ), a list[ ] and a set{ } are all about, with these
 # casting functions: tuple(), list() and set(). Note, the dict() function only works
@@ -1986,15 +1984,15 @@ os.system('cls')
 n=0
 
 while True:
-    print(white+'\n'+' '*6+'welcome to the binary beat in motion python program example:'.title()
-          +yellow+'\n\n'+' '*6+'1     1    1    1    1   1   1   1 = eight bits or one byte'
-          +'\n\n'+' '*6+'128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = decimal number: 255''\n\n'+' '*2
-          +'binary base: 2, octal base: 8, hexadecimal base: 16, decimal base: 10'.title()
-          +'\n\n'+' '*3+yellow,len(f'{n:b}'),green+'binary digits: '.title()
-          +yellow+f'{n:b} '+red+'=\n\n'+' '*3+yellow,len(f'{n:o}'),green+'octal digits: '.title()
-          +yellow+f'{n:o} '+red+'=\n\n'+green+' '*3+yellow,len(f'{n:x}'),green+'hexadecimal digits: '.title()
-          +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
-          +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
+  print(white+'\n'+' '*6+'welcome to the binary beat in motion python program example:'.title()
+        +yellow+'\n\n'+' '*6+'1     1    1    1    1   1   1   1 = eight bits or one byte'
+        +'\n\n'+' '*6+'128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = decimal number: 255''\n\n'+' '*2
+        +'binary base: 2, octal base: 8, hexadecimal base: 16, decimal base: 10'.title()
+        +'\n\n'+' '*3+yellow,len(f'{n:b}'),green+'binary digits: '.title()
+        +yellow+f'{n:b} '+red+'=\n\n'+' '*3+yellow,len(f'{n:o}'),green+'octal digits: '.title()
+        +yellow+f'{n:o} '+red+'=\n\n'+green+' '*3+yellow,len(f'{n:x}'),green+'hexadecimal digits: '.title()
+        +yellow+f'{n:X} '+red+'= '+green+'\n\n'+' '*3+yellow,len(f'{n:d}'),green+'decimal digits: '.title()
+        +red+'= '+yellow+f'{n:d}');delay(1);os.system('cls');n+=1
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is for advanced Python programmers, who want something a little bit saltier.
 # Create this Fibonary Bits In Action! Python program using a single print() function.
@@ -2028,23 +2026,23 @@ fib = [num1,num2]
 pause=1
 
 while True:
-    os.system('cls')
-    num3 = num1+num2
-    fib.append(num3)
-    num1 = num2;num2 = num3
+  os.system('cls')
+  num3 = num1+num2
+  fib.append(num3)
+  num1 = num2;num2 = num3
 
-    b = f'{num3:b}';o = f'{num3:o}'
-    x = f'{num3:X}';d = f'{num3:d}'
+  b = f'{num3:b}';o = f'{num3:o}'
+  x = f'{num3:X}';d = f'{num3:d}'
 
 # f' string formatted print() function example:
 
-    print(f'{white}{lb}{sp*16}{title_text[0]}{lb}{red}{lb}{sp*4}{len(b)}{green}{text[0].title()}'
-          f'{yellow}{b}{blue}{elb}{sp*4}{green}{red}{len(o)}{green}{text[1].title()}{yellow}'
-          f'{o}{blue}{elb}{sp*4}{green}{red}{len(x)}{green}{text[2].title()}{yellow}{x}'
-          f'{blue}{eq}{green}{lb}{sp*4}{red}{len(d)}{green}{text[3].title()}{blue}{eq}{yellow}'
-          f'{d}{lbb}{white}{sp*11}{title_text[1]}{lbb}{green}{sp*3}{text[4]}{yellow}{num3:,d}')
+  print(f'{white}{lb}{sp*16}{title_text[0]}{lb}{red}{lb}{sp*4}{len(b)}{green}{text[0].title()}'
+        f'{yellow}{b}{blue}{elb}{sp*4}{green}{red}{len(o)}{green}{text[1].title()}{yellow}'
+        f'{o}{blue}{elb}{sp*4}{green}{red}{len(x)}{green}{text[2].title()}{yellow}{x}'
+        f'{blue}{eq}{green}{lb}{sp*4}{red}{len(d)}{green}{text[3].title()}{blue}{eq}{yellow}'
+        f'{d}{lbb}{white}{sp*11}{title_text[1]}{lbb}{green}{sp*3}{text[4]}{yellow}{num3:,d}')
 
-    delay(pause)
+  delay(pause)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This is for advanced Python programmers, who want something a little bit saltier.
 # Create this Fibonacci Natural Number Sequence in Action... Python program using
@@ -2061,51 +2059,51 @@ while True:
 import os,time;os.system(f'title fibonacci natural number sequence'.title())
 
 text_colours=(
-    '\x1b[31m', # index 0 = red
-    '\x1b[32m', # index 1 = green
-    '\x1b[33m', # index 2 = yellow
-    '\x1b[34m', # index 3 = blue
-    '\x1b[35m', # index 4 = purple
-    '\x1b[36m', # index 5 = cyan
-    '\x1b[37m'  # index 6 = white
-    )
+  '\x1b[31m', # index 0 = red
+  '\x1b[32m', # index 1 = green
+  '\x1b[33m', # index 2 = yellow
+  '\x1b[34m', # index 3 = blue
+  '\x1b[35m', # index 4 = purple
+  '\x1b[36m', # index 5 = cyan
+  '\x1b[37m'  # index 6 = white
+  )
 
 text_words = (
-    f'{text_colours[1]}Fibonacci Natural Number Sequence in Action...',
+  f'{text_colours[1]}Fibonacci Natural Number Sequence in Action...',
 
-    f'\n\n{text_colours[2]}Fibonacci Natural Number Sequence example: \
+  f'\n\n{text_colours[2]}Fibonacci Natural Number Sequence example: \
 [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610...]',
 
-    f'\n\n{text_colours[5]}Fibonacci Natural Numbers go on forever!',
-    f'\n\nFibonacci Natural Numbers can only be found in \
+  f'\n\n{text_colours[5]}Fibonacci Natural Numbers go on forever!',
+  f'\n\nFibonacci Natural Numbers can only be found in \
 nature, such as plants and animals...'
-    )
+  )
 
 for i in range(25):
-    print('\n',' '*i,text_words[0])
-    time.sleep(.25)
-    os.system('cls')
+  print('\n',' '*i,text_words[0])
+  time.sleep(.25)
+  os.system('cls')
 
 num1 = 0
 num2 = 1
 fib = [num1,num2]
 
 while True:
-    num3 = num1+num2
-    fib.append(num3)
-    num1 = num2
-    num2 = num3
-    clock = (time.asctime())
+  num3 = num1+num2
+  fib.append(num3)
+  num1 = num2
+  num2 = num3
+  clock = (time.asctime())
 
-    print('\n',' '*25,text_words[0],text_words[1],text_words[2])
+  print('\n',' '*25,text_words[0],text_words[1],text_words[2])
 
-    print(f'\nFibonacci Natural Number Sequence: {text_colours[2]}\
+  print(f'\nFibonacci Natural Number Sequence: {text_colours[2]}\
 {num1} {text_colours[5]}+ {text_colours[2]}{num2}{text_colours[5]} = \
 ({text_colours[0]}{num1+num3}{text_colours[5]}){text_colours[5]}\n\n\
 Fibonacci Natural Numbers: "{text_colours[0]}{num1+num3:,}{text_colours[5]}\
 "\n\n{text_colours[0]}Date & Time:\n\n{clock}')
 
-    time.sleep(1),os.system('cls')
+  time.sleep(1),os.system('cls')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # input Fibonacci Number Sequence program example, using a set{}
 
@@ -2114,35 +2112,33 @@ num1,num2 = 0,1
 fib = {num1,num2}
 
 words = (
-    'is in the Fibonacci Sequence.',
-    'is not in the Fibonacci Sequence.',
-    'Please enter a correct Fibonacci Sequence Number: ',
-    'Sorry! Numbers only.',
-    'Memory Error!'
-    )
+  'is in the Fibonacci Sequence.',
+  'is not in the Fibonacci Sequence.',
+  'Please enter a correct Fibonacci Sequence Number: ',
+  'Sorry! Numbers only.',
+  'Memory Error!'
+  )
 
 while True:
-    try:
-        x=int(input(words[2]).strip())
+  try:
+    x=int(input(words[2]).strip())
+    for i in range(x):
+      fib_num=num1+num2
+      fib.add(fib_num)
+      num1=num2
+      num2=fib_num
+      if x in fib:
+          print(x,words[0])
+          break
 
-        for i in range(x):
-            fib_num=num1+num2
-            fib.add(fib_num)
-            num1=num2
-            num2=fib_num
+      elif x not in fib:
+        print(x,words[1])
 
-        if x in fib:
-            print(x,words[0])
-            break
+  except ValueError:
+      print(words[3])
 
-        elif x not in fib:
-            print(x,words[1])
-
-    except ValueError:
-        print(words[3])
-
-    except MemoryError:
-        print(words[4])
+  except MemoryError:
+      print(words[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 #                ASCII: (American Standard Code for Information Interchange)
 
@@ -2201,103 +2197,103 @@ for i in range(32,127):print(chr(i),'=',i)
 import os,time
 
 text_features = (
-    'cls', # index 0 = clear screen
-    '\x1b[31m', # index 1 = red
-    '\x1b[32m', # index 2 = green
-    '\x1b[33m', # index 3 = yellow
-    '\x1b[34m', # index 4 = blue
-    '\x1b[37m'  # index 5 = red
-    )
+  'cls', # index 0 = clear screen
+  '\x1b[31m', # index 1 = red
+  '\x1b[32m', # index 2 = green
+  '\x1b[33m', # index 3 = yellow
+  '\x1b[34m', # index 4 = blue
+  '\x1b[37m'  # index 5 = red
+  )
 
 text_words = (
-    f'\n{text_features[3]}ASCII CODE NUMERIC VALUE TRANSLATOR\n', # index 0 = text_words
+  f'\n{text_features[3]}ASCII CODE NUMERIC VALUE TRANSLATOR\n', # index 0 = text_words
 
-    f'\n{text_features[3]}ASCII CODE CHARACTER VALUE TRANSLATOR\n', # index 1 = text_words
+  f'\n{text_features[3]}ASCII CODE CHARACTER VALUE TRANSLATOR\n', # index 1 = text_words
 
-    f'\n{text_features[3]}ASCII CODE TRANSLATOR', # index 2 = text_words
+  f'\n{text_features[3]}ASCII CODE TRANSLATOR', # index 2 = text_words
 
-    f'\n{text_features[3]}Thanks for choosing ASCII CODE TRANSLATOR', # index 3 = text_words
+  f'\n{text_features[3]}Thanks for choosing ASCII CODE TRANSLATOR', # index 3 = text_words
 
-    'title ASCII CODE TRANSLATOR' # index 4 = text_words
-    )
+  'title ASCII CODE TRANSLATOR' # index 4 = text_words
+  )
 
 word_info = (
-    f'{text_features[5]}Please type a number, then press \
+  f'{text_features[5]}Please type a number, then press \
 (Enter) to confirm: {text_features[2]}', # index 0 = word_info
 
-    f'{text_features[5]}Please type a letter key or a number key, then press \
+  f'{text_features[5]}Please type a letter key or a number key, then press \
 (Enter) to confirm: {text_features[2]}', # index 1 = word_info
 
-    f'\n{text_features[3]}Please choose which ASCII code translator you \
+  f'\n{text_features[3]}Please choose which ASCII code translator you \
 would like to use:\n\n{text_features[5]}Press (1) for ASCII code number \
 values.\nPress (2) for ASCII code character values.\nPress \
 (Q) to quit.{text_features[2]} ', # index 2 = word_info
 
-    f'\n\n{text_features[3]}Do you wish to continue? Press \
+  f'\n\n{text_features[3]}Do you wish to continue? Press \
 (Enter) or press (Q) to quit: {text_features[2]}', # index 3 = word_info
 
-    f'\n{text_features[1]}This is a Value Error!', # index 4 = word_info
+  f'\n{text_features[1]}This is a Value Error!', # index 4 = word_info
 
-    f'\n{text_features[1]}This is a Type Error!' # index 5 = word_info
-    )
+  f'\n{text_features[1]}This is a Type Error!' # index 5 = word_info
+  )
 
 button = ('1','2','q')
 
 def ascii_codes():
 
-    os.system(text_words[4])
+  os.system(text_words[4])
 
-    def subroutine1():
+  def subroutine1():
 
-        while True:
-            os.system(text_features[0])
-            print(text_words[0])
+      while True:
+          os.system(text_features[0])
+          print(text_words[0])
 
-            try:
-                ascii_code = int(input(word_info[0]).strip())
-                ascii_code = input(f'\n{text_features[2]}{chr(ascii_code)}\
+          try:
+              ascii_code = int(input(word_info[0]).strip())
+              ascii_code = input(f'\n{text_features[2]}{chr(ascii_code)}\
 {text_features[5]} = ASCII code: " {text_features[2]}{ascii_code}\
 {text_features[5]} " {word_info[3]}').lower().lower().strip()
-                if ascii_code == button[2]:
-                    break
+              if ascii_code == button[2]:
+                  break
 
-            except ValueError:
-                print(word_info[4])
-                time.sleep(2)
+          except ValueError:
+              print(word_info[4])
+              time.sleep(2)
 
-    def subroutine2():
-        while True:
-            os.system(text_features[0])
-            print(text_words[1])
+  def subroutine2():
+      while True:
+          os.system(text_features[0])
+          print(text_words[1])
 
-            try:
-                ascii_code = input(word_info[1]).strip()
-                ascii_code = input(f'\n{text_features[2]}{ascii_code}\
+          try:
+              ascii_code = input(word_info[1]).strip()
+              ascii_code = input(f'\n{text_features[2]}{ascii_code}\
 {text_features[5]} = ASCII code: " {text_features[2]}{ord(ascii_code)}\
 {text_features[5]} " {word_info[3]}').lower().strip()
-                if ascii_code == button[2]:
-                    break
+              if ascii_code == button[2]:
+                  break
 
-            except TypeError:
-                print(word_info[5])
-                time.sleep(2)
+          except TypeError:
+              print(word_info[5])
+              time.sleep(2)
 
-    while True:
-        os.system(text_features[0])
-        print(text_words[2])
+  while True:
+      os.system(text_features[0])
+      print(text_words[2])
 
-        butt=input(word_info[2]).lower().strip()
-        if butt == button[0]:
-            subroutine1()
-        elif butt == button[1]:
-           subroutine2()
+      butt=input(word_info[2]).lower().strip()
+      if butt == button[0]:
+          subroutine1()
+      elif butt == button[1]:
+         subroutine2()
 
-        else:
-            if butt == button[2]:
-                os.system(text_features[0])
-                print(text_words[3])
-                time.sleep(3)
-                break
+      else:
+          if butt == button[2]:
+              os.system(text_features[0])
+              print(text_words[3])
+              time.sleep(3)
+              break
 
 ascii_codes()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2378,12 +2374,12 @@ print(timer.strftime('Day %j'))
 import time,datetime
 
 show_time = (
-    '%I:%M:%S:%p',
-    '%H:%M:%S',
-    '%A %B %d,%Y',
-    'Week %U',
-    'Day %j'
-    )
+  '%I:%M:%S:%p',
+  '%H:%M:%S',
+  '%A %B %d,%Y',
+  'Week %U',
+  'Day %j'
+  )
 
 timer = datetime.datetime.now()
 
@@ -2407,34 +2403,34 @@ print(timer.strftime(show_time[4]))
 import os,time,datetime
 
 show_time = (
-    '%I:%M:%S:%p',
-    '%H:%M:%S',
-    '%A %B %d,%Y',
-    'Week %U',
-    'Day %j'
-    )
+  '%I:%M:%S:%p',
+  '%H:%M:%S',
+  '%A %B %d,%Y',
+  'Week %U',
+  'Day %j'
+  )
 
 while True:
-    timer = datetime.datetime.now()
-    print(timer.strftime(show_time[0]))
-    print(timer.strftime(show_time[1]))
-    print(timer.strftime(show_time[2]))
-    print(timer.strftime(show_time[3]))
-    print(timer.strftime(show_time[4]))
+  timer = datetime.datetime.now()
+  print(timer.strftime(show_time[0]))
+  print(timer.strftime(show_time[1]))
+  print(timer.strftime(show_time[2]))
+  print(timer.strftime(show_time[3]))
+  print(timer.strftime(show_time[4]))
 
-    time.sleep(1)
-    os.system('cls')
+  time.sleep(1)
+  os.system('cls')
 
 # Let's shorten our code by reducing our print() functions down to only one, using a for
 # loop inside the while loop.
 
 while True:
-    for i in range(5):
-        timer = datetime.datetime.now()
-        print(timer.strftime(show_time[i]))
+  for i in range(5):
+    timer = datetime.datetime.now()
+    print(timer.strftime(show_time[i]))
 
-    time.sleep(1)
-    os.system('cls')
+  time.sleep(1)
+  os.system('cls')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to open .txt files, such as notepad files. These two program examples
 # do the exact same thing. However, with the first program example, you must tell
@@ -2457,7 +2453,7 @@ notepad_file.close()
 # or this:
 
 with open('Computer Science.txt') as notepad_file:
-          print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+  print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
 
 # You can assign variables to create clean, cut code.
 
@@ -2474,7 +2470,7 @@ notepad_file.close()
 text = 'Computer Science.txt'
 
 with open(text) as notepad_file:
-          print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
+  print(notepad_file.read())  # Computer Science is Soo Much Fun!! is read from notepad.txt file text.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to write to .txt files, such as notepad files.
 
@@ -2487,7 +2483,7 @@ notepad_file.close()
 # or this:
 
 with open('Computer Science.txt','w') as notepad_file:
-          print(notepad_file.write('Welcome to Python World'))
+  print(notepad_file.write('Welcome to Python World'))
 
 # You can assign variables to create clean, cut code.
 
@@ -2506,7 +2502,7 @@ text1 = 'Computer Science.txt','w'
 text2 = 'Welcome to Python World'
 
 with open(text1,'w') as notepad_file:
-          print(notepad_file.write(text2))
+  print(notepad_file.write(text2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to append/add text to .txt files, such as notepad files.
 
@@ -2519,7 +2515,7 @@ notepad_file.close()
 # or this:
 
 with open('Computer Science.txt','a') as notepad_file:
-          print(notepad_file.write('\nPython is Cool!!'))
+  print(notepad_file.write('\nPython is Cool!!'))
 
 # You can assign variables to create clean, cut code.
 
@@ -2538,7 +2534,7 @@ text1 = 'Computer Science.txt'
 text2 = '\nPython is Cool!!'
 
 with open(text1,'a') as notepad_file:
-          print(notepad_file.write(text2))
+  print(notepad_file.write(text2))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Use Python to copy .txt files, such as notepad files. You must import the 'shutil' module.
 
@@ -2571,23 +2567,23 @@ os.remove(text)  # .txt extension
 # tuples(), lists[] and dictionaries{}.
 
 if my_tuple := (
-    'Value 0','Value 1','Value 2',
-    'Value 3','Value 4','Value 5'):pass
+  'Value 0','Value 1','Value 2',
+  'Value 3','Value 4','Value 5'):pass
 
 for value in my_tuple:print(value)
 
 if my_list := [
-    'Value 0','Value 1','Value 2',
-    'Value 3','Value 4','Value 5']:pass
+  'Value 0','Value 1','Value 2',
+  'Value 3','Value 4','Value 5']:pass
 
 for value in my_list:print(value)
 
 if my_dictionary := {
-    1:'Value 1',2:'Value 2',3:'Value 3',
-    4:'Value 4',5:'Value 5',6:'Value 6'}:pass
+  1:'Value 1',2:'Value 2',3:'Value 3',
+  4:'Value 4',5:'Value 5',6:'Value 6'}:pass
 
 for value in my_dictionary:print(
-    my_dictionary.get(value+1,f"There are no more values to loop \
+  my_dictionary.get(value+1,f"There are no more values to loop \
 through after 'Value {value}'."))
 
 # Look what you can do with Python's print() function.
@@ -2610,53 +2606,53 @@ print("""That's 'GREAT' to "TRIPPLE QUOTES" """)
 # are also used for program manipulation purposes to change program flow control.
 
 if x := (0,1,2,3,4,5):
-    try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
+  try:
+    print(x[6],'is in the "x" variable tuple().')
+  except IndexError:
+    print('The IndexError handler stops index errors from occurring.')
 
 # The 'pass' prefix is for code place holding if you don't wish to write any code blocks
 # underneath expressions that use code blocks, such as the Python program above shows
 # in our first example.
 
 if x := (0,1,2,3,4,5):
-    try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        pass
+  try:
+    print(x[6],'is in the "x" variable tuple().')
+  except IndexError:
+      pass
 
 # Without the use of the walrus := operator.
 
 x = (0,1,2,3,4,5)
 
 if x == x:
-    try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
+  try:
+    print(x[6],'is in the "x" variable tuple().')
+  except IndexError:
+    print('The IndexError handler stops index errors from occurring.')
 
 # With the 'pass' prefix placeholder for code blocks.
 
 x = (0,1,2,3,4,5)
 
 if x == x:
-    try:
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        pass
+  try:
+    print(x[6],'is in the "x" variable tuple().')
+  except IndexError:
+    pass
 
 # Let's use one 'try:' and two exception handlers, alongside the walrus := operator. We will
 # use one 'IndexError:' handler and one 'TypeError:' handler to create some programming
 # manipulation within our Python program examples below.
 
 if x := (0,1,2,3,4,5):
-    try:
-        print(x[6],'is in the "x" variable tuple().')
-        print(x[4]+'character string')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
-    except TypeError:
-        print('The TypeError handler stops Type errors from occurring.')
+  try:
+    print(x[6],'is in the "x" variable tuple().')
+    print(x[4]+'character string')
+  except IndexError:
+    print('The IndexError handler stops index errors from occurring.')
+  except TypeError:
+    print('The TypeError handler stops Type errors from occurring.')
 
 # Python executes/runs its programs from the top downward, as the very same way you
 # can see the code order. Each instruction is first to execute, is the first to be serviced.
@@ -2664,13 +2660,13 @@ if x := (0,1,2,3,4,5):
 # on the code order.
 
 if x := (0,1,2,3,4,5):
-    try:
-        print(x[4]+'character string text.')
-        print(x[6],'is in the "x" variable tuple().')
-    except IndexError:
-        print('The IndexError handler stops index errors from occurring.')
-    except TypeError:
-        print('The TypeError handler stops Type errors from occurring.')
+  try:
+    print(x[4]+'character string text.')
+    print(x[6],'is in the "x" variable tuple().')
+  except IndexError:
+    print('The IndexError handler stops index errors from occurring.')
+  except TypeError:
+    print('The TypeError handler stops Type errors from occurring.')
 
 # Use the := Walrus Operator to temporarily check for values in tuples, lists, dictionaries
 # and sets. That way, you can be a bit lazy and not have to write two lines of code only to
@@ -2828,7 +2824,7 @@ print(int(int.__truediv__(8,2)))  # 4
 # will use these programming examples below so can learn what classes are all about.
 
 def return_message():
-        return 'Returned Message 1','Returned Message 2','Returned Message 3'
+  return 'Returned Message 1','Returned Message 2','Returned Message 3'
 
 message = return_message()[1]
 
@@ -2837,7 +2833,7 @@ print(message)  # Returned Message 2
 # or this:
 
 def return_message():
-        return 'Returned Message 1','Returned Message 2','Returned Message 3'
+  return 'Returned Message 1','Returned Message 2','Returned Message 3'
 
 message = return_message()
 
@@ -2846,7 +2842,7 @@ print(message[1])  # Returned Message 2
 # or this:
 
 def return_message(message1,message2,message3):
-        return message1,message2,message3
+  return message1,message2,message3
 
 message = return_message('Returned Message 1','Returned Message 2','Returned Message 3')[1]
 
@@ -2855,14 +2851,14 @@ print(message)  # Returned Message 2
 # or this:
 
 def return_message(message1,message2,message3):
-        return message1,message2,message3
+  return message1,message2,message3
 
 message = return_message('Returned Message 1','Returned Message 2','Returned Message 3')
 
 print(message[1])  # Returned Message 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def return_answer():
-        return 6+2+3
+  return 6+2+3
 
 answer = return_answer()
 
@@ -2871,7 +2867,7 @@ print(answer)  # 11
 # or this:
 
 def return_answer(num1,num2,num3):
-        return num1+num2+num3
+  return num1+num2+num3
 
 answer = return_answer(6,2,3)
 
@@ -2970,7 +2966,7 @@ class Animals:
     print('This is Macaw')
 
   def fish():
-      print('This is a Pleco')
+    print('This is a Pleco')
 
 Animals.dog()  # This is a German Shepherd.
 Animals.cat()  # This is a Taby
@@ -2993,7 +2989,7 @@ class Math:
     print(int(6*2*3))
 
   def division():
-      print(int(6/2/3))
+    print(int(6/2/3))
 
 Math.addition()  # 11
 Math.subtraction()  # 1
@@ -3341,7 +3337,7 @@ class Mom_class_attributes:
     self.mom4 = mom4
 
   def mom(mom1,mom2,mom3,mom4):
-      return mom1,mom2,mom3,mom4
+    return mom1,mom2,mom3,mom4
 
 class Dad_class_attributes:
 
@@ -3412,7 +3408,7 @@ class Math_class_attributes_addition:
     self.num4 = num4
 
   def addition(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_subtraction:
 
@@ -3424,7 +3420,7 @@ class Math_class_attributes_subtraction:
     self.num4 = num4
 
   def subtraction(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_multiplication:
 
@@ -3436,7 +3432,7 @@ class Math_class_attributes_multiplication:
     self.num4 = num4
 
   def multiplication(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_division:
 
@@ -3448,7 +3444,7 @@ class Math_class_attributes_division:
     self.num4 = num4
 
   def division(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_inheritance(
   Math_class_attributes_addition,Math_class_attributes_subtraction,
@@ -3508,7 +3504,7 @@ class Math_class_attributes_addition:
     self.num4 = num4
 
   def addition(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_subtraction:
 
@@ -3516,7 +3512,7 @@ class Math_class_attributes_subtraction:
     super().__init__(num1,num2,num3,num4)
 
   def subtraction(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_multiplication:
 
@@ -3524,7 +3520,7 @@ class Math_class_attributes_multiplication:
     super().__init__(num1,num2,num3,num4)
 
   def multiplication(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_division:
 
@@ -3532,7 +3528,7 @@ class Math_class_attributes_division:
       super().__init__(num1,num2,num3,num4)
 
   def division(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_inheritance(
   Math_class_attributes_addition,Math_class_attributes_subtraction,
@@ -3576,7 +3572,7 @@ class Math_class_attributes_addition:
     self.num4 = num4
 
   def addition(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_subtraction:
 
@@ -3586,7 +3582,7 @@ class Math_class_attributes_subtraction:
     self.num5 = num5  # Create the attribute property for num5
 
   def subtraction(num1,num2,num3,num4,num5):  # Add the num5 attribute variable here.
-      return num1,num2,num3,num4,num5  # Add the num5 attribute variable here.
+    return num1,num2,num3,num4,num5  # Add the num5 attribute variable here.
 
 class Math_class_attributes_multiplication:
 
@@ -3594,7 +3590,7 @@ class Math_class_attributes_multiplication:
     super().__init__(num1,num2,num3,num4)
 
   def multiplication(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_attributes_division:
 
@@ -3602,7 +3598,7 @@ class Math_class_attributes_division:
       super().__init__(num1,num2,num3,num4)
 
   def division(num1,num2,num3,num4):
-      return num1,num2,num3,num4
+    return num1,num2,num3,num4
 
 class Math_class_inheritance(
   Math_class_attributes_addition,Math_class_attributes_subtraction,
@@ -3643,12 +3639,12 @@ Math_class_inheritance.name()  # My name is Billy The Child!
 
 class Text_string:
 
-    def __init__(self,text_string):
+  def __init__(self,text_string):
 
-        self.text_string = text_string
+    self.text_string = text_string
 
-    def __str__(self):
-        return self.text_string
+  def __str__(self):
+    return self.text_string
 
 my_text_string1 = Text_string('I am a text string only.')
 my_text_string2 = Text_string('I am also a text string only.')
@@ -3669,15 +3665,15 @@ print(my_text_string4)  # This is what Magic Methods do...
 
 class Text_string:
 
-    def __init__(self,text_string1,text_string2,text_string3,text_string4):
+  def __init__(self,text_string1,text_string2,text_string3,text_string4):
 
-        self.text_string1 = text_string1
-        self.text_string2 = text_string2
-        self.text_string3 = text_string3
-        self.text_string4 = text_string4
+    self.text_string1 = text_string1
+    self.text_string2 = text_string2
+    self.text_string3 = text_string3
+    self.text_string4 = text_string4
 
-    def __str__(self):
-        return self.text_string4
+  def __str__(self):
+    return self.text_string4
 
 my_text_string1 = Text_string(
     'I am a text string only.',
@@ -3700,13 +3696,12 @@ print(my_text_string2)  # Magical Methods are like Harry Potter's wizard wand in
 # the returned and added value results of add1 and add2.
 
 class Math:
+  def __init__(self,num1):
 
-    def __init__(self,num1):
+    self.num1 = num1
 
-        self.num1 = num1
-
-    def __add__(self,num2):
-        return self.num1 + num2.num1
+  def __add__(self,num2):
+    return self.num1 + num2.num1
 
 add1 = Math(20)
 add2 = Math(5)
@@ -3715,12 +3710,12 @@ print(add1 + add2)  # 25
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1):
+  def __init__(self,num1):
 
-        self.num1 = num1
+    self.num1 = num1
 
-    def __sub__(self,num2):
-        return self.num1 - num2.num1
+  def __sub__(self,num2):
+    return self.num1 - num2.num1
 
 sub1 = Math(20)
 sub2 = Math(5)
@@ -3729,12 +3724,12 @@ print(sub1 - sub2)  # 15
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1):
+  def __init__(self,num1):
 
-        self.num1 = num1
+    self.num1 = num1
 
-    def __mul__(self,num2):
-        return self.num1 * num2.num1
+  def __mul__(self,num2):
+    return self.num1 * num2.num1
 
 mult1 = Math(20)
 mult2 = Math(5)
@@ -3743,12 +3738,12 @@ print(mult1 * mult2)  # 100
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1):
+  def __init__(self,num1):
 
-        self.num1 = num1
+    self.num1 = num1
 
-    def __truediv__(self,num2):
-        return self.num1 / num2.num1
+  def __truediv__(self,num2):
+    return self.num1 / num2.num1
 
 div1 = Math(20)
 div2 = Math(5)
@@ -3762,15 +3757,14 @@ print(int(div1 / div2))  # 4
 
 class Math:
 
-    def __init__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
 
-        self.num1 = num1
-        self.num2 = num2
-        self.num3 = num3
-        self.num4 = num4
-
-    def __add__(self,num5):
-        return self.num4 + num5.num4
+  def __add__(self,num5):
+    return self.num4 + num5.num4
 
 add1 = Math(10,20,30,40)
 add2 = Math(5,10,15,20)
@@ -3779,15 +3773,15 @@ print(add1 + add2)  # 40 + 20 = 60
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
-        self.num1 = num1
-        self.num2 = num2
-        self.num3 = num3
-        self.num4 = num4
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
 
-    def __sub__(self,num5):
-        return self.num4 - num5.num4
+  def __sub__(self,num5):
+    return self.num4 - num5.num4
 
 sub1 = Math(10,20,30,40)
 sub2 = Math(5,10,15,20)
@@ -3796,15 +3790,15 @@ print(sub1 - sub2)  # 40 - 20 = 20
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
 
-        self.num1 = num1
-        self.num2 = num2
-        self.num3 = num3
-        self.num4 = num4
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
 
-    def __mul__(self,num5):
-        return self.num4 * num5.num4
+  def __mul__(self,num5):
+    return self.num4 * num5.num4
 
 mult1 = Math(10,20,30,40)
 mult2 = Math(5,10,15,20)
@@ -3813,15 +3807,14 @@ print(mult1 * mult2)  # 40 * 20 = 800
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Math:
 
-    def __init__(self,num1,num2,num3,num4):
+  def __init__(self,num1,num2,num3,num4):
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
 
-        self.num1 = num1
-        self.num2 = num2
-        self.num3 = num3
-        self.num4 = num4
-
-    def __truediv__(self,num5):
-        return self.num4 / num5.num4
+  def __truediv__(self,num5):
+    return self.num4 / num5.num4
 
 div1 = Math(10,20,30,40)
 div2 = Math(5,10,15,20)
@@ -3832,21 +3825,21 @@ print(int(div1 / div2))  # 40 / 20 = 2
 
 class Math:
 
-    def __init__(self,num1):
+  def __init__(self,num1):
 
-        self.num1 = num1
+    self.num1 = num1
 
-    def __add__(self,num2):
-        return self.num1 + num2.num1
+  def __add__(self,num2):
+    return self.num1 + num2.num1
 
-    def __sub__(self,num2):
-        return self.num1 - num2.num1
+  def __sub__(self,num2):
+    return self.num1 - num2.num1
 
-    def __mul__(self,num2):
-        return self.num1 * num2.num1
+  def __mul__(self,num2):
+    return self.num1 * num2.num1
 
-    def __truediv__(self,num2):
-        return self.num1 / num2.num1
+  def __truediv__(self,num2):
+    return self.num1 / num2.num1
 
 number1 = Math(20)
 number2 = Math(5)
@@ -3859,69 +3852,191 @@ print(number1 * number2)  # 20 * 5 = 100
 
 print(int(number1 / number2))  # 20 / 5 = 4
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# This Math class act is the exact, same thing we did with dunder methods thus far.
-# All we did differently here was create four class attribute properties, not one like
-# we did before. Notice how we only needed to create one class. Donder methods
-# modify or change the behavior of class objects, all under one roof.
+class Math:
+  def __init__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __sub__(self,num5):
+    return self.num4 - num5.num4
+
+sub1 = Math(10,20,30,40)
+sub2 = Math(5,10,15,20)
+
+print(sub1 - sub2)  # 40 - 20 = 20
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+  def __init__(self,num1,num2,num3,num4):
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __mul__(self,num5):
+    return self.num4 * num5.num4
+
+mult1 = Math(10,20,30,40)
+mult2 = Math(5,10,15,20)
+
+print(mult1 * mult2)  # 40 * 20 = 800
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+  def __init__(self,num1,num2,num3,num4):
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __truediv__(self,num5):
+    return self.num4 / num5.num4
+
+div1 = Math(10,20,30,40)
+div2 = Math(5,10,15,20)
+
+print(int(div1 / div2))  # 40 / 20 = 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a Math class act that has four dunder methods in it, instead of only one.
 
 class Math:
 
-    def __init__(self,num1,num2,num3,num4):
+  def __init__(self,num1):
 
-        self.num1 = num1
-        self.num2 = num2
-        self.num3 = num3
-        self.num4 = num4
+    self.num1 = num1
 
-    def __add__(self,num5):
-        return self.num4 + num5.num4
+  def __add__(self,num2):
+    return self.num1 + num2.num1
 
-    def __sub__(self,num5):
-        return self.num4 - num5.num4
+  def __sub__(self,num2):
+    return self.num1 - num2.num1
 
-    def __mul__(self,num5):
-        return self.num4 * num5.num4
+  def __mul__(self,num2):
+    return self.num1 * num2.num1
 
-    def __truediv__(self,num5):
-        return self.num4 / num5.num4
+  def __truediv__(self,num2):
+    return self.num1 / num2.num1
 
-number1 = Math(10,20,30,40)
-number2 = Math(5,10,15,20)
+number1 = Math(20)
+number2 = Math(5)
 
-print(number1 + number2)  # 40 + 20 = 60
+print(number1 + number2)  # 20 + 5 = 20
 
-print(number1 - number2)  # 40 - 20 = 20
+print(number1 - number2)  # 20 - 5 = 15
 
-print(number1 * number2)  # 40 * 20 = 800
+print(number1 * number2)  # 20 * 5 = 100
 
-print(int(number1 / number2))  # 40 / 20 = 2
+print(int(number1 / number2))  # 20 / 5 = 4
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+  def __init__(self,num1,num2,num3,num4):
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __sub__(self,num5):
+      return self.num4 - num5.num4
+
+sub1 = Math(10,20,30,40)
+sub2 = Math(5,10,15,20)
+
+print(sub1 - sub2)  # 40 - 20 = 20
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+  def __init__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __mul__(self,num5):
+    return self.num4 * num5.num4
+
+mult1 = Math(10,20,30,40)
+mult2 = Math(5,10,15,20)
+
+print(mult1 * mult2)  # 40 * 20 = 800
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Math:
+
+  def __init__(self,num1,num2,num3,num4):
+
+    self.num1 = num1
+    self.num2 = num2
+    self.num3 = num3
+    self.num4 = num4
+
+  def __truediv__(self,num5):
+    return self.num4 / num5.num4
+
+div1 = Math(10,20,30,40)
+div2 = Math(5,10,15,20)
+
+print(int(div1 / div2))  # 40 / 20 = 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create a Math class act that has four dunder methods in it, instead of only one.
+
+class Math:
+  def __init__(self,num1):
+
+    self.num1 = num1
+
+  def __add__(self,num2):
+    return self.num1 + num2.num1
+
+  def __sub__(self,num2):
+    return self.num1 - num2.num1
+
+  def __mul__(self,num2):
+    return self.num1 * num2.num1
+
+  def __truediv__(self,num2):
+    return self.num1 / num2.num1
+
+number1 = Math(20)
+number2 = Math(5)
+
+print(number1 + number2)  # 20 + 5 = 20
+
+print(number1 - number2)  # 20 - 5 = 15
+
+print(number1 * number2)  # 20 * 5 = 100
+
+print(int(number1 / number2))  # 20 / 5 = 4
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Try this really cool Math class with __dunder__ methods to change each class object's
 # behavior and outcome.
 
 class Math:
 
-    def __init__(self,num1):
+  def __init__(self,num1):
 
-        self.num1 = num1
+    self.num1 = num1
 
-    def __add__(self,num2):
-        return self.num1 + num2.num1
+  def __add__(self,num2):
+    return self.num1 + num2.num1
 
-    def __sub__(self,num2):
-      return self.num1 - num2.num1
+  def __sub__(self,num2):
+    return self.num1 - num2.num1
 
-    def __mul__(self,num2):
-      return self.num1 * num2.num1
+  def __mul__(self,num2):
+    return self.num1 * num2.num1
 
-    def __truediv__(self,num2):
-      return self.num1 / num2.num1
+  def __truediv__(self,num2):
+    return self.num1 / num2.num1
 
     def __eq__(self,num2):
-        return self.num1 == num2.num1
+      return self.num1 == num2.num1
 
     def __gt__(self,num2):
-        return self.num1 > num2.num1
+      return self.num1 > num2.num1
 
     def __lt__(self,num2):
       return self.num1 < num2.num1
@@ -3954,15 +4069,15 @@ print(number1 < number2)  # False
 
 class Text_string:
 
-    def __init__(self,text_string):
+  def __init__(self,text_string):
 
-        self.text_string = text_string
+    self.text_string = text_string
 
-    def __add__(self):
-        return self.text_string
+  def __add__(self):
+    return self.text_string
 
-    def __repr__(self):
-        return '''\
+  def __repr__(self):
+    return '''\
 The __repr__ dunder method is for debugging Python code.
 The dunder __add__ method is the wrong type. The __repr__
 dunder method will execute, letting you know that something
@@ -3992,15 +4107,15 @@ print(repr.__call__(string))  # 'my string value'
 
 class My_pets:
 
-    def __init__(self,pet1,pet2,pet3,pet4):
+  def __init__(self,pet1,pet2,pet3,pet4):
 
-        self.pet1 = pet1
-        self.pet2 = pet2
-        self.pet3 = pet3
-        self.pet4 = pet4
+    self.pet1 = pet1
+    self.pet2 = pet2
+    self.pet3 = pet3
+    self.pet4 = pet4
 
-    def __str__(self):
-      return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+  def __str__(self):
+    return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
 
 my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
 my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
@@ -4027,18 +4142,18 @@ for i in class_objects:print(i)
 
 class My_pets:
 
-    def __init__(self,pet1,pet2,pet3,pet4):
+  def __init__(self,pet1,pet2,pet3,pet4):
 
-        self.pet1 = pet1
-        self.pet2 = pet2
-        self.pet3 = pet3
-        self.pet4 = pet4
+    self.pet1 = pet1
+    self.pet2 = pet2
+    self.pet3 = pet3
+    self.pet4 = pet4
 
-    def __str__(self):
-      return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+  def __str__(self):
+    return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
 
-    def __contains__(self,keywords):
-      return keywords in self.pet1  # change this self.pet-n to find other values.
+  def __contains__(self,keywords):
+    return keywords in self.pet1  # change this self.pet-n to find other values.
 
 my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
 my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
@@ -4084,24 +4199,23 @@ print('a Rhinoceros' in my_pet4)  # False
 
 class My_pets:
 
-    def __init__(self,pet1,pet2,pet3,pet4):
+  def __init__(self,pet1,pet2,pet3,pet4):
+    self.pet1 = pet1
+    self.pet2 = pet2
+    self.pet3 = pet3
+    self.pet4 = pet4
 
-        self.pet1 = pet1
-        self.pet2 = pet2
-        self.pet3 = pet3
-        self.pet4 = pet4
+  def __str__(self):
+    return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
 
-    def __str__(self):
-        return f'I have {self.pet1}, {self.pet2}, {self.pet3} and {self.pet4}.'
+  def __contains__(self,keywords):
+    return keywords in self.pet1  # change this self.pet-n to find other values.
 
-    def __contains__(self,keywords):
-        return keywords in self.pet1  # change this self.pet-n to find other values.
-
-    def __getitem__(self,item):
-        if item == 'get item':  # This string argument value can be any name you like.
-            return self.pet1
-        else:
-            return f"item '{item}' was not found:"
+  def __getitem__(self,item):
+    if item == 'get item':  # This string argument value can be any name you like.
+      return self.pet1
+    else:
+      return f"item '{item}' was not found:"
 
 my_pet1 = My_pets('a German Shepherd','a Tabby','a Parrot','some Angelfish')
 my_pet2 = My_pets('a Wolf','a Lion','an Ostrich','a Shark')
@@ -4130,7 +4244,7 @@ print(my_pet1['get ite'])  # item 'get ite' was not found:
 
 # It's now time to take a much needed break. Because believe me, you will need it after
 # this Monster Class Act Python program exercise. All I can say, it's Head Banging time.
-# Good Luck! But most importantly, take your time; you can never rush a turtle.
+# Good Luck! But most importantly, take your time; you can never rush a turtle...
 
 # Please note: because of how large this Python program exercise is, I do not use any
 # __dunder__ methods at all, except for the __init__ initialize dunder method. This
@@ -4151,235 +4265,235 @@ print(my_pet1['get ite'])  # item 'get ite' was not found:
 # define() function from within them.
 
 main_class = (
-    'This is an instance of a main class object with three attribute properties value 1',
-    'This is an instance of a main class object with three attribute properties value 2',
-    'This is an instance of a main class object with three attribute properties value 3')
+  'This is an instance of a main class object with three attribute properties value 1',
+  'This is an instance of a main class object with three attribute properties value 2',
+  'This is an instance of a main class object with three attribute properties value 3')
 
 subclass1 = (
-    'This is an instance of a subclass1 object with three attribute properties value 1',
-    'This is an instance of a subclass1 object with three attribute properties value 2',
-    'This is an instance of a subclass1 object with three attribute properties value 3')
+  'This is an instance of a subclass1 object with three attribute properties value 1',
+  'This is an instance of a subclass1 object with three attribute properties value 2',
+  'This is an instance of a subclass1 object with three attribute properties value 3')
 
 subclass2 = (
-    'This is an instance of a subclass2 object with three attribute properties value 1',
-    'This is an instance of a subclass2 object with three attribute properties value 2',
-    'This is an instance of a subclass2 object with three attribute properties value 3')
+  'This is an instance of a subclass2 object with three attribute properties value 1',
+  'This is an instance of a subclass2 object with three attribute properties value 2',
+  'This is an instance of a subclass2 object with three attribute properties value 3')
 
 super_subclass1 = (
-     'This is an instance of a super subclass1 object with four attribute properties value 1',
-     'This is an instance of a super subclass1 object with four attribute properties value 2',
-     'This is an instance of a super subclass1 object with four attribute properties value 3',
-     'This is an instance of a super subclass1 object with four attribute properties value 4')
+  'This is an instance of a super subclass1 object with four attribute properties value 1',
+  'This is an instance of a super subclass1 object with four attribute properties value 2',
+  'This is an instance of a super subclass1 object with four attribute properties value 3',
+  'This is an instance of a super subclass1 object with four attribute properties value 4')
 
 super_subclass2 = (
-     'This is an instance of a super subclass2 object with five attribute properties value 1',
-     'This is an instance of a super subclass2 object with five attribute properties value 2',
-     'This is an instance of a super subclass2 object with five attribute properties value 3',
-     'This is an instance of a super subclass2 object with five attribute properties value 4',
-     'This is an instance of a super subclass2 object with five attribute properties value 5')
+  'This is an instance of a super subclass2 object with five attribute properties value 1',
+  'This is an instance of a super subclass2 object with five attribute properties value 2',
+  'This is an instance of a super subclass2 object with five attribute properties value 3',
+  'This is an instance of a super subclass2 object with five attribute properties value 4',
+  'This is an instance of a super subclass2 object with five attribute properties value 5')
 
 super_subclass3 = (
-     'This is an instance of a super subclass3 object with five attribute properties value 1',
-     'This is an instance of a super subclass3 object with five attribute properties value 2',
-     'This is an instance of a super subclass3 object with five attribute properties value 3',
-     'This is an instance of a super subclass3 object with five attribute properties value 4',
-     'This is an instance of a super subclass3 object with five attribute properties value 5',
-     'This is an instance of a super subclass3 object with five attribute properties value 6')
+  'This is an instance of a super subclass3 object with five attribute properties value 1',
+  'This is an instance of a super subclass3 object with five attribute properties value 2',
+  'This is an instance of a super subclass3 object with five attribute properties value 3',
+  'This is an instance of a super subclass3 object with five attribute properties value 4',
+  'This is an instance of a super subclass3 object with five attribute properties value 5',
+  'This is an instance of a super subclass3 object with five attribute properties value 6')
 
 super_subclass4 = (
-     'This is an instance of a super subclass4 object with seven attribute properties value 1',
-     'This is an instance of a super subclass4 object with seven attribute properties value 2',
-     'This is an instance of a super subclass4 object with seven attribute properties value 3',
-     'This is an instance of a super subclass4 object with seven attribute properties value 4',
-     'This is an instance of a super subclass4 object with seven attribute properties value 5',
-     'This is an instance of a super subclass4 object with seven attribute properties value 6',
-     'This is an instance of a super subclass4 object with seven attribute properties value 7')
+  'This is an instance of a super subclass4 object with seven attribute properties value 1',
+  'This is an instance of a super subclass4 object with seven attribute properties value 2',
+  'This is an instance of a super subclass4 object with seven attribute properties value 3',
+  'This is an instance of a super subclass4 object with seven attribute properties value 4',
+  'This is an instance of a super subclass4 object with seven attribute properties value 5',
+  'This is an instance of a super subclass4 object with seven attribute properties value 6',
+  'This is an instance of a super subclass4 object with seven attribute properties value 7')
 
 super_subclass5 = (
-     'This is an instance of a super subclass5 object with eight attribute properties value 1',
-     'This is an instance of a super subclass5 object with eight attribute properties value 2',
-     'This is an instance of a super subclass5 object with eight attribute properties value 3',
-     'This is an instance of a super subclass5 object with eight attribute properties value 4',
-     'This is an instance of a super subclass5 object with eight attribute properties value 5',
-     'This is an instance of a super subclass5 object with eight attribute properties value 6',
-     'This is an instance of a super subclass5 object with eight attribute properties value 7',
-     'This is an instance of a super subclass5 object with eight attribute properties value 8')
+  'This is an instance of a super subclass5 object with eight attribute properties value 1',
+  'This is an instance of a super subclass5 object with eight attribute properties value 2',
+  'This is an instance of a super subclass5 object with eight attribute properties value 3',
+  'This is an instance of a super subclass5 object with eight attribute properties value 4',
+  'This is an instance of a super subclass5 object with eight attribute properties value 5',
+  'This is an instance of a super subclass5 object with eight attribute properties value 6',
+  'This is an instance of a super subclass5 object with eight attribute properties value 7',
+  'This is an instance of a super subclass5 object with eight attribute properties value 8')
 
 super_subclass6 = (
-     'This is an instance of a super subclass6 object with nine attribute properties value 1',
-     'This is an instance of a super subclass6 object with nine attribute properties value 2',
-     'This is an instance of a super subclass6 object with nine attribute properties value 3',
-     'This is an instance of a super subclass6 object with nine attribute properties value 4',
-     'This is an instance of a super subclass6 object with nine attribute properties value 5',
-     'This is an instance of a super subclass6 object with nine attribute properties value 6',
-     'This is an instance of a super subclass6 object with nine attribute properties value 7',
-     'This is an instance of a super subclass6 object with nine attribute properties value 8',
-     'This is an instance of a super subclass6 object with nine attribute properties value 9')
+  'This is an instance of a super subclass6 object with nine attribute properties value 1',
+  'This is an instance of a super subclass6 object with nine attribute properties value 2',
+  'This is an instance of a super subclass6 object with nine attribute properties value 3',
+  'This is an instance of a super subclass6 object with nine attribute properties value 4',
+  'This is an instance of a super subclass6 object with nine attribute properties value 5',
+  'This is an instance of a super subclass6 object with nine attribute properties value 6',
+  'This is an instance of a super subclass6 object with nine attribute properties value 7',
+  'This is an instance of a super subclass6 object with nine attribute properties value 8',
+  'This is an instance of a super subclass6 object with nine attribute properties value 9')
 
 super_subclass7 = (
-     'This is an instance of a super subclass7 object with ten attribute properties value 1',
-     'This is an instance of a super subclass7 object with ten attribute properties value 2',
-     'This is an instance of a super subclass7 object with ten attribute properties value 3',
-     'This is an instance of a super subclass7 object with ten attribute properties value 4',
-     'This is an instance of a super subclass7 object with ten attribute properties value 5',
-     'This is an instance of a super subclass7 object with ten attribute properties value 6',
-     'This is an instance of a super subclass7 object with ten attribute properties value 7',
-     'This is an instance of a super subclass7 object with ten attribute properties value 8',
-     'This is an instance of a super subclass7 object with ten attribute properties value 9',
-     'This is an instance of a super subclass7 object with ten attribute properties value 10')
+  'This is an instance of a super subclass7 object with ten attribute properties value 1',
+  'This is an instance of a super subclass7 object with ten attribute properties value 2',
+  'This is an instance of a super subclass7 object with ten attribute properties value 3',
+  'This is an instance of a super subclass7 object with ten attribute properties value 4',
+  'This is an instance of a super subclass7 object with ten attribute properties value 5',
+  'This is an instance of a super subclass7 object with ten attribute properties value 6',
+  'This is an instance of a super subclass7 object with ten attribute properties value 7',
+  'This is an instance of a super subclass7 object with ten attribute properties value 8',
+  'This is an instance of a super subclass7 object with ten attribute properties value 9',
+  'This is an instance of a super subclass7 object with ten attribute properties value 10')
 
 return_values = (
-    '"The Main Class Act"',
-    'Subclass Act One.',
-    'Subclass Act Two',
-    'Super Subclass Act One',
-    'Super Subclass Act Two',
-    'Super Subclass Act Three',
-    'Super Subclass Act Four',
-    'Super Subclass Act Five',
-    'Super Subclass Act Six',
-    'Super Subclass Act Seven')
+  '"The Main Class Act"',
+  'Subclass Act One.',
+  'Subclass Act Two',
+  'Super Subclass Act One',
+  'Super Subclass Act Two',
+  'Super Subclass Act Three',
+  'Super Subclass Act Four',
+  'Super Subclass Act Five',
+  'Super Subclass Act Six',
+  'Super Subclass Act Seven')
 
 # This is where you do your Clean, Cut Python Code, without all that spaghetti of
 # long string values getting in the way while you continue to write your code code.
 
 class Main_class_attribute_properties:
 
-    def return_function():
-        return return_values
+  def return_function():
+    return return_values
 
-    def __init__(self,attribute1,attribute2,attribute3):
+  def __init__(self,attribute1,attribute2,attribute3):
 
-        self.attribute1 = attribute1
-        self.attribute2 = attribute2
-        self.attribute3 = attribute3
+    self.attribute1 = attribute1
+    self.attribute2 = attribute2
+    self.attribute3 = attribute3
 
 class Subclass1_same_attribute_properties(  # inhert main class attribute properties only
-    Main_class_attribute_properties):pass
+  Main_class_attribute_properties):pass
 
 class Subclass2_same_attribute_properties(  # inhert main class attribute properties only
-    Main_class_attribute_properties):pass
+  Main_class_attribute_properties):pass
 
 class Super_subclass1_new_attribute_properties(
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(self,attribute1,attribute2,attribute3,attribute4):
-        super().__init__(attribute1, attribute2,attribute3)
+  def __init__(self,attribute1,attribute2,attribute3,attribute4):
+    super().__init__(attribute1, attribute2,attribute3)
 
-        self.attribute4 = attribute4
+    self.attribute4 = attribute4
 
 class Super_subclass2_new_attribute_properties(
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5):
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5):
 
-        super().__init__(attribute1,attribute2,attribute3,attribute4)
+    super().__init__(attribute1,attribute2,attribute3,attribute4)
 
-        self.attribute5 = attribute5
+    self.attribute5 = attribute5
 
 class Super_subclass3_new_attribute_properties(
-    Super_subclass2_new_attribute_properties,
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass2_new_attribute_properties,
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5,attribute6):
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6):
 
-        super().__init__(
-            attribute1,attribute2,attribute3,attribute4,
-            attribute5)
+    super().__init__(
+        attribute1,attribute2,attribute3,attribute4,
+        attribute5)
 
-        self.attribute6 = attribute6
+    self.attribute6 = attribute6
 
 class Super_subclass4_new_attribute_properties(
-    Super_subclass3_new_attribute_properties,
-    Super_subclass2_new_attribute_properties,
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass3_new_attribute_properties,
+  Super_subclass2_new_attribute_properties,
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5,attribute6,attribute7):
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6,attribute7):
 
-        super().__init__(
-            attribute1,attribute2,attribute3,attribute4,
-            attribute5,attribute6)
+    super().__init__(
+      attribute1,attribute2,attribute3,attribute4,
+      attribute5,attribute6)
 
-        self.attribute7 = attribute7
+    self.attribute7 = attribute7
 
 class Super_subclass5_new_attribute_properties(
-    Super_subclass4_new_attribute_properties,
-    Super_subclass3_new_attribute_properties,
-    Super_subclass2_new_attribute_properties,
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass4_new_attribute_properties,
+  Super_subclass3_new_attribute_properties,
+  Super_subclass2_new_attribute_properties,
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5,attribute6,attribute7,attribute8):
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6,attribute7,attribute8):
 
-        super().__init__(
-            attribute1,attribute2,attribute3,attribute4,
-            attribute5,attribute6,attribute7)
+    super().__init__(
+      attribute1,attribute2,attribute3,attribute4,
+      attribute5,attribute6,attribute7)
 
-        self.attribute8 = attribute8
+    self.attribute8 = attribute8
 
 class Super_subclass6_new_attribute_properties(
-    Super_subclass5_new_attribute_properties,
-    Super_subclass4_new_attribute_properties,
-    Super_subclass3_new_attribute_properties,
-    Super_subclass2_new_attribute_properties,
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass5_new_attribute_properties,
+  Super_subclass4_new_attribute_properties,
+  Super_subclass3_new_attribute_properties,
+  Super_subclass2_new_attribute_properties,
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5,attribute6,attribute7,attribute8,
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6,attribute7,attribute8,
 
-        attribute9):
-        super().__init__(
-            attribute1,attribute2,attribute3,attribute4,
-            attribute5,attribute6,attribute7,attribute8)
+    attribute9):
+    super().__init__(
+      attribute1,attribute2,attribute3,attribute4,
+      attribute5,attribute6,attribute7,attribute8)
 
-        self.attribute9 = attribute9
+    self.attribute9 = attribute9
 
 class Super_subclass7_new_attribute_properties(
-    Super_subclass6_new_attribute_properties,
-    Super_subclass5_new_attribute_properties,
-    Super_subclass4_new_attribute_properties,
-    Super_subclass3_new_attribute_properties,
-    Super_subclass2_new_attribute_properties,
-    Super_subclass1_new_attribute_properties,
-    Subclass2_same_attribute_properties,
-    Subclass1_same_attribute_properties,
-    Main_class_attribute_properties):
+  Super_subclass6_new_attribute_properties,
+  Super_subclass5_new_attribute_properties,
+  Super_subclass4_new_attribute_properties,
+  Super_subclass3_new_attribute_properties,
+  Super_subclass2_new_attribute_properties,
+  Super_subclass1_new_attribute_properties,
+  Subclass2_same_attribute_properties,
+  Subclass1_same_attribute_properties,
+  Main_class_attribute_properties):
 
-    def __init__(
-        self,attribute1,attribute2,attribute3,attribute4,
-        attribute5,attribute6,attribute7,attribute8,
-        attribute9,attribute10):
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6,attribute7,attribute8,
+    attribute9,attribute10):
 
-        super().__init__(
-            attribute1,attribute2,attribute3,attribute4,
-            attribute5,attribute6,attribute7,attribute8,
-            attribute9)
+    super().__init__(
+    attribute1,attribute2,attribute3,attribute4,
+    attribute5,attribute6,attribute7,attribute8,
+    attribute9)
 
-        self.attribute10 = attribute10
+    self.attribute10 = attribute10
 
 a = Main_class_attribute_properties(main_class[0],main_class[1],main_class[2])
 
@@ -4388,44 +4502,44 @@ b = Subclass1_same_attribute_properties(subclass1[0],subclass1[1],subclass1[2])
 c = Subclass2_same_attribute_properties(subclass2[0],subclass2[1],subclass2[2])
 
 d = Super_subclass1_new_attribute_properties(
-    super_subclass1[0],super_subclass1[1],
-    super_subclass1[2],super_subclass1[3])
+  super_subclass1[0],super_subclass1[1],
+  super_subclass1[2],super_subclass1[3])
 
 e = Super_subclass2_new_attribute_properties(
-    super_subclass2[0],super_subclass2[1],
-    super_subclass2[2],super_subclass2[3],
-    super_subclass2[4])
+  super_subclass2[0],super_subclass2[1],
+  super_subclass2[2],super_subclass2[3],
+  super_subclass2[4])
 
 f = Super_subclass3_new_attribute_properties(
-    super_subclass3[0],super_subclass3[1],
-    super_subclass3[2],super_subclass3[3],
-    super_subclass3[4],super_subclass3[5])
+  super_subclass3[0],super_subclass3[1],
+  super_subclass3[2],super_subclass3[3],
+  super_subclass3[4],super_subclass3[5])
 
 g = Super_subclass4_new_attribute_properties(
-    super_subclass4[0],super_subclass4[1],
-    super_subclass4[2],super_subclass4[3],
-    super_subclass4[4],super_subclass4[5],
-    super_subclass4[6])
+  super_subclass4[0],super_subclass4[1],
+  super_subclass4[2],super_subclass4[3],
+  super_subclass4[4],super_subclass4[5],
+  super_subclass4[6])
 
 h = Super_subclass5_new_attribute_properties(
-    super_subclass5[0],super_subclass5[1],
-    super_subclass5[2],super_subclass5[3],
-    super_subclass5[4],super_subclass5[5],
-    super_subclass5[6],super_subclass5[7])
+  super_subclass5[0],super_subclass5[1],
+  super_subclass5[2],super_subclass5[3],
+  super_subclass5[4],super_subclass5[5],
+  super_subclass5[6],super_subclass5[7])
 
 i = Super_subclass6_new_attribute_properties(
-    super_subclass6[0],super_subclass6[1],
-    super_subclass6[2],super_subclass6[3],
-    super_subclass6[4],super_subclass6[5],
-    super_subclass6[6],super_subclass6[7],
-    super_subclass6[8])
+  super_subclass6[0],super_subclass6[1],
+  super_subclass6[2],super_subclass6[3],
+  super_subclass6[4],super_subclass6[5],
+  super_subclass6[6],super_subclass6[7],
+  super_subclass6[8])
 
 j = Super_subclass7_new_attribute_properties(
-    super_subclass7[0],super_subclass7[1],
-    super_subclass7[2],super_subclass7[3],
-    super_subclass7[4],super_subclass7[5],
-    super_subclass7[6],super_subclass7[7],
-    super_subclass7[8],super_subclass7[9])
+  super_subclass7[0],super_subclass7[1],
+  super_subclass7[2],super_subclass7[3],
+  super_subclass7[4],super_subclass7[5],
+  super_subclass7[6],super_subclass7[7],
+  super_subclass7[8],super_subclass7[9])
 
 class_attribute_tuple = (
 
@@ -4463,18 +4577,18 @@ j.attribute10)
 
 return_value = (
 
-    Main_class_attribute_properties.return_function(),
+  Main_class_attribute_properties.return_function(),
 
-    Subclass1_same_attribute_properties.return_function(),
-    Subclass2_same_attribute_properties.return_function(),
+  Subclass1_same_attribute_properties.return_function(),
+  Subclass2_same_attribute_properties.return_function(),
 
-    Super_subclass1_new_attribute_properties.return_function(),
-    Super_subclass2_new_attribute_properties.return_function(),
-    Super_subclass3_new_attribute_properties.return_function(),
-    Super_subclass4_new_attribute_properties.return_function(),
-    Super_subclass5_new_attribute_properties.return_function(),
-    Super_subclass6_new_attribute_properties.return_function(),
-    Super_subclass7_new_attribute_properties.return_function())
+  Super_subclass1_new_attribute_properties.return_function(),
+  Super_subclass2_new_attribute_properties.return_function(),
+  Super_subclass3_new_attribute_properties.return_function(),
+  Super_subclass4_new_attribute_properties.return_function(),
+  Super_subclass5_new_attribute_properties.return_function(),
+  Super_subclass6_new_attribute_properties.return_function(),
+  Super_subclass7_new_attribute_properties.return_function())
 
 for i in range(0,10):print(f'\n{return_value[0][i]}\n\n{a.attribute1}')
 
