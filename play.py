@@ -4073,8 +4073,6 @@ print(number1 >= number2)  # True
 
 print(number1 <= number2)  # False
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
 # The dunder __repr__ method checks for string value integrity within a class. If you
 # create a wrong dunder method, the __repr__ method will execute, letting you know
 # that something isn't right in the code. The __repr__ is used for debugging strings.
