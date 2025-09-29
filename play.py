@@ -197,6 +197,7 @@ print(return_fuction_four('Four'))
 # Create multi return functions inside one define function program example:
 
 def multi_return_function():
+
   def return_fuction_one(arg):
     return arg
 
@@ -220,6 +221,7 @@ multi_return_function()
 # and one argument placeholder value program example:
 
 def multi_return_function(arg):
+
   def return_fuction_one(arg):
     return arg
 
@@ -1642,6 +1644,117 @@ while True:
   else:
     print('\nYou can\'t cheat now! Do you flip? or do you flop?')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# TIMERNATOR Python Program Example:
+
+# Try this fun Timernator Clock Python program example.
+
+# Note: you must execute/run the program from the OS output screen, via double-
+# clicking the Python program file itself.
+
+import os,datetime,asyncio,winsound
+from time import sleep as timernator
+
+os.system('title TIMERNATOR')
+
+text_colour = (
+  '\x1b[31m',  # index 0 = red
+  '\x1b[32m',  # index 1 = green
+  '\x1b[33m',  # index 2 = yellow
+  '\x1b[36m'   # index 3 = light blue
+  )
+
+special_fx = (
+  f'{text_colour[0]}TIMERNATOR', # index 0 = special_fx
+
+  'Speech Off',  # index 1 = special_fx
+
+  'cls','\n','\n\n',' '  # index 2 = special_fx
+  )
+
+time_fx = (
+  f'{text_colour[2]}12 Hour {text_colour[0]}%I\
+  {text_colour[1]}:{text_colour[0]}%M{text_colour[1]}\
+  :{text_colour[0]}%S {text_colour[2]}%p',  # index 0 = time_fx
+
+  f'{text_colour[2]}24 Hour {text_colour[0]}%H{text_colour[1]}:\
+  {text_colour[0]}%M{text_colour[1]}:{text_colour[0]}%S',  # index 1 = time_fx
+
+  f'{text_colour[2]}%A %B {text_colour[0]}%d{text_colour[1]}:\
+  {text_colour[0]}%Y',f'{text_colour[2]}Week{text_colour[1]}:\
+  {text_colour[0]}%U {text_colour[2]}Day{text_colour[1]}:\
+  {text_colour[0]}%j'  # index 2 = time_fx
+  )
+
+text_fx = (
+
+  f'{text_colour[3]}You\'re TIMERNATED!',  # index 0 = text_fx
+
+  f'{text_colour[3]}Look at me if you want the time.',  # index 1 = text_fx
+
+  f'{text_colour[3]}I need your hours, your minutes and your seconds.',  # index 2 = text_fx
+
+  f'{text_colour[3]}I swear I will tell the time.',  # index 3 = text_fx
+
+  f'{text_colour[3]}I cannot self timernate.'  # index 4 = text_fx
+  )
+
+redundant_code1 = '''
+print(
+  special_fx[3],
+  special_fx[5]*1,
+  special_fx[0],
+  special_fx[4],
+  special_fx[5]*1,
+  text_fx[x]
+  )
+'''
+redundant_code2 = '''
+print(
+  special_fx[3],
+  special_fx[5]*1,
+  timer.strftime(time_fx[y])
+  )
+'''
+while True:
+  for x in range(4):
+    os.system(special_fx[2])
+    winsound.PlaySound(
+      special_fx[1],winsound.SND_ASYNC)
+
+  exec(redundant_code1)
+
+  for y in range(4):
+    timer=datetime.datetime.now()
+    exec(redundant_code2)
+
+  timernator(1)
+
+  os.system(special_fx[2])
+
+  winsound.PlaySound(
+    special_fx[1],winsound.SND_ASYNC)
+
+  exec(redundant_code1)
+
+  for y in range(4):
+    timer=datetime.datetime.now()
+    exec(redundant_code2)
+
+  timernator(1)
+
+  os.system(special_fx[2])
+
+  winsound.PlaySound(
+    special_fx[1],winsound.SND_ASYNC)
+
+  exec(redundant_code1)
+
+  for y in range(4):
+    timer=datetime.datetime.now()
+    exec(redundant_code2)
+
+  timernator(1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pack three separate list variables, along with their separate value groups with just
 # one equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
 
@@ -2259,8 +2372,8 @@ print(f'The number {comp_nums} = the octal base 8 number value: {comp_nums:o}.')
 # Note: after you save your file, you must double click this file to view it's cool coloured
 # text and layout.
 
-from time import sleep as delay
 import os;os.system('title binary beat'.title())
+from time import sleep as delay
 
 red = '\x1b[31m'
 green = '\x1b[32m'
@@ -3637,7 +3750,7 @@ class Dad_class_attributes:
     self.dad4 = dad4
 
   def dad(dad1,dad2,dad3,dad4):
-      return dad1,dad2,dad3,dad4
+    return dad1,dad2,dad3,dad4
 
 class Child_class_inheritance(Mom_class_attributes,Dad_class_attributes):
   pass
@@ -3813,7 +3926,7 @@ class Math_class_attributes_multiplication:
 class Math_class_attributes_division:
 
   def __init__(self,num1,num2,num3,num4):
-      super().__init__(num1,num2,num3,num4)
+    super().__init__(num1,num2,num3,num4)
 
   def division(num1,num2,num3,num4):
     return num1,num2,num3,num4
@@ -3883,7 +3996,7 @@ class Math_class_attributes_multiplication:
 class Math_class_attributes_division:
 
   def __init__(self,num1,num2,num3,num4):
-      super().__init__(num1,num2,num3,num4)
+    super().__init__(num1,num2,num3,num4)
 
   def division(num1,num2,num3,num4):
     return num1,num2,num3,num4
@@ -3964,16 +4077,16 @@ class Text_string:
     return self.text_string4
 
 my_text_string1 = Text_string(
-    'I am a text string only.',
-    'I am also a text string only.',
-    'And so am I also a text string only.',
-    'This is what Magic Methods do...')
+  'I am a text string only.',
+  'I am also a text string only.',
+  'And so am I also a text string only.',
+  'This is what Magic Methods do...')
 
 my_text_string2 = Text_string(
-    'You can do a lot with Magic Methods.',
-    'Dunder methods modify the behavior of objects.',
-    'You can call these dunder methods, magic methods or a constructors',
-    "Magical Methods are like Harry Potter's wizard wand in Python programming.")
+  'You can do a lot with Magic Methods.',
+  'Dunder methods modify the behavior of objects.',
+  'You can call these dunder methods, magic methods or a constructors',
+  "Magical Methods are like Harry Potter's wizard wand in Python programming.")
 
 print(my_text_string2)  # Magical Methods are like Harry Potter's wizard wand in Python programming.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -4228,7 +4341,7 @@ class Math:
     self.num4 = num4
 
   def __sub__(self,num5):
-      return self.num4 - num5.num4
+    return self.num4 - num5.num4
 
 sub1 = Math(10,20,30,40)
 sub2 = Math(5,10,15,20)
@@ -4708,8 +4821,8 @@ class Super_subclass3_new_attribute_properties(
     attribute5,attribute6):
 
     super().__init__(
-        attribute1,attribute2,attribute3,attribute4,
-        attribute5)
+      attribute1,attribute2,attribute3,attribute4,
+      attribute5)
 
     self.attribute6 = attribute6
 
@@ -4788,9 +4901,9 @@ class Super_subclass7_new_attribute_properties(
     attribute9,attribute10):
 
     super().__init__(
-    attribute1,attribute2,attribute3,attribute4,
-    attribute5,attribute6,attribute7,attribute8,
-    attribute9)
+      attribute1,attribute2,attribute3,attribute4,
+      attribute5,attribute6,attribute7,attribute8,
+      attribute9)
 
     self.attribute10 = attribute10
 
