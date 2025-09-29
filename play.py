@@ -547,7 +547,7 @@ old to dream and use our imagination, for we only get one and it is ours forever
 be filled with courage and compassion, and your mind be as limitless and as wondrous as the
 universe itself! If you dream it, you can be it. Believe it!''','cls',len)
 
-length=0
+length = 0
 
 while length <= knowledge_poem[2](knowledge_poem[0]):
   text(knowledge_poem[0][:length])
@@ -593,8 +593,7 @@ DLIHC DNA NAMOW ,NAM YREVE OT SGNOLEB SIHT
 .rednow otni rednop ot yek eht si nettirw eb ot maxe ylno ehT
 .dnim eht dna traeh eht era ,dedeen skoobtxet ylno ehT
 !flesti dnim eht fo dna traeh eht fo noitnevni eerf a si
-'egdelwonK'
-''')
+'egdelwonK' ''')
 
 text(knowledge_poem[::-1])
 
@@ -1644,6 +1643,64 @@ while True:
   else:
     print('\nYou can\'t cheat now! Do you flip? or do you flop?')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This program example has three, separate conditional while-loops, each of them
+# compares data against user input data. The first while -loop asks for the user's first
+# name. The second while-loop asks for the user's last name, and the third while-loop
+# asks for the user's age. In the first and second while-loop, the user's first name and
+# user's last name are compared by how many letters the user types. The 'str([first_name])'
+# statement makes the user type in text only, not integers.
+
+# Note: Python executes/runs programs starting from the top, downward. Be very careful
+# on how you place statements. Some statements cannot execute right, even if they work.
+# This is simply because of the order that Python executes/runs its program statements.
+
+while True:
+  first_name = input('\nWhat is your name please? ').strip()
+
+  if first_name < str([first_name]):
+    print('\nError: text only please!')
+
+  elif len(first_name) < 3:
+    print('\nYour first name must be over 2 characters long.')
+
+  elif len(first_name) > 10:
+    print('Your first name must be under 10 characters long.')
+
+  else:
+    break
+
+while True:
+  last_name = input(f'\nNice to meet you {first_name.title()}. \
+What is your last name please? ').strip()
+
+  if last_name < str([last_name]):
+    print('\nError: text only please!')
+
+  elif len(last_name) < 3:
+    print('\nYour last name must be over 2 characters long.')
+
+  elif len(last_name) > 10:
+    print('\nYour last name must be under 10 characters long.')
+
+  else:
+    break
+
+while True:
+  try:
+    age = int(input(f'\nHow old are you {first_name.title()}? ').strip())
+
+    if age == 0:
+      print('\nNo such age exist:')
+
+      continue
+    break
+
+  except ValueError:
+    print('\nError: integers only please:')
+
+print(f'\nYour first name = {first_name.title()}:\nYour last name = \
+{last_name.title()}:\nYour age = {age}:\n')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # TIMERNATOR Python Program Example:
 
 # Try this fun Timernator Clock Python program example.
@@ -1660,16 +1717,14 @@ text_colour = (
   '\x1b[31m',  # index 0 = red
   '\x1b[32m',  # index 1 = green
   '\x1b[33m',  # index 2 = yellow
-  '\x1b[36m'   # index 3 = light blue
-  )
+  '\x1b[36m')  # index 3 = light blue
 
 special_fx = (
   f'{text_colour[0]}TIMERNATOR', # index 0 = special_fx
 
-  'Speech Off',  # index 1 = special_fx
+  'Place Windows wave sound file name here.',  # index 1 = special_fx
 
-  'cls','\n','\n\n',' '  # index 2 = special_fx
-  )
+  'cls','\n','\n\n',' ')  # index 2 = special_fx
 
 time_fx = (
   f'{text_colour[2]}12 Hour {text_colour[0]}%I\
@@ -1682,8 +1737,7 @@ time_fx = (
   f'{text_colour[2]}%A %B {text_colour[0]}%d{text_colour[1]}:\
   {text_colour[0]}%Y',f'{text_colour[2]}Week{text_colour[1]}:\
   {text_colour[0]}%U {text_colour[2]}Day{text_colour[1]}:\
-  {text_colour[0]}%j'  # index 2 = time_fx
-  )
+  {text_colour[0]}%j')  # index 2 = time_fx
 
 text_fx = (
 
@@ -1695,8 +1749,7 @@ text_fx = (
 
   f'{text_colour[3]}I swear I will tell the time.',  # index 3 = text_fx
 
-  f'{text_colour[3]}I cannot self timernate.'  # index 4 = text_fx
-  )
+  f'{text_colour[3]}I cannot self timernate.')  # index 4 = text_fx
 
 redundant_code1 = '''
 print(
@@ -1705,15 +1758,13 @@ print(
   special_fx[0],
   special_fx[4],
   special_fx[5]*1,
-  text_fx[x]
-  )
+  text_fx[x])
 '''
 redundant_code2 = '''
 print(
   special_fx[3],
   special_fx[5]*1,
-  timer.strftime(time_fx[y])
-  )
+  timer.strftime(time_fx[y]))
 '''
 while True:
   for x in range(4):
@@ -1724,7 +1775,7 @@ while True:
   exec(redundant_code1)
 
   for y in range(4):
-    timer=datetime.datetime.now()
+    timer = datetime.datetime.now()
     exec(redundant_code2)
 
   timernator(1)
@@ -1750,10 +1801,118 @@ while True:
   exec(redundant_code1)
 
   for y in range(4):
-    timer=datetime.datetime.now()
+    timer = datetime.datetime.now()
     exec(redundant_code2)
 
   timernator(1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# ONTARIO LOTTO 6/49 RANDOM NUMBER GENERATOR Python program example:
+
+# Note: you must execute/run the program from the OS output screen, via double-clicking
+# the Python program file itself.
+
+import os,time,math,random,winsound
+
+text_colour = (
+  '\x1b[31m',  # index 0 = red
+  '\x1b[32m',  # index 1 = green
+  '\x1b[33m',  # index 2 = yellow
+  '\x1b[34m',  # index 3 = blue
+  '\x1b[35m',  # index 4 = purple
+  '\x1b[36m',  # index 5 = cyan
+  '\x1b[37m')  # index 6 = white
+
+text_words = (
+  f'\n{text_colour[1]}Welcome to ONTARIO LOTTO 6/49 \
+RANDOM NUMBER GENERATOR. Good Luck!\n\nPress (Enter) \
+to activate the ONTARIO LOTTO 6/49 RANDOM NUMBER GENERATOR:',  # index 0 = text_words
+
+  f'\n{text_colour[1]}ONTARIO LOTTO 6/49 RANDOM NUMBER \
+GENERATOR is activated.\n\nONTARIO LOTTO 6/49 RANDOM NUMBER \
+GENERATOR SEQUENCE:',  # index 1 = text_words
+
+  f'\n{text_colour[2]}Press (N) then press (Enter) to randomly \
+pick a different set of Ontario Lotto 6/49 numbers.\n\nPress (Q) \
+then press (Enter) to quit:{text_colour[1]}',  # index 2 = text_words
+
+  f'\n{text_colour[1]}Thanks for playing ONTARIO LOTTO 6/49 \
+RANDOM NUMBER GENERATOR. Good Luck!',  # index 3 = text_words
+
+  'title ONTARIO LOTTO 6/49 RANDOM NUMBER GENERATOR')  # index 4 = text_words
+
+random_num = (
+random.randint(1,9),  # index 0 = random_num
+random.randint(10,17),  # index 1 = random_num
+random.randint(18,25),  # index 2 = random_num
+random.randint(26,33),  # index 3 = random_num
+random.randint(34,41),  # index 4 = random_num
+random.randint(42,49))  # index 5 = random_num
+
+win_sound = 'Place Windows wave sound file name here.'
+
+text_fx = ('cls','n','q')  # clear screen, n = random number button, q = quit
+
+os.system(text_words[4])
+random_num = (
+  random.randint(1,9),
+  random.randint(10,17),
+  random.randint(18,25),
+  random.randint(26,33),
+  random.randint(34,41),
+  random.randint(42,49))
+
+y = 0
+
+while y <= len(text_words[0]):
+  winsound.PlaySound(win_sound[0],winsound.SND_ASYNC)
+  print(text_words[0][:y])
+  time.sleep(.06)
+  os.system(text_fx[0])
+  y += 1
+
+button = input(text_words[0]).lower().strip()
+
+y = 0
+
+while y <= len(text_words[1]):
+  winsound.PlaySound(win_sound[0],winsound.SND_ASYNC)
+  print(text_words[1][:y])
+  time.sleep(.06)
+  os.system(text_fx[0])
+  y += 1
+
+while True:
+  winsound.PlaySound(win_sound[1],winsound.SND_ASYNC)
+  print(
+    f'{text_words[1]}{text_colour[0]}({random_num[0]}) \
+({random_num[1]}) ({random_num[2]}) ({random_num[3]}) \
+({random_num[4]}) ({random_num[5]})')
+
+  button = input(text_words[2]).lower().strip()
+  os.system(text_fx[0])
+  if button == (text_fx[1]):
+    random_num = (
+    random.randint(1,9),
+    random.randint(10,17),
+    random.randint(18,25),
+    random.randint(26,33),
+    random.randint(34,41),
+    random.randint(42,49))
+
+  elif button == (text_fx[2]):
+    break
+
+y = 0
+
+while y <= len(text_words[3]):
+  winsound.PlaySound(win_sound[0],winsound.SND_ASYNC)
+  print(text_words[3][:y])
+  time.sleep(.06)
+  os.system(text_fx[0])
+  y += 1
+
+print(text_words[3])
+time.sleep(3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pack three separate list variables, along with their separate value groups with just
 # one equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
@@ -4074,7 +4233,7 @@ class Text_string:
     self.text_string4 = text_string4
 
   def __str__(self):
-    return self.text_string4
+    return self.text_string4  # Change text_string4 to text_string1 and see what happens.
 
 my_text_string1 = Text_string(
   'I am a text string only.',
@@ -4087,6 +4246,8 @@ my_text_string2 = Text_string(
   'Dunder methods modify the behavior of objects.',
   'You can call these dunder methods, magic methods or a constructors',
   "Magical Methods are like Harry Potter's wizard wand in Python programming.")
+
+print(my_text_string1)  # This is what Magic Methods do...
 
 print(my_text_string2)  # Magical Methods are like Harry Potter's wizard wand in Python programming.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -4624,7 +4785,7 @@ class My_pets:
     return keywords in self.pet1  # change this self.pet-n to find other values.
 
   def __getitem__(self,item):
-    if item == 'get item':  # This string argument value can be any name you like.
+    if item == 'get item':  # This string argument value can be anything you like.
       return self.pet1
     else:
       return f"item '{item}' was not found:"
