@@ -1972,7 +1972,8 @@ print(f'The number {comp_nums} = the octal base 8 number value: {comp_nums:o}.')
 # Note: after you save your file, you must double click this file to view it's cool coloured
 # text and layout.
 
-from time import sleep as delay;import os;os.system('title binary beat'.title())
+from time import sleep as delay
+import os;os.system('title binary beat'.title())
 
 red = '\x1b[31m'
 green = '\x1b[32m'
@@ -1981,7 +1982,7 @@ yellow = '\x1b[33m'
 purple = '\x1b[35m'
 white = '\x1b[37m'
 os.system('cls')
-n=0
+n = 0
 
 while True:
   print(white+'\n'+' '*6+'welcome to the binary beat in motion python program example:'.title()
@@ -2023,7 +2024,7 @@ lb = '\n';lbb = '\n\n'; elb = ' =\n';eq = ' = ';sp = ' '
 num1 = 0;num2 = 1
 fib = [num1,num2]
 
-pause=1
+pause = 1
 
 while True:
   os.system('cls')
@@ -2058,7 +2059,7 @@ while True:
 
 import os,time;os.system(f'title fibonacci natural number sequence'.title())
 
-text_colours=(
+text_colours = (
   '\x1b[31m', # index 0 = red
   '\x1b[32m', # index 1 = green
   '\x1b[33m', # index 2 = yellow
@@ -2123,10 +2124,10 @@ while True:
   try:
     x=int(input(words[2]).strip())
     for i in range(x):
-      fib_num=num1+num2
+      fib_num = num1+num2
       fib.add(fib_num)
-      num1=num2
-      num2=fib_num
+      num1 = num2
+      num2 = fib_num
       if x in fib:
           print(x,words[0])
           break
@@ -4032,14 +4033,20 @@ class Math:
   def __truediv__(self,num2):
     return self.num1 / num2.num1
 
-    def __eq__(self,num2):
-      return self.num1 == num2.num1
+  def __eq__(self,num2):
+    return self.num1 == num2.num1
 
-    def __gt__(self,num2):
-      return self.num1 > num2.num1
+  def __gt__(self,num2):
+    return self.num1 > num2.num1
 
-    def __lt__(self,num2):
-      return self.num1 < num2.num1
+  def __lt__(self,num2):
+    return self.num1 < num2.num1
+
+  def __ge__(self,num2):
+    return self.num1 >= num2.num1
+
+  def __le__(self,num2):
+    return self.num1 <= num2.num1
 
 number1 = Math(20)
 number2 = Math(5)
@@ -4053,14 +4060,21 @@ print(number1 * number2)  # 100
 print(int(number1 / number2))  # 4
 
 # Change the values (20) and (5) to any numbers you like, and then check the outcome
-# to see if number1 == number2, greater than: > or less than: < number2.
+# to see if number1 == number2, greater than: > or less than: < number2 and greater
+# than or equal to >= number2 and less than or equal to <= number2.
 
 print(number1 == number2)  # False
 
 print(number1 > number2)  # True
 
 print(number1 < number2)  # False
+
+print(number1 >= number2)  # True
+
+print(number1 <= number2)  # False
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
 # The dunder __repr__ method checks for string value integrity within a class. If you
 # create a wrong dunder method, the __repr__ method will execute, letting you know
 # that something isn't right in the code. The __repr__ is used for debugging strings.
@@ -4354,7 +4368,7 @@ return_values = (
   'Super Subclass Act Six',
   'Super Subclass Act Seven')
 
-# This is where you do your Clean, Cut Python Code, without all that spaghetti of
+# This is where you do your Clean, Cut Python code, without all that spaghetti of
 # long string values getting in the way while you continue to write your code code.
 
 class Main_class_attribute_properties:
