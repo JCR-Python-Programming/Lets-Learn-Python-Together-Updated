@@ -8,7 +8,9 @@
 # for any reason, I can at least refer to my own research notes, via YouTube, without
 # losing my research, entirely. I can also be away from home and just quickly refer to
 # my research notes on YouTube, without having to log onto github.com to refer to
-# my research note studies.
+# my research note studies. This is my entire, general understanding of Python
+# programming to date. However, this Python programmer's manual should be enough
+# to give you a complete, general understanding of the Python programming language.
 
 # Created by Joseph C. Richardson, GitHub.com
 
@@ -4104,12 +4106,13 @@ class Math_class_inheritance(
 
 Math_class_inheritance.name()  # My name is Billy The Child!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's create a polygon class Python program that tells the user how many sides each polygon
-# has, along with its colour. Invoke the zip() function. Note: the zip() function will truncate its
-# index values down to the shortest array of values, even if the other arrays have more values
-# in them. The zip() function will keep all three arrays the same value length. The zip() function
-# is great for handling index range errors, should one array have not enough values as the other
-# arrays that have more values in them.
+# Let's create a polygon class Python program that tells the user how many sides
+# each polygon has, along with its colour. Invoke the zip() function. Note: the zip()
+# function will truncate its index values down to the shortest array of values, even
+# if the other arrays have more values in them. The zip() function will keep all three
+# arrays the same value length. The zip() function is great for handling index range
+# errors, should one array have not enough values as the other arrays that have
+# more values in them.
 
 polygon = (
   'triangle','square','pentagon','hexagon','heptagon',
