@@ -101,9 +101,9 @@ print(f'This define function returns two \
 {return_function("argument placeholder value","argument placeholder value")[0]} \
 {return_function("argument placeholder value","argument placeholder value")[1]}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# With *args, you can create as many argument placeholder values without the worry of
-# how many argument placeholder values to how may parameter variables, needed to be
-# satisfied.
+# With *args, you can create as many argument placeholder values without the worry
+# of how many argument placeholder values to how may parameter variables, needed
+# to be satisfied.
 
 def return_function(*args):
   return 'argument','values.'
@@ -122,9 +122,9 @@ print(f'This define function returns three \
 {return_function("argument placeholder value","argument placeholder value","argument placeholder value")[1]} \
 {return_function("argument placeholder value","argument placeholder value","argument placeholder value")[2]}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# With *args, you can create as many argument placeholder values without the worry of
-# how many argument placeholder values to how may parameter variables, needed to be
-# satisfied.
+# With *args, you can create as many argument placeholder values without the worry
+# of how many argument placeholder values to how may parameter variables, needed
+# to be satisfied.
 
 def return_function(*args):
   return 'argument','values.','WOW!'
@@ -296,9 +296,9 @@ print(lambda_function(2,12,2,2,12))
 # or divide integer numbers. Next add or subtract integer numbers. Watch the signs +
 # and - are used for creating positive and negative integer numbers. For example:
 # -2*3 = -6 not +6, which is just 6, without writing the + sign. Negative integer numbers
-# always show the - sign. All computers follow the 'Order of Operation', which also means
-# that you must have an understanding of 'BEDMAS' and the order of operation. A wee
-# bit of basic algebra knowledge wouldn't hurt, but it's not required for computer
+# always show the - sign. All computers follow the 'Order of Operation', which also
+# means that you must have an understanding of 'BEDMAS' and the order of operation.
+# A wee bit of basic algebra knowledge wouldn't hurt, but it's not required for computer
 # programming; it just makes computer programming that much more dynamic and fun.
 
 try:
@@ -377,8 +377,8 @@ try:
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that asks the user for an odd or even number, via the input()
-# function, along with a lambda function.
+# Create a Python program that asks the user for an odd or even number, via the
+# input() function, along with a lambda function.
 
 try:
   user_input = int(input('Give me an odd or even number: ').strip())
@@ -416,8 +416,8 @@ try:
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that asks the user for an odd or even number, via the input()
-# function and the modulo % operator.
+# Create a Python program that asks the user for an odd or even number, via the
+# input() function and the modulo % operator.
 
 try:
   user_input = int(input('Give me an odd or even number: ').strip())
@@ -430,8 +430,8 @@ try:
 except ValueError:
   print('Numbers only please:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create a Python program that asks the user for an odd or even number, via the input()
-# function and the modulo % operator.
+# Create a Python program that asks the user for an odd or even number, via the
+# input() function and the modulo % operator.
 
 try:
   user_input = int(input('Give me an odd or even number: ').strip())
@@ -475,9 +475,10 @@ for i in range(1,count+1):
     print(f'{i} is an even number.')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # This Python program example is an accidental, Happy Accident. It's probably one
-# of my later and one of my most favorite computer programming discoveries to happen.
-# I will be using this discovery within my future robotics and Raspberry Pi4 Python
-# programs. The modulo % operator is fascinating; the things you can do with it.
+# of my later and one of my most favorite computer programming discoveries to
+# happen. I will be using this discovery within my future robotics and Raspberry Pi4
+# Python programs. The modulo % operator is fascinating; the things you can do
+# with it.
 
 message = (
   "Type a number equal to or higher than '8': ",
@@ -1189,16 +1190,16 @@ print(convert1 ^ convert2)  # Symmetric Difference
 
 name_list = ['John','Bob','Rob','Tom']
 
-# Here is a simple for-loop that will loop through the name_list values starting with index
-# 0, followed by index 1 and then index 2, and finally index 3.
+# Here is a simple for-loop that will loop through the name_list values starting with
+# index 0, followed by index 1 and then index 2, and finally index 3.
 
 for index in name_list:
   print(index)
 
-# The for-loop example above is fine, but it has its limitations when it comes to multi indexing
-# through a tuple or list alike. With the enumerate() function, such things are possible.
-# Try these enumerate() function Python program examples below and see what happens
-# when you experiment with them.
+# The for-loop example above is fine, but it has its limitations when it comes to multi
+# indexing through a tuple or list alike. With the enumerate() function, such things are
+# possible. Try these enumerate() function Python program examples below and see
+# what happens when you experiment with them.
 
 for index,name in enumerate(name_list):
   print(index)
@@ -1586,7 +1587,7 @@ try:
 except ValueError:
   print('That is incorrect!')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# STARS Game Python program example:
+# STARS game Python program example:
 
 # Execute/run this program example and see how the while-loop only breaks when
 # one of the two 'break' statements is executed. If none of them gets executed, the
@@ -1615,13 +1616,13 @@ and \'Only\', single Star...')
   except ValueError:
     print('\nNumbers only please!\n')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Flip Flop Game Python program example:
+# Flip Flop game Python program example:
 
 # This little flip flop game is a great example of how the conditional while-loop works.
 # The 'else' statement executes/runs when the user types the wrong keys, and the
 # while-loop iterates/repeats over again while ignoring the 'break' statement.
 
-print('\nWelcome to the Flip Flop Game')
+print('\nWelcome to the Flip Flop game')
 
 print('\nPlease type the words "flip" or "flop", then press (ENTER)')
 
@@ -1707,6 +1708,9 @@ print(f'\nYour first name = {first_name.title()}:\nYour last name = \
 
 # Note: you must execute/run the program from the OS output screen, via double-
 # clicking the Python program file itself.
+
+# Save the Python file as 'TIMERNATOR.py'
+
 
 import os,datetime,asyncio,winsound
 from time import sleep as timernator
@@ -1811,6 +1815,8 @@ while True:
 # Note: you must execute/run the program from the OS output screen, via double-clicking
 # the Python program file itself.
 
+# Save the Python file as 'ONTARIO LOTTO.py'
+
 import os,time,math,random,winsound
 
 text_colour = (
@@ -1913,6 +1919,74 @@ while y <= len(text_words[3]):
 
 print(text_words[3])
 time.sleep(3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Know Your Polygons game Python program example:
+
+# See what happens when you type and execute/run this guessing game program
+# example below.
+
+# Note: you must execute/run the program from the OS output screen,
+# via double-clicking the Python program file itself.
+
+# Save the Python file as 'Know Your Polygons.py'
+
+import os
+
+text_col = (
+  '\x1b[31m',  # index 0 = red
+  '\x1b[32m',  # index 1 = green
+  '\x1b[33m',  # index 2 = yellow
+  '\x1b[34m',  # index 3 = blue
+  '\x1b[35m',  # index 4 = purple
+  '\x1b[36m',  # index 5 = cyan
+  '\x1b[37m',  # index 6 = white
+  'cls')  # index 7 = clear screen
+
+question_prompts = (
+  f'{text_col[2]}How many sides does a Triangle have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
+\n{text_col[1]}(b) {text_col[2]}three sides\n{text_col[1]}(c) {text_col[2]}two sides',
+
+  f'{text_col[2]}How many sides does a Square have?\n\n{text_col[1]}(a) {text_col[2]}Two sides\
+\n{text_col[1]}(b) {text_col[2]}Three sides\n{text_col[1]}(c) {text_col[2]}Four sides',
+
+  f'{text_col[2]}How many sides does a Pentagon have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
+\n{text_col[1]}(b) {text_col[2]}five sides\n{text_col[1]}(c) {text_col[2]}Three sides',
+
+  f'{text_col[2]}How many sides does a Hexagon have?\n\n{text_col[1]}(a) {text_col[2]}six sides\
+\n{text_col[1]}(b) {text_col[2]}five sides\n{text_col[1]}(c) {text_col[2]}two sides',
+
+  f'{text_col[2]}How many sides does a Octagon have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
+\n{text_col[1]}(b) {text_col[2]}six sides\n{text_col[1]}(c) {text_col[2]}eight sides',
+
+  f'{text_col[2]}How many sides does a Dodecagon have?\n\n{text_col[1]}(a) {text_col[2]}eight\
+sides\n{text_col[1]}(b) {text_col[2]}three sides\n{text_col[1]}(c) {text_col[2]}twelve sides',
+
+  f'{text_col[2]}How many sides does a Hexadecagon have?\n\n{text_col[1]}(a) {text_col[2]}sixteen\
+sides\n{text_col[1]}(b) {text_col[2]}eight sides\n{text_col[1]}(c) {text_col[2]}six sides')
+
+prompt = ('b','c','b','a','c','c','a')
+
+score = 0
+loop = 0
+
+while loop <= 6:
+
+  os.system(text_col[7])
+  button = input((text_col[1])+'\nKnow Your Polygons!\n\n'+(text_col[2])+'Know Your Polygons\n\n'+\
+  question_prompts[loop]+'\n\n'+(text_col[0])+'READY: '+(text_col[1])).strip()
+
+  if button == (prompt[loop]):
+      score += 1
+
+  loop += 1
+
+  os.system(text_col[7])
+
+print(f'\n{text_col[2]}Know Your Polygons\n\n{text_col[2]}You got \
+{score}/{len(question_prompts)} questions correct.\nCongratulations! Your total \
+Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.')
+
+input(f'\n{text_col[5]}Press Enter to exit:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pack three separate list variables, along with their separate value groups with just
 # one equals = sign. This also works with tuples ( ), sets { } and dictionaries { } alike.
@@ -2390,7 +2464,7 @@ cast_tuple_into_list.sort()
 
 print(cast_tuple_into_list)  # ['bird', 'cat', 'dog', 'fish']
 
-# # Let's cast the list back into a sorted tuple.
+# Let's cast the list back into a sorted tuple.
 
 cast_list_into_tuple = tuple(cast_tuple_into_list)
 
@@ -2619,14 +2693,13 @@ while True:
 import os,time;os.system(f'title fibonacci natural number sequence'.title())
 
 text_colours = (
-  '\x1b[31m', # index 0 = red
-  '\x1b[32m', # index 1 = green
-  '\x1b[33m', # index 2 = yellow
-  '\x1b[34m', # index 3 = blue
-  '\x1b[35m', # index 4 = purple
-  '\x1b[36m', # index 5 = cyan
-  '\x1b[37m'  # index 6 = white
-  )
+  '\x1b[31m',  # index 0 = red
+  '\x1b[32m',  # index 1 = green
+  '\x1b[33m',  # index 2 = yellow
+  '\x1b[34m',  # index 3 = blue
+  '\x1b[35m',  # index 4 = purple
+  '\x1b[36m',  # index 5 = cyan
+  '\x1b[37m')  # index 6 = white
 
 text_words = (
   f'{text_colours[1]}Fibonacci Natural Number Sequence in Action...',
@@ -2636,8 +2709,7 @@ text_words = (
 
   f'\n\n{text_colours[5]}Fibonacci Natural Numbers go on forever!',
   f'\n\nFibonacci Natural Numbers can only be found in \
-nature, such as plants and animals...'
-  )
+nature, such as plants and animals...')
 
 for i in range(25):
   print('\n',' '*i,text_words[0])
@@ -2676,8 +2748,7 @@ words = (
   'is not in the Fibonacci Sequence.',
   'Please enter a correct Fibonacci Sequence Number: ',
   'Sorry! Numbers only.',
-  'Memory Error!'
-  )
+  'Memory Error!')
 
 while True:
   try:
@@ -2757,13 +2828,12 @@ for i in range(32,127):print(chr(i),'=',i)
 import os,time
 
 text_features = (
-  'cls', # index 0 = clear screen
-  '\x1b[31m', # index 1 = red
-  '\x1b[32m', # index 2 = green
-  '\x1b[33m', # index 3 = yellow
-  '\x1b[34m', # index 4 = blue
-  '\x1b[37m'  # index 5 = red
-  )
+  'cls',  # index 0 = clear screen
+  '\x1b[31m',  # index 1 = red
+  '\x1b[32m',  # index 2 = green
+  '\x1b[33m',  # index 3 = yellow
+  '\x1b[34m',  # index 4 = blue
+  '\x1b[37m')  # index 5 = red
 
 text_words = (
   f'\n{text_features[3]}ASCII CODE NUMERIC VALUE TRANSLATOR\n', # index 0 = text_words
@@ -2938,8 +3008,7 @@ show_time = (
   '%H:%M:%S',
   '%A %B %d,%Y',
   'Week %U',
-  'Day %j'
-  )
+  'Day %j')
 
 timer = datetime.datetime.now()
 
@@ -2949,7 +3018,7 @@ print(timer.strftime(show_time[2]))
 print(timer.strftime(show_time[3]))
 print(timer.strftime(show_time[4]))
 
-# Now change and rearrange the tuple number values [0] through [4] in# the program
+# Now change and rearrange the tuple number values [0] through [4] in the program
 # example above and re-execute/run the program and see what happens.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Now, let's make our Python clock come to life. Let's also keep the code less balky
@@ -3307,7 +3376,7 @@ For the heart and the mind are thus, the greatest teachers of us…
 Believe in yourself! For you are their greatest student.'''
 
 # Here, we can use Python's Walrus Operator := to check our list of words within the poem
-# right on the spot and on one, single line of Python code# at that.
+# right on the spot and on one, single line of Python code at that.
 
 print(text := poem.split())
 
@@ -4071,24 +4140,24 @@ class Polygons:
 for x,i,j in zip(shape_colour,polygon,num_sides):
     print('The',x,i,'has',j,'sides.')
 
-# What do you call a hen that has eleven legs? A hen-decagon...
+# What do you call a Hen that has eleven legs? A Hen-decagon...
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's learn how to use the super() function within class attribute properties. If there are two
-# or more classes that have the same attribute variable names, the super() function can be used
-# on classes, underneath other classes that have the same attribute variable names, such as
-# these:
+# Let's learn how to use the super() function within class attribute properties. If there
+# are two or more classes that have the same attribute variable names, the super()
+# function can be used on classes, underneath other classes that have the same
+# attribute variable names, such as these:
 
 #   self.num1 = num1
 #   self.num2 = num2
 #   self.num3 = num3
 #   self.num4 = num4
 
-# What the super() function does is help the programmer reuse code, not rewrite it. Since all the
-# classes have the same attribute variable names, this is where the super() function truly shines.
-# This is what the super() function looks like with its class attribute properties inside it. Note: If
-# you have different attribute variable names in each class, the super() function cannot be used;
-# they are not the same attribute variable names, such was the case in our Mom and Dad class act
-# Python program example.
+# What the super() function does is help the programmer reuse code, not rewrite it. Since
+# all the classes have the same attribute variable names, this is where the super() function
+# truly shines. This is what the super() function looks like with its class attribute properties
+# inside it. Note: If you have different attribute variable names in each class, the super()
+# function cannot be used; they are not the same attribute variable names, such was the
+# case in our Mom and Dad class act Python program example.
 
 # super().__init__(num1,num2,num3,num4)
 
