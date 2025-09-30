@@ -4035,22 +4035,60 @@ class Math_class_inheritance(
 
 Math_class_inheritance.name()  # My name is Billy The Child!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Let's learn how to use the super() function within class attribute properties. If there
-# are two or more classes that have the same attribute variable names, the super()
-# function can be used on classes, underneath other classes that have the same
-# attribute variable names, such as these:
+# Let's create a polygon class Python program that tells the user how many sides each polygon
+# has, along with its colour. Invoke the zip() function. Note: the zip() function will truncate its
+# index values down to the shortest array of values, even if the other arrays have more values
+# in them. The zip() function will keep all three arrays the same value length. The zip() function
+# is great for handling index range errors, should one array have not enough values as the other
+# arrays that have more values in them.
+
+polygon = (
+  'triangle','square','pentagon','hexagon','heptagon',
+  'octagon','nonagon','decagon','hendecagon','dodecagon',
+  'tridecagon','tetradecagon', 'pentadecagon','hexadecagon',
+  'heptadecagon','octadecagon','enneadecagon','icosagon')  # tuple( ) array
+
+num_sides = 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20  # default tuple array
+
+shape_colour = [
+  'red','yellow','blue','green','pink','cyan','white'
+  ,'black','brown', 'orange','purple','gray','silver',
+  'gold','maroon','indigo','lavender','violet']  # list[ ] array
+
+shape_colour.sort()  # sort the shape_colour list in alphabetical order
+
+class Polygons:
+
+  def __init__(self,polygon,sides,colour):
+
+    self.polygon = polygon
+    self.sides = sides
+    self.colour = colour
+
+  def shape_sides(self):
+      return f'{self.polygon} {self.sides}'
+
+for x,i,j in zip(shape_colour,polygon,num_sides):
+    print('The',x,i,'has',j,'sides.')
+
+# What do you call a hen that has eleven legs? A hen-decagon...
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn how to use the super() function within class attribute properties. If there are two
+# or more classes that have the same attribute variable names, the super() function can be used
+# on classes, underneath other classes that have the same attribute variable names, such as
+# these:
 
 #   self.num1 = num1
 #   self.num2 = num2
 #   self.num3 = num3
 #   self.num4 = num4
 
-# What the super() function does is help the programmer reuse code, not rewrite it.
-# Since all the classes have the same attribute variable names, this is where the super()
-# function truly shines. This is what the super() function looks like with its class attribute
-# properties inside it. Note: If you have different attribute variable names in each class,
-# the super() function cannot be used; they are not the same attribute variable names,
-# such was the case in our Mom and Dad class act Python program example.
+# What the super() function does is help the programmer reuse code, not rewrite it. Since all the
+# classes have the same attribute variable names, this is where the super() function truly shines.
+# This is what the super() function looks like with its class attribute properties inside it. Note: If
+# you have different attribute variable names in each class, the super() function cannot be used;
+# they are not the same attribute variable names, such was the case in our Mom and Dad class act
+# Python program example.
 
 # super().__init__(num1,num2,num3,num4)
 
