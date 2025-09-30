@@ -16,6 +16,7 @@
 
 # Because a Great Programmer always starts with a Great Programmer's Manual... 😁
 '''---------------------------------------------------------------------------------------------------------------------------'''
+
 # Easy define function program example:
 
 def function():
