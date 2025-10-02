@@ -1949,7 +1949,7 @@ question_prompts = (
   f'{text_col[2]}How many sides does a Triangle have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
 \n{text_col[1]}(b) {text_col[2]}three sides\n{text_col[1]}(c) {text_col[2]}two sides',
 
-  f'{text_col[2]}How many sides does a Square have?\n\n{text_col[1]}(a) {text_col[2]}Two sides\
+  f'{text_col[2]}How many sides does a Square have?\n\n{text_col[1]}(a) {text_col[2]}two sides\
 \n{text_col[1]}(b) {text_col[2]}Three sides\n{text_col[1]}(c) {text_col[2]}Four sides',
 
   f'{text_col[2]}How many sides does a Pentagon have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
