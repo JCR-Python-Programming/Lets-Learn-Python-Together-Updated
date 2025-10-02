@@ -1950,10 +1950,10 @@ question_prompts = (
 \n{text_col[1]}(b) {text_col[2]}three sides\n{text_col[1]}(c) {text_col[2]}two sides',
 
   f'{text_col[2]}How many sides does a Square have?\n\n{text_col[1]}(a) {text_col[2]}two sides\
-\n{text_col[1]}(b) {text_col[2]}Three sides\n{text_col[1]}(c) {text_col[2]}Four sides',
+\n{text_col[1]}(b) {text_col[2]}three sides\n{text_col[1]}(c) {text_col[2]}four sides',
 
   f'{text_col[2]}How many sides does a Pentagon have?\n\n{text_col[1]}(a) {text_col[2]}four sides\
-\n{text_col[1]}(b) {text_col[2]}five sides\n{text_col[1]}(c) {text_col[2]}Three sides',
+\n{text_col[1]}(b) {text_col[2]}five sides\n{text_col[1]}(c) {text_col[2]}three sides',
 
   f'{text_col[2]}How many sides does a Hexagon have?\n\n{text_col[1]}(a) {text_col[2]}six sides\
 \n{text_col[1]}(b) {text_col[2]}five sides\n{text_col[1]}(c) {text_col[2]}two sides',
