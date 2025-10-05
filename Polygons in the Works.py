@@ -62,24 +62,24 @@ sides = (
   'twenty sides')  # index[18]
 
 answers = [
-  'Triangles have three equal sides.',
-  'Squares have four equal sides.',
-  'Pentagons have five equal sides.',
-  'Hexagons have six equal sides.',
-  'Heptagons have seven equal sides.',
-  'Octagons have eight equal sides.',
-  'Nonagons have nine equal sides.',
-  'Decagons have ten equal sides.',
-  'Hendecagons have eleven equal sides.',
-  'Dodecagons have twelve equal sides.',
-  'Tridecagons have thirteen equal sides.',
-  'Tetradecagons have fourteen equal sides.',
-  'Pentadecagons have fifteen equal sides.',
-  'Hexadecagons have sixteen equal sides.',
-  'Heptadecagons have seventeen equal sides.',
-  'Octadecagons have eighteen equal sides.',
-  'Enneadecagons have nineteen equal sides.',
-  'Icosagons have twenty equal sides.']
+  'Triangles have three equal sides.',  # index[0]
+  'Squares have four equal sides.',  # index[1]
+  'Pentagons have five equal sides.',  # index[2]
+  'Hexagons have six equal sides.',  # index[3]
+  'Heptagons have seven equal sides.',  # index[4]
+  'Octagons have eight equal sides.',  # index[5]
+  'Nonagons have nine equal sides.',  # index[6]
+  'Decagons have ten equal sides.',  # index[7]
+  'Hendecagons have eleven equal sides.',  # index[8]
+  'Dodecagons have twelve equal sides.',  # index[9]
+  'Tridecagons have thirteen equal sides.',  # index[10]
+  'Tetradecagons have fourteen equal sides.',  # index[11]
+  'Pentadecagons have fifteen equal sides.',  # index[12]
+  'Hexadecagons have sixteen equal sides.',  # index[13]
+  'Heptadecagons have seventeen equal sides.',  # index[14]
+  'Octadecagons have eighteen equal sides.',  # index[15]
+  'Enneadecagons have nineteen equal sides.',  # index[16]
+  'Icosagons have twenty equal sides.']  # index[17]
 
 question_prompts = (
   f'{text_col[2]}{polygons[0]}\n\n{text_col[1]}(a) {text_col[2]}{sides[2]}\
@@ -89,9 +89,8 @@ question_prompts = (
 \n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}',  # index[1]
 
   f'{text_col[2]}{polygons[2]}\n\n{text_col[1]}(a) {text_col[2]}{sides[3]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}')  # index[2]
+\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}',  # index[2]
 
-'''
   f'{text_col[2]}{polygons[3]}\n\n{text_col[1]}(a) {text_col[2]}{sides[4]}\
 \n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[3]}',  # index[3]
 
@@ -135,19 +134,19 @@ question_prompts = (
 \n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[18]}',  # index[16]
 
   f'{text_col[2]}{polygons[17]}\n\n{text_col[1]}(a) {text_col[2]}{sides[18]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[16]}')  # index[17]'''
+\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[16]}')  # index[17]
 
 title = 'know your polygons'.title()
 
 learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! \
 You don't know any of your Polygons... Sorry! Please try again.\n")
 
-choice = ['b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a']
+choice = ['b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a']  # choice values: 0 through 17 = 18
 
 score = 0
 loop = 0
 
-while loop <= 2:
+while loop <= 17:
   os.system(text_col[7])
 
   button = input(
@@ -173,7 +172,7 @@ elif score < len(question_prompts):
 Your total Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.\
 \n\nCorrect answers you got {text_col[0]}wrong:')
 
-elif score == len(question_prompts) == 3:
+elif score == len(question_prompts) == 18:
   print(f'{text_col[5]}{title}\n\n{text_col[2]}You got\
  {score}/{len(question_prompts)} questions correct:\n\nCongratulations! {text_col[4]}\
 Wow! You got them all right. {text_col[2]}Your total Prize Winnings: {text_col[1]}${score\
