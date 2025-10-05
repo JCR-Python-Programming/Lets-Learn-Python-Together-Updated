@@ -61,11 +61,6 @@ sides = (
   'nineteen sides',  # index[17]
   'twenty sides')  # index[18]
 
-title = 'know your polygons'.title()
-
-learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! \
-You don't know any of your Polygons... Sorry! Please try again.\n")
-
 answers = [
   'Triangles have three equal sides.',
   'Squares have four equal sides.',
@@ -142,9 +137,12 @@ question_prompts = (
   f'{text_col[2]}{polygons[17]}\n\n{text_col[1]}(a) {text_col[2]}{sides[18]}\
 \n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[16]}')  # index[17]'''
 
-print(len(question_prompts))
+title = 'know your polygons'.title()
 
-prompt = ('b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a')
+learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! \
+You don't know any of your Polygons... Sorry! Please try again.\n")
+
+choice = ['b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a']
 
 score = 0
 loop = 0
@@ -156,7 +154,7 @@ while loop <= 2:
     text_col[5]+f'\n{title}\n\n'+text_col[2]+question_prompts[loop]+
     '\n\n'+text_col[0]+'READY: '+text_col[1]).strip()
 
-  if button == (prompt[loop]):
+  if button == (choice[loop]):
     score += 1
 
   loop += 1
@@ -173,12 +171,10 @@ elif score < len(question_prompts):
   print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
  {score}/{len(question_prompts)} questions correct:\n\nCongratulations! \
 Your total Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.\
-\n\nCorrect answers you got {text_col[0]}wrong:\n')
-
-
+\n\nCorrect answers you got {text_col[0]}wrong:')
 
 elif score == len(question_prompts) == 3:
-  print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
+  print(f'{text_col[5]}{title}\n\n{text_col[2]}You got\
  {score}/{len(question_prompts)} questions correct:\n\nCongratulations! {text_col[4]}\
 Wow! You got them all right. {text_col[2]}Your total Prize Winnings: {text_col[1]}${score\
 *100*score:,}.00 {text_col[2]}Dollars.')
@@ -188,4 +184,4 @@ else:
  {score}/{len(question_prompts)} questions correct:\n\nCongratulations! Your total \
 Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.')
 
-input(f'\n{text_col[2]}Press Enter to exit:')
+input(f'\n{text_col[2]}Press Enter to exit: ')
