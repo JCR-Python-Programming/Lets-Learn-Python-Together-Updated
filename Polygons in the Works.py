@@ -20,7 +20,7 @@ text_col = (
   '\x1b[37m',  # index 6 = white
   'cls')  # index 7 = clear screen
 
-polygons = (
+polygons = [
   'How many sides does a Triangle have?',  # index[0]
   'How many sides does a Square have?',  # index[1]
   'How many sides does a Pentagon have?',  # index[2]
@@ -38,7 +38,7 @@ polygons = (
   'How many sides does a Heptadecagon have?',  # index[14]
   'How many sides does a Octadecagon have?',  # index[15]
   'How many sides does a Enneadecagon have?',  # index[16]
-  'How many sides does a Icosagon have?')  # index[17]
+  'How many sides does a Icosagon have?']  # index[17]
 
 sides = (
   'two sides',  # index[0]
@@ -63,73 +63,84 @@ sides = (
 
 title = 'know your polygons'.title()
 
-learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! You don't know \
-any of your Polygons... Sorry: Please try again.\
-\n\n{text_col[2]}Triangles have three equal sides.\
-\nSquares have four equal sides.\nPentagons have five equal sides.\
-\nHexagons have six equal sides.\nHeptagons have seven equal sides.\
-\nOctagons have eight equal sides.\nNonagons have nine equal sides.\
-\nDecagons have ten equal sides.\nHendecagons have eleven equal sides.\
-\nDodecagons have twelve equal sides.\nTridecagons have thirteen equal sides.\
-\nTetradecagons have fourteen equal sides.\nPentadecagons have fifteen equal sides.\
-\nHexadecagons have sixteen equal sides.\nHeptadecagons have seventeen equal sides.\
-\nOctadecagons have eighteen equal sides.\nEnneadecagons have nineteen equal sides.\
-\nIcosagons have twenty equal sides.")
+learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! \
+You don't know any of your Polygons... Sorry! Please try again.\n")
+
+answers = [
+  'Triangles have three equal sides.',
+  'Squares have four equal sides.',
+  'Pentagons have five equal sides.',
+  'Hexagons have six equal sides.',
+  'Heptagons have seven equal sides.',
+  'Octagons have eight equal sides.',
+  'Nonagons have nine equal sides.',
+  'Decagons have ten equal sides.',
+  'Hendecagons have eleven equal sides.',
+  'Dodecagons have twelve equal sides.',
+  'Tridecagons have thirteen equal sides.',
+  'Tetradecagons have fourteen equal sides.',
+  'Pentadecagons have fifteen equal sides.',
+  'Hexadecagons have sixteen equal sides.',
+  'Heptadecagons have seventeen equal sides.',
+  'Octadecagons have eighteen equal sides.',
+  'Enneadecagons have nineteen equal sides.',
+  'Icosagons have twenty equal sides.']
 
 question_prompts = (
   f'{text_col[2]}{polygons[0]}\n\n{text_col[1]}(a) {text_col[2]}{sides[2]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[0]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[0]}',  # index[0]
 
   f'{text_col[2]}{polygons[1]}\n\n{text_col[1]}(a) {text_col[2]}{sides[3]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}',  # index[1]
 
   f'{text_col[2]}{polygons[2]}\n\n{text_col[1]}(a) {text_col[2]}{sides[3]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[1]}\n{text_col[1]}(c) {text_col[2]}{sides[2]}')  # index[2]
 
+'''
   f'{text_col[2]}{polygons[3]}\n\n{text_col[1]}(a) {text_col[2]}{sides[4]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[3]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[3]}',  # index[3]
 
   f'{text_col[2]}{polygons[4]}\n\n{text_col[1]}(a) {text_col[2]}{sides[7]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',  # index[4]
 
   f'{text_col[2]}{polygons[5]}\n\n{text_col[1]}(a) {text_col[2]}{sides[5]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[4]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[4]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',   # index[5]
 
   f'{text_col[2]}{polygons[6]}\n\n{text_col[1]}(a) {text_col[2]}{sides[5]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[7]}\n{text_col[1]}(c) {text_col[2]}{sides[8]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[7]}\n{text_col[1]}(c) {text_col[2]}{sides[8]}',  # index[6]
 
   f'{text_col[2]}{polygons[7]}\n\n{text_col[1]}(a) {text_col[2]}{sides[9]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[8]}\n{text_col[1]}(c) {text_col[2]}{sides[10]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[8]}\n{text_col[1]}(c) {text_col[2]}{sides[10]}',  # index[7]
 
   f'{text_col[2]}{polygons[8]}\n\n{text_col[1]}(a) {text_col[2]}{sides[8]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[10]}\n{text_col[1]}(c) {text_col[2]}{sides[9]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[10]}\n{text_col[1]}(c) {text_col[2]}{sides[9]}',  # index[8]
 
   f'{text_col[2]}{polygons[9]}\n\n{text_col[1]}(a) {text_col[2]}{sides[8]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[10]}\n{text_col[1]}(c) {text_col[2]}{sides[9]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[10]}\n{text_col[1]}(c) {text_col[2]}{sides[9]}',  # index[9]
 
   f'{text_col[2]}{polygons[10]}\n\n{text_col[1]}(a) {text_col[2]}{sides[11]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[9]}\n{text_col[1]}(c) {text_col[2]}{sides[12]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[9]}\n{text_col[1]}(c) {text_col[2]}{sides[12]}',  # index[10]
 
   f'{text_col[2]}{polygons[11]}\n\n{text_col[1]}(a) {text_col[2]}{sides[11]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[12]}\n{text_col[1]}(c) {text_col[2]}{sides[10]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[12]}\n{text_col[1]}(c) {text_col[2]}{sides[10]}',  # index[11]
 
   f'{text_col[2]}{polygons[12]}\n\n{text_col[1]}(a) {text_col[2]}{sides[14]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[11]}\n{text_col[1]}(c) {text_col[2]}{sides[13]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[11]}\n{text_col[1]}(c) {text_col[2]}{sides[13]}',  # index[12]
 
   f'{text_col[2]}{polygons[13]}\n\n{text_col[1]}(a) {text_col[2]}{sides[15]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[13]}\n{text_col[1]}(c) {text_col[2]}{sides[14]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[13]}\n{text_col[1]}(c) {text_col[2]}{sides[14]}',  # index[13]
 
   f'{text_col[2]}{polygons[14]}\n\n{text_col[1]}(a) {text_col[2]}{sides[16]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[14]}\n{text_col[1]}(c) {text_col[2]}{sides[15]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[14]}\n{text_col[1]}(c) {text_col[2]}{sides[15]}',  # index[14]
 
   f'{text_col[2]}{polygons[15]}\n\n{text_col[1]}(a) {text_col[2]}{sides[17]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[16]}\n{text_col[1]}(c) {text_col[2]}{sides[18]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[16]}\n{text_col[1]}(c) {text_col[2]}{sides[18]}',  # index[15]
 
   f'{text_col[2]}{polygons[16]}\n\n{text_col[1]}(a) {text_col[2]}{sides[16]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[18]}',
+\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[18]}',  # index[16]
 
   f'{text_col[2]}{polygons[17]}\n\n{text_col[1]}(a) {text_col[2]}{sides[18]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[16]}')  # 18 tuple values: 0 through 17 = 18 values
+\n{text_col[1]}(b) {text_col[2]}{sides[17]}\n{text_col[1]}(c) {text_col[2]}{sides[16]}')  # index[17]'''
 
 print(len(question_prompts))
 
@@ -138,15 +149,15 @@ prompt = ('b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a
 score = 0
 loop = 0
 
-while loop <= 17:
+while loop <= 2:
   os.system(text_col[7])
 
-  button = input((text_col[5])+f'\n{title}\n\n'+(text_col[2])+\
-
-  question_prompts[loop]+'\n\n'+(text_col[0])+'READY: '+(text_col[1])).strip()
+  button = input(
+    text_col[5]+f'\n{title}\n\n'+text_col[2]+question_prompts[loop]+
+    '\n\n'+text_col[0]+'READY: '+text_col[1]).strip()
 
   if button == (prompt[loop]):
-      score += 1
+    score += 1
 
   loop += 1
 
@@ -155,15 +166,26 @@ while loop <= 17:
 if score / len(question_prompts) == 0:
   print(learn_your_polygons)
 
+  for i in answers:
+    print(text_col[5]+i)
+
 elif score < len(question_prompts):
   print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
- {score}/{len(question_prompts)} questions correct:\n\nCongratulations! Your total \
-Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.\
-\n\nCorrect answers you got {text_col[0]}wrong{text_col[2]}:')
+ {score}/{len(question_prompts)} questions correct:\n\nCongratulations! \
+Your total Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.\
+\n\nCorrect answers you got {text_col[0]}wrong:\n')
+
+
+
+elif score == len(question_prompts) == 3:
+  print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
+ {score}/{len(question_prompts)} questions correct:\n\nCongratulations! {text_col[4]}\
+Wow! You got them all right. {text_col[2]}Your total Prize Winnings: {text_col[1]}${score\
+*100*score:,}.00 {text_col[2]}Dollars.')
 
 else:
   print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
  {score}/{len(question_prompts)} questions correct:\n\nCongratulations! Your total \
 Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.')
 
-input(f'\n{text_col[6]}Press Enter to exit:')
+input(f'\n{text_col[2]}Press Enter to exit:')
