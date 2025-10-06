@@ -143,44 +143,53 @@ You don't know any of your Polygons... Sorry! Please try again.\n")
 
 choice = ['b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a']  # choice values: 0 through 17 = 18
 
-score = 0
-loop = 0
+def subroutine():
 
-while loop <= 17:
-  os.system(text_col[7])
+  score = 0
+  loop = 0
 
-  button = input(
-    text_col[5]+f'\n{title}\n\n'+text_col[2]+question_prompts[loop]+
-    '\n\n'+text_col[0]+'READY: '+text_col[1]).strip()
+  while loop <= 17:
+    os.system(text_col[7])
 
-  if button == (choice[loop]):
-    score += 1
+    button = input(
+      text_col[5]+f'\n{title}\n\n'+text_col[2]+question_prompts[loop]+
+      '\n\n'+text_col[0]+'READY: '+text_col[1]).strip()
 
-  loop += 1
+    if button == (choice[loop]):
+      score += 1
 
-  os.system(text_col[7])
+    loop += 1
 
-if score / len(question_prompts) == 0:
-  print(learn_your_polygons)
+    os.system(text_col[7])
 
-  for i in answers:
-    print(text_col[5]+i)
+  if score / len(question_prompts) == 0:
+    print(learn_your_polygons)
 
-elif score < len(question_prompts):
-  print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
- {score}/{len(question_prompts)} questions correct:\n\nCongratulations! \
-Your total Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.\
-\n\nCorrect answers you got {text_col[0]}wrong:')
+    for i in answers:
+      print(text_col[5]+i)
 
-elif score == len(question_prompts) == 18:
-  print(f'{text_col[5]}{title}\n\n{text_col[2]}You got\
- {score}/{len(question_prompts)} questions correct:\n\nCongratulations! {text_col[4]}\
-Wow! You got them all right. {text_col[2]}Your total Prize Winnings: {text_col[1]}${score\
-*100*score:,}.00 {text_col[2]}Dollars.')
+  elif score < len(question_prompts):
+    print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got \
+{score}/{len(question_prompts)} questions correct:\n\nCongratulations! \
+Your Grand Total Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.')
 
-else:
-  print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got\
- {score}/{len(question_prompts)} questions correct:\n\nCongratulations! Your total \
+  elif score == len(question_prompts) == 18:
+    print(f'{text_col[5]}{title}\n\n{text_col[2]}You got \
+{score}/{len(question_prompts)} questions correct:\n\nCongratulations! {text_col[4]}\
+Wow! You got them all right. {text_col[2]}Your Grand Total Prize Winnings with Bonus: {text_col[1]}${score\
+*500*score:,}.00 {text_col[2]}Dollars.')
+
+  else:
+    print(f'\n{text_col[5]}{title}\n\n{text_col[2]}You got \
+{score}/{len(question_prompts)} questions correct:\n\nCongratulations! Your Grand Total \
 Prize Winnings: {text_col[1]}${score*100*score:,}.00 {text_col[2]}Dollars.')
 
-input(f'\n{text_col[2]}Press Enter to exit: ')
+  play_again = input(f'\n{text_col[2]}Press P to play again or press ENTER to exit: ').lower().strip()
+
+  if play_again == 'p':
+    subroutine()
+
+  elif play_again == '':
+    pass
+
+subroutine()
