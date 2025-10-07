@@ -20,7 +20,7 @@ text_col = (
   '\x1b[37m',  # index 6 = white
   'cls')  # index 7 = clear screen
 
-polygons = [
+polygons = (
   'How many equal sides does a Triangle have?',  # index[0]
   'How many equal sides does a Square have?',  # index[1]
   'How many equal sides does a Pentagon have?',  # index[2]
@@ -38,7 +38,7 @@ polygons = [
   'How many equal sides does a Heptadecagon have?',  # index[14]
   'How many equal sides does a Octadecagon have?',  # index[15]
   'How many equal sides does a Enneadecagon have?',  # index[16]
-  'How many equal sides does a Icosagon have?']  # index[17]
+  'How many equal sides does a Icosagon have?')  # index[17]
 
 sides = (
   'two equal sides',  # index[0]
@@ -61,7 +61,7 @@ sides = (
   'nineteen equal sides',  # index[17]
   'twenty equal sides')  # index[18]
 
-answers = [
+answers = (
   'Triangles have three equal sides.',  # index[0]
   'Squares have four equal sides.',  # index[1]
   'Pentagons have five equal sides.',  # index[2]
@@ -79,7 +79,7 @@ answers = [
   'Heptadecagons have seventeen equal sides.',  # index[14]
   'Octadecagons have eighteen equal sides.',  # index[15]
   'Enneadecagons have nineteen equal sides.',  # index[16]
-  'Icosagons have twenty equal sides.']  # index[17]
+  'Icosagons have twenty equal sides.')  # index[17]
 
 question_prompts = (
   f'{text_col[2]}{polygons[0]}\n\n{text_col[1]}(a) {text_col[2]}{sides[2]}\
@@ -141,7 +141,7 @@ title = 'know your polygons'.title()
 learn_your_polygons = (f"\n{text_col[5]}{title}\n\n{text_col[0]}Oh No! \
 You don't know any of your Polygons... Sorry! Please try again.\n")
 
-choice = ['b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a']  # choice values: 0 through 17 = 18
+choice = ('b','c','a','a','b','c','b','b','c','b','a','b','c','c','c','b','b','a')  # choice values: 0 through 17 = 18
 
 def subroutine():
 
