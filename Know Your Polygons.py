@@ -98,7 +98,7 @@ question_prompts = (
 \n{text_col[1]}(b) {text_col[2]}{sides[5]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',  # index[4]
 
   f'{text_col[2]}{polygons[5]}\n\n{text_col[1]}(a) {text_col[2]}{sides[5]}\
-\n{text_col[1]}(b) {text_col[2]}{sides[4]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',   # index[5]
+\n{text_col[1]}(b) {text_col[2]}{sides[4]}\n{text_col[1]}(c) {text_col[2]}{sides[6]}',  # index[5]
 
   f'{text_col[2]}{polygons[6]}\n\n{text_col[1]}(a) {text_col[2]}{sides[5]}\
 \n{text_col[1]}(b) {text_col[2]}{sides[7]}\n{text_col[1]}(c) {text_col[2]}{sides[8]}',  # index[6]
