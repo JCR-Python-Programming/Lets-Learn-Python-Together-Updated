@@ -58,3 +58,6 @@ class Class_all(
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter1)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
+
+# I am almost a complete Walking Human Computer Science Research
+# Laboratory Machine on Two Legs... 😁
