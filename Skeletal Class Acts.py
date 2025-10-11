@@ -71,15 +71,18 @@ print(Single_class_skeleton_structure().single())
 
 class Main_class_skeleton_structure:
 
-  def main(self):return 'Main Class Act.'
+  def main(self):
+    return 'Main Class Act.'
 
 class Sub_class_skeleton_structure_one(Main_class_skeleton_structure):
 
-  def sub1(self):return 'Sub One Class Act.'
+  def sub1(self):
+    return 'Sub One Class Act.'
 
 class Sub_class_skeleton_structure_two(Sub_class_skeleton_structure_one):
 
-  def sub2(self):return 'Sub Two Class Act.'
+  def sub2(self):
+    return 'Sub Two Class Act.'
 
 class Class_all(
   Sub_class_skeleton_structure_two,  # Method Resolution Order
@@ -98,7 +101,8 @@ class Main_class_skeleton_structure:
     self.parameter2 = parameter2
     self.parameter3 = parameter3
 
-  def return_function1(self):return 'Main Class Act.'
+  def return_function1(self):
+    return 'Main Class Act.'
 
 class Sub_super_class_skeleton_structure_one(Main_class_skeleton_structure):
   def __init__(self,parameter1,parameter2,parameter3):pass
@@ -106,7 +110,8 @@ class Sub_super_class_skeleton_structure_one(Main_class_skeleton_structure):
   def __init__(self,parameter1,parameter2,parameter3):
     super().__init__(parameter1,parameter2,parameter3)
 
-  def return_function2(self):return 'Sub One Class Act.'
+  def return_function2(self):
+    return 'Sub One Class Act.'
 
 class Sub_super_class_skeleton_structure_two(Sub_super_class_skeleton_structure_one):
   def __init__(self,parameter1,parameter2,parameter3):pass
@@ -114,7 +119,8 @@ class Sub_super_class_skeleton_structure_two(Sub_super_class_skeleton_structure_
   def __init__(self,parameter1,parameter2,parameter3):
     super().__init__(parameter1,parameter2,parameter3)
 
-  def return_function3(self):return 'Sub Two Class Act.'
+  def return_function3(self):
+    return 'Sub Two Class Act.'
 
 class Class_all(
   Sub_super_class_skeleton_structure_two,  # Method Resolution Order
@@ -219,9 +225,31 @@ print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').par
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
 
+
 print(Class_all.return_function1('arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
 print(Class_all.return_function2('arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
 print(Class_all.return_function3('arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+
+print(Main_class_skeleton_structure.return_function1(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+
+print(Sub_super_class_skeleton_structure_one.return_function1(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+print(Sub_super_class_skeleton_structure_one.return_function2(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+
+print(Sub_super_class_skeleton_structure_two.return_function1(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+print(Sub_super_class_skeleton_structure_two.return_function2(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+
+print(Sub_super_class_skeleton_structure_two.return_function3(
+  'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
