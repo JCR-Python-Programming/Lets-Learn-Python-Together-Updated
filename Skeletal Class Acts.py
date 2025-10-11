@@ -63,7 +63,8 @@ print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').par
 
 class Single_class_skeleton_structure:
 
-  def single(self):return 'Single Class Act.'
+  def single(self):
+    return 'Single Class Act.'
 
 print(Single_class_skeleton_structure().single())
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
