@@ -251,6 +251,28 @@ print(Sub_super_class_skeleton_structure_two.return_function2(
 
 print(Sub_super_class_skeleton_structure_two.return_function3(
   'arg placeholder value1','arg placeholder value2','arg placeholder value3')[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Polygons:
+  def __init__(self,polygon,sides,colour):
+
+    self.polygon = polygon
+    self.sides = sides
+    self.colour = colour
+
+  def return_selfction(self):
+    return polygons[0],sides[0],colour_name[0]
+
+  def class_data(self):
+    print(self.colour,self.polygon,'has',self.sides)
+
+for i in range(18):
+  Polygons(polygons[i],sides[i],colour_name[0]).class_data()
+
+print(Polygons.return_selfction('Agument Placeholder Value')[2])
+
+print(Polygons.return_selfction('Agument Placeholder Value')[0])
+
+print(Polygons.return_selfction('Agument Placeholder Value')[1])
 
 # I am almost a complete Walking Human Computer Science Research
 # Laboratory Machine on Two Legs... 😁
