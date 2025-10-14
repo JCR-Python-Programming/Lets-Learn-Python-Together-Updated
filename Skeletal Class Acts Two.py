@@ -1,4 +1,3 @@
-
 class Main_super_class_skeleton_structure:
   def __init__(self,one,two,three):
     self.one = one
