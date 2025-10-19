@@ -196,3 +196,38 @@ print(Math_class(a+b,a-b,a*b,a/b,a**b).multiplication)
 print(int(Math_class(a+b,a-b,a*b,a/b,a**b).division))
 
 print(Math_class(a+b,a-b,a*b,a/b,a**b).exponent)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+import os,time,datetime
+
+class Time_and_date:
+
+  def __init__(self,hours,minutes,seconds,day,month,date,year,weeks,days):
+
+    self.hours = hours
+    self.minutes = minutes
+    self.seconds = seconds
+    self.day = day
+    self.month = month
+    self.date = date
+    self.year = year
+    self.weeks = weeks
+    self.days = days
+
+while True:
+
+  time = datetime.datetime.now().strftime
+
+  a,b,c,d,e,f,g,h,i = (
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).hours,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).minutes,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).seconds,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).day,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).month,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).date,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).year,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).weeks,
+    Time_and_date(time('%H:'),time('%M:'),time('%S'),time('%A'),time('%B'),time('%d,'),time('%Y'),time('%U'),time('%j')).days)
+
+  print(a+b+c,d,e,f,g,f'\nweeks {h} days {i}')
+
+  os.system('cls')
