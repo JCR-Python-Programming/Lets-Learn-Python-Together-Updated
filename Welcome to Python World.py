@@ -1,4 +1,3 @@
-
 # Welcome to the Wonderful World of Python Programming. Welcome to Python World!
 
 # This is my most advanced Python programming materials yet, thus far. I've studied
@@ -1213,7 +1212,7 @@ for index,name in enumerate(name_list):
 for index,name in enumerate(name_list):
   print(index,name)
 
-for index,name in enumerate(name_list,start=1):
+for index,name in enumerate(name_list,start = 1):
   print(index,name)
 
 name = ['John','Bob','Rob','Tom']
@@ -2985,11 +2984,11 @@ print(datetime.datetime.now().strftime('%H:%M:%S'))
 print(datetime.datetime.now().strftime('%A %B %d,%Y'))
 print(datetime.datetime.now().strftime('Week %U'))
 print(datetime.datetime.now().strftime('Day %j'))
-
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Remember you can reduce balky code, via using string variables. Let's use 'timer'
 # as the variable and use 'datetime.datetime.now()' as the value. Type and execute/run
 # the program example below and see what happens.
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 import time,datetime
 
 timer = datetime.datetime.now()
@@ -5039,7 +5038,7 @@ return_values = (
   'Super Subclass Act Seven')
 
 # This is where you do your Clean, Cut Python code, without all that spaghetti of
-# long string values getting in the way while you continue to write your code code.
+# long string values getting in the way while you continue to write your code.
 
 class Main_class_attribute_properties:
 
