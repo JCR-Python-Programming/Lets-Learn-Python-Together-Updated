@@ -1,3 +1,35 @@
+def find_equal_text():
+  if 'text' is 'text':
+    return True
+  else:
+    return False
+
+print(find_equal_text())
+
+def find_in_text():
+  if 'x' in 'text':
+    return True
+  else:
+    return False
+
+print(find_in_text())
+
+def find_not_in_text():
+  if 'c' not in 'text':
+    return True
+  else:
+    return False
+
+print(find_not_in_text())
+
+def num_logic():
+  if 1 == 1:
+    return True
+  else:
+    return False
+
+print(num_logic())
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 polygon = (
   'triangle','square','pentagon','hexagon','heptagon',
   'octagon','nonagon','decagon','hendecagon','dodecagon',
