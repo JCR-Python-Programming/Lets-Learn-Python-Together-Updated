@@ -1,5 +1,5 @@
 def find_equal_text():
-  if 'text' is 'text':
+  if 'text' == 'text':
     return True
   else:
     return False
@@ -263,3 +263,4 @@ while True:
   print(a+b+c,d,e,f,g,f'\nweeks {h} days {i}')
 
   os.system('cls')
+
