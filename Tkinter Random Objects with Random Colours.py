@@ -137,21 +137,13 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random lines, random rectangles and random
+            # You can increase_decrease_screen_objects value to add more or less random rectangles and random
             # ovals on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
-
-                objects_canvas.create_line(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                fill = random_colour_code(),
-                width = random_width)
 
                 objects_canvas.create_rectangle(
                 randint(screen_width1+x,screen_width2+x),
