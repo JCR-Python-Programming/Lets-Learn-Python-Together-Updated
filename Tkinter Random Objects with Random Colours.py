@@ -1,8 +1,8 @@
 # Tkinter Random Objects with Random Colours Python program example:
 
-from time import sleep as wait
-from random import*
 from tkinter import*
+from random import*
+from time import sleep as wait
 
 screensaver = Tk()
 
