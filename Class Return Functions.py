@@ -145,59 +145,62 @@ print(b)
 
 print(c)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class polygons:
-    def __init__(self,polygon,num,sides):
+class Polygons:
+    def __init__(shape,polygon,num,sides):
 
-        self.polygon = polygon
-        self.num = num
-        self.sides = sides
+        shape.polygon = polygon
+        shape.num = num
+        shape.sides = sides
 
-    def return_polygon_sides(self):
-        return f'{self.polygon} {self.num} {self.sides}'
+    def return_Polygons(shape):
+        return f'{shape.polygon} {shape.num} {shape.sides}'
 
-a = polygons('Triangle',3,'sides')
-b = polygons('Square',4,'sides')
-c = polygons('Pentagon',5,'sides')
-d = polygons('Hexagon',6,'sides')
-e = polygons('Heptagon',7,'sides')
-f = polygons('Octagon',8,'sides')
-g = polygons('Nonagon',9,'sides')
-h = polygons('Decagon',10,'sides')
-i = polygons('Hendecagon',11,'sides')
-j = polygons('Dodecagon',12,'sides')
-k = polygons('Tridecagon',13,'sides')
-l = polygons('Tetradecagon',14,'sides')
-m = polygons('Pentadecagon',15,'sides')
-n = polygons('Hexadecagon',16,'sides')
-o = polygons('Heptadecagon',17,'sides')
-p = polygons('Octadecagon',18,'sides')
-q = polygons('Enneadecagon',19,'sides')
-r = polygons('Icosagon',20,'sides')
+a = Polygons('Triangle',3,'sides')
+b = Polygons('Square',4,'sides')
+c = Polygons('Pentagon',5,'sides')
+d = Polygons('Hexagon',6,'sides')
+e = Polygons('Heptagon',7,'sides')
+f = Polygons('Octagon',8,'sides')
+g = Polygons('Nonagon',9,'sides')
+h = Polygons('Decagon',10,'sides')
+i = Polygons('Hendecagon',11,'sides')
+j = Polygons('Dodecagon',12,'sides')
+k = Polygons('Tridecagon',13,'sides')
+l = Polygons('Tetradecagon',14,'sides')
+m = Polygons('Pentadecagon',15,'sides')
+n = Polygons('Hexadecagon',16,'sides')
+o = Polygons('Heptadecagon',17,'sides')
+p = Polygons('Octadecagon',18,'sides')
+q = Polygons('Nonadecagon',19,'sides')
+r = Polygons('Icosagon',20,'sides')
 
 print(f'{a.polygon} {b.polygon} {c.polygon}')
 print(f'{a.num} {b.num} {c.num}')
 
-print(f'{a.return_polygon_sides()}')
-print(f'{b.return_polygon_sides()}')
-print(f'{c.return_polygon_sides()}')
+print(f'{a.return_Polygons()}')
+print(f'{b.return_Polygons()}')
+print(f'{c.return_Polygons()}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class polygons:
-    def __init__(self,polygon,num,sides):
+class Polygons:
+    def __init__(shape,polygon,num,sides):
 
-        self.polygon = polygon
-        self.num = num
-        self.sides = sides
+        shape.polygon = polygon
+        shape.num = num
+        shape.sides = sides
 
-    def return_polygon_sides(self):
-        return f'{self.polygon} {self.num} {self.sides}'
+    def return_Polygons(shape):
+        return f'{shape.polygon} {shape.num} {shape.sides}'
 
 polygon_list = [
-  polygons('Triangle',3,'sides'),polygons('Square',4,'sides'),polygons('Pentagon',5,'sides'),
-  polygons('Hexagon',6,'sides'),polygons('Heptagon',7,'sides'),polygons('Nonagon',9,'sides'),
-  polygons('Decagon',10,'sides'),polygons('Hendecagon',11,'sides'),polygons('Dodecagon',12,'sides'),
-  polygons('Tridecagon',13,'sides'),polygons('Tetradecagon',14,'sides'),polygons('Pentadecagon',15,'sides'),
-  polygons('Hexadecagon',16,'sides'),polygons('Heptadecagon',17,'sides'),polygons('Octadecagon',18,'sides'),
-  polygons('Enneadecagon',19,'sides'),polygons('Icosagon',20,'sides')]
+  Polygons('Triangle',3,'sides'),Polygons('Square',4,'sides'),
+  Polygons('Pentagon',5,'sides'),Polygons('Hexagon',6,'sides'),
+  Polygons('Heptagon',7,'sides'),Polygons('Octagon',8,'sides'),
+  Polygons('Nonagon',9,'sides'),Polygons('Decagon',10,'sides'),
+  Polygons('Hendecagon',11,'sides'),Polygons('Dodecagon',12,'sides'),
+  Polygons('Tridecagon',13,'sides'),Polygons('Tetradecagon',14,'sides'),
+  Polygons('Pentadecagon',15,'sides'),Polygons('Hexadecagon',16,'sides'),
+  Polygons('Heptadecagon',17,'sides'),Polygons('Octadecagon',18,'sides'),
+  Polygons('Nonadecagon',19,'sides'), Polygons('Icosagon',20,'sides')]
 
 for i in polygon_list:
-  print(i.return_polygon_sides())
+  print(i.return_Polygons())
