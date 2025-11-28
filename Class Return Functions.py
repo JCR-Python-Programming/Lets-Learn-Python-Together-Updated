@@ -146,14 +146,15 @@ print(b)
 print(c)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygons:
-    def __init__(shape,polygon,num,sides):
 
-        shape.polygon = polygon
-        shape.num = num
-        shape.sides = sides
+  def __init__(shape,polygon,num,sides):
 
-    def return_polygons(shape):
-        return f'{shape.polygon} {shape.num} {shape.sides}'
+      shape.polygon = polygon
+      shape.num = num
+      shape.sides = sides
+
+  def return_polygons(shape):
+    return f'{shape.polygon} {shape.num} {shape.sides}'
 
 a = Polygons('Triangle',3,'sides')
 b = Polygons('Square',4,'sides')
@@ -182,14 +183,15 @@ print(f'{b.return_polygons()}')
 print(f'{c.return_polygons()}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygons:
-    def __init__(shape,polygon,num,sides):
 
-        shape.polygon = polygon
-        shape.num = num
-        shape.sides = sides
+  def __init__(shape,polygon,num,sides):
 
-    def return_polygons(shape):
-        return f'{shape.polygon} {shape.num} {shape.sides}'
+      shape.polygon = polygon
+      shape.num = num
+      shape.sides = sides
+
+  def return_polygons(shape):
+    return f'{shape.polygon} {shape.num} {shape.sides}'
 
 polygon_list = [
   Polygons('Triangle',3,'sides'),Polygons('Square',4,'sides'),
@@ -205,6 +207,7 @@ polygon_list = [
 for i in polygon_list:print(i.return_polygons())
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygons:
+
   def __init__(shape,polygon,num,sides):
 
     shape.polygon = polygon
@@ -215,6 +218,7 @@ class Polygons:
     return f'{shape.polygon} {shape.num} {shape.sides}'
 
 class Colours(Polygons):
+
   def __init__(shape,colour,polygon,num,sides):
     super().__init__(polygon,num,sides)
 
