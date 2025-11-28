@@ -245,4 +245,6 @@ polygon_list = [
   Colours('dark red','Heptadecagon',17,'sides'),Colours('dark yellow','Octadecagon',18,'sides'),
   Colours('dark blue','Nonadecagon',19,'sides'),Colours('dark green','Icosagon',20,'sides')]
 
+for i in polygon_list:print(i.return_polygons())
+
 for i in polygon_list:print(i.return_colours())
