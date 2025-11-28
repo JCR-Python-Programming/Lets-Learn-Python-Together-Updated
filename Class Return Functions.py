@@ -152,7 +152,7 @@ class Polygons:
         shape.num = num
         shape.sides = sides
 
-    def return_Polygons(shape):
+    def return_polygons(shape):
         return f'{shape.polygon} {shape.num} {shape.sides}'
 
 a = Polygons('Triangle',3,'sides')
@@ -177,9 +177,9 @@ r = Polygons('Icosagon',20,'sides')
 print(f'{a.polygon} {b.polygon} {c.polygon}')
 print(f'{a.num} {b.num} {c.num}')
 
-print(f'{a.return_Polygons()}')
-print(f'{b.return_Polygons()}')
-print(f'{c.return_Polygons()}')
+print(f'{a.return_polygons()}')
+print(f'{b.return_polygons()}')
+print(f'{c.return_polygons()}')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygons:
     def __init__(shape,polygon,num,sides):
