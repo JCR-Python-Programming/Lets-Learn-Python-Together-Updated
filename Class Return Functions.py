@@ -105,7 +105,7 @@ class Class_act:
   def return_name_age(self):
     return f'{self.fname} {self.lname} {self.age}'
 
-class Super_Class(Class_act):
+class Super_class(Class_act):
 
   def __init__(self,fname,lname,age):
     super().__init__(fname,lname,age)
@@ -115,15 +115,15 @@ class Super_Class(Class_act):
 
 print(Class_act('John','Smith',60).return_name_age())
 
-print(Super_Class('Super','Smith',60).return_name_age())
+print(Super_class('Super','Smith',60).return_name_age())
 
-print(Super_Class('Super','Smith',60).return_super_class())
+print(Super_class('Super','Smith',60).return_super_class())
 
 # or this:
 
 a = Class_act('John','Smith',60)
 
-b = Super_Class('Super','Smith',60)
+b = Super_class('Super','Smith',60)
 
 print(a.return_name_age())
 
@@ -135,9 +135,9 @@ print(b.return_super_class())
 
 a = Class_act('John','Smith',60).return_name_age()
 
-b = Super_Class('Super','Smith',60).return_name_age()
+b = Super_class('Super','Smith',60).return_name_age()
 
-c = Super_Class('Super','Smith',60).return_super_class()
+c = Super_class('Super','Smith',60).return_super_class()
 
 print(a)
 
@@ -188,7 +188,7 @@ class Polygons:
         shape.num = num
         shape.sides = sides
 
-    def return_Polygons(shape):
+    def return_polygons(shape):
         return f'{shape.polygon} {shape.num} {shape.sides}'
 
 polygon_list = [
@@ -202,5 +202,47 @@ polygon_list = [
   Polygons('Heptadecagon',17,'sides'),Polygons('Octadecagon',18,'sides'),
   Polygons('Nonadecagon',19,'sides'), Polygons('Icosagon',20,'sides')]
 
-for i in polygon_list:
-  print(i.return_Polygons())
+for i in polygon_list:print(i.return_polygons())
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Polygons:
+  def __init__(shape,polygon,num,sides):
+
+    shape.polygon = polygon
+    shape.num = num
+    shape.sides = sides
+
+  def return_polygons(shape):
+    return f'{shape.polygon} {shape.num} {shape.sides}'
+
+class Colours(Polygons):
+  def __init__(shape,colour,polygon,num,sides):
+    super().__init__(polygon,num,sides)
+
+    shape.colour = colour
+
+  def return_colours(shape):
+    return f'{shape.colour} {shape.polygon} {shape.num} {shape.sides}'
+
+polygon_list = [
+  Polygons('Triangle',3,'sides'),Polygons('Square',4,'sides'),
+  Polygons('Pentagon',5,'sides'),Polygons('Hexagon',6,'sides'),
+  Polygons('Heptagon',7,'sides'),Polygons('Octagon',8,'sides'),
+  Polygons('Nonagon',9,'sides'),Polygons('Decagon',10,'sides'),
+  Polygons('Hendecagon',11,'sides'),Polygons('Dodecagon',12,'sides'),
+  Polygons('Tridecagon',13,'sides'),Polygons('Tetradecagon',14,'sides'),
+  Polygons('Pentadecagon',15,'sides'),Polygons('Hexadecagon',16,'sides'),
+  Polygons('Heptadecagon',17,'sides'),Polygons('Octadecagon',18,'sides'),
+  Polygons('Nonadecagon',19,'sides'), Polygons('Icosagon',20,'sides')]
+
+polygon_list = [
+  Colours('black','Triangle',3,'sides'),Colours('white','Square',4,'sides'),
+  Colours('red','Pentagon',5,'sides'),Colours('yellow','Hexagon',6,'sides'),
+  Colours('blue','Heptagon',7,'sides'),Colours('green','Octagon',8,'sides'),
+  Colours('pink','Nonagon',9,'sides'),Colours('cyan','Decagon',10,'sides'),
+  Colours('bright red','Hendecagon',11,'sides'),Colours('bright yellow','Decagon',12,'sides'),
+  Colours('bright blue','Tridecagon',13,'sides'),Colours('bright green','Tetradecagon',14,'sides'),
+  Colours('bright pink','Pentadecagon',15,'sides'),Colours('bright cyan','Hexadecagon',16,'sides'),
+  Colours('dark red','Heptadecagon',17,'sides'),Colours('dark yellow','Octadecagon',18,'sides'),
+  Colours('dark blue','Nonadecagon',19,'sides'),Colours('dark green','Icosagon',20,'sides')]
+
+for i in polygon_list:print(i.return_colours())
