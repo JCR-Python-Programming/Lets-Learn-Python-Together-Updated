@@ -1,7 +1,7 @@
 class Class_act:
 
   def __init__(self,attribute1,attribute2):
-    
+
     self.attribute1 = attribute1  # attribute1 property:
 
     self.attribute2 = attribute2  # attribute2 property:
@@ -148,7 +148,7 @@ print(c)
 class Polygons:
 
   def __init__(shape,polygon,num,sides):
-    
+
     shape.polygon = polygon
     shape.num = num
     shape.sides = sides
@@ -185,7 +185,7 @@ print(f'{c.return_polygons()}')
 class Polygons:
 
   def __init__(shape,polygon,num,sides):
-        
+
     shape.polygon = polygon
     shape.num = num
     shape.sides = sides
@@ -209,7 +209,7 @@ for i in polygon_list:print(i.return_polygons())
 class Polygons:
 
   def __init__(shape,polygon,num,sides):
-    
+
     shape.polygon = polygon
     shape.num = num
     shape.sides = sides
