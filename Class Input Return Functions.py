@@ -1,6 +1,6 @@
 user_input1 = input('Please type a number, or letter key, then press enter: ')
 user_input2 = input('Please type second number, or letter key, then press enter: ')
-  
+
 class Input_text:
 
   def __init__(self,user_input1,user_input2):
@@ -17,7 +17,7 @@ print(Input_text(user_input1,user_input2).user_input2)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 user_input1 = input('Please type a number, or letter key, then press enter: ')
 user_input2 = input('Please type second number, or letter key, then press enter: ')
-  
+
 class Input_text:
 
   def __init__(self,user_input1,user_input2):
@@ -33,7 +33,7 @@ print(Input_text(user_input1,user_input2).return_user_input())
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 user_input1 = input('Please type a number, or letter key, then press enter: ')
 user_input2 = input('Please type second number, or letter key, then press enter: ')
-  
+
 class Input_text:
 
   def __init__(self,user_input1,user_input2):
