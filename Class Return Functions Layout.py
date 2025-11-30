@@ -31,9 +31,9 @@ class Main_class:
     self.attribute = attribute
 
   def return_attributes(self):
-    return f'{self.argument_placeholder}'
+    return f'{self.attribute}'
 
-print(Main_class('See the return attribute value on the screen output.').attribute)
+print(Main_class('See the return attribute value on the screen output.').return_attributes())
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main_class:
 
@@ -54,9 +54,9 @@ class Main_class:
     self.attribute3 = attribute3
 
   def return_attributes(self):
-    return f'{self.argument_placeholder1} {self.argument_placeholder2} {self.argument_placeholder3}'
+    return f'{self.attribute1} {self.attribute2} {self.attribute3}'
 
-print(Main_class('return attribute1','return attribute2','return attribute3').attribute3)
+print(Main_class('return attribute1','return attribute2','return attribute3').return_attributes())
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main_class:
 
@@ -82,12 +82,12 @@ class Main_class:
     self.attribute3 = attribute3
 
   def return_attributes(self):
-    return f'{self.argument_placeholder1} {self.argument_placeholder2} {self.argument_placeholder3}'
+    return f'{self.attribute1} {self.attribute2} {self.attribute3}'
 
 class Child_class(Main_class):
   pass
 
-print(Main_class('return attribute1','return attribute2','return attribute3').attribute3)
+print(Main_class('return attribute1','return attribute2','return attribute3').return_attributes())
 
 print(Child_class('attribute1','attribute2','attribute3').attribute3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -131,14 +131,14 @@ class Super_class(Main_class):
     self.attribute4 = attribute4
 
   def return_attributes(self):
-    return f'{self.argument_placeholder1} {self.argument_placeholder2} {self.argument_placeholder3}'
+    return f'{self.attribute1} {self.attribute2} {self.attribute3} {self.attribute1} {self.attribute2} {self.attribute4}'
 
 class Child_class(Super_class,Main_class):  # Method Resolution Order (MRO)
   pass
 
 print(Main_class('attribute1','attribute2','attribute3').attribute3)
 
-print(Super_class('return attribute1','return attribute2','return attribute3','return attribute4').attribute4)
+print(Super_class('return attribute1','return attribute2','return attribute3','return attribute4').return_attributes())
 
 print(Child_class('attribute1','attribute2','attribute3','attribute4').attribute4)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -151,7 +151,7 @@ class Main_class:
     self.attribute3 = attribute3
 
   def return_attributes(self):
-    return f'{self.argument_placeholder1} {self.argument_placeholder2} {self.argument_placeholder3}'
+    return f'{self.attribute1} {self.attribute2} {self.attribute3}'
 
 class Super_class(Main_class):
 
@@ -161,13 +161,13 @@ class Super_class(Main_class):
     self.attribute4 = attribute4
 
   def return_attributes(self):
-    return f'{self.argument_placholder1} {self.argument_placeholder2} {self.argument_placeholder3} {self.argument_placeholder4}'
+    return f'{self.attribute1} {self.attribute2} {self.attribute3} {self.attribute4}'
 
 class Child_class(Super_class,Main_class):  # Method Resolution Order (MRO)
   pass
 
-print(Main_class('return attribute1','return attribute2','return attribute3').attribute3)
+print(Main_class('return attribute1','return attribute2','return attribute3').return_attributes())
 
-print(Super_class('return attribute1','return attribute2','return attribute3','return attribute4').attribute4)
+print(Super_class('return attribute1','return attribute2','return attribute3','return attribute4').return_attributes())
 
 print(Child_class('attribute1','attribute2','attribute3','attribute4').attribute4)
