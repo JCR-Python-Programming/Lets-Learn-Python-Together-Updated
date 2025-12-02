@@ -30,7 +30,17 @@ class Math:
     return  pow(self.user_input1,self.user_input2)
 
   def return_root(self):
-    return  math.sqrt(self.user_input1),math.sqrt(self.user_input2)
+    return  math.sqrt(self.user_input1)
+
+class Great_work(Math):
+
+  def __init__(self,user_input1,user_input2,user_input3):
+    super().__init__(user_input1,user_input2)
+
+    self.user_input3 = user_input3  # super attribute3 property:
+
+  def return_super(self):
+    return self.user_input3
 
 while True:
 
@@ -49,3 +59,7 @@ print(Math(user_input1,user_input2).return_division())
 print(Math(user_input1,user_input2).return_exponent())
 print(Math(user_input1,user_input2).return_power())
 print(Math(user_input1,user_input2).return_root())
+
+print(Great_work(user_input1,user_input2,'Great Work!!').user_input3)
+
+print(Great_work(user_input1,user_input2,'Great Work!!').return_super())
