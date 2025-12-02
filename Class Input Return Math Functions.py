@@ -30,7 +30,7 @@ class Math:
     return  pow(self.user_input1,self.user_input2)
 
   def return_root(self):
-    return  math.sqrt(self.user_input1)
+    return  math.sqrt(self.user_input2)
 
 class Great_work(Math):
 
