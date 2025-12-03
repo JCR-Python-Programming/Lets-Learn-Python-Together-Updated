@@ -1,8 +1,5 @@
 import math
 
-message1 = 'Please type a number, the press enter: '
-message2 = 'Please type a second number, then press enter: '
-
 class Math:
 
   def __init__(self,user_input1,user_input2):
@@ -41,6 +38,9 @@ class Great_work(Math):
 
   def return_super(self):
     return self.user_input3
+
+message1 = 'Please type a number, the press enter: '
+message2 = 'Please type a second number, then press enter: '
 
 while True:
 
