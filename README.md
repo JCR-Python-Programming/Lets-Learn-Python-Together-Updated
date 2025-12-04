@@ -44,4 +44,4 @@ w3schools.com
 
 https://www.w3schools.com/python/python_for_loops.asp
 
-I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs. 😁
+I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
