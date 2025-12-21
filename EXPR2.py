@@ -14,7 +14,7 @@ class Main:
     def __init__(self,**kwargs):
 
         self.kwargs = kwargs
-        
+
 
 class sub(Main):pass
 
@@ -30,7 +30,7 @@ class Main:
 class sub(Main):pass
 
 lazy2 = Main(kw_arg1 = 'argument1',kw_arg2 = 'argument2',kw_arg3 = 'argument3')
- 
+
 print(lazy2.kw_arg1)
 
 class Main:
@@ -105,7 +105,6 @@ print(text4)
 print(text5)
 
 print([cls.__name__ for cls in Super4.mro()])
-
 
 '''
 0 EOR 0 = 0 (They are the same)
