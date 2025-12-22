@@ -17,9 +17,9 @@ class Main:
 
 class sub(Main):pass
 
-lazy1 = Main(kw_arg1 = 'argument1',kw_arg2 = 'argument2',kw_arg3 = 'argument3').kwargs.get('kw_arg4','Attribute does not exist') # None
+lazy1 = Main(kw_arg1 = 'argument1',kw_arg2 = 'argument2',kw_arg3 = 'argument3')
 
-print(lazy1)
+print(lazy1.kwargs.get('kw_arg4','Attribute does not exist'))
 
 
 class Main:
