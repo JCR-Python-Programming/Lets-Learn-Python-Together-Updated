@@ -27,7 +27,7 @@ class Main:
 
         self.__dict__.update(kwargs)
 
-class sub(Main):pass
+class Sub(Main):pass
 
 lazy2 = Main(kw_arg1 = 'argument1',kw_arg2 = 'argument2',kw_arg3 = 'argument3')
  
@@ -109,7 +109,7 @@ print([cls.__name__ for cls in Super4.mro()])
 
 '''
 0 EOR 0 = 0 (They are the same)
+1 EOR 1 = 0 (They are different!)
+1 EOR 0 = 1 (They are the same)
 0 EOR 1 = 1 (They are different!)
-1 EOR 0 = 1 (They are different!)
-1 EOR 1 = 0 (They are the same)
 '''
