@@ -4,24 +4,14 @@ class Main:
     self.arg1 = arg1
     self.arg2 = arg2
 
-try:
-  print(Main('arg1','arg2').arg2)
-except AttributeError:
-  print('Attribute Error:')
-except NameError:
-  print('Name Error:')
+print(Main('arg1','arg2').arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,*args):
 
     self.args = args
 
-try:
-  print(Main('arg1','arg2').args[1])
-except NameError:
-  print('Name Errror:')
-except IndexError:
-  print('Index Error:')
+print(Main('arg1','arg2').args[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,arg1,arg2):
@@ -35,14 +25,7 @@ class Main:
 Main = Main.return_args(
   'argument placeholder','argument placeholder')
 
-try:
-  print(Main[1])
-except AttributeError:
-  print('Attribute Error:')
-except NameError:
-  print('Name Error:')
-except IndexError:
-  print('Index Error:')
+print(Main[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,arg1,arg2):
@@ -61,12 +44,7 @@ class Main:
 
 Main('arg1','arg2').class_data()
 
-try:
-  print(Main.return_self('Agument Placeholder Value')[1])
-except NameError:
-  print('Name Error:')
-except IndexError:
-  print('Index Error:')
+print(Main.return_self('Agument Placeholder Value')[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,arg1,arg2):
@@ -80,12 +58,7 @@ class Main:
 main = Main.return_args(
   'args1','args2','args3','args4','args5')
 
-try:
-  print(main[4])
-except NameError:
-  print('Name Error:')
-except IndexError:
-  print('Index Error:')
+print(main[4])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,arg1,arg2):
@@ -97,11 +70,11 @@ class Main:
     return kwargs
 
 Main = Main.return_keyword_args(
-  kwargs1 = 'karg1',kwargs2 = 'karg2',
-  kwargs3 = 'karg3',kwargs4 = 'karg4'
+  kwarg1 = 'karg1',kwarg2 = 'karg2',
+  kwarg3 = 'karg3',kwarg4 = 'karg4'
   )
 
-print(Main.get('kwargs4','Attribute Not Found:'))
+print(Main.get('kwarg4','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,**kwargs):
@@ -112,11 +85,11 @@ class Main:
     return kwargs
 
 main = Main.return_keyword_args(
-  kwargs1 = 'karg1',kwargs2 = 'karg2',
-  kwargs3 = 'karg3',kwargs4 = 'karg4'
+  kwarg1 = 'karg1',kwarg2 = 'karg2',
+  kwarg3 = 'karg3',kwarg4 = 'karg4'
   )
 
-print(main.get('kwargs4','Attribute Not Found:'))
+print(main.get('kwarg3','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
     def __init__(self,**kwargs):
@@ -126,11 +99,11 @@ class Main:
 class Sub(Main):pass
 
 main = Sub(
-  kwargs1 = 'keyword argument1',
-  kwargs2 = 'keyword argument2',
-  kwargs3 = 'keyword argument3')
+  kwarg1 = 'keyword argument1',
+  kwarg2 = 'keyword argument2',
+  kwarg3 = 'keyword argument3')
 
-print(main.kwargs.get('kwargs3','Attribute Not Found:'))
+print(main.kwargs.get('kwarg3','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
     def __init__(self,**kwargs):
@@ -140,16 +113,11 @@ class Main:
 class Sub(Main):pass
 
 main = Main(
-  kwargs1 = 'keyword argument1',
-  kwargs2 = 'keyword argument2',
-  kwargs3 = 'keyword argument3')
+  kwarg1 = 'keyword argument1',
+  kwarg2 = 'keyword argument2',
+  kwarg3 = 'keyword argument3')
 
-try:
-  print(main.kwargs3)
-except AttributeError:
-  print('Attribute Error:')
-except NameError:
-  print('Name Error:')
+print(main.kwarg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,*args):
@@ -157,10 +125,7 @@ class Main:
     self.args = args
 
   def class_data(self):
-    try:
-      print(self.args[8])
-    except IndexError:
-      print('Index Error:')
+    print(self.args[0])
 
 Main(
   'arg1','arg2','arg3',
@@ -174,16 +139,225 @@ class Main:
     self.kwargs = kwargs
 
   def class_data(self):
-
-    try:
-      print(self.kwargs.get('kwargs5','Attribute Not Found:'))
-    except IndexError:
-      print('Index Error:')
+    print(self.kwargs.get('kwarg5','Attribute Not Found:'))
 
 Main(
-  kwargs1 = 'karg1',kwargs2 = 'karg2',
-  kwargs3 = 'karg3',kwargs4 = 'karg4',
-  kwargs5 = 'karg5',kwargs6 = 'karg6',
-  kwargs7 = 'karg7',kwargs8 = 'karg8',
-  kwargs9 = 'karg9',kwargs10 = 'karg10'
+  kwarg1 = 'karg1',kwarg2 = 'karg2',
+  kwarg3 = 'karg3',kwarg4 = 'karg4',
+  kwarg5 = 'karg5',kwarg6 = 'karg6',
+  kwarg7 = 'karg7',kwarg8 = 'karg8',
+  kwarg9 = 'karg9',kwarg10 = 'karg10'
   ).class_data()
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+
+  def __init__(self,attribute1,attribute2):
+
+    self.attribute1 = attribute1
+    self.attribute2 = attribute2
+
+  def return_value(variable_value):
+    return 'Returned Variable Value from Main.'
+
+class Superclass1(Main):
+
+  def __init__(self,attribute1,attribute2):
+    super().__init__(attribute1,attribute2)
+
+class Superclass2(Main):
+
+  def __init__(
+    self,attribute1,attribute2,attribute3,attribute4):
+    super().__init__(attribute1,attribute2)
+
+    self.attribute3 = attribute3
+    self.attribute4 = attribute4
+
+class_attribute_values = Main(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2')
+
+superclass1_attribute_values = Superclass1(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2')
+
+superclass2_attribute_values = Superclass2(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2',
+  'I am the attribute property value of attribute3',
+  'I am the attribute property value of attribute4')
+
+return_value1 = Main.return_value('argument placeholder')
+
+return_value2 = Superclass1.return_value('argument placeholder')
+
+return_value3 = Superclass2.return_value('argument placeholder')
+
+print(class_attribute_values.attribute1)
+
+print(superclass1_attribute_values.attribute1)
+
+print(superclass2_attribute_values.attribute1)
+
+print(return_value1)
+print(return_value2)
+print(return_value3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+
+  def __init__(self,*args):
+
+    self.args = args
+
+  def return_value(variable_value):
+    return 'Returned Variable Value from Main.'
+
+class Superclass1(Main):
+
+  def __init__(self,*args):
+    super().__init__(*args)
+
+    self.args = args
+
+class Superclass2(Main):
+
+  def __init__(self,*args):
+    super().__init__(*args)
+
+    self.args = args
+
+class_attribute_values = Main(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2')
+
+superclass1_attribute_values = Superclass1(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2')
+
+superclass2_attribute_values = Superclass2(
+  'I am the attribute property value of attribute1',
+  'I am the attribute property value of attribute2',
+  'I am the attribute property value of attribute3',
+  'I am the attribute property value of attribute4')
+
+return_value1 = Main.return_value('argument placeholder')
+
+return_value2 = Superclass1.return_value('argument placeholder')
+
+return_value3 = Superclass2.return_value('argument placeholder')
+
+print(class_attribute_values.args[0])
+
+print(superclass1_attribute_values.args[0])
+
+print(superclass2_attribute_values.args[0])
+
+print(return_value1)
+print(return_value2)
+print(return_value3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+
+  def __init__(self,**kwargs):
+
+    self.kwargs = kwargs
+
+  def return_value(variable_value):
+    return 'Returned Variable Value from Main.'
+
+class Superclass1(Main):
+
+  def __init__(self,**kwargs):
+    super().__init__(**kwargs)
+
+    self.kwargs = kwargs
+
+class Superclass2(Main):
+
+  def __init__(self,**kwargs):
+    super().__init__(**kwargs)
+
+    self.kwargs = kwargs
+
+class_attribute_values = Main(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2')
+
+superclass1_attribute_values = Superclass1(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2')
+
+superclass2_attribute_values = Superclass2(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2',
+  kwarg3 = 'I am the attribute property value of attribute3',
+  kwarg4 = 'I am the attribute property value of attribute4')
+
+return_value1 = Main.return_value('argument placeholder')
+
+return_value2 = Superclass1.return_value('argument placeholder')
+
+return_value3 = Superclass2.return_value('argument placeholder')
+
+print(class_attribute_values.kwargs.get('kwarg1','Attribute Not Found:'))
+
+print(superclass1_attribute_values.kwargs.get('kwarg1','Attribute Not Found:'))
+
+print(superclass2_attribute_values.kwargs.get('kwarg1','Attribute Not Found:'))
+
+print(return_value1)
+print(return_value2)
+print(return_value3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+
+  def __init__(self,**kwargs):
+
+    self.__dict__.update(kwargs)
+
+  def return_value(variable_value):
+    return 'Returned Variable Value from Main.'
+
+class Superclass1(Main):
+
+  def __init__(self,**kwargs):
+    super().__init__(**kwargs)
+
+    self.kwargs = kwargs
+
+class Superclass2(Main):
+
+  def __init__(self,**kwargs):
+    super().__init__(**kwargs)
+
+    self.kwargs = kwargs
+
+class_attribute_values = Main(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2')
+
+superclass1_attribute_values = Superclass1(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2')
+
+superclass2_attribute_values = Superclass2(
+  kwarg1 = 'I am the attribute property value of attribute1',
+  kwarg2 = 'I am the attribute property value of attribute2',
+  kwarg3 = 'I am the attribute property value of attribute3',
+  kwarg4 = 'I am the attribute property value of attribute4')
+
+return_value1 = Main.return_value('argument placeholder')
+
+return_value2 = Superclass1.return_value('argument placeholder')
+
+return_value3 = Superclass2.return_value('argument placeholder')
+
+print(class_attribute_values.kwarg1)
+
+print(superclass1_attribute_values.kwarg1)
+
+print(superclass2_attribute_values.kwarg1)
+
+print(return_value1)
+print(return_value2)
+print(return_value3)
