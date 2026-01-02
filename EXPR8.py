@@ -323,14 +323,14 @@ class Superclass1(Main):
   def __init__(self,**kwargs):
     super().__init__(**kwargs)
 
-    self.kwargs = kwargs
+    self.__dict__.update(kwargs)
 
 class Superclass2(Main):
 
   def __init__(self,**kwargs):
     super().__init__(**kwargs)
 
-    self.kwargs = kwargs
+    self.__dict__.update(kwargs)
 
 class_attribute_values = Main(
   kwarg1 = 'I am the attribute property value of attribute1',
