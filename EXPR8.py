@@ -37,10 +37,7 @@ class Main:
     return 'arg1','arg2'
 
   def class_data(self):
-    try:
-      print(self.arg1)
-    except AttributeError:
-      print('Attribute Error:')
+    print(self.arg1)
 
 Main('arg1','arg2').class_data()
 
@@ -323,14 +320,14 @@ class Superclass1(Main):
   def __init__(self,**kwargs):
     super().__init__(**kwargs)
 
-    self.__dict__.update(kwargs)
+    self.kwargs = kwargs
 
 class Superclass2(Main):
 
   def __init__(self,**kwargs):
     super().__init__(**kwargs)
 
-    self.__dict__.update(kwargs)
+    self.kwargs = kwargs
 
 class_attribute_values = Main(
   kwarg1 = 'I am the attribute property value of attribute1',
@@ -361,3 +358,152 @@ print(superclass2_attribute_values.kwarg1)
 print(return_value1)
 print(return_value2)
 print(return_value3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Grandmother:
+    def __init__(
+        self,grandmother1,grandmother2,grandmother3):
+
+        self.grandmother1 = grandmother1
+        self.grandmother2 = grandmother2
+        self.grandmother3 = grandmother3
+
+class Grandfather:
+    def __init__(
+        self, grandfather1,grandfather2,grandfather3):
+
+        self.grandfather1 = grandfather1
+        self.grandfather2 = grandfather2
+        self.grandfather3 = grandfather3
+
+class Mom:
+    def __init__(self, mom1,mom2,mom3):
+
+        self.mom1 = mom1
+        self.mom2 = mom2
+        self.mom3 = mom3
+
+class Dad:
+    def __init__(self,dad1,dad2,dad3):
+
+        self.dad1 = dad1
+        self.dad2 = dad2
+        self.dad3 = dad3
+
+class Child(Grandmother):
+    def __init__(
+        self,grandmother1,grandmother2,grandmother3,
+        grandfather1,grandfather2,grandfather3,
+        mom1,mom2,mom3,dad1,dad2,dad3):
+
+        Grandmother.__init__(self,grandmother1,grandmother2,grandmother3)
+        Grandfather.__init__(self,grandfather1,grandfather2,grandfather3)
+        Mom.__init__(self,mom1,mom2,mom3)
+        Dad.__init__(self,dad1,dad2,dad3)
+
+grandmother = Grandmother('Grandmother1','Grandmother2','Grandmother3')
+
+grandfather = Grandfather('Grandfather1','Grandfather2','Grandfather3')
+
+mom = Mom('Mom1','Mom2','Mom3');dad = Dad('Dad1', 'Dad2','Dad3')
+
+child = Child(
+    'Grandmother1','Grandmother2','Grandmother3',
+    'Grandfather1','Grandfather2','Grandfather3',
+    'Dad1','Dad2','Dad3','Mom1', 'Mom2','Mom3')
+
+print(grandmother.grandmother1)
+
+print(grandfather.grandfather1)
+
+print(mom.mom1)
+
+print(dad.dad1)
+
+print(child.grandmother1)
+
+print(child.grandfather1)
+
+print(child.mom1)
+
+print(child.dad1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Grandmother:
+    def __init__(
+        self,grandmother1,grandmother2,grandmother3,**kwargs):
+
+        self.grandmother1 = grandmother1
+        self.grandmother2 = grandmother2
+        self.grandmother3 = grandmother3
+        super().__init__(**kwargs)
+
+class Grandfather:
+    def __init__(
+        self, grandfather1,grandfather2,grandfather3,**kwargs):
+
+        self.grandfather1 = grandfather1
+        self.grandfather2 = grandfather2
+        self.grandfather3 = grandfather3
+        super().__init__(**kwargs)
+
+class Mom:
+    def __init__(self, mom1,mom2,mom3,**kwargs):
+
+        self.mom1 = mom1
+        self.mom2 = mom2
+        self.mom3 = mom3
+        super().__init__(**kwargs)
+
+class Dad:
+    def __init__(self,dad1,dad2,dad3,**kwargs):
+
+        self.dad1 = dad1
+        self.dad2 = dad2
+        self.dad3 = dad3
+        super().__init__(**kwargs)
+
+class Child(Grandmother,Grandfather,Mom,Dad):
+    def __init__(
+      self,grandmother1, grandmother2, grandmother3,
+      grandfather1, grandfather2, grandfather3,
+      mom1, mom2, mom3,dad1, dad2, dad3):
+
+      super().__init__(
+            grandmother1 = grandmother1,
+            grandmother2 = grandmother2,
+            grandmother3 = grandmother3,
+            grandfather1 = grandfather1,
+            grandfather2 = grandfather2,
+            grandfather3 = grandfather3,
+            mom1= mom1,
+            mom2 = mom2,
+            mom3 = mom3,
+            dad1 = dad1,
+            dad2 = dad2,
+            dad3 = dad3)
+
+grandmother = Grandmother('Grandmother1','Grandmother2','Grandmother3')
+
+grandfather = Grandfather('Grandfather1','Grandfather2','Grandfather3')
+
+mom = Mom('Mom1','Mom2','Mom3');dad = Dad('Dad1', 'Dad2','Dad3')
+
+child = Child(
+    'Grandmother1','Grandmother2','Grandmother3',
+    'Grandfather1','Grandfather2','Grandfather3',
+    'Dad1','Dad2','Dad3','Mom1', 'Mom2','Mom3')
+
+print(grandmother.grandmother1)
+
+print(grandfather.grandfather1)
+
+print(mom.mom1)
+
+print(dad.dad1)
+
+print(child.grandmother1)
+
+print(child.grandfather1)
+
+print(child.mom1)
+
+print(child.dad1)
