@@ -590,3 +590,97 @@ print(child.grandfather1)
 print(child.mom1)
 
 print(child.dad1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Names1:
+  def __init__(self,name1,name2):
+
+    self.name1 = 'Bob'
+    self.name2 = 'Rob'
+
+class Names2:
+  def __init__(self,name3,name4):
+
+    self.name3 = 'Tom'
+    self.name4 = 'John'
+
+class Names3:
+  def __init__(self,name5,name6):
+
+    self.name5 = 'Mary'
+    self.name6 = 'Terry'
+
+class Child(Names1): # MRO doesn't matter. No ladder.
+  def __init__(
+    self,name1,name2,name3,name4,name5,name6):
+
+    Names1.__init__(self,name1,name2)
+    Names2.__init__(self,name3,name4)
+    Names3.__init__(self,name5,name6)
+
+print(Names1(
+  'argument placeholder value',
+  'argument placeholder value').name2)
+
+print(Names2(
+  'argument placeholder value',
+  'argument placeholder value').name4)
+
+print(Names3(
+  'argument placeholder value',
+  'argument placeholder value').name6)
+
+print(Child(
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value'
+  ).name6)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Names1:
+  def __init__(self,name1,name2):
+
+    self.name1 = 'Bob'
+    self.name2 = 'Rob'
+
+class Names2(Names1):
+  def __init__(self,name3,name4):
+
+    self.name3 = 'Tom'
+    self.name4 = 'John'
+
+class Names3(Names2):
+  def __init__(self,name5,name6):
+
+    self.name5 = 'Mary'
+    self.name6 = 'Terry'
+
+class Child(Names3,Names2,Names1): # MRO does matter
+  def __init__(
+    self,name1,name2,name3,name4,name5,name6):
+
+    Names1.__init__(self,name1,name2)
+    Names2.__init__(self,name3,name4)
+    Names3.__init__(self,name5,name6)
+
+print(Names1(
+  'argument placeholder value',
+  'argument placeholder value').name2)
+
+print(Names2(
+  'argument placeholder value',
+  'argument placeholder value').name4)
+
+print(Names3(
+  'argument placeholder value',
+  'argument placeholder value').name6)
+
+print(Child(
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value'
+  ).name6)
