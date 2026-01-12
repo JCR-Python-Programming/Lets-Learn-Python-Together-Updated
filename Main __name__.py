@@ -1,8 +1,8 @@
-def repeat_after_me(text):
-  pass
-
+def name(text): 
+  print('My name is {}'.format(text))
+  
 def main():
-  repeat_after_me('Look')
+  name('John')
 
 if __name__ == "__main__":
   main()
