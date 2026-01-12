@@ -4,9 +4,6 @@ class Main:
     self.arg1 = arg1
     self.arg2 = arg2
 
-  def __getattr__(self):
-    return
-
 print(Main('arg1','arg2').arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -17,9 +14,6 @@ class Main:
 
   def class_datta(self):
     print(self.arg2)
-
-  def __getattr__(self, arg1):
-    return
 
 Main('arg1','arg2').class_datta()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -38,9 +32,6 @@ class Main:
 
   def return_args(arg1,arg2):
     return 'arg1','arg2'
-
-  def __getattr__(self, arg1):
-    return
 
 Main = Main.return_args(
   'argument placeholder','argument placeholder')
@@ -69,9 +60,6 @@ class Main:
   def return_keyword_args(**kwargs):
     return kwargs
 
-  def __getattr__(self, arg1):
-    return
-
 Main = Main.return_keyword_args(
   kwarg1 = 'karg1',kwarg2 = 'karg2',
   kwarg3 = 'karg3',kwarg4 = 'karg4')
@@ -85,9 +73,6 @@ class Main:
 
   def return_keyword_args(**kwargs):
     return kwargs
-
-  def __getattr__(self, arg1):
-    return
 
 main = Main.return_keyword_args(
   kwarg1 = 'karg1',kwarg2 = 'karg2',
@@ -161,9 +146,6 @@ class Main:
 
   def return_value(variable_value):
     return 'Returned Variable Value from Main.'
-
-  def __getattr__(self, arg1):
-    return
 
 class Superclass1(Main):
   def __init__(self,attribute1,attribute2):
