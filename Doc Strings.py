@@ -32,3 +32,5 @@ def_functs = (
 
 for i in def_functs:
     print(i.__doc__);i()
+
+print(getattr(function_two, '__doc__'))
