@@ -563,14 +563,89 @@ class Main:
 class Sub_one:
   def __init__(self,sub_one1,sub_one2):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two:
   def __init__(self,sub_two1,sub_two2):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
+
+class Child(Main,Sub_one,Sub_two):
+  def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
+
+    Main.__init__(self,main1,main2)
+    Sub_one.__init__(self,sub_one1,sub_one2)
+    Sub_two.__init__(self,sub_two1,sub_two2)
+
+print(Main(
+  'argument placeholder value',
+  'argument placeholder value').main2)
+
+print(Sub_one(
+  'argument placeholder value',
+  'argument placeholder value').sub_one2)
+
+print(Sub_two(
+  'argument placeholder value',
+  'argument placeholder value').sub_two2)
+
+print(Child(
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value',
+  'argument placeholder value').main2)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self):
+
+    self.main1 = 'Main class value1'
+    self.main2 = 'Main class value2'
+
+class Sub_one():
+  def __init__(self):
+
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
+
+class Sub_two():
+  def __init__(self):
+
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
+
+class Child(Main,Sub_one,Sub_two):
+  def __init__(self):
+    super().__init__()
+
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
+
+print(Main().main1)
+print(Sub_one().sub_one1)
+print(Sub_two().sub_two1)
+print(Child().main1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self,*args):
+
+    self.main1 = 'Main class value1'
+    self.main2 = 'Main class value2'
+
+class Sub_one:
+  def __init__(self,*args):
+
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
+
+class Sub_two:
+  def __init__(self,*args):
+
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Main,Sub_one,Sub_two):
   def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
@@ -608,41 +683,26 @@ class Main:
 class Sub_one:
   def __init__(self,*args):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two:
   def __init__(self,*args):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Main,Sub_one,Sub_two):
-  def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
+  def __init__(self):
+    super().__init__()
 
-    Main.__init__(self,main1,main2)
-    Sub_one.__init__(self,sub_one1,sub_one2)
-    Sub_two.__init__(self,sub_two1,sub_two2)
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
 
-print(Main(
-  'argument placeholder value',
-  'argument placeholder value').main2)
-
-print(Sub_one(
-  'argument placeholder value',
-  'argument placeholder value').sub_one2)
-
-print(Sub_two(
-  'argument placeholder value',
-  'argument placeholder value').sub_two2)
-
-print(Child(
-  'argument placeholder value',
-  'argument placeholder value',
-  'argument placeholder value',
-  'argument placeholder value',
-  'argument placeholder value',
-  'argument placeholder value').sub_two2)
+print(Main().main2)
+print(Sub_one().sub_one2)
+print(Sub_two().sub_two2)
+print(Child().main1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,main1,main2):
@@ -653,14 +713,14 @@ class Main:
 class Sub_one(Main):
   def __init__(self,sub_one1,sub_one2):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two(Sub_one):
   def __init__(self,sub_two1,sub_two2):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Sub_two,Sub_one,Main):
   def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
@@ -698,14 +758,14 @@ class Main:
 class Sub_one(Main):
   def __init__(self,*args):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two(Sub_one):
   def __init__(self,*args):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Sub_two,Sub_one,Main):
   def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
@@ -743,14 +803,14 @@ class Main:
 class Sub_one:
   def __init__(self,sub_one1,sub_one2,**kwargs):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two:
   def __init__(self,sub_two1,sub_two2,**kwargs):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Main,Sub_one,Sub_two):
   def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
@@ -788,14 +848,14 @@ class Main:
 class Sub_one(Main):
   def __init__(self,sub_one1,sub_one2,**kwargs):
 
-    self.sub_one1 = 'Sub_one class vaue1'
-    self.sub_one2 = 'Sub_one class vaue2'
+    self.sub_one1 = 'Sub_one class value1'
+    self.sub_one2 = 'Sub_one class value2'
 
 class Sub_two(Sub_one):
   def __init__(self,sub_two1,sub_two2,**kwargs):
 
-    self.sub_two1 = 'Sub_two class vaue1'
-    self.sub_two2 = 'Sub_two class vaue2'
+    self.sub_two1 = 'Sub_two class value1'
+    self.sub_two2 = 'Sub_two class value2'
 
 class Child(Sub_two,Sub_one,Main):
   def __init__(self,main1,main2,sub_one1,sub_one2,sub_two1,sub_two2):
@@ -929,7 +989,7 @@ Class_all.sub1()
 Class_all.sub2()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main_class_skeleton_structure:
-  def __init__(self,parameter1,parameter2,parameter3):  # attribute property parameters
+  def __init__(self,parameter1,parameter2,parameter3):
     self.parameter1 = parameter1
     self.parameter2 = parameter2
     self.parameter3 = parameter3
@@ -949,7 +1009,7 @@ class Sub_super_class_skeleton_structure_two(Sub_super_class_skeleton_structure_
     super().__init__(parameter1,parameter2,parameter3)
 
 class Class_all(
-  Sub_super_class_skeleton_structure_two,  # Method Resolution Order
+  Sub_super_class_skeleton_structure_two,
   Sub_super_class_skeleton_structure_one,
   Main_class_skeleton_structure):
   pass
@@ -957,4 +1017,3 @@ class Class_all(
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter1)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
