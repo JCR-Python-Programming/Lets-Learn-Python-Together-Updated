@@ -523,7 +523,7 @@ class Class_all(Main,Sub_one,Sub_two,Sub_three):
       main1 = main1,main2 = main2,
       main3 = main3,sub_one1 = sub_one1,
       sub_one2 = sub_one2,sub_one3 = sub_one3,
-      sub_two1= sub_two1,sub_two2 = sub_two2,
+      sub_two1 = sub_two1,sub_two2 = sub_two2,
       sub_two3 = sub_two3,sub_three1 = sub_three1,
       sub_three2 = sub_three2,sub_three3 = sub_three3)
 
@@ -1017,3 +1017,24 @@ class Class_all(
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter1)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self):
+    self.bit_0 = 'bit_0'
+    self.bit_1 = 'bit_1'
+    self.bit_2 = 'bit_2'
+
+print(getattr(Main(),'bit_2'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self):
+    self.bit_0 = 'bit_0'
+    self.bit_1 = 'bit_1'
+    self.bit_2 = 'bit_2'
+
+  def return_data(self):
+    return 'Found:'
+
+print(getattr(Main(),'bit_2'))
+
+print(getattr(Main(),'return_data')())
