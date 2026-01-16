@@ -461,10 +461,9 @@ sub_three = Sub_three('Sub_three value1','Sub_three value2','Sub_three value3')
 
 class_all = Class_all(
   'Main value1','Main value2','Main value3',
-  'Sub_one value1','Sub_one value2',
-  'Sub_one value3','Mome1','Sub_two value2',
-  'Sub_two value3','Sub_three value1',
-  'Sub_three value2','Sub_three value3')
+  'Sub_one value1','Sub_one value2','Sub_one value3',
+  'Sub_two value1','Sub_two value2','Sub_two value3',
+  'Sub_three value1','Sub_three value2','Sub_three value3')
 
 print(main.main1)
 
@@ -481,7 +480,7 @@ print(class_all.sub_three1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(
-    self,main1,main2,main3,**kwargs):
+    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
 
     self.main1 = main1
     self.main2 = main2
@@ -490,7 +489,7 @@ class Main:
 
 class Sub_one:
   def __init__(
-    self,sub_one1,sub_one2,sub_one3,**kwargs):
+    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
 
     self.sub_one1 = sub_one1
     self.sub_one2 = sub_one2
@@ -498,7 +497,8 @@ class Sub_one:
     super().__init__(**kwargs)
 
 class Sub_two:
-  def __init__(self,sub_two1,sub_two2,sub_two3,**kwargs):
+   def __init__(
+     self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
 
     self.sub_two1 = sub_two1
     self.sub_two2 = sub_two2
@@ -506,7 +506,8 @@ class Sub_two:
     super().__init__(**kwargs)
 
 class Sub_three:
-  def __init__(self,sub_three1,sub_three2,sub_three3,**kwargs):
+   def __init__(
+     self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
 
     self.sub_three1 = sub_three1
     self.sub_three2 = sub_three2
@@ -538,21 +539,175 @@ sub_three = Sub_three('Sub_three value1','Sub_three value2','Sub_three value3')
 class_all = Class_all(
   'Main value1','Main value2','Main value3',
   'Sub_one value1','Sub_one value2','Sub_one value3',
+  'Sub_two value1','Sub_two value2','Sub_two value3',
+  'Sub_three value1','Sub_three value2','Sub_three value3')
+
+print(main.main3)
+
+print(sub_one.sub_one3)
+
+print(sub_two.sub_two3)
+
+print(sub_three.sub_three3)
+
+print(class_all.main3)
+print(class_all.sub_one3)
+print(class_all.sub_two3)
+print(class_all.sub_three3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(
+    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
+
+    self.main1 = main1
+    self.main2 = main2
+    self.main3 = main3
+    super().__init__(**kwargs)
+
+class Sub_one(Main):
+  def __init__(
+    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
+
+    self.sub_one1 = sub_one1
+    self.sub_one2 = sub_one2
+    self.sub_one3 = sub_one3
+    super().__init__(**kwargs)
+
+class Sub_two(Sub_one):
+  def __init__(
+    self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
+
+    self.sub_two1 = sub_two1
+    self.sub_two2 = sub_two2
+    self.sub_two3 = sub_two3
+    super().__init__(**kwargs)
+
+class Sub_three(Sub_two):
+  def __init__(
+    self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
+
+    self.sub_three1 = sub_three1
+    self.sub_three2 = sub_three2
+    self.sub_three3 = sub_three3
+    super().__init__(**kwargs)
+
+class Class_all(Sub_three,Sub_two,Sub_one,Main):
+  def __init__(
+    self,main1,main2,main3,
+    sub_one1,sub_one2,sub_one3,
+    sub_two1,sub_two2,sub_two3,
+    sub_three1,sub_three2,sub_three3):
+    super().__init__(
+      main1 = main1,main2 = main2,
+      main3 = main3,sub_one1 = sub_one1,
+      sub_one2 = sub_one2,sub_one3 = sub_one3,
+      sub_two1 = sub_two1,sub_two2 = sub_two2,
+      sub_two3 = sub_two3,sub_three1 = sub_three1,
+      sub_three2 = sub_three2,sub_three3 = sub_three3)
+
+main = Main('Main value1','Main value2','Main value3')
+
+sub_one = Sub_one('Sub_one value1','Sub_one value2','Sub_one value3')
+
+sub_two = Sub_two('Sub_two value1','Sub_two value2','Sub_two value3')
+
+sub_three = Sub_three('Sub_three value1','Sub_three value2','Sub_three value3')
+
+class_all = Class_all(
+  'Main value1','Main value2','Main value3',
+  'Sub_one value1','Sub_one value2','Sub_one value3',
   'Sub_three value1','Sub_three value2','Sub_three value3',
   'Sub_two value1','Sub_two value2','Sub_two value3')
 
-print(main.main1)
+print(main.main3)
 
-print(sub_one.sub_one1)
+print(sub_one.sub_one3)
 
-print(sub_two.sub_two1)
+print(sub_two.sub_two3)
 
-print(sub_three.sub_three1)
+print(sub_three.sub_three3)
 
-print(class_all.main1)
-print(class_all.sub_one1)
-print(class_all.sub_two1)
-print(class_all.sub_three1)
+print(class_all.main3)
+print(class_all.sub_one3)
+print(class_all.sub_two3)
+print(class_all.sub_three3)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(
+    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
+
+    self.main1 = main1
+    self.main2 = main2
+    self.main3 = main3
+    super().__init__(**kwargs)
+
+class Sub_one:
+  def __init__(
+    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
+
+    self.sub_one1 = sub_one1
+    self.sub_one2 = sub_one2
+    self.sub_one3 = sub_one3
+    super().__init__(**kwargs)
+
+class Sub_two:
+  def __init__(
+    self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
+
+    self.sub_two1 = sub_two1
+    self.sub_two2 = sub_two2
+    self.sub_two3 = sub_two3
+    super().__init__(**kwargs)
+
+class Sub_three:
+  def __init__(
+    self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
+
+    self.sub_three1 = sub_three1
+    self.sub_three2 = sub_three2
+    self.sub_three3 = sub_three3
+    super().__init__(**kwargs)
+
+class Class_all(Main,Sub_one,Sub_two,Sub_three):
+  def __init__(
+    self,main1,main2,main3,
+    sub_one1,sub_one2,sub_one3,
+    sub_two1,sub_two2,sub_two3,
+    sub_three1,sub_three2,sub_three3):
+    super().__init__(
+      main1 = 'main1',main2 = 'main2',
+      main3 = 'main3',sub_one1 = 'sub_one1',
+      sub_one2 = 'sub_one2',sub_one3 = 'sub_one3',
+      sub_two1 = 'sub_two1',sub_two2 = 'sub_two2',
+      sub_two3 = 'sub_two3',sub_three1 = 'sub_three1',
+      sub_three2 = 'sub_three2',sub_three3 = 'sub_three3')
+
+main = Main('Main value1','Main value2','Main value3')
+
+sub_one = Sub_one('Sub_one value1','Sub_one value2','Sub_one value3')
+
+sub_two = Sub_two('Sub_two value1','Sub_two value2','Sub_two value3')
+
+sub_three = Sub_three('Sub_three value1','Sub_three value2','Sub_three value3')
+
+class_all = Class_all(
+  'Main value1','Main value2','Main value3',
+  'Sub_one value1','Sub_one value2','Sub_one value3',
+  'Sub_two value1','Sub_two value2','Sub_two value3',
+  'Sub_three value1','Sub_three value2','Sub_three value3')
+
+print(main.main3)
+
+print(sub_one.sub_one3)
+
+print(sub_two.sub_two3)
+
+print(sub_three.sub_three3)
+
+print(class_all.main3)
+print(class_all.sub_one3)
+print(class_all.sub_two3)
+print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,main1,main2):
@@ -1019,7 +1174,29 @@ print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').par
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
+  def __init__(self,arg1,arg2,arg3):
+    
+    self.arg1 = arg1
+    self.arg2 = arg2
+    self.arg3 = arg3
+
+print(getattr(Main('arg1','arg2','arg3'),'arg1'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self,arg1,arg2,arg3):
+    
+    self.arg1 = arg1
+    self.arg2 = arg2
+    self.arg3 = arg3
+
+  def return_data(self):
+    return self.arg1,self.arg2,self.arg3
+
+print(getattr(Main('arg1','arg2','arg3'),'return_data')()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
   def __init__(self):
+    
     self.bit_0 = 'bit_0'
     self.bit_1 = 'bit_1'
     self.bit_2 = 'bit_2'
@@ -1028,13 +1205,11 @@ print(getattr(Main(),'bit_2'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self):
-    self.bit_0 = 'bit_0'
-    self.bit_1 = 'bit_1'
-    self.bit_2 = 'bit_2'
+    self.arg1 = 'arg1'
+    self.arg2 = 'arg2'
+    self.arg3 = 'arg3'
 
   def return_data(self):
-    return 'Found:'
+    return self.arg1,self.arg2,self.arg3
 
-print(getattr(Main(),'bit_2'))
-
-print(getattr(Main(),'return_data')())
+print(getattr(Main(),'return_data')()[0])
