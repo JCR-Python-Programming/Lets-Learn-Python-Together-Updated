@@ -1189,15 +1189,16 @@ print(Main.__doc__)
 print(getattr(Main(),'arg1'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
+  """ Class Main """
   def __init__(self,arg1,arg2):
-    """ Class Main """
+
     self.arg1 = arg1
     self.arg2 = arg2
 
   def return_data(self):
     return self.arg1,self.arg2
 
-print(Main.__doc__)
+print(getattr(Main, '__doc__'))
 
 print(getattr(Main('arg1','arg2'),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1210,7 +1211,7 @@ class Main:
   def return_data(self):
     return self.arg1,self.arg2
 
-print(Main.__doc__)
+print(getattr(Main, '__doc__'))
 
 print(getattr(Main(),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1224,7 +1225,7 @@ class Main:
   def return_data(self):
     return self.arg1,self.arg2
 
-print(Main.__doc__)
+print(getattr(Main, '__doc__'))
 
 print(getattr(Main(
   'argument placeholder',
@@ -1240,7 +1241,7 @@ class Main:
   def return_args(self):
     return self.arg1,self.arg2
 
-print(Main.__doc__)
+print(getattr(Main, '__doc__'))
 
 print(getattr(Main('Explicit'),'arg2'))
 
