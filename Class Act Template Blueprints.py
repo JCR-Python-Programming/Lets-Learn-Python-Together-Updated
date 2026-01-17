@@ -85,8 +85,7 @@ class Main:
 
     self.kwargs = kwargs
 
-class Sub(Main):
-  pass
+class Sub(Main):pass
 
 main = Sub(
   kwarg1 = 'keyword argument1',
@@ -100,8 +99,7 @@ class Main:
 
     self.__dict__.update(kwargs)
 
-class Sub(Main):
-  pass
+class Sub(Main):pass
 
 main = Main(
   kwarg1 = 'keyword argument1',
@@ -480,7 +478,7 @@ print(class_all.sub_three1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(
-    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
+    self,main1 = '',main2 = '',main3 = '',**kwargs):
 
     self.main1 = main1
     self.main2 = main2
@@ -489,7 +487,7 @@ class Main:
 
 class Sub_one:
   def __init__(
-    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
+    self,sub_one1 = '',sub_one2 = '',sub_one3 = '',**kwargs):
 
     self.sub_one1 = sub_one1
     self.sub_one2 = sub_one2
@@ -498,7 +496,7 @@ class Sub_one:
 
 class Sub_two:
    def __init__(
-     self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
+     self,sub_two1 = '',sub_two2 = '',sub_two3 = '',**kwargs):
 
     self.sub_two1 = sub_two1
     self.sub_two2 = sub_two2
@@ -507,7 +505,7 @@ class Sub_two:
 
 class Sub_three:
    def __init__(
-     self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
+     self,sub_three1 = '',sub_three2 = '',sub_three3 = '',**kwargs):
 
     self.sub_three1 = sub_three1
     self.sub_three2 = sub_three2
@@ -557,7 +555,7 @@ print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(
-    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
+    self,main1 = '',main2 = '',main3 = '',**kwargs):
 
     self.main1 = main1
     self.main2 = main2
@@ -566,7 +564,7 @@ class Main:
 
 class Sub_one(Main):
   def __init__(
-    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
+    self,sub_one1 = '',sub_one2 = '',sub_one3 = '',**kwargs):
 
     self.sub_one1 = sub_one1
     self.sub_one2 = sub_one2
@@ -575,7 +573,7 @@ class Sub_one(Main):
 
 class Sub_two(Sub_one):
   def __init__(
-    self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
+    self,sub_two1 = '',sub_two2 = '',sub_two3 = '',**kwargs):
 
     self.sub_two1 = sub_two1
     self.sub_two2 = sub_two2
@@ -584,7 +582,7 @@ class Sub_two(Sub_one):
 
 class Sub_three(Sub_two):
   def __init__(
-    self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
+    self,sub_three1 = '',sub_three2 = '',sub_three3 = '',**kwargs):
 
     self.sub_three1 = sub_three1
     self.sub_three2 = sub_three2
@@ -634,7 +632,7 @@ print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(
-    self,main1 = 'none',main2 = 'none',main3 = 'none',**kwargs):
+    self,main1 = '',main2 = '',main3 = '',**kwargs):
 
     self.main1 = main1
     self.main2 = main2
@@ -643,7 +641,7 @@ class Main:
 
 class Sub_one:
   def __init__(
-    self,sub_one1 = 'none',sub_one2 = 'none',sub_one3 = 'none',**kwargs):
+    self,sub_one1 = '',sub_one2 = '',sub_one3 = '',**kwargs):
 
     self.sub_one1 = sub_one1
     self.sub_one2 = sub_one2
@@ -652,7 +650,7 @@ class Sub_one:
 
 class Sub_two:
   def __init__(
-    self,sub_two1 = 'none',sub_two2 = 'none',sub_two3 = 'none',**kwargs):
+    self,sub_two1 = '',sub_two2 = '',sub_two3 = '',**kwargs):
 
     self.sub_two1 = sub_two1
     self.sub_two2 = sub_two2
@@ -661,7 +659,7 @@ class Sub_two:
 
 class Sub_three:
   def __init__(
-    self,sub_three1 = 'none',sub_three2 = 'none',sub_three3 = 'none',**kwargs):
+    self,sub_three1 = '',sub_three2 = '',sub_three3 = '',**kwargs):
 
     self.sub_three1 = sub_three1
     self.sub_three2 = sub_three2
@@ -1077,8 +1075,7 @@ class Sub_class:
   def print_message2():
     print('Print_message one','Print_message two')
 
-class Child(Sub_class,Main):
-  pass
+class Child(Sub_class,Main):pass
 
 text1 = Main(
   'parameter1','parameter2',
@@ -1136,8 +1133,7 @@ class Sub_class_skeleton_structure_two(Sub_class_skeleton_structure_one):
 class Class_all(
   Sub_class_skeleton_structure_two,
   Sub_class_skeleton_structure_one,
-  Main_class_skeleton_structure):
-  pass
+  Main_class_skeleton_structure):pass
 
 Class_all.main()
 Class_all.sub1()
@@ -1150,15 +1146,13 @@ class Main_class_skeleton_structure:
     self.parameter3 = parameter3
 
 class Sub_super_class_skeleton_structure_one(Main_class_skeleton_structure):
-  def __init__(self,parameter1,parameter2,parameter3):
-    pass
+  def __init__(self,parameter1,parameter2,parameter3):pass
 
   def __init__(self,parameter1,parameter2,parameter3):
     super().__init__(parameter1,parameter2,parameter3)
 
 class Sub_super_class_skeleton_structure_two(Sub_super_class_skeleton_structure_one):
-  def __init__(self,parameter1,parameter2,parameter3):
-    pass
+  def __init__(self,parameter1,parameter2,parameter3):pass
 
   def __init__(self,parameter1,parameter2,parameter3):
     super().__init__(parameter1,parameter2,parameter3)
@@ -1166,50 +1160,89 @@ class Sub_super_class_skeleton_structure_two(Sub_super_class_skeleton_structure_
 class Class_all(
   Sub_super_class_skeleton_structure_two,
   Sub_super_class_skeleton_structure_one,
-  Main_class_skeleton_structure):
-  pass
+  Main_class_skeleton_structure):pass
 
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter1)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2,arg3):
-    
+  """ Class Main """
+  def __init__(self,arg1,arg2):
+
     self.arg1 = arg1
     self.arg2 = arg2
-    self.arg3 = arg3
 
-print(getattr(Main('arg1','arg2','arg3'),'arg1'))
+print(Main.__doc__)
+
+print(getattr(Main('arg1','arg2'),'arg1'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2,arg3):
-    
+  """ Class Main """
+  def __init__(self):
+
+    self.arg1 = 'arg1'
+    self.arg2 = 'arg2'
+
+print(Main.__doc__)
+
+print(getattr(Main(),'arg1'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self,arg1,arg2):
+    """ Class Main """
     self.arg1 = arg1
     self.arg2 = arg2
-    self.arg3 = arg3
 
   def return_data(self):
-    return self.arg1,self.arg2,self.arg3
+    return self.arg1,self.arg2
 
-print(getattr(Main('arg1','arg2','arg3'),'return_data')()[0])
+print(Main.__doc__)
+
+print(getattr(Main('arg1','arg2'),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self):
-    
-    self.bit_0 = 'bit_0'
-    self.bit_1 = 'bit_1'
-    self.bit_2 = 'bit_2'
-
-print(getattr(Main(),'bit_2'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class Main:
+  """ Class Main """
   def __init__(self):
     self.arg1 = 'arg1'
     self.arg2 = 'arg2'
-    self.arg3 = 'arg3'
 
   def return_data(self):
-    return self.arg1,self.arg2,self.arg3
+    return self.arg1,self.arg2
+
+print(Main.__doc__)
 
 print(getattr(Main(),'return_data')()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """ Class Main """
+  def __init__(self,arg1,arg2):
+
+    self.arg1 = 'arg1'
+    self.arg2 = 'arg2'
+
+  def return_data(self):
+    return self.arg1,self.arg2
+
+print(Main.__doc__)
+
+print(getattr(Main(
+  'argument placeholder',
+  'argument placeholder'),'return_data')()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """ Class Main """
+  def __init__(self,arg2):
+
+    self.arg1 = 'arg1'
+    self.arg2 = arg2
+
+  def return_args(self):
+    return self.arg1,self.arg2
+
+print(Main.__doc__)
+
+print(getattr(Main('Explicit'),'arg2'))
+
+print(getattr(Main('Implicit'),'return_args')()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
