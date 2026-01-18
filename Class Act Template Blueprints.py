@@ -1,70 +1,76 @@
 class Main:
-  def __init__(self,arg1,arg2):
+  def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
     self.arg2 = arg2
+    self.arg3 = arg3
 
-print(Main('arg1','arg2').arg1)
+print(Main('arg1','arg2','arg3').arg1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2):
+  def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
     self.arg2 = arg2
+    self.arg3 = arg3
 
   def class_datta(self):
     print(self.arg2)
 
-Main('arg1','arg2').class_datta()
+Main('arg1','arg2','arg3').class_datta()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,*args):
 
     self.args = args
 
-print(Main('arg1','arg2').args[0])
+print(Main('arg1','arg2','arg3').args[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2):
+  def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
     self.arg2 = arg2
+    self.arg3 = arg3
 
-  def return_args(arg1,arg2):
-    return 'arg1','arg2'
+  def return_args(arg1,arg2,arg3):
+    return 'arg1','arg2','arg3'
 
 Main = Main.return_args(
-  'argument placeholder','argument placeholder')
+  'argument placeholder',
+  'argument placeholder',
+  'argument placeholder')
 
 print(Main[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2):
+  def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
     self.arg2 = arg2
+    self.arg3 = arg3
 
   def return_args(*args):
     return args
 
-main = Main.return_args('args1','args2','args3','args4','args5')
+main = Main.return_args('args1','args2','args3')
 
-print(main[4])
+print(main[2])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  def __init__(self,arg1,arg2):
+  def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
     self.arg2 = arg2
+    self.arg3 = arg3
 
   def return_keyword_args(**kwargs):
     return kwargs
 
 Main = Main.return_keyword_args(
-  kwarg1 = 'karg1',kwarg2 = 'karg2',
-  kwarg3 = 'karg3',kwarg4 = 'karg4')
+  kwarg1 = 'karg1',kwarg2 = 'karg2',kwarg3 = 'karg3')
 
-print(Main.get('kwarg4','Attribute Not Found:'))
+print(Main.get('kwarg3','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,**kwargs):
@@ -75,8 +81,7 @@ class Main:
     return kwargs
 
 main = Main.return_keyword_args(
-  kwarg1 = 'karg1',kwarg2 = 'karg2',
-  kwarg3 = 'karg3',kwarg4 = 'karg4')
+  kwarg1 = 'karg1',kwarg2 = 'karg2',kwarg3 = 'karg3')
 
 print(main.get('kwarg3','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -116,10 +121,7 @@ class Main:
   def class_datta(self):
     print(self.args[0])
 
-Main(
-  'arg1','arg2','arg3',
-  'arg4','arg5','arg6',
-  'arg7','arg8','arg9').class_datta()
+Main('arg1','arg2','arg3').class_datta()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,**kwargs):
@@ -127,14 +129,10 @@ class Main:
     self.kwargs = kwargs
 
   def class_datta(self):
-    print(self.kwargs.get('kwarg5','Attribute Not Found:'))
+    print(self.kwargs.get('kwarg3','Attribute Not Found:'))
 
 Main(
-  kwarg1 = 'karg1',kwarg2 = 'karg2',
-  kwarg3 = 'karg3',kwarg4 = 'karg4',
-  kwarg5 = 'karg5',kwarg6 = 'karg6',
-  kwarg7 = 'karg7',kwarg8 = 'karg8',
-  kwarg9 = 'karg9',kwarg10 = 'karg10').class_datta()
+  kwarg1 = 'karg1',kwarg2 = 'karg2',kwarg3 = 'karg3').class_datta()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   def __init__(self,attribute1,attribute2):
@@ -184,7 +182,9 @@ print(superclass1_attribute_values.attribute1)
 print(superclass2_attribute_values.attribute1)
 
 print(return_value1)
+
 print(return_value2)
+
 print(return_value3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -234,7 +234,9 @@ print(superclass1_attribute_values.args[0])
 print(superclass2_attribute_values.args[0])
 
 print(return_value1)
+
 print(return_value2)
+
 print(return_value3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -284,7 +286,9 @@ print(superclass1_attribute_values.kwargs.get('kwarg1','Attribute Not Found:'))
 print(superclass2_attribute_values.kwargs.get('kwarg1','Attribute Not Found:'))
 
 print(return_value1)
+
 print(return_value2)
+
 print(return_value3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -334,7 +338,9 @@ print(superclass1_attribute_values.kwarg1)
 print(superclass2_attribute_values.kwarg1)
 
 print(return_value1)
+
 print(return_value2)
+
 print(return_value3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -401,8 +407,11 @@ print(sub_two.sub_two1)
 print(sub_three.sub_three1)
 
 print(class_all.main1)
+
 print(class_all.sub_one1)
+
 print(class_all.sub_two1)
+
 print(class_all.sub_three1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -472,8 +481,11 @@ print(sub_two.sub_two1)
 print(sub_three.sub_three1)
 
 print(class_all.main1)
+
 print(class_all.sub_one1)
+
 print(class_all.sub_two1)
+
 print(class_all.sub_three1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -549,8 +561,11 @@ print(sub_two.sub_two3)
 print(sub_three.sub_three3)
 
 print(class_all.main3)
+
 print(class_all.sub_one3)
+
 print(class_all.sub_two3)
+
 print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -626,8 +641,11 @@ print(sub_two.sub_two3)
 print(sub_three.sub_three3)
 
 print(class_all.main3)
+
 print(class_all.sub_one3)
+
 print(class_all.sub_two3)
+
 print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -703,8 +721,11 @@ print(sub_two.sub_two3)
 print(sub_three.sub_three3)
 
 print(class_all.main3)
+
 print(class_all.sub_one3)
+
 print(class_all.sub_two3)
+
 print(class_all.sub_three3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -778,8 +799,11 @@ class Child(Main,Sub_one,Sub_two):
     Sub_two.__init__(self)
 
 print(Main().main1)
+
 print(Sub_one().sub_one1)
+
 print(Sub_two().sub_two1)
+
 print(Child().main1)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -1163,11 +1187,13 @@ class Class_all(
   Main_class_skeleton_structure):pass
 
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter1)
+
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter2)
+
 print(Class_all('Main Class Act.','Sub One Class Act.','Sub Two Class Act.').parameter3)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self,arg1,arg2):
 
     self.arg1 = arg1
@@ -1178,7 +1204,7 @@ print(Main.__doc__)
 print(getattr(Main('arg1','arg2'),'arg1'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self):
 
     self.arg1 = 'arg1'
@@ -1189,7 +1215,7 @@ print(Main.__doc__)
 print(getattr(Main(),'arg1'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self,arg1,arg2):
 
     self.arg1 = arg1
@@ -1198,12 +1224,12 @@ class Main:
   def return_data(self):
     return self.arg1,self.arg2
 
-print(getattr(Main, '__doc__'))
+print(getattr(Main,'__doc__'))
 
 print(getattr(Main('arg1','arg2'),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self):
     self.arg1 = 'arg1'
     self.arg2 = 'arg2'
@@ -1211,12 +1237,12 @@ class Main:
   def return_data(self):
     return self.arg1,self.arg2
 
-print(getattr(Main, '__doc__'))
+print(getattr(Main,'__doc__'))
 
 print(getattr(Main(),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self,arg1,arg2):
 
     self.arg1 = 'arg1'
@@ -1225,14 +1251,14 @@ class Main:
   def return_data(self):
     return self.arg1,self.arg2
 
-print(getattr(Main, '__doc__'))
+print(getattr(Main,'__doc__'))
 
 print(getattr(Main(
   'argument placeholder',
   'argument placeholder'),'return_data')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
-  """ Class Main """
+  """Class Main"""
   def __init__(self,arg2):
 
     self.arg1 = 'arg1'
@@ -1241,9 +1267,61 @@ class Main:
   def return_args(self):
     return self.arg1,self.arg2
 
-print(getattr(Main, '__doc__'))
+print(getattr(Main,'__doc__'))
 
 print(getattr(Main('Explicit'),'arg2'))
 
 print(getattr(Main('Implicit'),'return_args')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self):
+
+    self.arg1 = 'arg1'
+    self.arg2 = 'arg2'
+
+class Sub_one(Main):
+  """Sub one"""
+  def __init__(self):
+
+    self.arg3 = 'arg3'
+    self.arg4 = 'arg4'
+
+class Sub_two(Sub_one):
+  """Sub one"""
+  def __init__(self):
+
+    self.arg5 = 'arg5'
+    self.arg6 = 'arg6'
+
+class Sub_three(Sub_two):
+  """Sub one"""
+  def __init__(self):
+
+    self.arg7 = 'arg7'
+    self.arg8 = 'arg8'
+
+class Class_all(Sub_three,Sub_two,Sub_one,Main):
+  """Class_all"""
+  def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
+
+    Main.__init__(self)
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
+    Sub_three.__init__(self)
+
+print(getattr(Main(),'arg1'))
+
+print(getattr(Sub_one(),'arg3'))
+
+print(getattr(Sub_two(),'arg5'))
+
+print(getattr(Sub_three(),'arg7'))
+
+print(getattr(Class_all(
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder'),'arg8'))
+
+print(getattr(Class_all,'__doc__'))
