@@ -100,6 +100,27 @@ main = Sub(
 print(main.kwargs.get('kwarg3','Attribute Not Found:'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
+  def __init__(
+    self,kwarg1 = 'keyword argeument one',
+    kwarg2 = 'keyword argeument two',
+    kwarg3 = 'keyword argeument three'):
+
+    self.kwarg1 = kwarg1
+    self.kwarg2 = kwarg2
+    self.kwarg3 = kwarg3
+
+print(Main().kwarg1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  def __init__(self,kwarg1 = '',kwarg2 = '',kwarg3 = ''):
+
+    self.kwarg1 = 'keyword argeument one'
+    self.kwarg2 = 'keyword argeument two'
+    self.kwarg3 = 'keyword argeument two'
+
+print(Main().kwarg1)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
   def __init__(self,**kwargs):
 
     self.__dict__.update(kwargs)
@@ -1275,6 +1296,161 @@ print(getattr(Main('Implicit'),'return_args')()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Class Main"""
+  def __init__(self,arg1,arg2):
+
+    self.arg1 = arg1
+    self.arg2 = arg2
+
+class Sub_one:
+  """Sub one"""
+  def __init__(self,arg3,arg4):
+
+    self.arg3 = arg3
+    self.arg4 = arg4
+
+class Sub_two:
+  """Sub two"""
+  def __init__(self,arg5,arg6):
+
+    self.arg5 = arg5
+    self.arg6 = arg6
+
+class Sub_three:
+  """Sub three"""
+  def __init__(self,arg7,arg8):
+
+    self.arg7 = arg7
+    self.arg8 = arg8
+
+class Class_all(Main,Sub_one,Sub_two,Sub_three):
+  """Class_all"""
+  def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
+
+    Main.__init__(self,arg1,arg2)
+    Sub_one.__init__(self,arg3,arg4)
+    Sub_two.__init__(self,arg5,arg6)
+    Sub_three.__init__(self,arg7,arg8)
+
+print(getattr(Main('Explicit one','Explicit two'),'arg1'))
+
+print(getattr(Sub_one('Explicit three','Explicit four'),'arg3'))
+
+print(getattr(Sub_two('Explicit five','Explicit six'),'arg5'))
+
+print(getattr(Sub_three('Explicit seven','Explicit eight'),'arg7'))
+
+print(getattr(Class_all(
+  'Explicit one','Explicit two','Explicit three','Explicit four',
+  'Explicit five','Explicit six','Explicit seven','Explicit eight'),'arg1'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self,arg1,arg2):
+
+    self.arg1 = arg1
+    self.arg2 = arg2
+
+class Sub_one(Main):
+  """Sub one"""
+  def __init__(self,arg3,arg4):
+
+    self.arg3 = arg3
+    self.arg4 = arg4
+
+class Sub_two(Sub_one):
+  """Sub two"""
+  def __init__(self,arg5,arg6):
+
+    self.arg5 = arg5
+    self.arg6 = arg6
+
+class Sub_three(Sub_two):
+  """Sub three"""
+  def __init__(self,arg7,arg8):
+
+    self.arg7 = arg7
+    self.arg8 = arg8
+
+class Class_all(Sub_three,Sub_two,Sub_one,Main):
+  """Class_all"""
+  def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
+
+    Main.__init__(self,arg1,arg2)
+    Sub_one.__init__(self,arg3,arg4)
+    Sub_two.__init__(self,arg5,arg6)
+    Sub_three.__init__(self,arg7,arg8)
+
+print(getattr(Main('Explicit one','Explicit two'),'arg1'))
+
+print(getattr(Sub_one('Explicit three','Explicit four'),'arg3'))
+
+print(getattr(Sub_two('Explicit five','Explicit six'),'arg5'))
+
+print(getattr(Sub_three('Explicit seven','Explicit eight'),'arg7'))
+
+print(getattr(Class_all(
+  'Explicit one','Explicit two','Explicit three','Explicit four',
+  'Explicit five','Explicit six','Explicit seven','Explicit eight'),'arg1'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self):
+
+    self.arg1 = 'arg1'
+    self.arg2 = 'arg2'
+
+class Sub_one:
+  """Sub one"""
+  def __init__(self):
+
+    self.arg3 = 'arg3'
+    self.arg4 = 'arg4'
+
+class Sub_two:
+  """Sub two"""
+  def __init__(self):
+
+    self.arg5 = 'arg5'
+    self.arg6 = 'arg6'
+
+class Sub_three:
+  """Sub three"""
+  def __init__(self):
+
+    self.arg7 = 'arg7'
+    self.arg8 = 'arg8'
+
+class Class_all(Main,Sub_one,Sub_two,Sub_three):
+  """Class_all"""
+  def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
+
+    Main.__init__(self)
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
+    Sub_three.__init__(self)
+
+print(getattr(Main(),'arg1'))
+
+print(getattr(Sub_one(),'arg3'))
+
+print(getattr(Sub_two(),'arg5'))
+
+print(getattr(Sub_three(),'arg7'))
+
+print(getattr(Class_all(
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder'),'arg8'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
   def __init__(self):
 
     self.arg1 = 'arg1'
@@ -1323,5 +1499,221 @@ print(getattr(Class_all(
   'argument placeholder','argument placeholder',
   'argument placeholder','argument placeholder',
   'argument placeholder','argument placeholder'),'arg8'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self,main1 = '',main2 = '',main3 = ''):
+
+    self.main_explicit_value_1 = main1
+    self.main_explicit_value_2 = main2
+    self.main_explicit_value_3 = main3
+
+class Sub_one:
+  """Sub one"""
+  def __init__(self,sub_one1 = '',sub_one2 = '',sub_one3 = ''):
+
+    self.sub_one_explicit_value_1 = sub_one1
+    self.sub_one_explicit_value_2 = sub_one2
+    self.sub_one_explicit_value_3 = sub_one3
+
+class Sub_two:
+  """Sub two"""
+  def __init__(self,sub_two1 = '',sub_two2 = '',sub_two3 = ''):
+
+    self.sub_two_explicit_value_1 = sub_two1
+    self.sub_two_explicit_value_2 = sub_two2
+    self.sub_two_explicit_value_3 = sub_two3
+
+class Sub_three:
+  """Sub three"""
+  def __init__(self,sub_three1 = '',sub_three2 = '',sub_three3 = ''):
+
+    self.sub_three_explicit_value_1 = sub_three1
+    self.sub_three_explicit_value_2 = sub_three2
+    self.sub_three_explicit_value_3 = sub_three3
+
+class Class_all(Main,Sub_one,Sub_two,Sub_three):
+  """Class all"""
+  def __init__(
+    self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
+    sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3,
+    sub_two_explicit_value_1,sub_two_explicit_value_2,sub_two_explicit_value_3,
+    sub_three_explicit_value_1,sub_three_explicit_value_2,sub_three_explicit_value_3):
+
+    Main.__init__(self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3)
+    Sub_one.__init__(self,sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3)
+    Sub_two.__init__(self,sub_two_explicit_value_1,sub_two_explicit_value_2,sub_two_explicit_value_3)
+    Sub_three.__init__(self,sub_three_explicit_value_1,sub_three_explicit_value_2,sub_three_explicit_value_3)
+
+print(getattr(Class_all(
+  'Main explicit value 1','Main explicit value 2','Main explicit value 3',
+  'Sub one explicit value 1','Sube one explicit value 2','Sube one explicit value 3',
+  'Sub two explicit value 1','Sub two explicit value 2','Sub two explicit value 3',
+  'Sub three explicit value 1','Sub three explicit value 2','Sub three explicit value 3'),'main_explicit_value_1'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self,main1 = '',main2 = '',main3 = ''):
+
+    self.main_explicit_value_1 = main1
+    self.main_explicit_value_2 = main2
+    self.main_explicit_value_3 = main3
+
+class Sub_one(Main):
+  """Sub one"""
+  def __init__(self,sub_one1 = '',sub_one2 = '',sub_one3 = ''):
+
+    self.sub_one_explicit_value_1 = sub_one1
+    self.sub_one_explicit_value_2 = sub_one2
+    self.sub_one_explicit_value_3 = sub_one3
+
+class Sub_two(Sub_one):
+  """Sub two"""
+  def __init__(self,sub_two1 = '',sub_two2 = '',sub_two3 = ''):
+
+    self.sub_two_explicit_value_1 = sub_two1
+    self.sub_two_explicit_value_2 = sub_two2
+    self.sub_two_explicit_value_3 = sub_two3
+
+class Sub_three(Sub_two):
+  """Sub three"""
+  def __init__(self,sub_three1 = '',sub_three2 = '',sub_three3 = ''):
+
+    self.sub_three_explicit_value_1 = sub_three1
+    self.sub_three_explicit_value_2 = sub_three2
+    self.sub_three_explicit_value_3 = sub_three3
+
+class Class_all(Sub_three,Sub_two,Sub_one,Main):
+  """Class all"""
+  def __init__(
+    self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
+    sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3,
+    sub_two_explicit_value_1,sub_two_explicit_value_2,sub_two_explicit_value_3,
+    sub_three_explicit_value_1,sub_three_explicit_value_2,sub_three_explicit_value_3):
+
+    Main.__init__(self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3)
+    Sub_one.__init__(self,sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3)
+    Sub_two.__init__(self,sub_two_explicit_value_1,sub_two_explicit_value_2,sub_two_explicit_value_3)
+    Sub_three.__init__(self,sub_three_explicit_value_1,sub_three_explicit_value_2,sub_three_explicit_value_3)
+
+print(getattr(Class_all(
+  'Main explicit value 1','Main explicit value 2','Main explicit value 3',
+  'Sub one explicit value 1','Sube one explicit value 2','Sube one explicit value 3',
+  'Sub two explicit value 1','Sub two explicit value 2','Sub two explicit value 3',
+  'Sub three explicit value 1','Sub three explicit value 2','Sub three explicit value 3'),'main_explicit_value_1'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self):
+
+    self.main1 = 'Main implicit value 1'
+    self.main2 = 'Main implicit value 2'
+    self.main3 = 'Main implicit value 3'
+
+class Sub_one(Main):
+  """Sub one"""
+  def __init__(self):
+
+    self.sub_one1 = 'Sub one implicit value 1'
+    self.sub_one2 = 'Sub one implicit value 2'
+    self.sub_one3 = 'Sub one implicit value 3'
+
+class Sub_two(Sub_one):
+  """Sub two"""
+  def __init__(self):
+
+    self.sub_two1 = 'Sub two implicit value 1'
+    self.sub_two2 = 'Sub two implicit value 2'
+    self.sub_two3 = 'Sub two implicit value 3'
+
+class Sub_three(Sub_two):
+  """Sub three"""
+  def __init__(self):
+
+    self.sub_three1 = 'Sub three implicit value 1'
+    self.sub_three2 = 'Sub three implicit value 2'
+    self.sub_three3 = 'Sub three implicit value 3'
+
+class Class_all(Sub_three,Sub_two,Sub_one,Main):
+  """Class all"""
+  def __init__(
+    self,main1,main2,main3,
+    sub_one1,sub_one2,sub_one3,
+    sub_two1,sub_two2,sub_two3,
+    sub_three1,sub_three2,sub_three3):
+
+    Main.__init__(self)
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
+    Sub_three.__init__(self)
+
+print(getattr(Class_all(
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder'),'main1'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  def __init__(self):
+
+    self.main1 = 'Main implicit value 1'
+    self.main2 = 'Main implicit value 2'
+    self.main3 = 'Main implicit value 3'
+
+class Sub_one:
+  """Sub one"""
+  def __init__(self):
+
+    self.sub_one1 = 'Sub one implicit value 1'
+    self.sub_one2 = 'Sub one implicit value 2'
+    self.sub_one3 = 'Sub one implicit value 3'
+
+class Sub_two:
+  """Sub two"""
+  def __init__(self):
+
+    self.sub_two1 = 'Sub two implicit value 1'
+    self.sub_two2 = 'Sub two implicit value 2'
+    self.sub_two3 = 'Sub two implicit value 3'
+
+class Sub_three:
+  """Sub three"""
+  def __init__(self):
+
+    self.sub_three1 = 'Sub three implicit value 1'
+    self.sub_three2 = 'Sub three implicit value 2'
+    self.sub_three3 = 'Sub three implicit value 3'
+
+class Class_all(Main,Sub_one,Sub_two,Sub_three):
+  """Class all"""
+  def __init__(
+    self,main1,main2,main3,
+    sub_one1,sub_one2,sub_one3,
+    sub_two1,sub_two2,sub_two3,
+    sub_three1,sub_three2,sub_three3):
+
+    Main.__init__(self)
+    Sub_one.__init__(self)
+    Sub_two.__init__(self)
+    Sub_three.__init__(self)
+
+print(getattr(Class_all(
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder',
+  'argument placeholder','argument placeholder'),'main1'))
 
 print(getattr(Class_all,'__doc__'))
