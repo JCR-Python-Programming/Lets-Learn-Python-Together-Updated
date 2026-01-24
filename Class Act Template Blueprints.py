@@ -461,6 +461,7 @@ print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
+  __slots__ = ('main1','main2','main3')
   def __init__(self,main1,main2,main3):
 
     self.main1 = main1
@@ -469,6 +470,7 @@ class Main:
 
 class Sub_one:
   """Sub_one"""
+  __slot__ = ('sub_one1','sub_one2','sub_one3')
   def __init__(self,sub_one1,sub_one2,sub_one3):
 
     self.sub_one1 = sub_one1
@@ -477,6 +479,7 @@ class Sub_one:
 
 class Sub_two:
   """Sub_two"""
+  __slot__ = ('sub_two1','sub_two2','sub_two3')
   def __init__(self,sub_two1,sub_two2,sub_two3):
 
     self.sub_two1 = sub_two1
@@ -485,6 +488,7 @@ class Sub_two:
 
 class Sub_three:
   """Sub_three"""
+  __slots__ = ('sub_three1','sub_three2','sub_three3')
   def __init__(self,sub_three1,sub_three2,sub_three3):
 
     self.sub_three1 = sub_three1
@@ -493,8 +497,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
-
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -510,7 +517,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
-  Class_all('','','','','','','','','','','','').sub_three1
+  Class_all('','','','','','','','','','','','').main1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -523,8 +530,7 @@ print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
-  def __init__(
-    self,main1,main2,main3,*args):
+  def __init__(self,main1,main2,main3,*args):
 
     self.main1 = main1
     self.main2 = main2
@@ -533,8 +539,7 @@ class Main:
 
 class Sub_one:
   """Sub_one"""
-  def __init__(
-    self,sub_one1,sub_one2,sub_one3,*args):
+  def __init__(self,sub_one1,sub_one2,sub_one3,*args):
 
     self.sub_one1 = sub_one1
     self.sub_one2 = sub_one2
@@ -561,7 +566,11 @@ class Sub_three:
 
 class Class_all(Main,Sub_one,Sub_two,Sub_three):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -579,7 +588,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
-  Class_all('','','','','','','','','','','','').sub_three1
+  Class_all('','','','','','','','','','','','').main1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -632,7 +641,11 @@ class Sub_three:
 
 class Class_all(Main,Sub_one,Sub_two,Sub_three):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -702,7 +715,11 @@ class Sub_three(Sub_two):
     super().__init__(**kwargs)
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -768,7 +785,11 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -834,7 +855,11 @@ class Sub_three:
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -906,7 +931,11 @@ class Sub_three:
 
 class Class_all(Main,Sub_one,Sub_two,Sub_three):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -977,7 +1006,11 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1032,7 +1065,7 @@ class Sub_two:
 
 class Sub_three:
   """Sub_three"""
-  def __init__(self,sub_two1,sub_two2,sub_two3):
+  def __init__(self,sub_three1,sub_three2,sub_three3):
 
     self.sub_three1 = 'sub_three1'
     self.sub_three2 = 'sub_three2'
@@ -1040,7 +1073,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1105,7 +1142,11 @@ class Sub_three():
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(self):
     super().__init__()
@@ -1160,7 +1201,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1225,7 +1270,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(self):
     super().__init__()
@@ -1280,7 +1329,11 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1344,7 +1397,11 @@ class Sub_three(Sub_two):
     self.sub_three3 = 'sub_three3'
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1409,7 +1466,11 @@ class Sub_three:
 
 class Class_all(Main,Sub_one,Sub_two,Sub_three):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1474,7 +1535,11 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+      'main1','main2','main3',
+      'sub_one1','sub_one2','sub_one3',
+      'sub_two1','sub_two2','sub_two3',
+      'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
@@ -1548,7 +1613,7 @@ class Sub_class:
 
 class Class_all(Sub_class,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7')
 
 try:
   Class_all('','','').arg1
@@ -1577,11 +1642,6 @@ class Sub_two(Sub_one):
 
 class Class_all(Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
-
-try:
-  Class_all()
-except AttributeError:pass
 
 getattr(Class_all,'main')()
 
@@ -1779,7 +1839,9 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = (
+    'arg1','arg2','arg3','arg4','arg5','arg6',
+    'arg7','arg8','arg9','arg10','arg11','arg12')
 
   def __init__(
     self,arg1,arg2,arg3,arg4,arg5,arg6,
@@ -1834,7 +1896,7 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
 
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
@@ -1887,7 +1949,7 @@ class Sub_three:
 
 class Class_all(Main):
   """Class_all"""
-  __slots__ = ()
+  __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
 
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
@@ -1942,7 +2004,7 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
-  __slots__= ()
+  __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
 
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
@@ -2001,7 +2063,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class all"""
-  __slots__ = ()
+  __slots__ = (
+    'main_explicit_value_1','main_explicit_value_2','main_explicit_value_3',
+    'sub_one_explicit_value_1','sub_one_explicit_value_2','sub_one_explicit_value_3'
+    'sub_two_explicit_value_1','sub_two_explicit_value_2','sub_two_explicit_value_3',
+    'sub_three_explicit_value_1','sub_three_explicit_value_2','sub_three_explicit_value_3')
 
   def __init__(
     self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
@@ -2064,7 +2130,11 @@ class Sub_three(Sub_two):
 
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class all"""
-  __slots__ = ()
+  __slots__ = (
+    'main_explicit_value_1','main_explicit_value_2','main_explicit_value_3',
+    'sub_one_explicit_value_1','sub_one_explicit_value_2','sub_one_explicit_value_3'
+    'sub_two_explicit_value_1','sub_two_explicit_value_2','sub_two_explicit_value_3',
+    'sub_three_explicit_value_1','sub_three_explicit_value_2','sub_three_explicit_value_3')
 
   def __init__(
     self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
@@ -2127,7 +2197,11 @@ class Sub_three:
 
 class Class_all(Main):
   """Class all"""
-  __slots__ = ()
+  __slots__ = (
+    'main1','main2','main3',
+    'sub_one1','sub_one2','sub_one3',
+    'sub_two1','sub_two2','sub_two3',
+    'sub_three1','sub_three2','sub_three3')
 
   def __init__(
     self,main1,main2,main3,
