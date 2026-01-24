@@ -510,6 +510,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -578,6 +579,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -650,6 +652,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -717,6 +720,7 @@ try:
   Sub_one('','','').sub_one1
   Sub_two('','','').sub_two1
   Sub_three('','','').sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:pass
 
 print(getattr(Class_all(
@@ -782,6 +786,7 @@ try:
   Sub_one().sub_one1
   Sub_two().sub_two1
   Sub_three().sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:print('test')
 
 print(getattr(Class_all(
@@ -848,6 +853,7 @@ try:
   Sub_one().sub_one1
   Sub_two().sub_two1
   Sub_three().sub_three1
+  Class_all('','','','','','','','','','','','').sub_three1
 except AttributeError:pass
 
 print(getattr(Class_all(
