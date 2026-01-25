@@ -2231,3 +2231,147 @@ print(getattr(Class_all(
   'argument placeholder','argument placeholder'),'sub_three1'))
 
 print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Computer:
+  """Computer"""
+  __slots__ = ('computer')
+  def __init__(self,computer):
+
+    self.computer = computer
+
+class Science(Computer):
+  """Science"""
+  __slots__ = ('science')
+  def __init__(self,science):
+
+    self.science = science
+
+class Class_all(Science,Computer):
+  """Class_all"""
+  __slots__ = ()
+  def __init__(self,computer,science):
+
+    Computer.__init__(self,computer)
+    Science.__init__(self,science)
+
+try:
+  Computer('').compter
+  Science('').science
+  Class_all('').science
+except AttributeError:pass
+
+print(getattr(Computer('Computer'),'computer'))
+print(getattr(Science('Science'),'science'))
+
+print(getattr(Class_all('Computer','Science'),'computer'))
+print(getattr(Class_all('Computer','Science'),'science'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Computer:
+  """Computer"""
+  __slots__ = ('computer')
+  def __init__(self,computer):
+
+    self.computer = 'Computer'
+
+class Science(Computer):
+  """Science"""
+  __slots__ = ('science')
+  def __init__(self,science):
+
+    self.science = 'Science'
+
+class Class_all(Science,Computer):
+  """Class_all"""
+  __slots__ = ()
+  def __init__(self,computer,science):
+
+    Computer.__init__(self,computer)
+    Science.__init__(self,science)
+
+try:
+  Computer('').compter
+  Science('').science
+  Class_all('').science
+except AttributeError:pass
+
+print(getattr(Computer(''),'computer'))
+print(getattr(Science(''),'science'))
+
+print(getattr(Class_all('',''),'computer'))
+print(getattr(Class_all('',''),'science'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Computer:
+  """Computer"""
+  __slots__ = ('computer')
+  def __init__(self,computer):
+
+    self.computer = 'Computer'
+
+class Science(Computer):
+  """Science"""
+  __slots__ = ('science')
+  def __init__(self,science):
+
+    self.science = science
+
+class Class_all(Science,Computer):
+  """Class_all"""
+  __slots__ = ()
+  def __init__(self,computer,science):
+
+    Computer.__init__(self,computer)
+    Science.__init__(self,science)
+
+try:
+  Computer('').compter
+  Science('').science
+  Class_all('').science
+except AttributeError:pass
+
+print(getattr(Computer(''),'computer'))
+print(getattr(Science('Science'),'science'))
+
+print(getattr(Class_all('','Science'),'computer'))
+print(getattr(Class_all('','Science'),'science'))
+
+print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Computer:
+  """Computer"""
+  __slots__ = ('computer')
+  def __init__(self,computer):
+
+    self.computer = computer
+
+class Science(Computer):
+  """Science"""
+  __slots__ = ('science')
+  def __init__(self,science):
+
+    self.science = 'Science'
+
+class Class_all(Science,Computer):
+  """Class_all"""
+  __slots__ = ()
+  def __init__(self,computer,science):
+
+    Computer.__init__(self,computer)
+    Science.__init__(self,science)
+
+try:
+  Computer('').compter
+  Science('').science
+  Class_all('').science
+except AttributeError:pass
+
+print(getattr(Computer('Computer'),'computer'))
+print(getattr(Science(''),'science'))
+
+print(getattr(Class_all('Computer',''),'computer'))
+print(getattr(Class_all('Computer',''),'science'))
+
+print(getattr(Class_all,'__doc__'))
