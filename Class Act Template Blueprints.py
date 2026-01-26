@@ -2375,3 +2375,71 @@ print(getattr(Class_all('Computer',''),'computer'))
 print(getattr(Class_all('Computer',''),'science'))
 
 print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  __slots__ = ('main',)
+
+  def __init__(
+    self,main = '',**kwargs):
+
+    self.main = main
+
+class Sub_one(Main):
+  __slots__ = ('sub_one',)
+  def __init__(
+    self,sub_one = '',**kwargs):
+
+    self.sub_one = sub_one
+
+class Class_all(Sub_one,Main):
+  __slots__ = ('main','sub_one')
+
+  def __init__(self,main,sub_one):
+    
+    Sub_one.__init__(self,sub_one = sub_one)
+    Main.__init__(self,main = main)
+
+try:
+  Main('').main
+  Sub_one('').sub_one
+  Class_all('','').main
+except AttributeError:pass
+
+print(getattr(Class_all('Main value','Sub_one'),'main'))
+
+print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  __slots__ = ('main',)
+
+  def __init__(
+    self,main = '',**kwargs):
+
+    self.main = main
+    super().__init__(**kwargs)
+
+class Sub_one(Main):
+  __slots__ = ('sub_one',)
+  def __init__(
+    self,sub_one = '',**kwargs):
+
+    self.sub_one = sub_one
+    super().__init__(**kwargs)
+
+class Class_all(Sub_one,Main):
+  __slots__ = ('main','sub_one')
+
+  def __init__(self,main,sub_one):
+    super().__init__(main = main,sub_one = sub_one)
+
+try:
+  Main('').main
+  Sub_one('').sub_one
+  Class_all('','').main
+except AttributeError:pass
+
+print(getattr(Class_all('Main value','Sub_one'),'main'))
+
+print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
