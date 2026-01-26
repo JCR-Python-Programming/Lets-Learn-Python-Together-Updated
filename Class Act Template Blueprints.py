@@ -2332,13 +2332,13 @@ print(getattr(Class_all,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-  def __init__(self,main = '',**kwargs):
+  def __init__(self,main = ''):
 
     self.main = main
 
 class Sub_one:
   __slots__ = ('sub_one',)
-  def __init__(self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = ''):
 
     self.sub_one = sub_one
 
@@ -2364,13 +2364,13 @@ print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-  def __init__(self,main = '',**kwargs):
+  def __init__(self,main = ''):
 
     self.main = main
 
 class Sub_one(Main):
   __slots__ = ('sub_one',)
-  def __init__(self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = ''):
 
     self.sub_one = sub_one
 
@@ -2396,13 +2396,13 @@ print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-  def __init__(self,main = '',**kwargs):
+  def __init__(self,main = ''):
 
     self.main = 'Main value'
 
 class Sub_one(Main):
   __slots__ = ('sub_one',)
-  def __init__(self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = ''):
 
     self.sub_one = 'Sub_one value'
 
