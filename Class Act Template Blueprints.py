@@ -1,7 +1,6 @@
 class Main:
   """Class Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -19,7 +18,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -40,7 +38,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('args')
-
   def __init__(self,*args):
 
     self.args = args
@@ -56,7 +53,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -80,7 +76,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -101,7 +96,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -123,7 +117,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwargs',)
-
   def __init__(self,**kwargs):
 
     self.kwargs = kwargs
@@ -143,7 +136,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwargs',)
-
   def __init__(self,**kwargs):
 
     self.kwargs = kwargs
@@ -164,7 +156,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwarg1','kwarg2','kwarg3')
-
   def __init__(
     self,kwarg1 = 'keyword argeument one',
     kwarg2 = 'keyword argeument two',
@@ -185,7 +176,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwarg1','kwarg2','kwarg3')
-
   def __init__(self,kwarg1 = '',kwarg2 = '',kwarg3 = ''):
 
     self.kwarg1 = 'keyword argeument one'
@@ -203,7 +193,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('__dict__',)
-
   def __init__(self,**kwargs):
 
     self.__dict__.update(kwargs)
@@ -224,7 +213,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('args',)
-
   def __init__(self,*args):
 
     self.args = args
@@ -243,7 +231,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwargs',)
-
   def __init__(self,**kwargs):
 
     self.kwargs = kwargs
@@ -262,7 +249,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('attribute1','attribute2')
-
   def __init__(self,attribute1,attribute2):
 
     self.attribute1 = attribute1
@@ -277,7 +263,6 @@ class Superclass1(Main):
 
 class Superclass2(Superclass1):
   __slots__ = ('attribute3','attribute4')
-
   def __init__(
     self,attribute1,attribute2,attribute3,attribute4):
     super().__init__(attribute1,attribute2)
@@ -315,7 +300,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('args',)
-
   def __init__(self,*args):
 
     self.args = args
@@ -364,7 +348,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('kwargs',)
-
   def __init__(self,**kwargs):
 
     self.kwargs = kwargs
@@ -413,7 +396,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('__dict__',)
-
   def __init__(self,**kwargs):
 
     self.__dict__.update(kwargs)
@@ -571,7 +553,6 @@ class Class_all(Main,Sub_one,Sub_two,Sub_three):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -646,7 +627,6 @@ class Class_all(Main,Sub_one,Sub_two,Sub_three):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -720,7 +700,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -790,7 +769,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -860,7 +838,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -936,7 +913,6 @@ class Class_all(Main,Sub_one,Sub_two,Sub_three):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1011,7 +987,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1078,7 +1053,6 @@ class Class_all(Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1147,7 +1121,6 @@ class Class_all(Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(self):
     super().__init__()
 
@@ -1173,7 +1146,6 @@ class Main:
     self.main1 = 'main1'
     self.main2 = 'main2'
     self.main3 = 'main3'
-
 
 class Sub_one:
   """Sub_one"""
@@ -1206,7 +1178,6 @@ class Class_all(Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1275,7 +1246,6 @@ class Class_all(Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(self):
     super().__init__()
 
@@ -1334,7 +1304,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1402,7 +1371,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1471,7 +1439,6 @@ class Class_all(Main,Sub_one,Sub_two,Sub_three):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1540,7 +1507,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
       'sub_one1','sub_one2','sub_one3',
       'sub_two1','sub_two2','sub_two3',
       'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -1686,7 +1652,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -1704,7 +1669,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self):
 
     self.arg1 = 'arg1'
@@ -1722,7 +1686,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = arg1
@@ -1743,7 +1706,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self):
     self.arg1 = 'arg1'
     self.arg2 = 'arg2'
@@ -1763,7 +1725,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg1,arg2,arg3):
 
     self.arg1 = 'arg1'
@@ -1787,7 +1748,6 @@ print(getattr(Main,'__doc__'))
 class Main:
   """Main"""
   __slots__ = ('arg1','arg2','arg3')
-
   def __init__(self,arg3):
 
     self.arg1 = 'arg1'
@@ -1842,7 +1802,6 @@ class Class_all(Main):
   __slots__ = (
     'arg1','arg2','arg3','arg4','arg5','arg6',
     'arg7','arg8','arg9','arg10','arg11','arg12')
-
   def __init__(
     self,arg1,arg2,arg3,arg4,arg5,arg6,
     arg7,arg8,arg9,arg10,arg11,arg12):
@@ -1897,7 +1856,6 @@ class Sub_three(Sub_two):
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
   __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
-
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
     Main.__init__(self,arg1,arg2)
@@ -1950,7 +1908,6 @@ class Sub_three:
 class Class_all(Main):
   """Class_all"""
   __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
-
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
     Main.__init__(self)
@@ -2005,7 +1962,6 @@ class Sub_three(Sub_two):
 class Class_all(Sub_three,Sub_two,Sub_one,Main):
   """Class_all"""
   __slots__ = ('arg1','arg2','arg3','arg4','arg5','arg6','arg7','arg8')
-
   def __init__(self,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8):
 
     Main.__init__(self)
@@ -2068,7 +2024,6 @@ class Class_all(Main):
     'sub_one_explicit_value_1','sub_one_explicit_value_2','sub_one_explicit_value_3'
     'sub_two_explicit_value_1','sub_two_explicit_value_2','sub_two_explicit_value_3',
     'sub_three_explicit_value_1','sub_three_explicit_value_2','sub_three_explicit_value_3')
-
   def __init__(
     self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
     sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3,
@@ -2135,7 +2090,6 @@ class Class_all(Sub_three,Sub_two,Sub_one,Main):
     'sub_one_explicit_value_1','sub_one_explicit_value_2','sub_one_explicit_value_3'
     'sub_two_explicit_value_1','sub_two_explicit_value_2','sub_two_explicit_value_3',
     'sub_three_explicit_value_1','sub_three_explicit_value_2','sub_three_explicit_value_3')
-
   def __init__(
     self,main_explicit_value_1,main_explicit_value_2,main_explicit_value_3,
     sub_one_explicit_value_1,sub_one_explicit_value_2,sub_one_explicit_value_3,
@@ -2202,7 +2156,6 @@ class Class_all(Main):
     'sub_one1','sub_one2','sub_one3',
     'sub_two1','sub_two2','sub_two3',
     'sub_three1','sub_three2','sub_three3')
-
   def __init__(
     self,main1,main2,main3,
     sub_one1,sub_one2,sub_one3,
@@ -2379,22 +2332,18 @@ print(getattr(Class_all,'__doc__'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-
-  def __init__(
-    self,main = '',**kwargs):
+  def __init__(self,main = '',**kwargs):
 
     self.main = main
 
 class Sub_one:
   __slots__ = ('sub_one',)
-  def __init__(
-    self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = '',**kwargs):
 
     self.sub_one = sub_one
 
 class Class_all(Main):
   __slots__ = ('main','sub_one')
-
   def __init__(self,main,sub_one):    
     
     Main.__init__(self,main = main)
@@ -2415,22 +2364,18 @@ print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-
-  def __init__(
-    self,main = '',**kwargs):
+  def __init__(self,main = '',**kwargs):
 
     self.main = main
 
 class Sub_one(Main):
   __slots__ = ('sub_one',)
-  def __init__(
-    self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = '',**kwargs):
 
     self.sub_one = sub_one
 
 class Class_all(Sub_one,Main):
   __slots__ = ('main','sub_one')
-
   def __init__(self,main,sub_one):
     
     Sub_one.__init__(self,sub_one = sub_one)
@@ -2451,24 +2396,20 @@ print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 class Main:
   """Class Main"""
   __slots__ = ('main',)
-
-  def __init__(
-    self,main = '',**kwargs):
+  def __init__(self,main = '',**kwargs):
 
     self.main = main
     super().__init__(**kwargs)
 
 class Sub_one(Main):
   __slots__ = ('sub_one',)
-  def __init__(
-    self,sub_one = '',**kwargs):
+  def __init__(self,sub_one = '',**kwargs):
 
     self.sub_one = sub_one
     super().__init__(**kwargs)
 
 class Class_all(Sub_one,Main):
   __slots__ = ('main','sub_one')
-
   def __init__(self,main,sub_one):
     super().__init__(main = main,sub_one = sub_one)
 
