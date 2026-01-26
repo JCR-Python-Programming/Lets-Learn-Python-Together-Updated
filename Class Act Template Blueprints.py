@@ -2234,14 +2234,14 @@ print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Computer:
   """Computer"""
-  __slots__ = ('computer')
+  __slots__ = ('computer',)
   def __init__(self,computer):
 
     self.computer = computer
 
 class Science(Computer):
   """Science"""
-  __slots__ = ('science')
+  __slots__ = ('science',)
   def __init__(self,science):
 
     self.science = science
@@ -2257,7 +2257,7 @@ class Class_all(Science,Computer):
 try:
   Computer('').compter
   Science('').science
-  Class_all('').science
+  Class_all('').compter
 except AttributeError:pass
 
 print(getattr(Computer('Computer'),'computer'))
@@ -2270,14 +2270,14 @@ print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Computer:
   """Computer"""
-  __slots__ = ('computer')
+  __slots__ = ('computer',)
   def __init__(self,computer):
 
     self.computer = 'Computer'
 
 class Science(Computer):
   """Science"""
-  __slots__ = ('science')
+  __slots__ = ('science',)
   def __init__(self,science):
 
     self.science = 'Science'
@@ -2293,7 +2293,7 @@ class Class_all(Science,Computer):
 try:
   Computer('').compter
   Science('').science
-  Class_all('').science
+  Class_all('').compter
 except AttributeError:pass
 
 print(getattr(Computer(''),'computer'))
@@ -2306,14 +2306,14 @@ print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Computer:
   """Computer"""
-  __slots__ = ('computer')
+  __slots__ = ('computer',)
   def __init__(self,computer):
 
     self.computer = 'Computer'
 
 class Science(Computer):
   """Science"""
-  __slots__ = ('science')
+  __slots__ = ('science',)
   def __init__(self,science):
 
     self.science = science
@@ -2329,7 +2329,7 @@ class Class_all(Science,Computer):
 try:
   Computer('').compter
   Science('').science
-  Class_all('').science
+  Class_all('').compter
 except AttributeError:pass
 
 print(getattr(Computer(''),'computer'))
@@ -2342,14 +2342,14 @@ print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Computer:
   """Computer"""
-  __slots__ = ('computer')
+  __slots__ = ('computer',)
   def __init__(self,computer):
 
     self.computer = computer
 
 class Science(Computer):
   """Science"""
-  __slots__ = ('science')
+  __slots__ = ('science',)
   def __init__(self,science):
 
     self.science = 'Science'
@@ -2365,7 +2365,7 @@ class Class_all(Science,Computer):
 try:
   Computer('').compter
   Science('').science
-  Class_all('').science
+  Class_all('').compter
 except AttributeError:pass
 
 print(getattr(Computer('Computer'),'computer'))
@@ -2375,6 +2375,42 @@ print(getattr(Class_all('Computer',''),'computer'))
 print(getattr(Class_all('Computer',''),'science'))
 
 print(getattr(Class_all,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Class Main"""
+  __slots__ = ('main',)
+
+  def __init__(
+    self,main = '',**kwargs):
+
+    self.main = main
+
+class Sub_one:
+  __slots__ = ('sub_one',)
+  def __init__(
+    self,sub_one = '',**kwargs):
+
+    self.sub_one = sub_one
+
+class Class_all(Main):
+  __slots__ = ('main','sub_one')
+
+  def __init__(self,main,sub_one):    
+    
+    Main.__init__(self,main = main)
+    Sub_one.__init__(self,sub_one = sub_one)
+
+try:
+  Main('').main
+  Sub_one('').sub_one
+  Class_all('','').main
+except AttributeError:pass
+
+print(getattr(Main('Main value'),'main'))
+print(getattr(Sub_one('Sub_one value'),'sub_one'))
+
+print(getattr(Class_all('Main value','Sub_one'),'main'))
+print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Class Main"""
@@ -2406,8 +2442,10 @@ try:
   Class_all('','').main
 except AttributeError:pass
 
-print(getattr(Class_all('Main value','Sub_one'),'main'))
+print(getattr(Main('Main value'),'main'))
+print(getattr(Sub_one('Sub_one value'),'sub_one'))
 
+print(getattr(Class_all('Main value','Sub_one'),'main'))
 print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -2440,6 +2478,8 @@ try:
   Class_all('','').main
 except AttributeError:pass
 
-print(getattr(Class_all('Main value','Sub_one'),'main'))
+print(getattr(Main('Main value'),'main'))
+print(getattr(Sub_one('Sub_one value'),'sub_one'))
 
+print(getattr(Class_all('Main value','Sub_one'),'main'))
 print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
