@@ -2337,12 +2337,14 @@ class Main:
     self.main = main
 
 class Sub_one:
+  """Sub_one"""
   __slots__ = ('sub_one',)
   def __init__(self,sub_one = ''):
 
     self.sub_one = sub_one
 
 class Class_all(Main):
+  """Class_all"""
   __slots__ = ('main','sub_one')
   def __init__(self,main,sub_one):
 
@@ -2361,7 +2363,7 @@ print(getattr(Sub_one('Sub_one value'),'sub_one'))
 print(getattr(Class_all('Main value','Sub_one'),'main'))
 print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2371,12 +2373,14 @@ class Main:
     self.main = main
 
 class Sub_one(Main):
+  """Sub_one"""
   __slots__ = ('sub_one',)
   def __init__(self,sub_one = ''):
 
     self.sub_one = sub_one
 
 class Class_all(Sub_one,Main):
+  """Class_all"""
   __slots__ = ('main','sub_one')
   def __init__(self,main,sub_one):
 
@@ -2395,7 +2399,7 @@ print(getattr(Sub_one('Sub_one value'),'sub_one'))
 print(getattr(Class_all('Main value','Sub_one'),'main'))
 print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2405,12 +2409,14 @@ class Main:
     self.main = 'Main value'
 
 class Sub_one(Main):
+  """Sub_one"""
   __slots__ = ('sub_one',)
   def __init__(self,sub_one = ''):
 
     self.sub_one = 'Sub_one value'
 
 class Class_all(Sub_one,Main):
+  """Class_all"""
   __slots__ = ('main','sub_one')
   def __init__(self,main,sub_one):
 
@@ -2429,7 +2435,7 @@ print(getattr(Sub_one(''),'sub_one'))
 print(getattr(Class_all('',''),'main'))
 print(getattr(Class_all('',''),'sub_one'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2440,6 +2446,7 @@ class Main:
     super().__init__(**kwargs)
 
 class Sub_one(Main):
+  """Sub_one"""
   __slots__ = ('sub_one',)
   def __init__(self,sub_one = '',**kwargs):
 
@@ -2447,6 +2454,7 @@ class Sub_one(Main):
     super().__init__(**kwargs)
 
 class Class_all(Sub_one,Main):
+  """Class_all"""
   __slots__ = ('main','sub_one')
   def __init__(self,main,sub_one):
     super().__init__(main = main,sub_one = sub_one)
@@ -2463,7 +2471,7 @@ print(getattr(Sub_one('Sub_one value'),'sub_one'))
 print(getattr(Class_all('Main value','Sub_one'),'main'))
 print(getattr(Class_all('Main','Sub_one value'),'sub_one'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2474,6 +2482,7 @@ class Main:
     super().__init__(**kwargs)
 
 class Sub_one(Main):
+  """Sub_one"""
   __slots__ = ('sub_one',)
   def __init__(self,sub_one = '',**kwargs):
 
@@ -2481,6 +2490,7 @@ class Sub_one(Main):
     super().__init__(**kwargs)
 
 class Class_all(Sub_one,Main):
+  """Class_all"""
   __slots__ = ('main','sub_one')
   def __init__(self,main,sub_one):
     super().__init__(main = main,sub_one = sub_one)
@@ -2497,7 +2507,7 @@ print(getattr(Sub_one(''),'sub_one'))
 print(getattr(Class_all('',''),'main'))
 print(getattr(Class_all('',''),'sub_one'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2509,6 +2519,7 @@ class Main:
     self.main3 = main3
 
 class Sub_one:
+  """Sub_one"""
   __slots__ = ('sub_one1','sub_one2','sub_one3')
   def __init__(self,sub_one1 = '',sub_one2 = '',sub_one3 = ''):
 
@@ -2517,6 +2528,7 @@ class Sub_one:
     self.sub_one3 = sub_one3
 
 class Class_all(Main):
+  """Class_all"""
   __slots__ = ('main1','main2','main3','sub_one1','sub_one2','sub_one3')
   def __init__(
     self,main1,main2,main3,
@@ -2541,7 +2553,7 @@ print(getattr(Class_all(
   'main1 value','main2 value','main3 value',
   'sub_one1 value','sub_one2 value','sub_one3 value'),'sub_one1'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
   """Main"""
@@ -2553,6 +2565,7 @@ class Main:
     self.main3 = 'main3 value'
 
 class Sub_one:
+  """Sub_one"""
   __slots__ = ('sub_one1','sub_one2','sub_one3')
   def __init__(self):
 
@@ -2561,6 +2574,7 @@ class Sub_one:
     self.sub_one3 = 'sub_one3 value'
 
 class Class_all(Main):
+  """Class_all"""
   __slots__ = (
     'main1','main2','main3',
     'sub_one1','sub_one2','sub_one3')
@@ -2581,12 +2595,13 @@ print(getattr(Sub_one(),'sub_one1'))
 print(getattr(Class_all(),'main1'))
 print(getattr(Class_all(),'sub_one1'))
 
-print(getattr(Main,'__doc__'))
+print(getattr(Class_all,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 first = 'John'
 last = 'Smith'
 
 class Name:
+  """Name"""
   def __init__(self,first,last):
 
     self.first = first
@@ -2596,11 +2611,36 @@ class Name:
     return first,last
 
 print(Name.return_name()[0])
+
+print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 first = 'John'
 last = 'Smith'
 
 class Name:
+  """Name"""
+  __slots__ = ('first','last')
+  def __init__(self,first,last):
+
+    self.first = first
+    self.last = last
+
+  def return_name():
+    return first,last
+
+try:
+  Name('','').return_name
+except AttributeError:pass
+
+print(getattr(Name(first,last),'first'))
+
+print(getattr(Name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+first = 'John'
+last = 'Smith'
+
+class Name:
+  """Name"""
   def __init__(self,first,last):
 
     self.first = first
@@ -2610,16 +2650,45 @@ class Name:
     return self.first,self.last
 
 print(Name(first,last).return_name()[0])
+
+print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-var = 'Non Dedicated Variable'
+first = 'John'
+last = 'Smith'
+
+class Name:  
+  """Name"""
+  __slots__ = ('first','last')
+  def __init__(self,first,last):
+
+    self.first = first
+    self.last = last
+
+  def return_name(self):
+    return self.first,self.last
+
+try:
+  Name('','').return_name
+except AttributeError:pass
+
+print(getattr(Name(first,last),'first'))
+
+print(getattr(Name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+global_var = 'Non Dedicated Variable'
 
 class Dedicated_var:
+  """Dedicated_var"""
   def dedicated_var():
-    global var
-    var = 'Dedicated Variable'
+    global global_var
 
-print(var)
+    global_var = 'Dedicated Variable'
+
+print(global_var)
 
 Dedicated_var.dedicated_var()
 
-print(var)
+print(global_var)
+
+print(getattr(Dedicated_var,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
