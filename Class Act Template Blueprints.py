@@ -2592,10 +2592,10 @@ class Name:
     self.first = first
     self.last = last
 
-  def test():
+  def return_name():
     return first,last
 
-print(Name.test()[0])
+print(Name.return_name()[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 first = 'John'
 last = 'Smith'
@@ -2606,7 +2606,20 @@ class Name:
     self.first = first
     self.last = last
 
-  def test(self):
+  def return_name(self):
     return self.first,self.last
 
-print(Name(first,last).test()[0])
+print(Name(first,last).return_name()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+var = 'Non Dedicated Variable'
+
+class Dedicated_var:
+  def dedicated_var():
+    global var
+    var = 'Dedicated Variable'
+
+print(var)
+
+Dedicated_var.dedicated_var()
+
+print(var)
