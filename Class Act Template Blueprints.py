@@ -2582,3 +2582,31 @@ print(getattr(Class_all(),'main1'))
 print(getattr(Class_all(),'sub_one1'))
 
 print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+first = 'John'
+last = 'Smith'
+
+class Name:
+  def __init__(self,first,last):
+
+    self.first = first
+    self.last = last
+
+  def test():
+    return first,last
+
+print(Name.test()[0])
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+first = 'John'
+last = 'Smith'
+
+class Name:
+  def __init__(self,first,last):
+
+    self.first = first
+    self.last = last
+
+  def test(self):
+    return self.first,self.last
+
+print(Name(first,last).test()[0])
