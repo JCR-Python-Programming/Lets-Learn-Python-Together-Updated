@@ -58,22 +58,22 @@ sides = [
 
 class Polygons:
   def __init__(self,polygon,sides,colour):
-    
+
     self.polygon = polygon
     self.sides = sides
     self.colour = colour
 
-  def return_self(self):
+  def return_self():
     return polygons[0],sides[0],colour_name[0]
 
   def class_data(self):
-    print(self.colour,self.polygon,'has',self.sides)  
+    print(self.colour,self.polygon,'has',self.sides)
 
 for i in range(18):
   Polygons(polygons[i],sides[i],colour_name[0]).class_data()
 
-print(Polygons.return_self('Agument Placeholder Value')[2])
+print(Polygons.return_self()[2])
 
-print(Polygons.return_self('Agument Placeholder Value')[0])
+print(Polygons.return_self()[0])
 
-print(Polygons.return_self('Agument Placeholder Value')[1])
+print(Polygons.return_self()[1])
