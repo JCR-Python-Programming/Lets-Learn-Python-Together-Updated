@@ -2675,6 +2675,46 @@ print(getattr(Name(first,last),'first'))
 
 print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Name:
+  def __init__(self,first,last):
+    self._first = first
+    self._last = last
+
+  @property
+  def first(self):
+    return self._first
+
+  @first.setter
+  def first(self,first):
+    self._first = first
+
+  @first.deleter
+  def first(self):
+    del self._first
+    print('first name is deleted:')
+
+  @property
+  def last(self):
+    return self._last
+
+  @last.setter
+  def last(self,last):
+    self._last = last
+
+  @last.deleter
+  def last(self):
+    del self._last
+    print('last name is deleted:')
+
+name = Name('Jane','Doe')
+name.first = 'John'
+name.last = 'Smith'
+
+print(name.first,name.last)
+
+del Name('','').first
+del Name('','').last
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 global_var = 'Non Dedicated Variable'
 
 class Dedicated_var:
