@@ -2602,6 +2602,7 @@ last = 'Smith'
 
 class Name:
   """Name"""
+  __slots__ = ('first','last')
   def __init__(self,first,last):
 
     self.first = first
@@ -2610,7 +2611,11 @@ class Name:
   def return_name():
     return first,last
 
-print(Name.return_name()[0])
+try:
+  Name('','').first
+except AttributeError:pass
+
+print(getattr(Name(first,last),'last'))
 
 print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2629,7 +2634,7 @@ class Name:
     return first,last
 
 try:
-  Name('','').return_name
+  Name('','').first
 except AttributeError:pass
 
 print(getattr(Name(first,last),'first'))
@@ -2641,6 +2646,7 @@ last = 'Smith'
 
 class Name:
   """Name"""
+  __slots__ = ('first','last')
   def __init__(self,first,last):
 
     self.first = first
@@ -2648,6 +2654,10 @@ class Name:
 
   def return_name(self):
     return self.first,self.last
+
+try:
+  Name('','').first
+except AttributeError:pass
 
 print(Name(first,last).return_name()[0])
 
@@ -2656,7 +2666,7 @@ print(getattr(Name,'__doc__'))
 first = 'John'
 last = 'Smith'
 
-class Name:  
+class Name:
   """Name"""
   __slots__ = ('first','last')
   def __init__(self,first,last):
@@ -2676,6 +2686,8 @@ print(getattr(Name(first,last),'first'))
 print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Name:
+  """Name"""
+  __slots__ = ('_first','_last')
   def __init__(self,first,last):
     self._first = first
     self._last = last
@@ -2684,22 +2696,27 @@ class Name:
   def first(self):
     return self._first
 
+  @property
+  def last(self):
+    return self._last
+
   @first.setter
   def first(self,first):
     self._first = first
+
+  @last.setter
+  def last(self,last):
+    self._last = last
+
+  def __repr__(self):
+    full_name1 = str(self.first),str(self.last)
+    full_name2 = str(self.first)+str(self.last)
+    return str(len(full_name2))
 
   @first.deleter
   def first(self):
     del self._first
     print('first name is deleted:')
-
-  @property
-  def last(self):
-    return self._last
-
-  @last.setter
-  def last(self,last):
-    self._last = last
 
   @last.deleter
   def last(self):
@@ -2710,7 +2727,15 @@ name = Name('Jane','Doe')
 name.first = 'John'
 name.last = 'Smith'
 
-print(name.first,name.last)
+try:
+  Name('','').first
+except AttributeError:pass
+
+print(getattr(name,'first'),getattr(name,'last'))
+
+print(getattr(Name,'__doc__'))
+
+print(name)
 
 del Name('','').first
 del Name('','').last
