@@ -2659,9 +2659,9 @@ try:
   Name('','').first
 except AttributeError:pass
 
-print(Name(first,last).return_name()[0])
+print(getattr(Name(first,last),'first'))
 
-print(getattr(Name,'__doc__'))
+print(getattr(Name,'__doc__'));input()
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 first = 'John'
 last = 'Smith'
