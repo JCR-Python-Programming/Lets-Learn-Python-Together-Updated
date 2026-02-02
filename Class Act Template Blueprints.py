@@ -2608,77 +2608,8 @@ class Name:
     self.first = first
     self.last = last
 
-  def return_name():
-    return first,last
-
 try:
   Name('','').first
-except AttributeError:pass
-
-print(getattr(Name(first,last),'last'))
-
-print(getattr(Name,'__doc__'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-first = 'John'
-last = 'Smith'
-
-class Name:
-  """Name"""
-  __slots__ = ('first','last')
-  def __init__(self,first,last):
-
-    self.first = first
-    self.last = last
-
-  def return_name():
-    return first,last
-
-try:
-  Name('','').first
-except AttributeError:pass
-
-print(getattr(Name(first,last),'first'))
-
-print(getattr(Name,'__doc__'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-first = 'John'
-last = 'Smith'
-
-class Name:
-  """Name"""
-  __slots__ = ('first','last')
-  def __init__(self,first,last):
-
-    self.first = first
-    self.last = last
-
-  def return_name(self):
-    return self.first,self.last
-
-try:
-  Name('','').first
-except AttributeError:pass
-
-print(getattr(Name(first,last),'first'))
-
-print(getattr(Name,'__doc__'));input()
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-first = 'John'
-last = 'Smith'
-
-class Name:
-  """Name"""
-  __slots__ = ('first','last')
-  def __init__(self,first,last):
-
-    self.first = first
-    self.last = last
-
-  def return_name(self):
-    return self.first,self.last
-
-try:
-  Name('','').return_name
 except AttributeError:pass
 
 print(getattr(Name(first,last),'first'))
@@ -2740,6 +2671,89 @@ print(name)
 del Name('','').first
 del Name('','').last
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+RGB = (
+  '\033[38;2;255;0;0m',  # index 0 = red
+  '\033[38;2;255;255;0m',  # index 1 = yellow
+  '\033[38;2;0;0;255m',  # index 2 = blue
+  '\033[38;2;0;255;0m',  # index 3 = green
+  '\033[38;2;255;0;255m',  # index 4 = pink
+  '\033[38;2;0;255;255m',  # index 5 = cyan
+  '\033[38;2;255;255;255m')  # index 6 = white
+
+colour_name = (
+  RGB[0]+'A red',  # index 0 = colour name red
+  RGB[1]+'A yellow',  # index 1 = colour name yellow
+  RGB[2]+'A blue',  # index 2 = colour name blue
+  RGB[3]+'A green',  # index 3 = colour name green
+  RGB[4]+'A pink',  # index 4 = colour name pink
+  RGB[5]+'A cyan',  # index 5 = colour name cyan
+  RGB[6]+'A white')  # index 6 = colour name white
+
+polygons = (
+  'Triangle',  # index[0]
+  'Square',  # index[1]
+  'Pentagon',  # index[2]
+  'Hexagon',  # index[3]
+  'Heptagon',  # index[4]
+  'Octagon',  # index[5]
+  'Nonagon',  # index[6]
+  'Decagon',  # index[7]
+  'Hendecagon',  # index[8]
+  'Dodecagon',  # index[9]
+  'Tridecagon',  # index[10]
+  'Tetradecagon',  # index[11]
+  'Pentadecagon',  # index[12]
+  'Hexadecagon',  # index[13]
+  'Heptadecagon',  # index[14]
+  'Octadecagon',  # index[15]
+  'Enneadecagon',  # index[16]
+  'Icosagon')  # index[17]
+
+sides = (
+  'has three equal sides.',  # index[0]
+  'has four equal sides.',  # index[1]
+  'has five equal sides.',  # index[2]
+  'has six equal sides.',  # index[3]
+  'has seven equal sides.',  # index[4]
+  'has eight equal sides.',  # index[5]
+  'has nine equal sides.',  # index[6]
+  'has ten equal sides.',  # index[7]
+  'has eleven equal sides.',  # index[8]
+  'has twelve equal sides.',  # index[9]
+  'has thirteen equal sides.',  # index[10]
+  'has fourteen equal sides.',  # index[11]
+  'has fifteen equal sides.',  # index[12]
+  'has sixteen equal sides.',  # index[13]
+  'has seventeen equal sides.',  # index[14]
+  'has eighteen equal sides.',  # index[15]
+  'has nineteen equal sides.',  # index[16]
+  'has twenty equal sides.')  # index[17]
+
+class Polygons:
+  """Polygons"""
+  __slots__ = ('_colour','_polygon','_sides')
+  def __init__(self,colour,polygon,sides):
+
+    self._colour = colour
+    self._polygon = polygon
+    self._sides = sides
+
+  @property
+  def class_data(self):
+    print(self._colour,self._polygon,self._sides)
+
+try:
+  Polygons('','','')._colour
+  Polygons('','','')._polygon
+  Polygons('','','')._sides
+except AttributeError:pass
+
+for i in range(18):
+  print(
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_colour'),
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_polygon'),
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_sides'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 global_var = 'Non Dedicated Variable'
 
 class Dedicated_var:
@@ -2756,4 +2770,3 @@ Dedicated_var.dedicated_var()
 print(global_var)
 
 print(getattr(Dedicated_var,'__doc__'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
