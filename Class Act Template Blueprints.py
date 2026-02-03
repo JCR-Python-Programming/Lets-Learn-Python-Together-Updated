@@ -2738,10 +2738,6 @@ class Polygons:
     self._polygon = polygon
     self._sides = sides
 
-  @property
-  def class_data(self):
-    print(self._colour,self._polygon,self._sides)
-
 try:
   Polygons('','','')._colour
   Polygons('','','')._polygon
