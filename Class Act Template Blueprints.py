@@ -2738,6 +2738,11 @@ class Polygons:
     self._polygon = polygon
     self._sides = sides
 
+
+  @property
+  def class_data(self):
+    print(self._colour,self._polygon,self._sides)
+
 try:
   Polygons('','','')._colour
   Polygons('','','')._polygon
@@ -2749,6 +2754,9 @@ for i in range(18):
     getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_colour'),
     getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_polygon'),
     getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_sides'))
+
+for i in range(18):
+  getattr(Polygons(colour_name[0],polygons[i],sides[i]),'class_data')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 global_var = 'Non Dedicated Variable'
 
