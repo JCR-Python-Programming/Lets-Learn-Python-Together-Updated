@@ -2738,11 +2738,9 @@ class Polygons:
     self._polygon = polygon
     self._sides = sides
 
-
   @property
   def class_data(self):
     print(self._colour,self._polygon,self._sides)
-
  
   @property
   def return_data(self):
