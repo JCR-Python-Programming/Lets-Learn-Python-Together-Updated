@@ -2602,74 +2602,26 @@ last = 'Smith'
 
 class Name:
   """Name"""
-  __slots__ = ('first','last')
-  def __init__(self,first,last):
-
-    self.first = first
-    self.last = last
-
-try:
-  Name('','').first
-except AttributeError:pass
-
-print(getattr(Name(first,last),'first'))
-
-print(getattr(Name,'__doc__'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class Name:
-  """Name"""
   __slots__ = ('_first','_last')
   def __init__(self,first,last):
+
     self._first = first
     self._last = last
 
   @property
-  def first(self):
-    return self._first
-
-  @property
-  def last(self):
-    return self._last
-
-  @first.setter
-  def first(self,first):
-    self._first = first
-
-  @last.setter
-  def last(self,last):
-    self._last = last
-
-  def __repr__(self):
-    full_name1 = str(self.first),str(self.last)
-    full_name2 = str(self.first)+str(self.last)
-    return str(len(full_name2))
-
-  @first.deleter
-  def first(self):
-    del self._first
-    print('first name is deleted:')
-
-  @last.deleter
-  def last(self):
-    del self._last
-    print('last name is deleted:')
-
-name = Name('Jane','Doe')
-name.first = 'John'
-name.last = 'Smith'
+  def return_data(self):
+    return self._first,self._last
 
 try:
-  Name('','').first
+  Name('','')._first
+  Name('','')._last
 except AttributeError:pass
 
-print(getattr(name,'first'),getattr(name,'last'))
+print(getattr(Name(first,last),'_first'))
 
 print(getattr(Name,'__doc__'))
 
-print(name)
-
-del Name('','').first
-del Name('','').last
+print(getattr(Name(first,last),'return_data')[0])
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 RGB = (
   '\033[38;2;255;0;0m',  # index 0 = red
