@@ -2595,7 +2595,7 @@ print(getattr(Sub_one(),'sub_one1'))
 print(getattr(Class_all(),'main1'))
 print(getattr(Class_all(),'sub_one1'))
 
-print(getattr(Class_all,'__doc__'))
+print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 first = 'John'
 last = 'Smith'
@@ -2622,6 +2622,40 @@ print(getattr(Name(first,last),'_first'))
 print(getattr(Name,'__doc__'))
 
 print(getattr(Name(first,last),'return_data')[0])
+
+print(getattr(Name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+first = 'John'
+last = 'Smith'
+
+class Name:
+  """Name"""
+  __slots__ = ('_first','_last')
+  def __init__(self,first,last):
+
+    self._first = first
+    self._last = last
+
+  @property
+  def class_data(self):
+    print(self._first,self._last)
+
+  @property
+  def return_data(self):
+    return self._first,self._last
+
+try:
+  Name('','')._first
+  Name('','')._last
+except AttributeError:pass
+
+print(getattr(Name(first,last),'_first'))
+
+getattr(Name(first,last),'class_data')
+
+print(getattr(Name(first,last),'return_data')[0])
+
+print(getattr(Name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 RGB = (
   '\033[38;2;255;0;0m',  # index 0 = red
@@ -2693,7 +2727,7 @@ class Polygons:
   @property
   def class_data(self):
     print(self._colour,self._polygon,self._sides)
- 
+
   @property
   def return_data(self):
     return self._colour,self._polygon,self._sides
@@ -2718,6 +2752,8 @@ for i in range(18):
     getattr(Polygons(colour_name[2],polygons[i],sides[i]),'return_data')[0],
     getattr(Polygons(colour_name[0],polygons[i],sides[i]),'return_data')[1],
     getattr(Polygons(colour_name[0],polygons[i],sides[i]),'return_data')[2])
+
+print(getattr(Polygons,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 global_var = 'Non Dedicated Variable'
 
