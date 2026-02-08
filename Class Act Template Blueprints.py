@@ -2755,6 +2755,104 @@ for i in range(18):
 
 print(getattr(Polygons,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+frist_name = 'What is your first name?: '
+last_name = 'What is your last name?: '
+age = 'What is your age?: '
+error = 'Numbers only please:'
+correct_number = 'What is your age?: '
+
+class User_name:
+  """Class Main"""
+  __slots__ = ('user_first','user_last','user_age')
+
+  def __init__(self,user_first,user_last,user_age):
+
+    self.user_first = user_first
+    self.user_last = user_last
+    self.user_age = user_age
+
+try:
+  User_name('','','').user_first
+  User_name('','','').user_last
+  User_name('','','').user_age
+except AttributeError:pass
+
+user_first = input(frist_name).title().strip()
+user_last = input(last_name).title().strip()
+
+while True:
+  try:
+    user_age = int(input(age).strip())
+    break
+  except ValueError:print(error)
+
+if user_age >= 19:
+  print('Nice to meet you:',getattr(User_name(user_first,user_last,user_age),'user_first'),
+  getattr(User_name(user_first,user_last,user_age),'user_last')+'. You are old enough to PARTY!')
+else:
+  print('Nice to meet you:',getattr(User_name(user_first,user_last,user_age),'user_first'),
+  getattr(User_name(user_first,user_last,user_age),'user_last')+'. You not are old enough to PARTY!')
+
+for i in User_name. __slots__:
+  print(getattr(User_name(user_first,user_last,user_age),i))
+
+print(getattr(User_name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class User_name:
+  """Class Main"""
+  __slots__ = ('slot1','slot2','slot3')
+
+  def __init__(self,slot1,slot2,slot3):
+
+    self.slot1 = slot1
+    self.slot2 = slot2
+    self.slot3 = slot3
+
+try:
+  User_name('','','').slot1
+  User_name('','','').slot2
+  User_name('','','').slot3
+except AttributeError:pass
+
+for i in User_name.__slots__:
+  print(getattr(User_name('slot1','slot2','slot3'),i))
+
+for i in User_name.__slots__:
+  print(User_name(i,i,i).slot1)
+
+print(getattr(User_name('slot1','slot2','slot3'),'slot1'))
+
+print(User_name('slot1','slot2','slot3').slot1)
+
+print(getattr(User_name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class User_name:
+  """Class Main"""
+  __slots__ = ('slot1','slot2','slot3')
+
+  def __init__(self):
+
+    self.slot1 = 'implicit slot1'
+    self.slot2 = 'implicit slot2'
+    self.slot3 = 'implicit slot3'
+
+try:
+  User_name().slot1
+  User_name().slot2
+  User_name().slot3
+except AttributeError:pass
+
+for i in User_name.__slots__:
+  print(getattr(User_name(),i))
+
+for i in User_name.__slots__:print(i)
+
+print(getattr(User_name(),'slot1'))
+
+print(User_name().slot1)
+
+print(getattr(User_name,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 global_var = 'Non Dedicated Variable'
 
 class Dedicated_var:
