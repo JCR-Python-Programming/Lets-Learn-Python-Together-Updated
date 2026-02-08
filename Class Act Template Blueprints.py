@@ -2814,16 +2814,14 @@ try:
   User_name('','','').slot3
 except AttributeError:pass
 
-for i in User_name.__slots__:
-  print(getattr(User_name('slot1','slot2','slot3'),i))
+for i in User_name.__slots__:print(getattr(i,i,i))
 
-for i in User_name.__slots__:
-  print(User_name(i,i,i).slot1)
+for i in User_name.__slots__:print(i)
 
-print(getattr(User_name('slot1','slot2','slot3'),'slot1'))
+print(getattr(User_name('Explicit slot1','Explicit slot2','Explicit slot3'),'slot1'))
 
-print(User_name('slot1','slot2','slot3').slot1)
-
+print(User_name('Explicit slot1','Explicit slot2','Explicit slot3').slot1)
+  
 print(getattr(User_name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class User_name:
@@ -2842,8 +2840,7 @@ try:
   User_name().slot3
 except AttributeError:pass
 
-for i in User_name.__slots__:
-  print(getattr(User_name(),i))
+for i in User_name.__slots__:print(getattr(i,i,i))
 
 for i in User_name.__slots__:print(i)
 
