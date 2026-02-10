@@ -2755,6 +2755,121 @@ for i in range(18):
 
 print(getattr(Polygons,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+RGB = (
+  '\033[38;2;255;0;0m',  # index 0 = red
+  '\033[38;2;255;255;0m',  # index 1 = yellow
+  '\033[38;2;0;0;255m',  # index 2 = blue
+  '\033[38;2;0;255;0m',  # index 3 = green
+  '\033[38;2;255;0;255m',  # index 4 = pink
+  '\033[38;2;0;255;255m',  # index 5 = cyan
+  '\033[38;2;255;255;255m')  # index 6 = white
+
+colour_name = (
+  RGB[0]+'A red',  # index 0 = colour name red
+  RGB[1]+'A yellow',  # index 1 = colour name yellow
+  RGB[2]+'A blue',  # index 2 = colour name blue
+  RGB[3]+'A green',  # index 3 = colour name green
+  RGB[4]+'A pink',  # index 4 = colour name pink
+  RGB[5]+'A cyan',  # index 5 = colour name cyan
+  RGB[6]+'A white')  # index 6 = colour name white
+
+polygons = (
+  'Triangle',  # index[0]
+  'Square',  # index[1]
+  'Pentagon',  # index[2]
+  'Hexagon',  # index[3]
+  'Heptagon',  # index[4]
+  'Octagon',  # index[5]
+  'Nonagon',  # index[6]
+  'Decagon',  # index[7]
+  'Hendecagon',  # index[8]
+  'Dodecagon',  # index[9]
+  'Tridecagon',  # index[10]
+  'Tetradecagon',  # index[11]
+  'Pentadecagon',  # index[12]
+  'Hexadecagon',  # index[13]
+  'Heptadecagon',  # index[14]
+  'Octadecagon',  # index[15]
+  'Enneadecagon',  # index[16]
+  'Icosagon')  # index[17]
+
+sides = (
+  'has three equal sides.',  # index[0]
+  'has four equal sides.',  # index[1]
+  'has five equal sides.',  # index[2]
+  'has six equal sides.',  # index[3]
+  'has seven equal sides.',  # index[4]
+  'has eight equal sides.',  # index[5]
+  'has nine equal sides.',  # index[6]
+  'has ten equal sides.',  # index[7]
+  'has eleven equal sides.',  # index[8]
+  'has twelve equal sides.',  # index[9]
+  'has thirteen equal sides.',  # index[10]
+  'has fourteen equal sides.',  # index[11]
+  'has fifteen equal sides.',  # index[12]
+  'has sixteen equal sides.',  # index[13]
+  'has seventeen equal sides.',  # index[14]
+  'has eighteen equal sides.',  # index[15]
+  'has nineteen equal sides.',  # index[16]
+  'has twenty equal sides.')  # index[17]
+
+class Polygons:
+  """Polygons"""
+  __slots__ = ('_colour','_polygon','_sides')
+  def __init__(self,colour,polygon,sides):
+
+    self._colour = colour
+    self._polygon = polygon
+    self._sides = sides
+
+  @property
+  def class_data(self):
+    print(self._colour,self._polygon,self._sides)
+
+  @property
+  def return_data(self):
+    return self._colour,self._polygon,self._sides
+
+  @class_data.setter
+  def class_data(self,new_polygon):
+    self._polygon = new_polygon
+
+  @class_data.deleter
+  def class_data(self):
+    self._polygon = None
+    print('polygon is deleted:')
+
+try:
+  Polygons('','','')._colour
+  Polygons('','','')._polygon
+  Polygons('','','')._sides
+except AttributeError:pass
+
+for i in range(18):
+  print(
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_colour'),
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_polygon'),
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'_sides'))
+
+for i in range(18):
+  getattr(Polygons(colour_name[1],polygons[i],sides[i]),'class_data')
+
+for i in range(18):
+  print(
+    getattr(Polygons(colour_name[2],polygons[i],sides[i]),'return_data')[0],
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'return_data')[1],
+    getattr(Polygons(colour_name[0],polygons[i],sides[i]),'return_data')[2])
+
+shape = Polygons('','','')
+shape._colour = 'A black polka dot'
+shape._polygon = 'Icosikaihenagon has'
+shape._sides = 21
+print(shape._colour,shape._polygon,shape._sides)
+
+del shape.class_data
+
+print(getattr(Polygons,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 frist_name = 'What is your first name?: '
 last_name = 'What is your last name?: '
 age = 'What is your age?: '
@@ -2821,7 +2936,7 @@ for i in User_name.__slots__:print(i)
 print(getattr(User_name('Explicit slot1','Explicit slot2','Explicit slot3'),'slot1'))
 
 print(User_name('Explicit slot1','Explicit slot2','Explicit slot3').slot1)
-  
+
 print(getattr(User_name,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class User_name:
