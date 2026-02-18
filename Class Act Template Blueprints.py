@@ -3020,25 +3020,25 @@ print(attribute_list[0].par1)
 print(attribute_list[0].par2)
 print(attribute_list[0].par3)
 
+print(getattr(attribute_list[0],'par1'))
+print(getattr(attribute_list[0],'par2'))
+print(getattr(attribute_list[0],'par3'))
+
 print('{}'.format(attribute_list[0].par1))
 print('{}'.format(attribute_list[0].par2))
 print('{}'.format(attribute_list[0].par3))
+
+print('{}'.format(getattr(attribute_list[0],'par1')))
+print('{}'.format(getattr(attribute_list[0],'par2')))
+print('{}'.format(getattr(attribute_list[0],'par3')))
 
 print(f'{attribute_list[0].par1}')
 print(f'{attribute_list[0].par2}')
 print(f'{attribute_list[0].par3}')
 
-print(attribute_list[1].par1)
-print(attribute_list[1].par2)
-print(attribute_list[1].par3)
-
-print('{}'.format(attribute_list[1].par1))
-print('{}'.format(attribute_list[1].par2))
-print('{}'.format(attribute_list[1].par3))
-
-print(f'{attribute_list[1].par1}')
-print(f'{attribute_list[1].par2}')
-print(f'{attribute_list[1].par3}')
+print(f"{getattr(attribute_list[0],'par1')}")
+print(f"{getattr(attribute_list[0],'par2')}")
+print(f"{getattr(attribute_list[0],'par3')}")
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3055,25 +3055,25 @@ print(Main().par1[0])
 print(Main().par2[0])
 print(Main().par3[0])
 
+print(getattr(Main(),'par1')[0])
+print(getattr(Main(),'par2')[0])
+print(getattr(Main(),'par3')[0])
+
 print('{}'.format(Main().par1[0]))
 print('{}'.format(Main().par2[0]))
 print('{}'.format(Main().par3[0]))
 
+print('{}'.format(getattr(Main(),'par1')[0]))
+print('{}'.format(getattr(Main(),'par2')[0]))
+print('{}'.format(getattr(Main(),'par3')[0]))
+
 print(f'{Main().par1[0]}')
-print(f'{Main().par2[0]}')
-print(f'{Main().par3[0]}')
+print(f'{Main().par1[0]}')
+print(f'{Main().par1[0]}')
 
-print(Main().par1[1])
-print(Main().par2[1])
-print(Main().par3[1])
-
-print('{}'.format(Main().par1[1]))
-print('{}'.format(Main().par2[1]))
-print('{}'.format(Main().par3[1]))
-
-print(f'{Main().par1[1]}')
-print(f'{Main().par2[1]}')
-print(f'{Main().par3[1]}')
+print(f"{getattr(Main(),'par1')[0]}")
+print(f"{getattr(Main(),'par1')[0]}")
+print(f"{getattr(Main(),'par1')[0]}")
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3098,8 +3098,22 @@ parameters = (
   attribute_list[1].par2,
   attribute_list[1].par3)
 
+parameters = (
+  getattr(attribute_list[0],'par1'),
+  getattr(attribute_list[0],'par2'),
+  getattr(attribute_list[0],'par3'),
+  getattr(attribute_list[1],'par1'),
+  getattr(attribute_list[1],'par2'),
+  getattr(attribute_list[1],'par3'))
+
 for i in parameters:
   print(i)
+
+for i in parameters:
+  print(f'{i}')
+
+for i in parameters:
+  print('{}'.format(i))
 
 parameters = (
   '{}'.format(attribute_list[0].par1),
@@ -3109,8 +3123,22 @@ parameters = (
   '{}'.format(attribute_list[1].par2),
   '{}'.format(attribute_list[1].par3))
 
+parameters = (
+  '{}'.format(getattr(attribute_list[0],'par1')),
+  '{}'.format(getattr(attribute_list[0],'par2')),
+  '{}'.format(getattr(attribute_list[0],'par3')),
+  '{}'.format(getattr(attribute_list[1],'par1')),
+  '{}'.format(getattr(attribute_list[1],'par2')),
+  '{}'.format(getattr(attribute_list[1],'par3')))
+
 for i in parameters:
   print(i)
+
+for i in parameters:
+  print(f'{i}')
+
+for i in parameters:
+  print('{}'.format(i))
 
 parameters = (
   f'{attribute_list[0].par1}',
@@ -3120,27 +3148,13 @@ parameters = (
   f'{attribute_list[1].par2}',
   f'{attribute_list[1].par3}')
 
-for i in parameters:
-  print(i)
-
-print(getattr(Main,'__doc__'))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class Main:
-  """Main"""
-  __slots__ = ('par1','par2','par3')
-  def __init__(self):
-
-    self.par1 = 'Implicit Attribute One','par1'
-    self.par2 = 'Implicit Attribute Two','par2'
-    self.par3 = 'Implicit Attribute Three','par3'
-
-attribute_list = (
-  Main().par1[0],Main().par2[0],Main().par3[0],
-  Main().par1[1],Main().par2[1],Main().par3[1])
-
 parameters = (
-  attribute_list[0],attribute_list[1],attribute_list[2],
-  attribute_list[3],attribute_list[4],attribute_list[5])
+  f"{getattr(attribute_list[0],'par1')}",
+  f"{getattr(attribute_list[0],'par2')}",
+  f"{getattr(attribute_list[0],'par3')}",
+  f"{getattr(attribute_list[1],'par1')}",
+  f"{getattr(attribute_list[1],'par2')}",
+  f"{getattr(attribute_list[1],'par3')}",)
 
 for i in parameters:
   print(i)
@@ -3166,9 +3180,22 @@ attribute_list = (
   Main().par1[0],Main().par2[0],Main().par3[0],
   Main().par1[1],Main().par2[1],Main().par3[1])
 
+attribute_list = (
+  getattr(Main(),'par1')[0],getattr(Main(),'par2')[0],getattr(Main(),'par3')[0],
+  getattr(Main(),'par1')[1],getattr(Main(),'par2')[1],getattr(Main(),'par3')[1])
+
 parameters = (
   attribute_list[0],attribute_list[1],attribute_list[2],
   attribute_list[3],attribute_list[4],attribute_list[5])
+
+for i in attribute_list:
+  print(i)
+
+for i in attribute_list:
+  print(f'{i}')
+
+for i in attribute_list:
+  print('{}'.format(i))
 
 for i in parameters:
   print(i)
