@@ -2978,13 +2978,13 @@ class Main:
     setattr(Main,'new_attribute2','New Attribute Two')
     setattr(Main,'new_attribute3','New Attribute Three')
 
+    print(Main.new_attribute1)
+
+    print(getattr(Main,'new_attribute1'))
+
 print(Main('Explicit1','Explicit2','Explicit3').par1)
 
 print(getattr(Main('Explicit1','Explicit2','Explicit3'),'par1'))
-
-print(Main.new_attribute1)
-
-print(getattr(Main,'new_attribute1'))
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3001,13 +3001,13 @@ class Main:
     setattr(Main,'new_attribute2','New Attribute Two')
     setattr(Main,'new_attribute3','New Attribute Three')
 
+    print(Main.new_attribute1)
+
+    print(getattr(Main,'new_attribute1'))
+
 print(Main().par1)
 
 print(getattr(Main(),'par1'))
-
-print(Main.new_attribute1)
-
-print(getattr(Main,'new_attribute1'))
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
