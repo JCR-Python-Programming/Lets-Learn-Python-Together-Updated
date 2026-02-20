@@ -2974,13 +2974,13 @@ class Main:
     self.par2 = par2
     self.par3 = par3
 
-    setattr(Main,'new_attribute1','New Attribute One')
-    setattr(Main,'new_attribute2','New Attribute Two')
-    setattr(Main,'new_attribute3','New Attribute Three')
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
 
-    print(Main.new_attribute1)
+print(Main.new_attribute1)
 
-    print(getattr(Main,'new_attribute1'))
+print(getattr(Main,'new_attribute1'))
 
 print(Main('Explicit1','Explicit2','Explicit3').par1)
 
@@ -2997,13 +2997,13 @@ class Main:
     self.par2 = 'Implicit2'
     self.par3 = 'Implicit3'
 
-    setattr(Main,'new_attribute1','New Attribute One')
-    setattr(Main,'new_attribute2','New Attribute Two')
-    setattr(Main,'new_attribute3','New Attribute Three')
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
 
-    print(Main.new_attribute1)
+print(Main.new_attribute1)
 
-    print(getattr(Main,'new_attribute1'))
+print(getattr(Main,'new_attribute1'))
 
 print(Main().par1)
 
