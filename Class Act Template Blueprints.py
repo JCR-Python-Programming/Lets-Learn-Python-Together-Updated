@@ -2986,6 +2986,10 @@ print(Main.new_attribute1)
 
 print(getattr(Main,'new_attribute1'))
 
+print(hasattr(Main,'par1'))
+
+print(hasattr(Main,'new_attribute1'))
+
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Main:
@@ -3008,6 +3012,10 @@ print(getattr(Main(),'par1'))
 print(Main.new_attribute1)
 
 print(getattr(Main,'new_attribute1'))
+
+print(hasattr(Main,'par1'))
+
+print(hasattr(Main,'new_attribute1'))
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3041,11 +3049,14 @@ for i in get_attribute:
 for i in getattr_attribute:
   print(getattr(Main('Explicit1','Explicit2','Explicit3'),i))
 
-for i in get_new_attribute:
-  print(i)
-
 for i in getattr_new_attribute:
   print(getattr(Main,i))
+
+for i in getattr_attribute:
+  print(hasattr(Main,i))
+
+for i in getattr_new_attribute:
+  print(hasattr(Main,i))
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3076,11 +3087,14 @@ for i in get_attribute:
 for i in getattr_attribute:
   print(getattr(Main(),i))
 
-for i in get_new_attribute:
-  print(i)
-
 for i in getattr_new_attribute:
   print(getattr(Main,i))
+
+for i in getattr_attribute:
+  print(hasattr(Main,i))
+
+for i in getattr_new_attribute:
+  print(hasattr(Main,i))
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
