@@ -3020,6 +3020,79 @@ class Main:
     self.par2 = par2
     self.par3 = par3
 
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attribute = (
+  Main('Explicit1','Explicit2','Explicit3').par1,
+  Main('Explicit1','Explicit2','Explicit3').par2,
+  Main('Explicit1','Explicit2','Explicit3').par3)
+
+getattr_attribute = 'par1','par2','par3'
+
+get_new_attribute = Main.new_attribute1,Main.new_attribute2,Main.new_attribute3
+
+getattr_new_attribute = 'new_attribute1','new_attribute2','new_attribute3'
+
+for i in get_attribute:
+  print(i)
+
+for i in getattr_attribute:
+  print(getattr(Main('Explicit1','Explicit2','Explicit3'),i))
+
+for i in get_new_attribute:
+  print(i)
+
+for i in getattr_new_attribute:
+  print(getattr(Main,i))
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self):
+
+    self.par1 = 'Implicit1'
+    self.par2 = 'Implicit2'
+    self.par3 = 'Implicit3'
+
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attribute = Main().par1,Main().par2,Main().par3
+
+getattr_attribute = 'par1','par2','par3'
+
+get_new_attribute = Main.new_attribute1,Main.new_attribute2,Main.new_attribute3
+
+getattr_new_attribute = 'new_attribute1','new_attribute2','new_attribute3'
+
+for i in get_attribute:
+  print(i)
+
+for i in getattr_attribute:
+  print(getattr(Main(),i))
+
+for i in get_new_attribute:
+  print(i)
+
+for i in getattr_new_attribute:
+  print(getattr(Main,i))
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self,par1,par2,par3):
+
+    self.par1 = par1
+    self.par2 = par2
+    self.par3 = par3
+
 attribute_list = [
   Main('Explicit Attribute One','Explicit Attribute Two','Explicit Attribute Three'),
   Main('par1', 'par2', 'par3')]
