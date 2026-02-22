@@ -321,7 +321,8 @@ class Superclass2(Superclass1):
 
 try:
   Main('','').args
-except AttributeError:print('test')
+except AttributeError:
+  print('test')
 
 print(Main(
   'I am the attribute property value of attribute1',
@@ -786,7 +787,8 @@ try:
   Sub_two().sub_two1
   Sub_three().sub_three1
   Class_all('','','','','','','','','','','','').sub_three1
-except AttributeError:print('test')
+except AttributeError:
+  print('test')
 
 print(getattr(Class_all(
   'Main value1','Main value2','Main value3',
@@ -2864,6 +2866,7 @@ shape = Polygons('','','')
 shape._colour = 'A black polka dot'
 shape._polygon = 'Icosikaihenagon has'
 shape._sides = 21
+
 print(shape._colour,shape._polygon,shape._sides)
 
 del shape.class_data
@@ -2899,7 +2902,8 @@ while True:
   try:
     user_age = int(input(age).strip())
     break
-  except ValueError:print(error)
+  except ValueError:
+    print(error)
 
 if user_age >= 19:
   print('Nice to meet you:',getattr(User_name(user_first,user_last,user_age),'user_first'),
@@ -2929,9 +2933,11 @@ try:
   User_name('','','').slot3
 except AttributeError:pass
 
-for i in User_name.__slots__:print(getattr(i,i,i))
+for i in User_name.__slots__:
+  print(getattr(i,i,i))
 
-for i in User_name.__slots__:print(i)
+for i in User_name.__slots__:
+  print(i)
 
 print(getattr(User_name('Explicit slot1','Explicit slot2','Explicit slot3'),'slot1'))
 
@@ -2955,9 +2961,11 @@ try:
   User_name().slot3
 except AttributeError:pass
 
-for i in User_name.__slots__:print(getattr(i,i,i))
+for i in User_name.__slots__:
+  print(getattr(i,i,i))
 
-for i in User_name.__slots__:print(i)
+for i in User_name.__slots__:
+  print(i)
 
 print(getattr(User_name(),'slot1'))
 
@@ -3095,6 +3103,154 @@ for i in getattr_attribute:
 
 for i in getattr_new_attribute:
   print(hasattr(Main,i))
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self):
+
+    self.par1 = 'Implicit1'
+    self.par2 = 'Implicit2'
+    self.par3 = 'Implicit3'
+
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attributes = (
+  (Main().par1,Main().par2,Main().par3),
+
+  ('par1','par2','par3'),
+
+  (Main.new_attribute1,Main.new_attribute2,Main.new_attribute3),
+
+  ('new_attribute1','new_attribute2','new_attribute3'))
+
+for index,name in enumerate(get_attributes):
+  print(name[0]+':','index',index)
+
+for index,name in enumerate(get_attributes):
+  print(name[0]+f': index {index}')
+
+for index,name in enumerate(get_attributes):
+  print(f'{name[0]}: index {index}')
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self,par1,par2,par3):
+
+    self.par1 = par1
+    self.par2 = par2
+    self.par3 = par3
+
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attributes = (
+  (Main('Explicit1','Explicit2','Explicit3').par1,
+   Main('Explicit1','Explicit2','Explicit3').par2,
+   Main('Explicit1','Explicit2','Explicit3').par3),
+
+  (Main.new_attribute1,Main.new_attribute2,Main.new_attribute3),
+
+  ('new_attribute1','new_attribute2','new_attribute3'),
+
+  ('par1','par2','par3'))
+
+for index,name in enumerate(get_attributes):
+  print(name[0]+':','index',index)
+
+for index,name in enumerate(get_attributes):
+  print(name[0]+f': index {index}')
+
+for index,name in enumerate(get_attributes):
+  print(f'{name[0]}: index {index}')
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self):
+
+    self.par1 = 'Implicit1'
+    self.par2 = 'Implicit2'
+    self.par3 = 'Implicit3'
+
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attributes = (
+  (Main().par1,Main().par2,Main().par3),
+
+  ('par1','par2','par3'),
+
+  (Main.new_attribute1,Main.new_attribute2,Main.new_attribute3),
+
+  ('new_attribute1','new_attribute2','new_attribute3'))
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(i)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(x)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(y)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(i,x,y)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(end=''+i+'\n'+x+'\n'+y+'\n')
+
+print(getattr(Main,'__doc__'))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Main:
+  """Main"""
+  __slots__ = ('par1','par2','par3')
+  def __init__(self,par1,par2,par3):
+
+    self.par1 = par1
+    self.par2 = par2
+    self.par3 = par3
+
+setattr(Main,'new_attribute1','New Attribute One')
+setattr(Main,'new_attribute2','New Attribute Two')
+setattr(Main,'new_attribute3','New Attribute Three')
+
+get_attributes = (
+  (Main('Explicit1','Explicit2','Explicit3').par1,
+   Main('Explicit1','Explicit2','Explicit3').par2,
+   Main('Explicit1','Explicit2','Explicit3').par3),
+
+  (Main.new_attribute1,Main.new_attribute2,Main.new_attribute3),
+
+  ('new_attribute1','new_attribute2','new_attribute3'),
+
+  ('par1','par2','par3'))
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(i)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(x)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(y)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(i,x,y)
+
+for i,x,y in zip(get_attributes[0],get_attributes[1],get_attributes[2]):
+  print(end=''+i+'\n'+x+'\n'+y+'\n')
 
 print(getattr(Main,'__doc__'))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
