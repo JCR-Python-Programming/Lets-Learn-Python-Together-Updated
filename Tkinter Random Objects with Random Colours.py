@@ -6,6 +6,9 @@ from time import sleep as wait
 
 screensaver = Tk()
 
+screensaver.attributes("-fullscreen", True)
+screensaver.overrideredirect(True)
+
 black = '#000000'
 white = '#ffffff'
 red = '#ff0000'
@@ -15,10 +18,12 @@ green = '#00ff00'
 pink = '#ff00ff'
 cyan = '#00ffff'
 
-w,h = 1365,744
+w = screensaver.winfo_screenwidth()
+h = screensaver.winfo_screenheight()
 r,c = 0,0
 line_width1,line_width2 = 1,20
-screen_width1,screen_width2 = -1365,1365
+screen_width1,screen_width2 = -w,w
+screen_height1,screen_height2 = -h,h
 increase_decrease_screen_objects = 20
 blink_rate = .12
 screensaver_time_cycle = 200
@@ -42,18 +47,20 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # increase_decrease_screen_objects value to add more random lines on the screen output
+            # increase_decrease_screen_objects value to add more random objects
+            # on the screen output
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_line(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 fill = random_colour_code(),
                 width = random_width)
 
@@ -63,12 +70,14 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random gridlines on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random gridlines on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_line(r,c+x,w,r+x,fill = random_colour_code(),width = random_width)
                 objects_canvas.create_line(r+x,c,r+x,h,fill = random_colour_code(),width = random_width)
@@ -79,12 +88,14 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-             # You can increase_decrease_screen_objects value to add more or less random diagonal gridlines on the screen output.
+             # You can increase_decrease_screen_objects value to add more or less
+             # random diagonal gridlines on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_line(r,c+x,w,h+x,fill = random_colour_code(),width = random_width)
                 objects_canvas.create_line(r,h+x,w,c+x,fill = random_colour_code(),width = random_width)
@@ -95,18 +106,20 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random rectangles on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random rectangles on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_rectangle(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 width = random_width)
 
@@ -116,18 +129,20 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random ovals on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random ovals on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_oval(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 width = random_width)
 
@@ -137,27 +152,28 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random rectangles and random
-            # ovals on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random rectangles and random ovals on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_rectangle(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 width = random_width)
 
                 objects_canvas.create_oval(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 width = random_width)
 
@@ -167,18 +183,20 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random solid rectangles on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random solid rectangles on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_rectangle(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
@@ -189,18 +207,20 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-             # You can increase_decrease_screen_objects value to add more or less random solid ovals on the screen output.
+             # You can increase_decrease_screen_objects value to add more or less
+             # random solid ovals on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_oval(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
@@ -211,28 +231,29 @@ try:
 
         for i in range(screensaver_time_cycle):
 
-            # You can increase_decrease_screen_objects value to add more or less random solid rectangles and random solid
-            # ovals on the screen output.
+            # You can increase_decrease_screen_objects value to add more or less
+            # random solid rectangles and random solid ovals on the screen output.
 
             for j in range(increase_decrease_screen_objects):
                 random_width = randint(line_width1,line_width2)
 
                 x = randint(screen_width1,screen_width2)
+                y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_rectangle(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
 
                 objects_canvas.create_oval(
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
-                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
                 outline = random_colour_code(),
                 fill = random_colour_code(),
                 width = random_width)
