@@ -6,7 +6,7 @@ from time import sleep as wait
 
 screensaver = Tk()
 
-screensaver.attributes("-fullscreen", True)
+screensaver.attributes("-fullscreen",True)
 screensaver.overrideredirect(True)
 
 black = '#000000'
@@ -26,7 +26,7 @@ screen_width1,screen_width2 = -w,w
 screen_height1,screen_height2 = -h,h
 increase_decrease_screen_objects = 20
 blink_rate = .12
-screensaver_time_cycle = 200
+screensaver_time_cycle = 400
 everything = 'all'
 
 screensaver.title('Tkinter Random Objects with Random Colours')
@@ -44,7 +44,6 @@ objects_canvas.grid(row = r,column = c)
 
 try:
     while True:
-
         for i in range(screensaver_time_cycle):
 
             # increase_decrease_screen_objects value to add more random objects
