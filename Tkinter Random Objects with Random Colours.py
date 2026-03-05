@@ -57,10 +57,10 @@ try:
                 y = randint(screen_height1,screen_height2)
 
                 objects_canvas.create_line(
-                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
-                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
-                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
-                randint(screen_width1+x,screen_width2+x),randint(screen_height1+y,screen_height2+y),
+                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),
+                randint(screen_width1+x,screen_width2+x),
                 fill = random_colour_code(),
                 width = random_width)
 
