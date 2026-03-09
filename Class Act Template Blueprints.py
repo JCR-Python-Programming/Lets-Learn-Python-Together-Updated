@@ -183,7 +183,7 @@ class Main:
     self.kwarg3 = 'keyword argeument two'
 
 try:
-  Main().kwarg
+  Main().kwarg1
 except AttributeError:pass
 
 print(getattr(Main(),'kwarg1'))
