@@ -274,7 +274,13 @@ dictionary_three = {'key1':'Fly','key2':'Ant','key3':'Butterfly','key4':'Beetle'
 
 # Create a dictionaries variable for three, separate dictionaries.
 
-dectionaries = [dictionary_one,dictionary_two,dictionary_three]
+dectionaries = dictionary_one,dictionary_two,dictionary_three
+
+# Use the enumerate() function to loop through a variable.
+# Note: you can also keep the print() function on the same
+# line if you like, as shownNote: you can also keep the
+# print() function on the same line if you like, as shown
+# below.  below.
 
 for keys,values in enumerate(dectionaries):print(values)
 
@@ -284,4 +290,152 @@ for keys,values in enumerate(dectionaries):print(values)
 
 for variable in zip(dectionaries):print(variable)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Still under construction.....
+dict_one = dict(key1 = 'Dog',key2 = 'Cat',key3 = 'Mouse',key4 = 'Bird')
+dict_two = dict(key1 = 'Frog',key2 = 'Toad',key3 = 'Turtle',key4 = 'Lizard')
+dict_three = dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle')
+
+# Create a dictionaries variable for three, separate dictionaries.
+
+dicts = dict_one,dict_two,dict_three
+
+# Use the enumerate() function to loop through a variable.
+# Note: you can also keep the print() function on the same
+# line if you like, as shownNote: you can also keep the
+# print() function on the same line if you like, as shown
+# below.  below.
+
+for keys,values in enumerate(dicts):print(values)
+
+# Create a Grand Zip() function to retrieve keys and values from
+# three separate dictionaries Note: you can also keep the print()
+# function on the same line if you like, as shown below.
+
+for variable in zip(dicts):print(variable)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+set_one = {'Dog','Cat','Mouse','Bird','Dog'}
+set_two = {'Frog','Toad','Turtle','Lizard','Toad'}
+set_three = {'Fly','Ant','Butterfly','Beetle','Butterfly'}
+
+# Create a sets variable for three, separate sets.
+
+sets = set_one,set_two,set_three
+
+# Use the enumerate() function to loop through a variable.
+# Note: you can also keep the print() function on the same
+# line if you like, as shownNote: you can also keep the
+# print() function on the same line if you like, as shown
+# below.  below.
+
+for set_variable in enumerate(sets):print(set_variable)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a tuple of values using list comprehension.
+
+tuple_one = ('Dog','Cat','Mouse','Bird')
+tuple_two = ('Frog','Toad','Turtle','Lizard')
+tuple_three = ('Fly','Ant','Butterfly','Beetle')
+
+# This is like killing two birds with one stone's throw. List
+# comprehension shortens for loops down when looping
+# through a tuple, using a for loop right inside the tuple()
+# function. You can use list comprehension with tuples.
+
+values = tuple(value for value in tuple_one)
+
+print(values)
+
+# Invoke the 'if' and 'else' statements that override all values,
+# except the value 'Mouse'.
+
+values = [value if value == 'Mouse' else 'OVERRIDE!' for value in tuple_one]
+
+print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a list of values using list comprehension.
+
+list_one = ['Dog','Cat','Mouse','Bird']
+list_two = ['Frog','Toad','Turtle','Lizard']
+list_three = ['Fly','Ant','Butterfly','Beetle']
+
+# This is like killing two birds with one stone's throw. List
+# comprehension shortens for loops down when looping
+# through a list, using a for loop right inside the list [ ]
+# square brackets.
+
+values = [value for value in list_one]
+
+print(values)
+
+# Invoke the 'if' and 'else' statements that override all values,
+# except the value 'Mouse'.
+
+values = [value if value == 'Mouse' else 'OVERRIDE!' for value in list_one]
+
+print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a dictionary of values using list comprehension.
+
+dictionary_one = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+dictionary_two = {'key1':'Frog','key2':'Toad','key3':'Turtle','key4':'Lizard'}
+dictionary_three = {'key1':'Fly','key2':'Ant','key3':'Butterfly','key4':'Beetle'}
+
+# This is like killing two birds with one stone's throw. List
+# comprehension shortens for loops down when looping
+# through a dictionary, using a for loop right inside the
+# dictionary { } curly braces. You can use list comprehension
+# with dictionaries.
+
+values = {value for value in dictionary_one}
+
+print(values)
+
+# Invoke the 'if' and 'else' statements that override all values,
+# except the value 'key3'.
+
+values = [value if value == 'key3' else 'OVERRIDE!' for value in dictionary_one]
+
+print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use the dict() function to create a dictionary of values using list comprehension.
+
+dict_one = dict(key1 = 'Dog',key2 = 'Cat',key3 = 'Mouse',key4 = 'Bird')
+dict_two = dict(key1 = 'Frog',key2 = 'Toad',key3 = 'Turtle',key4 = 'Lizard')
+dict_three = dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle')
+
+# This is like killing two birds with one stone's throw. List
+# comprehension shortens for loops down when looping
+# through a dict() function, using a for loop right inside the
+# dict() function { } curly braces. You can use list comprehension
+# with dictionaries.
+
+values = {value for value in dict_one}
+
+print(values)
+
+# Invoke the 'if' and 'else' statements that override all values,
+# except the value 'key3'.
+
+values = [value if value == 'key3' else 'OVERRIDE!' for value in dict_one]
+
+print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a set of values using sets for list comprehension.
+
+set_one = {'Dog','Cat','Mouse','Bird','Dog'}
+set_two = {'Frog','Toad','Turtle','Lizard','Toad'}
+set_three = {'Fly','Ant','Butterfly','Beetle','Butterfly'}
+
+# This is like killing two birds with one stone's throw. List
+# comprehension shortens for loops down when looping
+# through a set, using a for loop right inside the set( ) function.
+# You can use list comprehension with sets.
+
+values = set(value for value in set_one)
+
+print(values)
+
+# Invoke the 'if' and 'else' statements that override all values,
+# except the value 'Mouse'.
+
+values = [value if value == 'Mouse' else 'OVERRIDE!' for value in set_one]
+
+print(values)
