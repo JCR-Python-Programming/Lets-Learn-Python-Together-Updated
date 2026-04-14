@@ -203,9 +203,9 @@ print(multi_dimensional_tuple[1][0])  # Frog
 for index,variable in enumerate(multi_dimensional_tuple):print(index,variable)
 
 # Note: the zip() function only goes to the shortest length
-# in a multi dimensional tuple. However, you can simply keep
+# in a multi-dimensional tuple. However, you can simply keep
 # them the same size such as the tuple examples above, which
-# shows the multi dimensional tuple. Each tuple has four values
+# shows the multi-dimensional tuple. Each tuple has four values
 # in them. This way, every value gets called inside one, single
 # 'print' statement. Note: you can also keep the print() function
 # on the same line if you like, as shown below.
@@ -259,9 +259,9 @@ print(multi_dimensional_list[2][3])  # Fly
 for index,variable in enumerate(multi_dimensional_list):print(index,variable)
 
 # Note: the zip() function only goes to the shortest length
-# in a multi dimensional list. However, you can simply keep
+# in a multi-dimensional list. However, you can simply keep
 # them the same size such as the list examples above, which
-# shows the multi dimensional list. Each list has four values
+# shows the multi-dimensional list. Each list has four values
 # in them. This way, every value gets called inside one, single
 # 'print' statement. Note: you can also keep the print() function
 # on the same line if you like, as shown below.
@@ -346,7 +346,7 @@ print(values)
 # Invoke the 'if' and 'else' statements that override all values,
 # except the value 'Mouse'.
 
-values = [value if value == 'Mouse' else 'OVERRIDE!' for value in tuple_one]
+values = [value if value == 'Mouse' else 'OVERRIDE ALL VALUES!' for value in tuple_one]
 
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -368,7 +368,7 @@ print(values)
 # Invoke the 'if' and 'else' statements that override all values,
 # except the value 'Mouse'.
 
-values = [value if value == 'Mouse' else 'OVERRIDE!' for value in list_one]
+values = [value if value == 'Mouse' else 'OVERRIDE ALL VALUES!' for value in list_one]
 
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -391,7 +391,7 @@ print(values)
 # Invoke the 'if' and 'else' statements that override all values,
 # except the value 'key3'.
 
-values = [value if value == 'key3' else 'OVERRIDE!' for value in dictionary_one]
+values = [value if value == 'key3' else 'OVERRIDE ALL VALUES!' for value in dictionary_one]
 
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -414,7 +414,7 @@ print(values)
 # Invoke the 'if' and 'else' statements that override all values,
 # except the value 'key3'.
 
-values = [value if value == 'key3' else 'OVERRIDE!' for value in dict_one]
+values = [value if value == 'key3' else 'OVERRIDE ALL VALUES!' for value in dict_one]
 
 print(values)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -436,6 +436,336 @@ print(values)
 # Invoke the 'if' and 'else' statements that override all values,
 # except the value 'Mouse'.
 
-values = [value if value == 'Mouse' else 'OVERRIDE!' for value in set_one]
+values = [value if value == 'Mouse' else 'OVERRIDE ALL VALUES!' for value in set_one]
 
 print(values)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's explore two different ways to create multi-dimensional tuples and lists.
+
+# This is what a multi-dimensional tuple looks like, also known as a 2D tuple
+# by Python standards.
+
+multi_dimensional_tuple = (
+  ('Dog','Cat','Mouse','Bird'),
+  ('Frog','Toad','Turtle','Lizard'),
+  ('Fly','Ant','Butterfly','Beetle'))
+
+# To get tuple values from a multi-dimensional tuple requires two indexes [n][n].
+# The first index [n] gets each tuple's groups entire values, and the second index
+# [n] gets each individual tuple value from these tuple groups. See the examples
+# below.
+
+print(multi_dimensional_tuple[0])  # ('Dog', 'Cat', 'Mouse', 'Bird')
+
+print(multi_dimensional_tuple[1])  # ('Frog', 'Toad', 'Turtle', 'Lizard')
+
+print(multi_dimensional_tuple[2])  # ('Fly', 'Ant', 'Butterfly', 'Beetle')
+
+# Get each individual multi-dimensional tuple value example below.
+
+print(multi_dimensional_tuple[0][0])  # Dog
+
+print(multi_dimensional_tuple[1][0])  # Frog
+
+print(multi_dimensional_tuple[2][0])  # Fly
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This is what a multi-dimensional list looks like, also known as a 2D list
+# by Python standards.
+
+multi_dimensional_list = [
+  ['Dog','Cat','Mouse','Bird'],
+  ['Frog','Toad','Turtle','Lizard'],
+  ['Fly','Ant','Butterfly','Beetle']]
+
+# To get list values from a multi-dimensional list requires two indexes [n][n].
+# The first index [n] gets each list's groups entire values, and the second index
+# [n] gets each individual list value from these list groups. See the examples
+# below.
+
+print(multi_dimensional_list[0])  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+print(multi_dimensional_list[1])  # ['Frog', 'Toad', 'Turtle', 'Lizard']
+
+print(multi_dimensional_list[2])  # ['Fly', 'Ant', 'Butterfly', 'Beetle']
+
+# Get each individual multi-dimensional list value example below.
+
+print(multi_dimensional_list[0][0])  # Dog
+
+print(multi_dimensional_list[1][0])  # Frog
+
+print(multi_dimensional_list[2][0])  # Fly
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+multi_dimensional_tuple = (
+  'Dog','Cat','Mouse','Bird',
+  ('Frog','Toad','Turtle','Lizard'),
+  'Fly','Ant','Butterfly','Beetle')
+
+# Get each individual multi-dimensional tuple value example below.
+
+print(multi_dimensional_tuple[0])  # Dog
+
+print(multi_dimensional_tuple[1])  # Cat
+
+print(multi_dimensional_tuple[2])  # Mouse
+
+print(multi_dimensional_tuple[3])  # Bird
+
+print(multi_dimensional_tuple[4])  # ('Frog', 'Toad', 'Turtle', 'Lizard')
+
+print(multi_dimensional_tuple[4][0])  # Frog
+
+print(multi_dimensional_tuple[5])  # Fly
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+multi_dimensional_list = [
+  'Dog','Cat','Mouse','Bird',
+  ['Frog','Toad','Turtle','Lizard'],
+  'Fly','Ant','Butterfly','Beetle']
+
+# Get each individual multi-dimensional list value example below.
+
+print(multi_dimensional_list[0])  # Dog
+
+print(multi_dimensional_list[1])  # Cat
+
+print(multi_dimensional_list[2])  # Mouse
+
+print(multi_dimensional_list[3])  # Bird
+
+print(multi_dimensional_list[4])  # ['Frog', 'Toad', 'Turtle', 'Lizard']
+
+print(multi_dimensional_list[4][0])  # Frog
+
+print(multi_dimensional_list[5])  # Fly
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# You can create multi-dimensional highbred values all under one, single variable.
+# Here are some examples of how you can create multi-dimensional highbred values
+# that have tuples, lists, dictionaries and sets all under one variable name. You can
+# access them all, via their index [n][n] numbers. Here are three, different ways to
+# to create multi-dimensional highbred values as follows:
+
+multi_dimensional_highbred = (
+  ('Dog','Cat','Mouse','Bird'),
+  ['Frog','Toad','Turtle','Lizard'],
+  {'key1':'Fly','key2':'Ant','key3':'Butterfly','key4':'Beetle'},
+  {'Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle'},)  # you must use a comma ',' here
+
+print(multi_dimensional_highbred[0])  # ('Dog', 'Cat', 'Mouse', 'Bird')
+
+print(multi_dimensional_highbred[0][0])  # Dog
+
+multi_dimensional_highbred[1].sort()  # invoke the sort() function to sort list values
+
+print(multi_dimensional_highbred[1])  # ['Frog', 'Lizard', 'Toad', 'Turtle']
+
+print(multi_dimensional_highbred[1][0])  # Frog
+
+print(multi_dimensional_highbred[2])  # {'key1': 'Fly', 'key2': 'Ant', 'key3': 'Butterfly', 'key4': 'Beetle'}
+
+print(multi_dimensional_highbred[2].get('key1'))  # Fly
+
+print(multi_dimensional_highbred[3])
+
+# {'Ant', 'Dog', 'Mouse', 'Cat', 'Turtle', 'Beetle', 'Toad', 'Butterfly', 'Fly', 'Frog', 'Lizard', 'Bird'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+multi_dimensional_highbred = (
+  ('Dog','Cat','Mouse','Bird'),
+  ['Frog','Toad','Turtle','Lizard'],
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  {'Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle'},)  # you must use a comma ',' here
+
+print(multi_dimensional_highbred[0])  # ('Dog', 'Cat', 'Mouse', 'Bird')
+
+print(multi_dimensional_highbred[0][0])  # Dog
+
+multi_dimensional_highbred[1].sort()  # invoke the sort() function to sort list values
+
+print(multi_dimensional_highbred[1])  # ['Frog', 'Lizard', 'Toad', 'Turtle']
+
+print(multi_dimensional_highbred[1][0])  # Frog
+
+print(multi_dimensional_highbred[2])  # {'key1': 'Fly', 'key2': 'Ant', 'key3': 'Butterfly', 'key4': 'Beetle'}
+
+print(multi_dimensional_highbred[2].get('key1'))  # Fly
+
+print(multi_dimensional_highbred[3])
+
+# {'Ant', 'Dog', 'Mouse', 'Cat', 'Turtle', 'Beetle', 'Toad', 'Butterfly', 'Fly', 'Frog', 'Lizard', 'Bird'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+multi_dimensional_highbred = (
+  tuple(('Dog','Cat','Mouse','Bird')),
+  list(('Frog','Toad','Turtle','Lizard')),
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  set(('Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle')))  # you must leave out the comma ',' this time.
+
+print(multi_dimensional_highbred[0])  # ('Dog', 'Cat', 'Mouse', 'Bird')
+
+print(multi_dimensional_highbred[0][0])  # Dog
+
+multi_dimensional_highbred[1].sort()  # invoke the sort() function to sort list values
+
+print(multi_dimensional_highbred[1])  # ['Frog', 'Lizard', 'Toad', 'Turtle']
+
+print(multi_dimensional_highbred[1][0])  # Frog
+
+print(multi_dimensional_highbred[2])  # {'key1': 'Fly', 'key2': 'Ant', 'key3': 'Butterfly', 'key4': 'Beetle'}
+
+print(multi_dimensional_highbred[2].get('key1'))  # Fly
+
+print(multi_dimensional_highbred[3])
+
+# {'Ant', 'Dog', 'Mouse', 'Cat', 'Turtle', 'Beetle', 'Toad', 'Butterfly', 'Fly', 'Frog', 'Lizard', 'Bird'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's put this multi-dimensional highbred variable to work and use its values.
+
+multi_dimensional_highbred = (
+  tuple(('Dog','Cat','Mouse','Bird')),
+  list(('Frog','Toad','Turtle','Lizard')),
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  set(('Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle')))  # you must leave out the comma ',' this time.
+
+# Let's start with tuple values first with a simple print() function to make things simpler
+# to understand. Let's also use the f' string format to make string concatenation much
+# more easier. Note: tuples cannot be changed or modified; they are immutable.
+
+print(f'I love my {multi_dimensional_highbred[0][0]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[0][1]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[0][2]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[0][3]} so much...')
+
+print(f'My {multi_dimensional_highbred[0][0]} chases the {multi_dimensional_highbred[0][1]}.')
+
+print(f'My {multi_dimensional_highbred[0][1]} eats the {multi_dimensional_highbred[0][2]}.')
+
+print(f'My {multi_dimensional_highbred[0][3]} flew away on me today...')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's get values from a list with the same multi-dimensional highbred variable.
+
+multi_dimensional_highbred = (
+  tuple(('Dog','Cat','Mouse','Bird')),
+  list(('Frog','Toad','Turtle','Lizard')),
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  set(('Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle')))  # you must leave out the comma ',' this time.
+
+multi_dimensional_highbred[1].sort()  # sort the themulti_dimensional_highbred list
+
+print(f'I love my {multi_dimensional_highbred[1][0]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[1][1]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[1][2]} so much...')
+
+print(f'I love my {multi_dimensional_highbred[1][3]} so much...')
+
+print(f'My {multi_dimensional_highbred[1][0]} chases the {multi_dimensional_highbred[1][1]}.')
+
+print(f'My {multi_dimensional_highbred[1][1]} eats the {multi_dimensional_highbred[1][2]}.')
+
+print(f'My {multi_dimensional_highbred[1][3]} swam away on me today...')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's get values from a dictionary with the same multi-dimensional highbred variable.
+
+multi_dimensional_highbred = (
+  tuple(('Dog','Cat','Mouse','Bird')),
+  list(('Frog','Toad','Turtle','Lizard')),
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  set(('Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle')))  # you must leave out the comma ',' this time.
+
+# this with double quote marks: "key1"
+
+print(f'I love my {multi_dimensional_highbred[2].get("key1")} so much...')
+
+# or this:
+
+print(f"I love my {multi_dimensional_highbred[2].get('key1')} so much...")
+
+# or these with single quote marks: 'key1'
+
+print(f'I love my {multi_dimensional_highbred[2].get('key1')} so much...')
+
+print(f'I love my {multi_dimensional_highbred[2].get('key2')} so much...')
+
+print(f'I love my {multi_dimensional_highbred[2].get('key3')} so much...')
+
+print(f'I love my {multi_dimensional_highbred[2].get('key4')} so much...')
+
+print(f'My {multi_dimensional_highbred[2].get('key1')} \
+chases the {multi_dimensional_highbred[2].get('key2')}.')  # invoke the \ for hard returns
+
+print(f'My {multi_dimensional_highbred[2].get('key3')} \
+chases the {multi_dimensional_highbred[2].get('key4')}.')  # invoke the \ for hard returns
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Lastly, let's invoke a randomized set from the same multi-dimensional highbred variable.
+# Note: sets do not contain indexes [ ] and are always in random order. Sets also get rid of
+# any duplicate values, which is what they are mainly used for. However, we can cast sets
+# into tuples and lists with indexes [ ], via invoking the tuple() function, or the list() function
+# alike. Let's cast a set into a sorted list, and then re-cast the sorted list into a sorted tuple,
+# via invoking the tuple() function.
+
+multi_dimensional_highbred = (
+  tuple(('Dog','Cat','Mouse','Bird')),
+  list(('Frog','Toad','Turtle','Lizard')),
+  dict(key1 = 'Fly',key2 = 'Ant',key3 = 'Butterfly',key4 = 'Beetle'),
+  set(('Dog','Cat','Mouse','Bird','Dog','Frog','Toad','Turtle',
+   'Lizard','Fly','Ant','Butterfly','Beetle')))  # you must leave out the comma ',' this time.
+
+type_cast_to_list = list(multi_dimensional_highbred[3])
+
+type_cast_to_list.sort()  # sort converted list values
+
+type_cast_to_tuple = tuple(type_cast_to_list)
+
+print(type_cast_to_tuple[0])  # Ant
+
+# Tip! You can invoke the sorted() function to sort a list, without sorting the actual list. For example:
+
+my_list = ['Frog','Toad','Turtle','Lizard']
+
+sort_my_list = sorted(my_list)
+
+print(sort_my_list)  # ['Frog', 'Lizard', 'Toad', 'Turtle']
+
+print(my_list)  # ['Frog', 'Toad', 'Turtle', 'Lizard']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's learn how to append a value to a list, extend a list with another list, update a
+# dictionary and update a set with another set. Here are some examples:
+
+my_list = ['Frog','Toad','Turtle','Lizard']
+
+my_list.sort()  # sort list values
+
+my_list.append('Snake')
+
+print(my_list)  # ['Frog', 'Lizard', 'Toad', 'Turtle', 'Snake']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+my_list1 = ['Dog','Cat','Mouse','Bird']
+my_list2 = ['Frog','Toad','Turtle','Lizard']
+
+my_list1.extend(my_list2)
+
+my_list1.sort()  # sort extended list values
+
+print(my_list1)  # ['Bird', 'Cat', 'Dog', 'Frog', 'Lizard', 'Mouse', 'Toad', 'Turtle']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+
+my_dictionary.update({'key5':'Fish'})
+
+print(my_dictionary)  # {'key1': 'Dog', 'key2': 'Cat', 'key3': 'Mouse', 'key4': 'Bird', 'key5': 'Fish'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+my_set1 = {'Dog','Cat','Mouse','Bird','Dog'}
+my_set2 = {'Fly','Ant','Butterfly','Beetle','Ant'}
+
+my_set1.update(my_set2)
+
+print(my_set1)  # {'Butterfly', 'Fly', 'Cat', 'Mouse', 'Bird', 'Beetle', 'Ant', 'Dog'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
