@@ -769,3 +769,94 @@ my_set1.update(my_set2)
 
 print(my_set1)  # {'Butterfly', 'Fly', 'Cat', 'Mouse', 'Bird', 'Beetle', 'Ant', 'Dog'}
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pop the last value from a list, via invoking the pop() function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+my_list.pop()
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse']
+
+# Return popped values from a list, via invoking the pop() function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+popped_value = my_list.pop()
+
+print(popped_value)  # Bird
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pop values from a list, via invoking the pop(n) function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+my_list.pop(1)
+
+print(my_list)  # ['Dog', 'Mouse', 'Bird']
+
+# Return popped values from a list, via invoking the pop(n) function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+popped_value = my_list.pop(1)
+
+print(popped_value)  # Cat
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Permanently remove values from a list, via invoking the remove() function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+my_list.remove('Mouse')
+
+print(my_list)  # ['Dog', 'Cat', 'Bird']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Pop values from a dictionary, via invoking the pop() function.
+
+my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+
+key = my_dictionary.pop('key3',None)
+
+print(my_dictionary)  # {'key1': 'Dog', 'key2': 'Cat', 'key4': 'Bird'}
+
+print(key)  # Mouse
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Permanently delete keys from a dictionary, via invoking del.
+
+my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+
+del my_dictionary['key3']
+
+print(my_dictionary)  # {'key1': 'Dog', 'key2': 'Cat', 'key4': 'Bird'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Replace values inside a tuple, via invoking the replace() function.
+
+my_tuple = ('Dog','Cat','Mouse','Bird'.replace('Bird','Fish'))
+
+print(my_tuple)  # ('Dog', 'Cat', 'Mouse', 'Fish')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Replace values inside a list, via invoking the replace() function.
+
+my_list = ['Dog','Cat','Mouse','Bird'.replace('Bird','Fish')]
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Fish']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Replace string letters, numbers and text strings, via the replace() function.
+
+print('I love my Cat so very much!'.replace('Cat','Dog'))
+
+# or this:
+
+text_string = 'I love my Cat so very much!'
+
+print(text_string.replace('Cat','Dog'))
+
+# or this:
+
+text_string = 'I love my Cat so very much!'.replace('Cat','Dog')
+
+print(text_string)
