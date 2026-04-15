@@ -805,6 +805,16 @@ popped_value = my_list.pop(1)
 
 print(popped_value)  # Cat
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Clear all values from a list, via invoking the clear() function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+my_list.clear()
+
+print(my_list)  # []
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Permanently remove values from a list, via invoking the remove() function.
 
 my_list = ['Dog','Cat','Mouse','Bird']
@@ -814,6 +824,19 @@ print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
 my_list.remove('Mouse')
 
 print(my_list)  # ['Dog', 'Cat', 'Bird']
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Delete an entire list, along with its name and its values alike.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+print(my_list)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+del my_list
+
+try:
+  print(my_list)
+except NameError:
+  print('my_list[ ] no longer exists:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pop values from a dictionary, via invoking the pop() function.
 
@@ -832,6 +855,17 @@ my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
 del my_dictionary['key3']
 
 print(my_dictionary)  # {'key1': 'Dog', 'key2': 'Cat', 'key4': 'Bird'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Delete an entire dictionary, along with its name, keys and values alike.
+
+my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+
+del my_dictionary
+
+try:
+  print(my_list)
+except NameError:
+  print('my_dictionary{ } no longer exists:')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Replace values inside a tuple, via invoking the replace() function.
 
