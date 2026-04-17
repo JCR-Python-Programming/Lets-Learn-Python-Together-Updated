@@ -769,6 +769,34 @@ my_set1.update(my_set2)
 
 print(my_set1)  # {'Butterfly', 'Fly', 'Cat', 'Mouse', 'Bird', 'Beetle', 'Ant', 'Dog'}
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a list with the copy() function.
+
+my_list = ['Dog','Cat','Mouse','Bird']
+
+list_copy = my_list.copy()
+
+print(list_copy)  # ['Dog', 'Cat', 'Mouse', 'Bird']
+
+print(list_copy[0])  # Dog
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a dictionary with the copy() function.
+
+my_dictionary = {'key1':'Dog','key2':'Cat','key3':'Mouse','key4':'Bird'}
+
+dictionary_copy = my_dictionary.copy()
+
+print(dictionary_copy)  # {'key1': 'Dog', 'key2': 'Cat', 'key3': 'Mouse', 'key4': 'Bird'}
+
+print(dictionary_copy.get('key1'))  # Dog
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Copy a set with the copy() function.
+
+my_set = {'Dog','Cat','Mouse','Bird','Dog'}
+
+set_copy = my_set.copy()
+
+print(set_copy)  # {'Cat', 'Bird', 'Dog', 'Mouse'}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Pop the last value from a list, via invoking the pop() function.
 
 my_list = ['Dog','Cat','Mouse','Bird']
@@ -894,3 +922,18 @@ print(text_string.replace('Cat','Dog'))
 text_string = 'I love my Cat so very much!'.replace('Cat','Dog')
 
 print(text_string)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create a dictionary that can loop through integer keys.
+
+my_dictionary = {0:'Fly',1:'Ant',2:'Butterfly',3:'Beetle'}
+
+for i in range(4):
+  print(my_dictionary.get(i))
+
+# Note: if no keys are found, the dictionary will say 'None' by default.
+
+for i in range(5):
+  print(my_dictionary.get(i))  # None
+
+for i in range(5):
+  print(my_dictionary.get(i,'key not found!'))  # optional if key is not found
