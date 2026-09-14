@@ -356,7 +356,7 @@ class Easy_class:
 try:
   print(Easy_class(kwargs = 'Hello').kwargs['kwargs1','Error! Not to worry...'])
 except KeyError:
-  print('Value not found:')
+  print('Attribute not found:')
 
 # or this:
 
@@ -380,7 +380,7 @@ print(Easy_class(kwargs = 'Hello').kwargs.get('kwargs'))
 
 # or this:
 
-print(Easy_class(kwargs = 'Hello').kwargs.get('kwargs','Value not found:'))  # optional
+print(Easy_class(kwargs = 'Hello').kwargs.get('kwargs','Attribute not found:'))  # optional
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Easy_class:
   def __init__(self,**kwargs):
@@ -458,7 +458,7 @@ print(Easy_class(keyword_arguments = 'Hello').keyword_arguments.get('kwargs'))
 
 # or this:
 
-print(Easy_class(keyword_arguments = 'Hello').keyword_arguments.get('kwargs','Value not found:'))  # optional
+print(Easy_class(keyword_arguments = 'Hello').keyword_arguments.get('kwargs','Attribute not found:'))  # optional
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # We can also use different variable names in attribute properties.
 # For example:
