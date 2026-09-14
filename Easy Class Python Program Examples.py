@@ -18,8 +18,15 @@
 # on and WAX off. Shall we...
 
 # First of all, we must learn the three parts that make up a class.
-# The class blueprint or empty template looks like this example
-# below. The word 'self' can be any name you wish to use. How-
+# The class blueprint or empty template looks like this example:
+
+class Easy_class:
+
+  def __init__(self,attribute):  # two parameters
+
+    self.attribute = attribute  # one attribute
+
+# The word 'self' can be any name you wish to use. How-
 # ever, programmers use 'self' as the standard. The 'self' word
 # is an address in memory that points back to its attribute, so it
 # can be accessible to itself. The class constructor __init__
@@ -36,7 +43,7 @@
 # didn't put any features into it yet. We need to create an instance
 # for this class, along with its attribute's name:
 
-# print(Easy_class('Hello').attribute)
+print(Easy_class('Hello').attribute)
 
 # Please note: arguments are nothing more than the values you
 # see on a computer's monitor at run time, such as the word 'Hello'
@@ -512,7 +519,7 @@ print(Easy_class('Hello','World!').attribute2)  # World!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # These two Python command lines below are what are called
 # 'instances'. The green text, 'Hello' and 'World!' are the actual
-# arguments you see on the computer screen at execution/run
+# arguments you see on a computer's monitor at execution/run
 # time. Any text you see on the screen at execution/run time,
 # are the actual arguments every easy class Python program
 # illustrated here. All the green text are the actual 'arguments'.
@@ -528,7 +535,7 @@ Easy_class('Hello','World!').attribute2  # World!
 # Believe me, this last part of our lesson on Easy Classes wasn't
 # so easy for me to create, as well as creating comments for
 # these last two lessons from docstrings, onward to __slots__.
-# I am heading into my ninth year into Python programming, since
+# I am heading into my ninth year with Python programming, since
 # Christmas day, 2017. And it was all because of my Best Friend,
 # Brian, who lit the fire inside me to take up computer programming
 # again. He introduced me to that little Cozo Robot, and I haven't
