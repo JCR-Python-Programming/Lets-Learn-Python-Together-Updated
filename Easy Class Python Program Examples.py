@@ -538,5 +538,5 @@ Easy_class('Hello','World!').attribute2  # World!
 # I am heading into my ninth year with Python programming, since
 # Christmas day, 2017. And it was all because of my Best Friend,
 # Brian, who lit the fire inside me to take up computer programming
-# again. He introduced me to that little Cozo Robot, and I haven't
+# again. He introduced me to that little Cozmo Robot, and I haven't
 # looked back since that day...
