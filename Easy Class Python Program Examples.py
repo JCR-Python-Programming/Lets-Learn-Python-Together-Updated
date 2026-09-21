@@ -540,3 +540,5 @@ Easy_class('Hello','World!').attribute2  # World!
 # Brian, who lit the fire inside me to take up computer programming
 # again. He introduced me to that little Cozmo Robot, and I haven't
 # looked back since that day...
+
+# I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
