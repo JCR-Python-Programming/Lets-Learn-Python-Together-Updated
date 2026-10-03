@@ -367,7 +367,7 @@ print(getattr(Easy_class_super('','','',''),'attribute3','Sorry! Attribute not f
 print(getattr(Easy_class_super('','','',''),'attribute4','Sorry! Attribute not found:'))  # Computers
 
 # The super() function can be as complex as you please. However,
-# you should research: Memory Resolution Order (MRO) first.
+# you should research: Method Resolution Order (MRO) first.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Whoever learns Python through me. You'd better supersede me!!
 # A true teacher doesn't hold back their knowledge and keep students
