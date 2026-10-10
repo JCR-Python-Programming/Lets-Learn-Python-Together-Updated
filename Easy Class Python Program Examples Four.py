@@ -983,9 +983,9 @@ for i in range(2):
   print(getattr(Easy_class_child('Jerry','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jerry Smith
 
 for i in range(2):
-  print(getattr(Easy_class_child('Jane','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jerry Smith
+  print(getattr(Easy_class_child('Jane','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jane Smith
 
 for i in range(2):
-  print(getattr(Easy_class_child('John','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jerry Smith
+  print(getattr(Easy_class_child('John','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # John Smith
 
 # I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
