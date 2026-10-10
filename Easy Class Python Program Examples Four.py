@@ -977,7 +977,7 @@ class Easy_class_child(Easy_class_dad):
 # Invoke the end=' ' to keep text output on one line.
 
 for i in range(2):
-  print(getattr(Easy_class_mom('Mary','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Mary Smith
+  print(getattr(Easy_class_child('Mary','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Mary Smith
 
 for i in range(2):
   print(getattr(Easy_class_child('Jerry','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jerry Smith
