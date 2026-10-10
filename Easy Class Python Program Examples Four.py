@@ -770,6 +770,8 @@ class Easy_class_mom(Easy_class_grandfather):
 
   def __init__(self,*args):  # two parameters
 
+    super().__init__(*args)  # one positional argument
+
     self.args = args  # one args attribute property
 
 # Easy_class_dad(Easy_class_mom) passes the baton up to
@@ -848,6 +850,8 @@ class Easy_class_grandfather(Easy_class_grandmother):
 class Easy_class_mom(Easy_class_grandfather):
 
   def __init__(self,**kwargs):  # two parameters
+
+    super().__init__(**kwargs)  # one positional argument
 
     self.kwargs = kwargs  # one args attribute property
 
@@ -946,6 +950,8 @@ class Easy_class_mom(Easy_class_grandfather):
 
   def __init__(self,*args):  # two parameters
 
+    super().__init__(*args)  # one positional argument
+
     self.args = args  # one args attribute property
 
 # Easy_class_dad(Easy_class_mom) passes the baton up to
@@ -971,7 +977,7 @@ class Easy_class_child(Easy_class_dad):
 # Invoke the end=' ' to keep text output on one line.
 
 for i in range(2):
-  print(getattr(Easy_class_child('Mary','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Mary Smith
+  print(getattr(Easy_class_mom('Mary','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Mary Smith
 
 for i in range(2):
   print(getattr(Easy_class_child('Jerry','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # Jerry Smith
