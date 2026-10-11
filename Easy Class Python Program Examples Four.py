@@ -988,4 +988,12 @@ for i in range(2):
 for i in range(2):
   print(getattr(Easy_class_child('John','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')  # John Smith
 
+# We can also add more arguments in a child class instance, via invoking *args.
+
+for i in range(8):
+  print(getattr(Easy_class_child(
+    'Mary','Smith','Jerry',
+    'Smith','Jane','Smith',
+    'John','Smith'),'args',['Sorry! Attribute not found:',''])[i],end=' ')
+
 # I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
