@@ -219,7 +219,11 @@ print(getattr(Easy_class_dad('John','Smith'),'attribute4','Sorry! Attribute not 
 
 print(getattr(Easy_class_child('Jane','Smith','John','Smith'),'attribute1','Sorry! Attribute not found:'))  # Jane
 
+print(getattr(Easy_class_child('Jane','Smith','John','Smith'),'attribute2','Sorry! Attribute not found:'))  # Smith
+
 print(getattr(Easy_class_child('Jane','Smith','John','Smith'),'attribute3','Sorry! Attribute not found:'))  # John
+
+print(getattr(Easy_class_child('Jane','Smith','John','Smith'),'attribute4','Sorry! Attribute not found:'))  # Smith
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Easy_class_mom:
 
@@ -251,7 +255,11 @@ print(getattr(Easy_class_dad('',''),'attribute4','Sorry! Attribute not found:'))
 
 print(getattr(Easy_class_child('','','',''),'attribute1','Sorry! Attribute not found:'))  # Jane
 
+print(getattr(Easy_class_child('','','',''),'attribute2','Sorry! Attribute not found:'))  # Smith
+
 print(getattr(Easy_class_child('','','',''),'attribute3','Sorry! Attribute not found:'))  # John
+
+print(getattr(Easy_class_child('','','',''),'attribute4','Sorry! Attribute not found:'))  # Smith
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Easy_class_grandmother:
 
