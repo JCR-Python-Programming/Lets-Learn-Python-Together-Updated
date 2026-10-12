@@ -32,7 +32,27 @@
 
 class Easy_class_parent:
 
+# Let's learn what 'documentation strings' do with classes. In Python,
+# we call these 'doctrings'. We  need to invoke three double quote
+# marks """ on each side of the docstring title: """Easy class""".
+# The getattr() function simply means the word: 'get attribute'. With
+# docstrings, we can see the documentation payload/description
+# block of the class at execution/run time. Docstrings are like a
+# comment; they descibe what the class is about at execution/run
+# time.
+
   """Easy Class Parent"""  # documentation payload/description block
+
+# Let's learn what __slots__ do! Slots reserve exact memory
+# for class attributes. You don't need a huge, empty warehouse
+# just to store a few attributes. Slots optimize memory and performance.
+# Research Python __slots__ to learn more about them. Two double
+# underscores __ __ are required to create __slots__. Simply
+# press and hold down the shift key, while pressing the minus key.
+
+# Note: when invoking __slots__ with only one attribute, you must
+# place a comma ',' at the end of the slot's single attribute, as not
+# to confuse it as a tuple value at execution/run time.
 
   __slots__ = ('attribute',)  # __slots__ optimizes memory and performance
 
@@ -62,7 +82,7 @@ class Easy_class_mom:
 
     self.attribute = attribute  # one explicit attribute property
 
-class Easy_class_dad:
+class Easy_class_dad(Easy_class_mom):
 
   """Easy Class Dad"""  # documentation payload/description block
 
@@ -564,9 +584,9 @@ class Easy_class_mom:
 
   """Easy Class Mom"""  # documentation payload/description block
 
-  def __init__(self,attribute1,attribute2):  # three parameters
+  __slots__ = ('attribute1','attribute2')  # __slots__ optimizes memory and performance
 
-    __slots__ = ('attribute1','attribute2')  # __slots__ optimizes memory and performance
+  def __init__(self,attribute1,attribute2):  # three parameters
 
     self.attribute1 = attribute1  # one explicit attribute property, named: 'attribute1'
     self.attribute2 = attribute2  # one explicit attribute property, named: 'attribute2'
