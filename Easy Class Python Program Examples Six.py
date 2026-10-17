@@ -81,7 +81,7 @@ def my_def_function():  # define function
 my_def_function()  # Call up the def function: my_def_function()
 
 # Here is the very same def function() example, but we need the
-# 'self' parameter when invokng def fructions within classes.
+# 'self' parameter when invoking def functions within classes.
 
 def my_def_function(self):  # define function
     print('Mary')
@@ -114,12 +114,12 @@ class Dad:  # non class-incest sub parent class
   def dad(self):  # define function
     print('John')
 
-# When a class-incest chid happens, we must make sure that the child
+# When a class-incest child happens, we must make sure that the child
 # class, Grandfather has to stay to the left side of its non class-incest
 # parent class, or non class-incest sub parent class: Grandmother, in
 # the final non class-incest Child class below is where this matters.
-# Grandfather must stay to the left of any none class-incest parent, or
-# none class-incest sub parent'. Grandmother' for example:
+# Grandfather must stay to the left of any non class-incest parent, or
+# non class-incest sub parent: Grandmother for example.
 
 class Child(Grandfather,Grandmother):pass  # Oh, you poor Child class act. lol
 
