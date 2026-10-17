@@ -1,6 +1,10 @@
 
 # EaZy Class Smash Python Program Examples:
 
+# Note: this Python program exercise is rated PG 13,
+# "Parental Guidance: Some material may be inappropriate
+# for children under 13."
+
 # by Joseph C. Richardson,GitHub.com
 
 # Welcome to our last Easy Class Python program examples:
