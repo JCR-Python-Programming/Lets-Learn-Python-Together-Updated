@@ -1,5 +1,5 @@
 
-# Type and execute/run this Polygon class program example:
+# Type and execute/run these Polygon class program examples:
 
 # Save this Python file as Polygon class.py. Note: double click
 # the Python file to view all its cool colour text.
