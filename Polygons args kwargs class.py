@@ -25,11 +25,31 @@ polygons = (
 
 class Polygon:
 
-  """Polygon"""
+# Let's learn what 'documentation strings' do with classes. In Python,
+# we call these 'doctrings'. We  need to invoke three double quote
+# marks """ on each side of the docstring title: """Polygon""".
+# The getattr() function simply means the word: 'get attribute'. With
+# docstrings, we can see the documentation payload/description
+# block of the class at execution/run time. Docstrings are like a
+# comment; they descibe what the class is about at execution/run
+# time.
 
-  __slots__ = ('polygons1','polygons2','polygons3','polygons4')
+  """Polygon"""  # documentation payload/description block
 
-  def __init__(self,polygons1,polygons2,polygons3,polygons4):
+# Let's learn what __slots__ do! Slots reserve exact memory
+# for class attributes. You don't need a huge, empty warehouse
+# just to store a few attributes. Slots optimize memory and performance.
+# Research Python __slots__ to learn more about them. Two double
+# underscores __ __ are required to create __slots__. Simply
+# press and hold down the shift key, while pressing the minus key.
+
+# Note: when invoking __slots__ with only one attribute, you must
+# place a comma ',' at the end of the slot's single attribute, as not
+# to confuse it as a tuple value at execution/run time.
+
+  __slots__ = ('polygons1','polygons2','polygons3','polygons4')  # __slots__ optimizes memory and performance
+
+  def __init__(self,polygons1,polygons2,polygons3,polygons4):  # five parameters
 
     self.polygons1 = polygons1
     self.polygons2 = polygons2
@@ -42,6 +62,14 @@ print(getattr(Polygon,'__doc__'))
 
 print(Polygon(polygons[0],polygons[1],polygons[2],polygons[3]).polygons1)
 
+# The getattr('get attribute') lookup, looks up valid attributes.
+# Think of 'getattr' as the attribute gatekeeper. If an attribute
+# does not exist, or is floating, bleeding into other class attributes,
+# the gatekeeper, 'getattr' looks up exact attributes with their
+# class only. The fallback, 'Attribute Not Found' text prevents
+# program crashes from occurring, should a wrong attribute or
+# name error happen.
+
 # When an attribute is not found, a fallback error message will stop the program
 # from crashing.
 
@@ -49,11 +77,11 @@ print(getattr(Polygon(polygons[0],polygons[1],polygons[2],polygons[3]),'bogus at
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('polygons1','polygons2','polygons3','polygons4')
+  __slots__ = ('polygons1','polygons2','polygons3','polygons4')  # __slots__ optimizes memory and performance
 
-  def __init__(self,polygons1,polygons2,polygons3,polygons4):
+  def __init__(self,polygons1,polygons2,polygons3,polygons4):  # five parameters
 
     self.polygons1 = polygons[0]
     self.polygons2 = polygons[1]
@@ -79,9 +107,9 @@ print(getattr(Polygon(None,None,None,None),'bogus attribute','Sorry! Attribute n
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('args',)
+  __slots__ = ('args',)  # __slots__ optimizes memory and performance
 
   def __init__(self,*args):  # two parameters
 
@@ -110,48 +138,11 @@ print(getattr(Polygon(polygons[0],polygons[1],polygons[2],polygons[3]),'bogus at
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('kwargs',)
+  __slots__ = ('__dict__',)  # __slots__ optimizes memory and performance
 
   def __init__(self,**kwargs):  # two parameters
-
-    self.kwargs = kwargs  # one attribute
-
-print(getattr(Polygon,'__doc__'))
-
-# four explicit keyword argument placeholder values
-
-print(getattr(Polygon(
-  kwargs1 = polygons[0],kwargs2 = polygons[1],
-  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('kwargs1'))
-
-# When an attribute is not found, a fallback error message will stop the program
-# from crashing.
-
-print(getattr(Polygon(
-  kwargs1 = polygons[0],kwargs2 = polygons[1],
-  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute','Sorry! Attribute not found:'))
-
-# or this:
-
-print(getattr(Polygon(
-  kwargs1 = polygons[0],kwargs2 = polygons[1],
-  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute',''))
-
-# or this:
-
-print(getattr(Polygon(
-  kwargs1 = polygons[0],kwargs2 = polygons[1],
-  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute',None))
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-class Polygon:
-
-  """Polygon"""
-
-  __slots__ = ('__dict__',)
-
-  def __init__(self,**kwargs):
 
     self.__dict__.update(kwargs)
 
@@ -192,9 +183,46 @@ print(getattr(Polygon(
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('args','kwargs')
+  __slots__ = ('kwargs',)  # __slots__ optimizes memory and performance
+
+  def __init__(self,**kwargs):  # two parameters
+
+    self.kwargs = kwargs  # one attribute
+
+print(getattr(Polygon,'__doc__'))
+
+# four explicit keyword argument placeholder values
+
+print(getattr(Polygon(
+  kwargs1 = polygons[0],kwargs2 = polygons[1],
+  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('kwargs1'))
+
+# When an attribute is not found, a fallback error message will stop the program
+# from crashing.
+
+print(getattr(Polygon(
+  kwargs1 = polygons[0],kwargs2 = polygons[1],
+  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute','Sorry! Attribute not found:'))
+
+# or this:
+
+print(getattr(Polygon(
+  kwargs1 = polygons[0],kwargs2 = polygons[1],
+  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute',''))
+
+# or this:
+
+print(getattr(Polygon(
+  kwargs1 = polygons[0],kwargs2 = polygons[1],
+  kwargs3 = polygons[2],kwargs4 = polygons[3]),'kwargs').get('bogus attribute',None))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+class Polygon:
+
+  """Polygon"""  # documentation payload/description block
+
+  __slots__ = ('args','kwargs')  # __slots__ optimizes memory and performance
 
   def __init__(self,*args,**kwargs):  # two parameters
 
@@ -251,11 +279,11 @@ print(getattr(Polygon(polygons[0],polygons[1],polygons[2],polygons[3]),'bogus at
 
 class Polygon:
 
-  """Polygon"""
+  """Polygon""" # documentation payload/description block
 
-  __slots__ = ('polygons1','polygons2','polygons3','polygons4')
+  __slots__ = ('polygons1','polygons2','polygons3','polygons4')  # __slots__ optimizes memory and performance
 
-  def __init__(self,polygons1,polygons2,polygons3,polygons4):
+  def __init__(self,polygons1,polygons2,polygons3,polygons4):  # five parameters
 
     self.polygons1 = polygons1
     self.polygons2 = polygons2
@@ -291,11 +319,11 @@ print(getattr(instance_var,'bogus attribute',None))
 
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('polygons1','polygons2','polygons3','polygons4')
+  __slots__ = ('polygons1','polygons2','polygons3','polygons4')  # __slots__ optimizes memory and performance
 
-  def __init__(self,polygons1,polygons2,polygons3,polygons4):
+  def __init__(self,polygons1,polygons2,polygons3,polygons4):  # five parameters
 
     self.polygons1 = polygons[0]
     self.polygons2 = polygons[1]
@@ -329,9 +357,9 @@ print(getattr(instance_var,'bogus attribute','Sorry! Attribute not found:'))
 
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('args',)
+  __slots__ = ('args',)  # __slots__ optimizes memory and performance
 
   def __init__(self,*args):  # two parameters
 
@@ -364,11 +392,11 @@ print(getattr(instance_var,'bogus attribute',[None])[0])
 
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('__dict__',)
+  __slots__ = ('__dict__',)  # __slots__ optimizes memory and performance
 
-  def __init__(self,**kwargs):
+  def __init__(self,**kwargs):  # two parameters
 
     self.__dict__.update(kwargs)
 
@@ -399,9 +427,9 @@ print(getattr(instance_var,'bogus attribute',None))
 
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('kwargs',)
+  __slots__ = ('kwargs',)  # __slots__ optimizes memory and performance
 
   def __init__(self,**kwargs):  # two parameters
 
@@ -430,9 +458,9 @@ print(getattr(instance_var,'kwargs').get('bogus attribute',None))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 class Polygon:
 
-  """Polygon"""
+  """Polygon"""  # documentation payload/description block
 
-  __slots__ = ('args','kwargs')
+  __slots__ = ('args','kwargs')  # __slots__ optimizes memory and performance
 
   def __init__(self,*args,**kwargs):  # two parameters
 
