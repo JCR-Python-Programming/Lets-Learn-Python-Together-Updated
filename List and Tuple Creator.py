@@ -5,13 +5,13 @@ message = (
   'q','Q','\nYou have','values:\n','Copy and paste your automated list or tuple into your Python code.',
   '\nmy_tuple_helper =','\nmy_list_helper =','\nprint(my_tuple_helper[0])\n\nprint(my_list_helper[0])')
 
-empty_list = [ ]
+empty_list = [ ]  # create an empty list
 
-print(message[0])
+print(message[0])  # message intro
 
 while True:
 
-  user_input = input(message[1])
+  user_input = input(message[1])  # user_input text values
 
   if user_input in (message[2],message[3]):break  # lowercase/uppercase characters for Caps Lock and shift keys
 
@@ -27,10 +27,10 @@ convert_to_tuple = tuple(convert_to_list)  # cast to a tuple
 
 print(message[4],len(convert_to_list),message[5])  # assure accurate tuple and list value counts
 
-print(message[6])
+print(message[6])  # copy and paste message
 
 print(message[7],convert_to_tuple)  # automated Tuple output
 
 print(message[8],convert_to_list)  # automated list output
 
-print(message[9])
+print(message[9])  # print(my_tuple_helper[0], print(my_list_helper[0])
