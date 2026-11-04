@@ -23,7 +23,9 @@ def tuple_and_list_helper():
 
     user_input = input(message_text[1])  # user_input text values
 
-    if user_input in (message_text[2],message_text[3]):break  # lowercase/uppercase characters for Caps Lock and shift keys
+# lowercase/uppercase characters for Caps Lock and shift keys
+
+    if user_input in (message_text[2],message_text[3]):break
 
     empty_list.append(user_input)  # add new values to tuples and lists
 
@@ -35,7 +37,9 @@ def tuple_and_list_helper():
 
   convert_to_tuple = tuple(convert_to_list)  # cast to a immutable tuple
 
-  print(message_text[4],len(convert_to_list),message_text[5])  # assure accurate tuple and list value counts
+# assure accurate tuple and list value counts
+
+  print(message_text[4],len(convert_to_list),message_text[5])
 
   print(message_text[6])  # copy and paste message_text
 
@@ -44,7 +48,6 @@ def tuple_and_list_helper():
   print(message_text[8],convert_to_list)  # automated mutable list output
 
   print(message_text[9])  # print(my_tuple_helper[0], print(my_list_helper[0])
-
 
 def dictionary_helper():
 
@@ -62,13 +65,19 @@ def dictionary_helper():
 
     user_input_key = input(message_text[1])  # user_input keys
 
-    if user_input_key in (message_text[2],message_text[3]):break  # lowercase/uppercase characters for Caps Lock and shift keys
+# lowercase/uppercase characters for Caps Lock and shift keys
+
+    if user_input_key in (message_text[2],message_text[3]):break
 
     user_input_value = input(message_text[4])  # user_input values
 
-    if user_input_value in (message_text[2],message_text[3]):break  # lowercase/uppercase characters for Caps Lock and shift keys
+# lowercase/uppercase characters for Caps Lock and shift keys
 
-    empty_dictionary.update({user_input_key:user_input_value})  # add new keys and value pairs to dictionaries
+    if user_input_value in (message_text[2],message_text[3]):break
+
+# add new keys and value pairs to dictionaries
+
+    empty_dictionary.update({user_input_key:user_input_value})
 
   print(
     message_text[5],len(empty_dictionary.keys()),message_text[6],  # assure accurate key counts
