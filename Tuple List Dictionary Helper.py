@@ -4,7 +4,8 @@ Why not become a pragmatical, lazy computer programmer?
 Create automated tuples, lists and dictionaries right on the fly.
 \nType 'T' or 'L' for tuples and lists, then press the Enter key
 to begin. Press 'q' to guit and exit this Python program example.
-Type 'D' for dictionaries, then press the Enter key to begin.''',
+Type 'D' for dictionaries, then press the Enter key to begin.
+Press 'q' to guit and exit this Python program example.''',
   '\nREADY: ','q','Q','t','T','l','L','d','D')
 
 def tuple_and_list_helper():
@@ -94,6 +95,8 @@ print(message_text[0])
 while True:
   user_input = input(message_text[1])
 
+# lowercase/uppercase characters for Caps Lock and shift keys
+
   if user_input in (message_text[2],message_text[3]):break
 
   elif user_input in (message_text[4],message_text[5],message_text[6],message_text[7]):
@@ -102,3 +105,5 @@ while True:
   elif user_input in (message_text[8],message_text[9]):
     dictionary_helper()
   else:continue
+
+# I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
