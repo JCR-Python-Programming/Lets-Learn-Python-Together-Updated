@@ -1,4 +1,3 @@
-
 # The correct 'if', 'elif' and 'else' Python program structure example:
 
 while True:
@@ -141,4 +140,3 @@ print('I gave you back ${}'.format(user_input+100)+' dollars.')  # old school fo
 
 
 print(f'I gave you back ${user_input+100} dollars.')  # the new f' formatted string concatenation
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
