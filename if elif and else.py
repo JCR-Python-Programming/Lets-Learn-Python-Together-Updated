@@ -9,6 +9,24 @@ while True:
     print('I Quit!:')
     break
 
+  elif user_input in ('Good','Great','Perfect'):
+    print("That's how it's done!")
+    break
+
+  else:
+    continue  # continue the while loop iterataion
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# We can use as many 'elif', control flow statements as we wish.
+
+while True:
+  user_input = input('User input: ').strip()  # remove leading and trailing whitespace characters
+
+# lowercase/uppercase characters for Caps Lock and shift keys
+
+  if user_input in ('q','Q'):
+    print('I Quit!:')
+    break
+
   elif user_input == 'Good':
     print('Good!')
     break
@@ -24,24 +42,6 @@ while True:
   else:
     continue  # continue the while loop iterataion
 '''----------------------------------------------------------------------'''
-# or this example to keep the Python code shorter.
-
-while True:
-  user_input = input('User input: ').strip()  # remove leading and trailing whitespace characters
-
-# lowercase/uppercase characters for Caps Lock and shift keys
-
-  if user_input in ('q','Q'):
-    print('I Quit!:')
-    break
-
-  elif user_input in ('Good','Great','Perfect'):
-    print("That's how it's done!")
-    break
-
-  else:
-    continue  # continue the while loop iterataion
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is practical 'if', 'elif' and 'else' Python program structure example:
 
 while True:
@@ -51,15 +51,15 @@ while True:
 
   if user_input in ('q','Q'):
     print('I Quit!:')
-    break
+    break  # breaks out of the while loop
 
   elif user_input == '10':
     print('I gave you back $'+str(int(user_input)+100),'dollars.')  # nonformatted string concatenation
-    break
+    break  # breaks out of the while loop
 
   else:
     print('You must give me the number 10 please:')
-    continue  # continue the while loop iterataion
+    continue  # continues the while loop iterataion
 
 # Why not try these formatted string concatenation examples out:
 
@@ -99,16 +99,16 @@ finally:  # the finally statement is optional
 # Type and execute/run the program and see what happens.
 
 try:
-     message = int(input('Pick a number. ').strip())  # remove leading and trailing whitespace characters
+  message = int(input('Pick a number. ').strip())  # remove leading and trailing whitespace characters
 
 except ValueError:
-     print('Numbers only please.')
+  print('Numbers only please.')
 
 else:
-     print('You picked a number.')
+  print('You picked a number.')
 
 finally:
-     print("'finally' executed no matter what.")
+  print("'finally' executed no matter what.")
 
 # The 'finally' statement is executed no matter the outcome the
 # 'try and except' handler block does.
