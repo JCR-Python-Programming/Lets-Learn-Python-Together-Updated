@@ -1,5 +1,11 @@
 # The correct 'if', 'elif' and 'else' Python program structure example:
 
+# Note: Python executes/runs programs starting from the top,
+# downward. Be very careful on how you place statements.
+# Some statements cannot execute right, even if they work.
+# This is simply because of the order that Python executes/runs
+# its program statements.
+
 while True:
   user_input = input('User input: ').strip()  # remove leading and trailing whitespace characters
 
@@ -99,7 +105,7 @@ finally:  # the finally statement is optional
 # Type and execute/run the program and see what happens.
 
 try:
-  message = int(input('Pick a number. ').strip())  # remove leading and trailing whitespace characters
+  message = int(input('Pick a number: ').strip())  # remove leading and trailing whitespace characters
 
 except ValueError:
   print('Numbers only please.')
@@ -182,3 +188,88 @@ print('I gave you back ${}'.format(user_input+100)+' dollars.')  # old school fo
 
 
 print(f'I gave you back ${user_input+100} dollars.')  # the new f' formatted string concatenation
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# This program example has three, separate conditional while
+# loops, each of them compares data against user input data.
+# The first while loop asks for the user's first name. The second
+# while-loop asks for the user's last name, and the third while
+# loop asks for the user's age. In the first and second while loop,
+# the user's first name and the user's last name is compared
+# by how many letters the user types. The 'str([first_name])'
+# statement makes the user type in text only, not integers.
+
+# Note: Python executes/runs programs starting from the top,
+# downward. Be very careful on how you place statements.
+# Some statements cannot execute right, even if they work.
+# This is simply because of the order that Python executes/runs
+# its program statements.
+
+while True:
+    first_name = input('\nWhat is your name please?: ').strip()
+
+    if first_name < str([first_name]):
+        print('\nError! text only please:')
+
+    elif len(first_name) < 3:
+        print('\nYour first name must be over 2 characters long.')
+
+    elif len(first_name) > 10:
+        print('Your first name must be under 10 characters long.')
+
+    else:
+        break
+
+while True:
+    last_name = input(f'\nNice to meet you {first_name.title()}. \
+What is your last name please?: ').strip()
+
+    if last_name < str([last_name]):
+        print('\nError! text only please:')
+
+    elif len(last_name) < 3:
+        print('\nYour last name must be over 2 characters long.')
+
+    elif len(last_name) > 10:
+        print('\nYour last name must be under 10 characters long.')
+
+    else:
+        break
+
+while True:
+    try:
+        age = int(input(f'\nHow old are you {first_name.title()}?: ').strip())
+        break
+
+    except ValueError:
+        print('\nError! integers only please!')
+
+print(f'\nYour first name = {first_name.title()}:\nYour last name = \
+{last_name.title()}:\nYour age = {age}:\n')
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create this fun password Python program example below:
+
+message_text = 'Please type your password to enter: '
+password = 'open sesame'
+welcome = "Welcome!\n\nYou've gained access into HEXADECACOM A.I."
+incorrect_password = 'PASSWORD INCORRECT!'
+denied_entry = 'You have entered the incorrect password too many times.\n\nAccess Denied!'
+end_program = 'Now you know how to make Python create a password, that only you know.'
+line_break = '\n'
+
+count = 1
+while count <= 3:
+
+    message = input(message_text)
+
+    if message == password:
+        print(line_break+welcome+line_break) # This is where you would put all your nice, complex Python code
+        break
+
+    else:
+        print(line_break+incorrect_password+line_break)
+    count += 1
+
+    if count == 4:
+        print(denied_entry+line_break)
+
+print(end_program)
