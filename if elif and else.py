@@ -1,4 +1,4 @@
-# The correct 'if', 'elif' and 'else' Python program structure example:
+# The Correct 'if', 'elif' and 'else' Python Program Structure Examples:
 
 # by Joseph C. Richardson, GitHub.com
 
@@ -17,7 +17,7 @@ while True:
     print('I Quit!:')
     break
 
-  elif user_input in ('Good','Great','Perfect'):
+  elif user_input == 'Perfect':
     print("That's how it's done!")
     break
 
