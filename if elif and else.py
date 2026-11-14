@@ -1,5 +1,7 @@
 # The correct 'if', 'elif' and 'else' Python program structure example:
 
+# by Joseph C. Richardson, GitHub.com
+
 # Note: Python executes/runs programs starting from the top,
 # downward. Be very careful on how you place statements.
 # Some statements cannot execute right, even if they work.
@@ -205,7 +207,7 @@ print(f'I gave you back ${user_input+100} dollars.')  # the new f' formatted str
 # its program statements.
 
 while True:
-    first_name = input('\nWhat is your name please?: ').strip()
+    first_name = input('\nWhat is your name please?: ').strip()  # remove leading and trailing whitespace characters
 
     if first_name < str([first_name]):
         print('\nError! text only please:')
@@ -221,7 +223,7 @@ while True:
 
 while True:
     last_name = input(f'\nNice to meet you {first_name.title()}. \
-What is your last name please?: ').strip()
+What is your last name please?: ').strip()  # remove leading and trailing whitespace characters
 
     if last_name < str([last_name]):
         print('\nError! text only please:')
@@ -237,7 +239,7 @@ What is your last name please?: ').strip()
 
 while True:
     try:
-        age = int(input(f'\nHow old are you {first_name.title()}?: ').strip())
+        age = int(input(f'\nHow old are you {first_name.title()}?: ').strip())  # remove leading and trailing whitespace characters
         break
 
     except ValueError:
@@ -246,9 +248,10 @@ while True:
 print(f'\nYour first name = {first_name.title()}:\nYour last name = \
 {last_name.title()}:\nYour age = {age}:\n')
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# Create this fun password Python program example below:
+# Create this fun password Python program example below. Let's
+# also create some variables for print() function text arguments.
 
-message_text = 'Please type your password to enter: '
+message = 'Please type your password to enter: '
 password = 'open sesame'
 welcome = "Welcome!\n\nYou've gained access into HEXADECACOM A.I."
 incorrect_password = 'PASSWORD INCORRECT!'
@@ -259,9 +262,9 @@ line_break = '\n'
 count = 1
 while count <= 3:
 
-    message = input(message_text)
+    user_input = input(message),strip()  # remove leading and trailing whitespace characters
 
-    if message == password:
+    if user_input == password:
         print(line_break+welcome+line_break) # This is where you would put all your nice, complex Python code
         break
 
@@ -273,3 +276,52 @@ while count <= 3:
         print(denied_entry+line_break)
 
 print(end_program)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Create this fun Python program example below. Make the computer
+# find a number from 1 to 100. Let's also create two variables for
+# print() function text arguments. Note: make sure you manually
+# line up the break statement with the exact, same outer indentation
+# as the for loop.
+
+message = 'Pick a number from of 1 to 100 and I will find it: '
+error_message = 'Sorry! Numbers only please.'
+
+while True:
+  try:
+    user_input = int(input(message).strip())  # remove leading and trailing whitespace characters
+
+    for i in range(1,101):
+        if i == user_input:
+            print(f'{i}: I found number "{i}" from 1 to 100:')
+            continue
+        print(i)
+    break
+
+  except ValueError:
+    print(error_message)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Let's create the same Python program example as the one
+# above. Only this time, the computer will stop counting at the
+# number that was picked, instead of counting onward. Note:
+# make sure you manually line up the break statement with the
+# exact, same outer indentation as the for loop.
+
+message = 'Pick a number and I will count to it: '
+error_message = 'Sorry! Numbers only please.'
+line_break = '\n'
+
+while True:
+  try:
+    user_input = int(input(message).strip())  # remove leading and trailing whitespace characters
+
+    for i in range(1,user_input+1):
+        if i == user_input:
+            print(f'{i}{line_break}I counted to number "{i}" ')
+            break
+        print(i)
+    break
+
+  except ValueError:
+    print(error_message)
+
+# I am almost a complete Walking Human Computer Science Research Laboratory Machine on Two Legs... 😁
