@@ -13,7 +13,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):
+  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
     print('I Quit!:')
     break
 
@@ -31,7 +31,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):
+  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
     print('I Quit!:')
     break
 
@@ -44,12 +44,32 @@ while True:
     break
 
   elif user_input == 'Perfect':
-    print('Perfect!')
+    print("That's how it's done!")
     break
 
   else:
     continue  # continue the while loop iterataion
-'''----------------------------------------------------------------------'''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Here is our same Python programe example as the one above.
+
+while True:
+  user_input = input('User input: ').strip()  # remove leading and trailing whitespace characters
+
+# lowercase/uppercase characters for Caps Lock and shift keys
+
+  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
+    print('I Quit!:')
+    break
+
+# Invoke the built-in keyword 'in' to shorten redundant code.
+
+  elif user_input in ('Good','Great','Perfect'):
+    print(user_input,"That's how it's done!")
+    break
+
+  else:
+    continue  # continue the while loop iterataion
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Here is practical 'if', 'elif' and 'else' Python program structure example:
 
 while True:
@@ -57,7 +77,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):
+  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
     print('I Quit!:')
     break  # breaks out of the while loop
 
