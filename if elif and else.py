@@ -13,7 +13,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
+  if user_input in ('q','Q'):  # invoke the built-in keyword 'in' to shorten redundant code
     print('I Quit!:')
     break
 
@@ -31,7 +31,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
+  if user_input in ('q','Q'):  # invoke the built-in keyword 'in' to shorten redundant code
     print('I Quit!:')
     break
 
@@ -57,11 +57,11 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
+  if user_input in ('q','Q'):  # invoke the built-in keyword 'in' to shorten redundant code
     print('I Quit!:')
     break
 
-# Invoke the built-in keyword 'in' to shorten redundant code.
+# invoke the built-in keyword 'in' to shorten redundant code
 
   elif user_input in ('Good','Great','Perfect'):
     print(user_input,"That's how it's done!")
@@ -77,7 +77,7 @@ while True:
 
 # lowercase/uppercase characters for Caps Lock and shift keys
 
-  if user_input in ('q','Q'):  # Invoke the built-in keyword 'in' to shorten redundant code.
+  if user_input in ('q','Q'):  # invoke the built-in keyword 'in' to shorten redundant code
     print('I Quit!:')
     break  # breaks out of the while loop
 
@@ -116,7 +116,7 @@ print(f'I gave you back ${int(user_input)+90} dollars.')  # the new f' formatted
 
 try:
   pass
-except:   # Invoke the right kind of error handler for the right kind of error.
+except:   # invoke the right kind of error handler for the right kind of error
   pass
 else:
   pass
@@ -285,7 +285,7 @@ while count <= 3:
     user_input = input(message),strip()  # remove leading and trailing whitespace characters
 
     if user_input == password:
-        print(line_break+welcome+line_break) # This is where you would put all your nice, complex Python code
+        print(line_break+welcome+line_break) # this is where you would put all your nice, complex Python code
         break
 
     else:
